@@ -3,62 +3,68 @@ load("@bazel_tools//tools/build_defs/repo:jvm.bzl", "jvm_maven_import_external")
 def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
     jvm_maven_import_external(
         name = "edu_wpi_first_wpiutil_wpiutil_java",
-        artifact = "edu.wpi.first.wpiutil:wpiutil-java:2022.1.1",
-        artifact_sha256 = "7b0f5c9d4ef7d98c0d2d735cb1af31461840811c6b8d5fd21d96a61ffaa1e34d",
+        artifact = "edu.wpi.first.wpiutil:wpiutil-java:2022.3.1",
+        artifact_sha256 = "9ebea418d5b0518015f6c27ccc7fbb07eb948876538c78c2c34c63cae01b4614",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
         name = "edu_wpi_first_wpimath_wpimath_java",
-        artifact = "edu.wpi.first.wpimath:wpimath-java:2022.1.1",
-        artifact_sha256 = "e3d2c1e4e46abf98ddaf2e1a77abdd76d63d18b634a212070ac1f350141d06a6",
+        artifact = "edu.wpi.first.wpimath:wpimath-java:2022.3.1",
+        artifact_sha256 = "d6ffdcc0bc7b1a08df1748819330887e68c2a54e707c8bb90a864b2da30ed978",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
         name = "edu_wpi_first_hal_hal_java",
-        artifact = "edu.wpi.first.hal:hal-java:2022.1.1",
-        artifact_sha256 = "cd49ca18066d1eafa8877a3342383127557f594f302bd422f0ea21f850ca94cb",
+        artifact = "edu.wpi.first.hal:hal-java:2022.3.1",
+        artifact_sha256 = "e571485032dfd89a7e8bd36b93176e327a1ed2579356f3b70594a95a83c118e9",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
         name = "edu_wpi_first_ntcore_ntcore_java",
-        artifact = "edu.wpi.first.ntcore:ntcore-java:2022.1.1",
-        artifact_sha256 = "b5065d34aaadca8968748df86b8850667d3a8397ec5977316d961de5311ebcc0",
+        artifact = "edu.wpi.first.ntcore:ntcore-java:2022.3.1",
+        artifact_sha256 = "de93f971efce1a4d9bd37bbe313e5315eb88726866db16759b39f02b14f6b144",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
         name = "edu_wpi_first_cscore_cscore_java",
-        artifact = "edu.wpi.first.cscore:cscore-java:2022.1.1",
-        artifact_sha256 = "ac38684b7ec825c627ca73d18e41cd956205250af16a90688c8d98e7d9a0c187",
+        artifact = "edu.wpi.first.cscore:cscore-java:2022.3.1",
+        artifact_sha256 = "2b4e468a4ce9e5732c1d86daa0b8d7c0a0fb300a1e6f7db4efc9bb387ec53440",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
         name = "edu_wpi_first_cameraserver_cameraserver_java",
-        artifact = "edu.wpi.first.cameraserver:cameraserver-java:2022.1.1",
-        artifact_sha256 = "99427cbfd43c933608c7b243509f3f7ad43872fa0057defcadbc09d8b4bdfb46",
+        artifact = "edu.wpi.first.cameraserver:cameraserver-java:2022.3.1",
+        artifact_sha256 = "fcef0d9be9915292fa5d6666560922cd091b2a337b96c6b56faf0602ad99a1e8",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
         name = "edu_wpi_first_wpilibj_wpilibj_java",
-        artifact = "edu.wpi.first.wpilibj:wpilibj-java:2022.1.1",
-        artifact_sha256 = "27b8d98abffcaca0f493cd5bda9a1b4ab64e8fceb513b2241aab08d961951179",
+        artifact = "edu.wpi.first.wpilibj:wpilibj-java:2022.3.1",
+        artifact_sha256 = "4f98ee6970c2ec95b262b8908ed7cd7e7706de5376d3e9ff90ccb9c5ed2f46ac",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
         name = "edu_wpi_first_wpilibnewcommands_wpilibnewcommands_java",
-        artifact = "edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java:2022.1.1",
-        artifact_sha256 = "d87aab4d067dbb9c06203667bb7a8c9d658d9aa731c91370446f57a75335ffff",
+        artifact = "edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java:2022.3.1",
+        artifact_sha256 = "78ece93a3254ddff41d664d0a3757c7887455c0fe9a609b7c8289518ddcce9d7",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
         name = "edu_wpi_first_wpiliboldcommands_wpiliboldcommands_java",
-        artifact = "edu.wpi.first.wpilibOldCommands:wpilibOldCommands-java:2022.1.1",
-        artifact_sha256 = "a07ecd41b13bff0649a0feb30c9f62694145cc222ee1cb2c8cc57bca2b6bb0cc",
+        artifact = "edu.wpi.first.wpilibOldCommands:wpilibOldCommands-java:2022.3.1",
+        artifact_sha256 = "0d827fd744ea6885ce6c80e7f717b7bc5276152c4c073019b2194208d3bdbdd8",
+        server_urls = ["https://frcmaven.wpi.edu/release"],
+    )
+    jvm_maven_import_external(
+        name = "edu_wpi_first_fieldimages_fieldimages_java",
+        artifact = "edu.wpi.first.fieldImages:fieldImages-java:2022.3.1",
+        artifact_sha256 = "8ab0fe2245f56c4e440c31996c772173c2b0530c9962d2a470c981601351b490",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
         name = "edu_wpi_first_shuffleboard_api",
-        artifact = "edu.wpi.first.shuffleboard:api:2022.1.1",
-        artifact_sha256 = "889c805d97a6be839e95ad21eb113621d3f8d24d9b73dcefaee00b492a507c98",
+        artifact = "edu.wpi.first.shuffleboard:api:2022.3.1",
+        artifact_sha256 = "94d313fb326029cf31ca9a04df8d02371e43156af9dda918c2f7660efd75ae5e",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
 

@@ -1,0 +1,7 @@
+java_import(
+    name = "fieldImages",
+    jars = ["@edu_wpi_first_fieldimages_fieldimages_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+    ],
+)

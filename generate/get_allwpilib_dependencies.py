@@ -44,8 +44,11 @@ def _default_embedded_platforms():
 
 
 def _default_all_platforms():
-    return [
-    ] + _make_all_native_platforms(_default_native_shared_platforms()) + _make_all_native_platforms(_default_embedded_platforms())
+    return (
+        []
+        + _make_all_native_platforms(_default_native_shared_platforms())
+        + _make_all_native_platforms(_default_embedded_platforms())
+    )
 
 
 def _default_java_tools_platforms():
@@ -122,9 +125,12 @@ def _executable_tool(
         lower_target_name=lower_target_name,
     )
 
-def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False, version=None):
+
+def get_allwpilib_dependencies(
+    use_local_opencv=False, use_local_ni=False, version=None
+):
     year = "2022"
-    version = f"{year}.1.1"
+    version = f"{year}.3.1"
     opencv_version = None  # "3.4.7-4"
     ni_version = None  # ""
 
@@ -153,9 +159,7 @@ def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False, versi
     # _cc_dependency(group, "wpinet", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(group, "wpimath", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(group, "hal", has_jni=True, dependencies=["wpiutil-cpp", "ni"])
-    _cc_dependency(
-        group, "ntcore", has_jni=True, dependencies=["wpiutil-cpp"]
-    )
+    _cc_dependency(group, "ntcore", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(
         group,
         "cscore",
@@ -197,7 +201,21 @@ def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False, versi
             "wpilibc-cpp",
         ],
     )
-    _cc_dependency(group, "wpilibOldCommands", has_jni=False, dependencies=["wpiutil-cpp", "wpimath-cpp", "cscore-cpp", "ntcore-cpp", "hal-cpp", "cameraserver-cpp", "opencv-cpp", "wpilibc-cpp"])
+    _cc_dependency(
+        group,
+        "wpilibOldCommands",
+        has_jni=False,
+        dependencies=[
+            "wpiutil-cpp",
+            "wpimath-cpp",
+            "cscore-cpp",
+            "ntcore-cpp",
+            "hal-cpp",
+            "cameraserver-cpp",
+            "opencv-cpp",
+            "wpilibc-cpp",
+        ],
+    )
 
     _java_dependency(
         group,
@@ -285,9 +303,27 @@ def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False, versi
             "wpilibj-java",
         ],
     )
-    _java_dependency(group, "wpilibOldCommands", dependencies=["wpiutil-cpp", "wpiutil-java", "wpimath-cpp", "wpimath-java", "cscore-cpp", "cscore-java", "ntcore-cpp", "ntcore-java", "hal-cpp", "hal-java", "cameraserver-java", "opencv-cpp", "wpilibj-java"])
+    _java_dependency(
+        group,
+        "wpilibOldCommands",
+        dependencies=[
+            "wpiutil-cpp",
+            "wpiutil-java",
+            "wpimath-cpp",
+            "wpimath-java",
+            "cscore-cpp",
+            "cscore-java",
+            "ntcore-cpp",
+            "ntcore-java",
+            "hal-cpp",
+            "hal-java",
+            "cameraserver-java",
+            "opencv-cpp",
+            "wpilibj-java",
+        ],
+    )
 
-    # _java_dependency(group, "fieldImages", dependencies=[])
+    _java_dependency(group, "fieldImages", dependencies=[])
 
     _halsim_dependency(
         group, "halsim_ds_socket", dependencies=["hal-cpp", "wpiutil-cpp"]

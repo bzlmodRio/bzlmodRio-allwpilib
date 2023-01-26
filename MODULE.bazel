@@ -1,6 +1,6 @@
 module(
     name = "bzlmodrio-allwpilib",
-    version = "2022.1.1",
+    version = "2022.3.1",
     compatibility_level = 2022,
 )
 
@@ -400,6 +400,7 @@ use_repo(
     setup_bzlmodrio_allwpilib_java_dependencies,
     "edu_wpi_first_cameraserver_cameraserver_java",
     "edu_wpi_first_cscore_cscore_java",
+    "edu_wpi_first_fieldimages_fieldimages_java",
     "edu_wpi_first_hal_hal_java",
     "edu_wpi_first_ntcore_ntcore_java",
     "edu_wpi_first_shuffleboard_api",
