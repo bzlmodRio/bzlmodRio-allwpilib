@@ -1,0 +1,38 @@
+alias(
+    name = "hal",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
+        "@bzlmodrio-ni//libraries/cpp/ni:shared",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/hal:shared",
+    ],
+)
+
+cc_library(
+    name = "static",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+        "@bzlmodrio-ni//libraries/cpp/ni:shared",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/hal:static",
+    ],
+)
+
+cc_library(
+    name = "jni",
+    visibility = ["//visibility:public"],
+    deps = [
+        ":hal",
+        "@bzlmodrio-allwpilib//private/cpp/hal:jni",
+    ],
+)

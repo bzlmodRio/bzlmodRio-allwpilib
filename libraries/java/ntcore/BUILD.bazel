@@ -1,0 +1,10 @@
+java_import(
+    name = "ntcore",
+    jars = ["@edu_wpi_first_ntcore_ntcore_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/ntcore:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/wpiutil",
+    ],
+)

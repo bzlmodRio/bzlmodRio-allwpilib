@@ -1,0 +1,37 @@
+alias(
+    name = "halsim_ws_server",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    target_compatible_with = select({
+        "@rules_roborio_toolchain//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:shared",
+    ],
+)
+
+cc_library(
+    name = "static",
+    linkstatic = 1,
+    target_compatible_with = select({
+        "@rules_roborio_toolchain//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/hal:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:static",
+    ],
+)

@@ -1,0 +1,7 @@
+java_import(
+    name = "shuffleboard-api",
+    jars = ["@edu_wpi_first_shuffleboard_api//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+    ],
+)

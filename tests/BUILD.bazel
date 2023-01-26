@@ -1,0 +1,42 @@
+# alias(
+#     name = "Glass",
+#     actual = "@bzlmodrio-allwpilib//libraries/tools/glass",
+#     tags = ["no-roborio"],
+# )
+# 
+# alias(
+#     name = "OutlineViewer",
+#     actual = "@bzlmodrio-allwpilib//libraries/tools/outlineviewer",
+#     tags = ["no-roborio"],
+# )
+# 
+# alias(
+#     name = "SysId",
+#     actual = "@bzlmodrio-allwpilib//libraries/tools/sysid",
+#     tags = ["no-roborio"],
+# )
+# 
+# alias(
+#     name = "SmartDashboard",
+#     actual = "@bzlmodrio-allwpilib//libraries/tools/SmartDashboard",
+#     tags = ["no-roborio"],
+# )
+# 
+# alias(
+#     name = "PathWeaver",
+#     actual = "@bzlmodrio-allwpilib//libraries/tools/PathWeaver",
+#     tags = ["no-roborio"],
+# )
+# 
+# alias(
+#     name = "RobotBuilder",
+#     actual = "@bzlmodrio-allwpilib//libraries/tools/RobotBuilder",
+#     tags = ["no-roborio"],
+# )
+# 
+# alias(
+#     name = "shuffleboard",
+#     actual = "@bzlmodrio-allwpilib//libraries/tools/shuffleboard",
+#     tags = ["no-roborio"],
+# )
+# 

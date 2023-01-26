@@ -1,0 +1,12 @@
+java_import(
+    name = "cscore",
+    jars = ["@edu_wpi_first_cscore_cscore_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/cscore:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/wpiutil",
+        "@bzlmodrio-opencv//libraries/cpp/opencv:jni",
+        "@bzlmodrio-opencv//libraries/java/opencv",
+    ],
+)

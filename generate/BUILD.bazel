@@ -1,0 +1,28 @@
+py_library(
+    name = "get_allwpilib_dependencies",
+    srcs = ["get_allwpilib_dependencies.py"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-gentool//bazelrio_gentool",
+        "@bzlmodrio-ni-gentool//:get_ni_dependencies",
+        "@bzlmodrio-opencv-gentool//:get_opencv_dependencies",
+    ],
+)
+
+py_binary(
+    name = "generate",
+    srcs = ["generate.py"],
+    deps = [
+        ":get_allwpilib_dependencies",
+        "@bzlmodrio-gentool//bazelrio_gentool",
+    ],
+)
+
+py_binary(
+    name = "publish",
+    srcs = ["publish.py"],
+    deps = [
+        ":get_allwpilib_dependencies",
+        "@bzlmodrio-gentool//bazelrio_gentool",
+    ],
+)

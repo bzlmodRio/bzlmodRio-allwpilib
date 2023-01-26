@@ -1,0 +1,36 @@
+alias(
+    name = "ntcore",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/ntcore:shared",
+    ],
+)
+
+cc_library(
+    name = "static",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/ntcore:static",
+    ],
+)
+
+cc_library(
+    name = "jni",
+    visibility = ["//visibility:public"],
+    deps = [
+        ":ntcore",
+        "@bzlmodrio-allwpilib//private/cpp/ntcore:jni",
+    ],
+)

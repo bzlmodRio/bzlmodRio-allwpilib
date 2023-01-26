@@ -1,0 +1,36 @@
+alias(
+    name = "wpimath",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/wpimath:shared",
+    ],
+)
+
+cc_library(
+    name = "static",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/wpimath:static",
+    ],
+)
+
+cc_library(
+    name = "jni",
+    visibility = ["//visibility:public"],
+    deps = [
+        ":wpimath",
+        "@bzlmodrio-allwpilib//private/cpp/wpimath:jni",
+    ],
+)

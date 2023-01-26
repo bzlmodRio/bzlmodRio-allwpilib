@@ -1,0 +1,10 @@
+java_import(
+    name = "hal",
+    jars = ["@edu_wpi_first_hal_hal_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/hal:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/wpiutil",
+    ],
+)

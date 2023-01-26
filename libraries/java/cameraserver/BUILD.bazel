@@ -1,0 +1,14 @@
+java_import(
+    name = "cameraserver",
+    jars = ["@edu_wpi_first_cameraserver_cameraserver_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/cscore:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/ntcore:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/cscore",
+        "@bzlmodrio-allwpilib//libraries/java/ntcore",
+        "@bzlmodrio-allwpilib//libraries/java/wpiutil",
+        "@bzlmodrio-opencv//libraries/cpp/opencv:jni",
+    ],
+)

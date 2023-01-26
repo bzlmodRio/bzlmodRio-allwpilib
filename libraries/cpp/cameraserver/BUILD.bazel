@@ -1,0 +1,33 @@
+alias(
+    name = "cameraserver",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
+        "@bzlmodrio-opencv//libraries/cpp/opencv:shared",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared",
+    ],
+)
+
+cc_library(
+    name = "static",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/cscore:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/ntcore:static",
+        "@bzlmodrio-opencv//libraries/cpp/opencv:static",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/cameraserver:static",
+    ],
+)

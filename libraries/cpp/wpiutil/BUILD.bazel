@@ -1,0 +1,34 @@
+alias(
+    name = "wpiutil",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/wpiutil:shared",
+    ],
+)
+
+cc_library(
+    name = "static",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/wpiutil:static",
+    ],
+)
+
+cc_library(
+    name = "jni",
+    visibility = ["//visibility:public"],
+    deps = [
+        ":wpiutil",
+        "@bzlmodrio-allwpilib//private/cpp/wpiutil:jni",
+    ],
+)
