@@ -10,12 +10,12 @@ from bazelrio_gentool.deps.dependency_container import (
 
 def _default_native_shared_platforms():
     return [
+        "linuxarm32",
+        "linuxarm64",
         "linuxx86-64",
-        "osxx86-64",
+        "osxuniversal",
         "windowsx86-64",
-        "windowsx86",
     ]
-    # return ["linuxarm32", "linuxarm64", "linuxx86-64", "osxuniversal", "windowsx86-64"]
 
 
 def _make_native_static_platforms(platforms):
@@ -40,7 +40,7 @@ def _make_all_native_platforms(platforms):
 
 
 def _default_embedded_platforms():
-    return ["linuxathena", "linuxaarch64bionic", "linuxraspbian"]
+    return ["linuxathena"]
 
 
 def _default_all_platforms():
@@ -52,7 +52,7 @@ def _default_all_platforms():
 
 
 def _default_java_tools_platforms():
-    return ["linux64", "mac64", "win64"]
+    return ["linuxarm32", "linuxarm64", "linuxx64", "macx64", "winx64"]
 
 
 def _cc_dependency(group, parent_folder, resources=None, **kwargs):
@@ -126,11 +126,9 @@ def _executable_tool(
     )
 
 
-def get_allwpilib_dependencies(
-    use_local_opencv=False, use_local_ni=False, version=None
-):
-    year = "2022"
-    version = f"{year}.4.1"
+def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False):
+    year = "2023"
+    version = f"{year}.1.1"
     opencv_version = None  # "3.4.7-4"
     ni_version = None  # ""
 
@@ -156,15 +154,20 @@ def get_allwpilib_dependencies(
     group.add_module_dependency(ni_dependency, meta_deps=["ni"])
 
     _cc_dependency(group, "wpiutil", has_jni=True)
-    # _cc_dependency(group, "wpinet", has_jni=True, dependencies=["wpiutil-cpp"])
+    _cc_dependency(group, "wpinet", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(group, "wpimath", has_jni=True, dependencies=["wpiutil-cpp"])
+    _cc_dependency(
+        group, "apriltag", has_jni=True, dependencies=["wpiutil-cpp", "wpimath-cpp"]
+    )
     _cc_dependency(group, "hal", has_jni=True, dependencies=["wpiutil-cpp", "ni"])
-    _cc_dependency(group, "ntcore", has_jni=True, dependencies=["wpiutil-cpp"])
+    _cc_dependency(
+        group, "ntcore", has_jni=True, dependencies=["wpiutil-cpp", "wpinet-cpp"]
+    )
     _cc_dependency(
         group,
         "cscore",
         has_jni=True,
-        dependencies=["wpiutil-cpp", "opencv-cpp"],
+        dependencies=["wpiutil-cpp", "wpinet-cpp", "opencv-cpp"],
     )
     _cc_dependency(
         group,
@@ -201,21 +204,6 @@ def get_allwpilib_dependencies(
             "wpilibc-cpp",
         ],
     )
-    _cc_dependency(
-        group,
-        "wpilibOldCommands",
-        has_jni=False,
-        dependencies=[
-            "wpiutil-cpp",
-            "wpimath-cpp",
-            "cscore-cpp",
-            "ntcore-cpp",
-            "hal-cpp",
-            "cameraserver-cpp",
-            "opencv-cpp",
-            "wpilibc-cpp",
-        ],
-    )
 
     _java_dependency(
         group,
@@ -227,15 +215,16 @@ def get_allwpilib_dependencies(
             ("com.fasterxml.jackson.core:jackson-databind", "2.12.4"),
         ],
     )
-    # _java_dependency(
-    #     group, "wpinet", dependencies=["wpiutil-java", "wpiutil-cpp"]
-    # )
+    _java_dependency(
+        group, "wpinet", dependencies=["wpiutil-java", "wpiutil-cpp", "wpinet-cpp"]
+    )
     _java_dependency(
         group,
         "wpimath",
         dependencies=["wpiutil-java", "wpiutil-cpp", "wpimath-cpp"],
         maven_deps=[("org.ejml:ejml-simple", "0.41")],
     )
+    _java_dependency(group, "apriltag", dependencies=["wpimath-java", "apriltag-cpp"])
     _java_dependency(
         group, "hal", dependencies=["wpiutil-java", "wpiutil-cpp", "hal-cpp"]
     )
@@ -303,27 +292,17 @@ def get_allwpilib_dependencies(
             "wpilibj-java",
         ],
     )
+
     _java_dependency(
         group,
-        "wpilibOldCommands",
-        dependencies=[
-            "wpiutil-cpp",
-            "wpiutil-java",
-            "wpimath-cpp",
-            "wpimath-java",
-            "cscore-cpp",
-            "cscore-java",
-            "ntcore-cpp",
-            "ntcore-java",
-            "hal-cpp",
-            "hal-java",
-            "cameraserver-java",
-            "opencv-cpp",
-            "wpilibj-java",
+        "fieldImages",
+        dependencies=[],
+        maven_deps=[
+            ("com.fasterxml.jackson.core:jackson-annotations", "2.12.4"),
+            ("com.fasterxml.jackson.core:jackson-core", "2.12.4"),
+            ("com.fasterxml.jackson.core:jackson-databind", "2.12.4"),
         ],
     )
-
-    _java_dependency(group, "fieldImages", dependencies=[])
 
     _halsim_dependency(
         group, "halsim_ds_socket", dependencies=["hal-cpp", "wpiutil-cpp"]
@@ -346,11 +325,19 @@ def get_allwpilib_dependencies(
 
     _executable_tool(group, "Glass", lower_target_name=True)
     _executable_tool(group, "OutlineViewer", lower_target_name=True)
-    _executable_tool(group, "SysId")
+    _executable_tool(group, "roboRIOTeamNumberSetter", lower_target_name=True)
+    _executable_tool(group, "DataLogTool", lower_target_name=True)
+    _executable_tool(
+        group,
+        "SysId",
+        lower_target_name=True,
+        native_platforms=["linuxx86-64", "osxuniversal", "windowsx86-64"],
+    )
     _java_tool(
         group,
         "SmartDashboard",
         main_class="edu.wpi.first.smartdashboard.SmartDashboard",
+        native_platforms=["linuxx64", "macx64", "winx64"],
     )
     _java_tool(group, "PathWeaver", main_class="edu.wpi.first.pathweaver.Main")
     _java_tool(
@@ -361,10 +348,16 @@ def get_allwpilib_dependencies(
     )
     _java_tool(
         group,
-        "shuffleboard",
+        "Shuffleboard",
         main_class="edu.wpi.first.shuffleboard.app.Main",
-        group_id="edu.wpi.first.shuffleboard",
-        native_platforms=["linux64", "mac64", "win64"],
+        native_platforms=[
+            "linuxarm32",
+            "linuxarm64",
+            "linuxx64",
+            "macarm64",
+            "macx64",
+            "winx64",
+        ],
     )
 
     return group

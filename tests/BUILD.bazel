@@ -11,6 +11,18 @@ alias(
 )
 
 alias(
+    name = "roboRIOTeamNumberSetter",
+    actual = "@bzlmodrio-allwpilib//libraries/tools/roborioteamnumbersetter",
+    tags = ["no-roborio"],
+)
+
+alias(
+    name = "DataLogTool",
+    actual = "@bzlmodrio-allwpilib//libraries/tools/datalogtool",
+    tags = ["no-roborio"],
+)
+
+alias(
     name = "SysId",
     actual = "@bzlmodrio-allwpilib//libraries/tools/sysid",
     tags = ["no-roborio"],
@@ -35,7 +47,7 @@ alias(
 )
 
 alias(
-    name = "shuffleboard",
-    actual = "@bzlmodrio-allwpilib//libraries/tools/shuffleboard",
+    name = "Shuffleboard",
+    actual = "@bzlmodrio-allwpilib//libraries/tools/Shuffleboard",
     tags = ["no-roborio"],
 )

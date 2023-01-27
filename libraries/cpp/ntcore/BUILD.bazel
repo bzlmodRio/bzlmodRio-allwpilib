@@ -10,6 +10,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/ntcore:shared",
     ],
@@ -21,6 +22,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/ntcore:static",
     ],

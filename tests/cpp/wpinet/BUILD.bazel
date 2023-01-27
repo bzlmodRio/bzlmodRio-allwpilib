@@ -2,7 +2,7 @@ cc_binary(
     name = "main",
     srcs = ["main.cpp"],
     tags = ["no-sandbox"],
-    deps = ["@bzlmodrio-allwpilib//libraries/cpp/wpilibOldCommands"],
+    deps = ["@bzlmodrio-allwpilib//libraries/cpp/wpinet"],
 )
 
 cc_test(
@@ -13,7 +13,7 @@ cc_test(
         "no-sandbox",
     ],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpilibOldCommands",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet",
         "@googletest//:gtest_main",
     ],
 )

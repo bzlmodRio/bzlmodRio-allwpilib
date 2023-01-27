@@ -31,6 +31,8 @@ class BasicTest {
   void commandSetup() {
     CommandScheduler.getInstance().cancelAll();
     CommandScheduler.getInstance().enable();
+    CommandScheduler.getInstance().getActiveButtonLoop().clear();
+    CommandScheduler.getInstance().clearComposedCommands();
     setDSEnabled(true);
   }
 

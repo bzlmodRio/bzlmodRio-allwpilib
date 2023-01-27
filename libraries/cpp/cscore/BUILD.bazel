@@ -10,6 +10,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
         "@bzlmodrio-opencv//libraries/cpp/opencv:shared",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/cscore:shared",
@@ -22,6 +23,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
         "@bzlmodrio-opencv//libraries/cpp/opencv:static",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/cscore:static",

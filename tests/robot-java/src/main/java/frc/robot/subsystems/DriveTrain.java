@@ -57,7 +57,7 @@ public class DriveTrain extends SubsystemBase {
     m_rightEncoder = new Encoder(PortMap.kDrivetrainEncoderRightPortA, PortMap.kDrivetrainEncoderRightPortB);
     m_gyro = new ADXRS450_Gyro();
 
-    m_odometry = new DifferentialDriveOdometry(m_gyro.getRotation2d());
+    m_odometry = new DifferentialDriveOdometry(m_gyro.getRotation2d(), 0, 0);
     m_field = new Field2d();
 
     m_leftEncoder.setDistancePerPulse((4.0 / 12.0 * Math.PI) / 360.0);

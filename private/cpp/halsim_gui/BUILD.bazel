@@ -7,11 +7,13 @@ cc_library(
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
     deps = select({
+        "@rules_bazelrio//conditions:linux_arm64": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_linuxarm64//:shared_libs"],
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_linuxx86-64//:shared_libs"],
-        "@rules_bazelrio//conditions:osx": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_osxx86-64//:shared_libs"],
+        "@rules_bazelrio//conditions:osx": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_osxuniversal//:shared_libs"],
         "@rules_bazelrio//conditions:windows": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86-64//:shared_libs"],
+        "@rules_bazelrio//conditions:linux_arm64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_linuxarm64debug//:shared_libs"],
         "@rules_bazelrio//conditions:linux_x86_64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_linuxx86-64debug//:shared_libs"],
-        "@rules_bazelrio//conditions:osx_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_osxx86-64debug//:shared_libs"],
+        "@rules_bazelrio//conditions:osx_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_osxuniversaldebug//:shared_libs"],
         "@rules_bazelrio//conditions:windows_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86-64debug//:shared_libs"],
     }),
 )
@@ -25,11 +27,13 @@ cc_library(
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
     deps = select({
+        "@rules_bazelrio//conditions:linux_arm64": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_linuxarm64static//:static_libs"],
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_linuxx86-64static//:static_libs"],
-        "@rules_bazelrio//conditions:osx": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_osxx86-64static//:static_libs"],
+        "@rules_bazelrio//conditions:osx": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_osxuniversalstatic//:static_libs"],
         "@rules_bazelrio//conditions:windows": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86-64static//:static_libs"],
+        "@rules_bazelrio//conditions:linux_arm64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_linuxarm64staticdebug//:static_libs"],
         "@rules_bazelrio//conditions:linux_x86_64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_linuxx86-64staticdebug//:static_libs"],
-        "@rules_bazelrio//conditions:osx_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_osxx86-64staticdebug//:static_libs"],
+        "@rules_bazelrio//conditions:osx_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_osxuniversalstaticdebug//:static_libs"],
         "@rules_bazelrio//conditions:windows_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86-64staticdebug//:static_libs"],
     }),
 )

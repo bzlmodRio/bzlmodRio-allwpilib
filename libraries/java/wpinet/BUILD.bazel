@@ -1,0 +1,10 @@
+java_import(
+    name = "wpinet",
+    jars = ["@edu_wpi_first_wpinet_wpinet_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/wpiutil",
+    ],
+)

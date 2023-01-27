@@ -1,0 +1,38 @@
+alias(
+    name = "apriltag",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shared",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/apriltag:shared",
+    ],
+)
+
+cc_library(
+    name = "static",
+    linkstatic = 1,
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
+    ] + [
+        "@bzlmodrio-allwpilib//private/cpp/apriltag:static",
+    ],
+)
+
+cc_library(
+    name = "jni",
+    visibility = ["//visibility:public"],
+    deps = [
+        ":apriltag",
+        "@bzlmodrio-allwpilib//private/cpp/apriltag:jni",
+    ],
+)
