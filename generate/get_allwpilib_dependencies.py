@@ -130,7 +130,7 @@ def get_allwpilib_dependencies(
     use_local_opencv=False, use_local_ni=False, version=None
 ):
     year = "2022"
-    version = f"{year}.3.1"
+    version = f"{year}.4.1"
     opencv_version = None  # "3.4.7-4"
     ni_version = None  # ""
 

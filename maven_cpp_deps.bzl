@@ -63,2511 +63,2511 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-headers.zip",
-        sha256 = "519eaac8a91663b142d811a199fe8abf46a086dbc9f82317887322008473cca1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-headers.zip",
+        sha256 = "942259f211f59ec6e8e72ef5b1991ef4d4084c6cd7bcf52b17d5a22e5377340a",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-sources.zip",
-        sha256 = "2a66e761d025bacdce90337e96a33d11f7a31ded69c4addbfc69e8e1c4b4945a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-sources.zip",
+        sha256 = "3da422182062d828aa0747aff949ecd2702564608982e7af82af07ec0ce0813d",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxx86-64.zip",
-        sha256 = "56cc57f4e0252c122a77843ff244025bb39ad36229104e6a9c6a47a51d913bc7",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxx86-64.zip",
+        sha256 = "17db0ec3133fea1588d90f8f0c8c5a778cc1d8a16c0c667f6a9b0ebc6310cb82",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-osxx86-64.zip",
-        sha256 = "e5481f51dec5fcf2ee912acfd24bcc6705c3e08e4cd38072dda88188329a7b72",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-osxx86-64.zip",
+        sha256 = "82e3d024065b9d3c875d99f1b5e1c0ae2b92a1dca63ff3f514c9015cf2939b1c",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-windowsx86-64.zip",
-        sha256 = "a3c99c0ba61c6f215a3efa37249f21b67c60ee3c051a88796eabf3c91edd6a69",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-windowsx86-64.zip",
+        sha256 = "b7aad4d4562a86a89106f9c28043ed78c785fe8c4715fc9de677eebffa232263",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-windowsx86.zip",
-        sha256 = "0f446540802ac6953850f46120a8a1fe877f8032567bf2e4ea788c73db6fe015",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-windowsx86.zip",
+        sha256 = "9e87b33d1d495ef4a4d9b8b14b110bb1e2b653b40db2af27daa99da6945b8dcd",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxx86-64static.zip",
-        sha256 = "5fbfafc0c6018398f1fb45005d26154595bc4e56287c4c3d2faedd70e4d7f197",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxx86-64static.zip",
+        sha256 = "22989250b9b27e2c337929a0f9383c447b55b67688e43abc417cc3eafd6f5ce9",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-osxx86-64static.zip",
-        sha256 = "919399b4f25f419e4f132b5a3206a71854d8097adcfffb9ff904ec7c1569653b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-osxx86-64static.zip",
+        sha256 = "dea966dcbde121b1d1c1649f395c6d399b5bee5e123c0867e27cc64b4fc881e8",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-windowsx86-64static.zip",
-        sha256 = "3085ed9ae8ae5bcc570f23e47c0679a402d06afc826ac9159c4f89c3d1d9add0",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-windowsx86-64static.zip",
+        sha256 = "7183a6b75856632ab4e50cccdeb14ac0acbb42d0c7544b3225183999659108bf",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-windowsx86static.zip",
-        sha256 = "07c7941bfcd59a79300720737ea3d61857fedb53aa16cd27c621c5f9d4c32c52",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-windowsx86static.zip",
+        sha256 = "331dee8180a62b1d86569c2169d69b952ce87ab3cbadaeb58d4fc26e5fdbbd9a",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "d0ee46eddc323ec35ff7cd3000a15c28beb0246d5325e546abfee1add2bf8098",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "e4db42907b4f8cebec4c92306ba15db9a1b32a5218f706d031a7639acde38491",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-osxx86-64debug.zip",
-        sha256 = "8fee5e8dab433290dc4030819b20ce358a932ecb16605ec1745fb9c39f359782",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-osxx86-64debug.zip",
+        sha256 = "5d6e98dabcc51f732ca5942ccabacabd9e6dc03ebc0b68e61ed733d244883b8b",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "56a441c6acc8e0b250656aba07a04e8698614392ec5791785c96ed1dfb9c73ea",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "22d4fccae97e15952e3f3b75f2dcb8c9ad435965c50041f8cb7baad2b3f78e44",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-windowsx86debug.zip",
-        sha256 = "d1e18a8975000437d871082c9143724f89dec2f806b1280364f5eb0149ea639d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-windowsx86debug.zip",
+        sha256 = "f2f0fafaab1965014cfb93162ea48f4cb4b738beed690daec9259add4832418d",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "ce889b317cdb75b35e486297a1dba250a0f6df4a74f4c7628ab4904d31f77972",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "fba8a5647d575089a642fd69dabde421b8e83b8387bd531609ab897f8530da4e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "08a13e800a321ca1e395985c74aeb4a7cc77e982491c046ed3dc82da0bd7a398",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "b4bca5c7981ac6821a220f1c79b6b2f06efd64fbe380d41e1a062a871749f339",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "81814c564bcc352059f90ebaa9c96abadb8aa5a4208837019ba5b246c5eba5cc",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "86f4a5b6a0aa1d29098065d2ca0242ecc2bf50148bb1cdd7a382122d7a02d56e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "f91fe9fb86c0e236728b28868d53cbd8c0b3f396af8de2d211ff648a4ec3c955",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "77bd0395709a9dc5b323ef85ceb482c943cac51ee7af0142209d5c8c329a9cc2",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxathena",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxathena.zip",
-        sha256 = "9cdbe79da2555a6fa6dd0dbc8fd01d534dd51bdce939627bf0e1881566f1aba7",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxathena.zip",
+        sha256 = "185ed776a5a8de78d817a39a3c6da313623624d5c8beff25e48971efb9705483",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxaarch64bionic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxaarch64bionic.zip",
-        sha256 = "ff1aa832e2072e5bfa2644a7538ff7208761236f4ce73d6b11f67b88bf7f0279",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxaarch64bionic.zip",
+        sha256 = "55956c4d2f3b5e6a4b449be8f059b09cd9ce735f30bc811bd76ae60b4a7b6fda",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxraspbian",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxraspbian.zip",
-        sha256 = "fa8e2b132dfcb5b2d73359bf8b19aaf423819b2fb40acd5824f92b6d0bafc360",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxraspbian.zip",
+        sha256 = "b9625d0533046a39fdabcf5cf83d32e69437b067623e484c32d084c82feddf9b",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxathenastatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxathenastatic.zip",
-        sha256 = "97ffe2f8836392732f3fe361e72dd19634464f07a3b7e89359e50ce8f2f7498d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxathenastatic.zip",
+        sha256 = "3b922c9f433005bd7c9ab51a50d47efd2d4568e7e628be9c5e2bfd04a0c37a93",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxaarch64bionicstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxaarch64bionicstatic.zip",
-        sha256 = "7e4c645b244a64273a68939352c54581ec1ef8bbf98dd9ee49f2599d9a61273a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxaarch64bionicstatic.zip",
+        sha256 = "aaf8f83a3a2c49afe76536e89bad74522862dc9ffb985264fb605c7e834b3691",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxraspbianstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxraspbianstatic.zip",
-        sha256 = "a6a0a2b67b2dd1dec26dcca94a94a0cb0925a39196175e6ee95c4d28839cfbb6",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxraspbianstatic.zip",
+        sha256 = "d6dcfad08a3cd7832dfe158ed01454a3a572d1194418f08c3bf4bef21d30be14",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxathenadebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxathenadebug.zip",
-        sha256 = "0e960495d908badf3b0971419ab2e009382a90530d6b9a73f5a68d0cd37bbddb",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxathenadebug.zip",
+        sha256 = "be9b75b3e2b9154835b7342ff4da4055d338b86c3c1cff165871805e25cc0df0",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxaarch64bionicdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxaarch64bionicdebug.zip",
-        sha256 = "687d8c46dc08be1bf3080b9750af69a5cdcecf0a3701791bc3ecd060dec7a10c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxaarch64bionicdebug.zip",
+        sha256 = "9a89fe83276edb519bb2412322b4ac16f595dd16e69ff8a2335fa1ef971d4e83",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxraspbiandebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxraspbiandebug.zip",
-        sha256 = "a1f8c9d832b583dc9358f9e0fafe0171069b364c21111103cd489fdea7389485",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxraspbiandebug.zip",
+        sha256 = "0f4a83fce4f63e2dcfd752f73d5c51733718fadaf8937d1e64a174b4c7ec0c60",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxathenastaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxathenastaticdebug.zip",
-        sha256 = "64cd16fe30c5be93a090d258c42f1ca2ff3555ecc84343220df4fd8586e781ce",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxathenastaticdebug.zip",
+        sha256 = "8a4fd8c28e2de332b8ece9cf1a7ccc5103191ae4258e409f492b080782bba72a",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxaarch64bionicstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxaarch64bionicstaticdebug.zip",
-        sha256 = "e3f493bbd2e8019ddfa4d87c9ace22986ea2c92bdeb33e5b24683e60823ad675",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxaarch64bionicstaticdebug.zip",
+        sha256 = "0a9c46fae96edfed8b242b572f97d8668d58cbe3abbd8b47487d82afcb7c095b",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxraspbianstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.3.1/wpiutil-cpp-2022.3.1-linuxraspbianstaticdebug.zip",
-        sha256 = "6202c1d7cd8308d68c869258eb62f5412595ffa57220c353d289126c8682f120",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2022.4.1/wpiutil-cpp-2022.4.1-linuxraspbianstaticdebug.zip",
+        sha256 = "d5d7a3c1dd1dcdfb5c43f35a7aabef18f5fcc922e8bacda14c5f88ddb233660e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-headers.zip",
-        sha256 = "1a2165cf8127a2a45cc673517eb0af5e7e92fee377b35e4e83195538a024d65a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-headers.zip",
+        sha256 = "ba1baa5d7d2b206ca7f385d05e50347ae33cbfb226d33650b3a8b5cdadee2361",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-sources.zip",
-        sha256 = "62f04d5f47f42a507864c6c451b27076384041fbac0bcf4fa57b47baf09d8b37",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-sources.zip",
+        sha256 = "653be57f7045b0d295ad1522c151b7ad7c13769269a791ca84a70238b939f597",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxx86-64.zip",
-        sha256 = "aff716f9a6b5d830fe3c90a1ea0e5e8e4ad86fbfc2f4f8d7f9090e1517685c9c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxx86-64.zip",
+        sha256 = "80bb40c420fe3da5aa8c1e07fcae199e4cef97d5903dcef66d5847233a190c63",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-osxx86-64.zip",
-        sha256 = "2dd218696838eb57999a0ce0d8ae4c6969d37a48bbdc0fa26dc8e60fbee6783b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-osxx86-64.zip",
+        sha256 = "c37e0735b12aaab1a95cd5906ad8eeeb2320caffb486b57181585fc8176b46aa",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-windowsx86-64.zip",
-        sha256 = "aa166dabcfdd92e89ffce0aab62b8898d11f8072c456892627a14f18ffed8f73",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-windowsx86-64.zip",
+        sha256 = "66989de51f3624572a3e6edaff9bbcf980076f5d3312022b1e19b5977b7f61f3",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-windowsx86.zip",
-        sha256 = "3851f5f27d9814180c9fb05fad12dd1502c1af677261b71986c514475dd7454f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-windowsx86.zip",
+        sha256 = "dce1b76da96c8fe4835ba6666249a140c590e2cf41898eaf893decb785d7ace1",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxx86-64static.zip",
-        sha256 = "eee5db885c3863f2c1cb49cf4b058c0b2d5e4ee046262d59912143bd8bbfa022",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxx86-64static.zip",
+        sha256 = "797d0a2580314316e9894a004534c86b73863990991585c8596e6ab53d9197bc",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-osxx86-64static.zip",
-        sha256 = "b786242ff0364dd0aa881565c42be10e57a1bc0c1346eedbb054e15f9508d575",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-osxx86-64static.zip",
+        sha256 = "7b92b55f95258da6e00b6b69848648d19f1b262421d8bce0e728f2188b4ec4ac",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-windowsx86-64static.zip",
-        sha256 = "ebb21c86c0d9aae86dec1a697705078dbfe7832e329ac828658b4389f85a5717",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-windowsx86-64static.zip",
+        sha256 = "26a257e1898f754710c8168df80666d47ee0dd350cd0dc6b5212d6d6cf883c96",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-windowsx86static.zip",
-        sha256 = "1b6130f23dda795138395e8b06c47ad177998a9fa3adcdf99d788706fe5c550b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-windowsx86static.zip",
+        sha256 = "fa27d11fba1404b34393a29734df3e41ea27b805b7ccafd5842b64878ff55498",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "db57d8ea3761ca66134a3f401cb3edea1d68e00d1ac2fe2241e8573e5fad8a06",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "380ccfc60e5945babf6d230099262ea61bf147370d61f5144588c4c31c58e027",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-osxx86-64debug.zip",
-        sha256 = "68d9d31c7eb7b03eba8edf2eb1c287c58fa0c8c0ef2e622fe4c62e928e34f5db",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-osxx86-64debug.zip",
+        sha256 = "fa2c8f5f90d11b43cd5e45ab0f098b6752ba1dc4ed66a51aca4ec6b20369a909",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "7adb2d9e659a6a6bdd0ed942d3cba91143ee2db488ca8bf91bc45927569b7f80",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "03b5aba051d278cb1e9cfa95afef7fb73cfa065d21e5ad1d9e87349f640fcb37",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-windowsx86debug.zip",
-        sha256 = "86497f1aa79625ad7098c9a3e4d84d080bdee6e9a59c39b1eb864525e3656e33",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-windowsx86debug.zip",
+        sha256 = "5af5bdb7600af146d8b85ba4c9a9062e7ed77a9a2f8cd1382bd49e7b7cf8b232",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "58780b05c6b71df514adb047296c6ab037ec75994ac1bea78b8812e14db8df1c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "e6cc5856c28324edaab33dc3a85e2417101a14f2072c191209eab90306387b92",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "510b556d57ec6c43495b6306a9ce17c6c4b87bdcbb71c1d1250b6fe5d7ac7d6c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "b12f5ec97d23a5ac570e5a9fab217358ce0cce3d6cf29fe644b77a44e0b57927",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "971224ce33a8a8251162461f976b3fad8ee299b6e07b3494b378bf5996e0ca02",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "3149e263c619d8ca9df3477dd3c0bbb3daf3c72fcb5485383450632e821aff9e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "49cbaf9f2cfa338d9437d69d34f5ca4124df38c55dd3cc6a86d924249c961912",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "e820277356cc67feb93320e01dedea3e3207a32068fccfb5d549beee45f0b695",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxathena",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxathena.zip",
-        sha256 = "316fac1af3cc3932d7364e487f109d31abc37cc2ed950e49d598f044d87d16d0",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxathena.zip",
+        sha256 = "3e5b0dd54681e843f016a7a75d1774784f37163ef21c95b0840389a6c8de16d5",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxaarch64bionic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxaarch64bionic.zip",
-        sha256 = "92f2d0d18f06fdf26201fd99157c8fd49528ad76dff81553ed697d1f28f3cd1f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxaarch64bionic.zip",
+        sha256 = "951c0d63ffdf015ecc19c4eadcfe28abdef111bc94615cc7044a2eb2261c4f1c",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxraspbian",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxraspbian.zip",
-        sha256 = "fd4683a8f9c509fe0d303502b1a23fb5813c9499c9121f4c04564e1888555628",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxraspbian.zip",
+        sha256 = "ebbb47a17c5558670f5991b30593500d34c7c3e8e5d6eda6af9237c34b07ca97",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxathenastatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxathenastatic.zip",
-        sha256 = "e7e32ed9d8fcc3fc069d9a0da68dd3ed9c36b10ef258bc21028cdab89b63edc1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxathenastatic.zip",
+        sha256 = "cee2cffeaf2d865fdb5664fbd50944a28baecce7c76721af2bb53cb698cae47c",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxaarch64bionicstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxaarch64bionicstatic.zip",
-        sha256 = "64e059a47f5d65d83d1a136abffba3684170681a60a5f9315f6ad6c1bfd0c575",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxaarch64bionicstatic.zip",
+        sha256 = "a0f54940a538b7ab9797fc14e2878fcd2f480ce63b6df24d4519b83ecb3481ce",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxraspbianstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxraspbianstatic.zip",
-        sha256 = "d795ee1eebef91e82592cefd6e8baf2c7a8a0c4bdd458d20d47568a192d33afd",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxraspbianstatic.zip",
+        sha256 = "50f7a2ab582054bd48183084fea532a241bd1eedc448b65fd347bee416e2ace0",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxathenadebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxathenadebug.zip",
-        sha256 = "1893c659bbb2b39c8410be24612702e5b216d8177378ef25e98b5740c318d46d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxathenadebug.zip",
+        sha256 = "7337b18a0c7971be4f76e8ffe6675147b625e4e39d5edc3f7e523a5f62f78b9d",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxaarch64bionicdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxaarch64bionicdebug.zip",
-        sha256 = "ff226cf63aba9bfa2a069576c0a6362b96050b8430dca09b339e2800f1fbd838",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxaarch64bionicdebug.zip",
+        sha256 = "a9fe64753a08c2fc9af9e215005b07511ace5a62358a8b1f9590050a23e8bcce",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxraspbiandebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxraspbiandebug.zip",
-        sha256 = "2a162970933126288f685ca29ed9f49b653a8a67926422b9a6a2147d1a0d09bd",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxraspbiandebug.zip",
+        sha256 = "1311c5010f0ff93eaeda34853a0faf59dfafc897b633d1eb7f01766769313a68",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxathenastaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxathenastaticdebug.zip",
-        sha256 = "b102b35c35ad7f5874ed8baf55fe5a06d386d011d9fe2221c0994c7af5d9420c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxathenastaticdebug.zip",
+        sha256 = "f909f8b9eeccc033d90a615562c9f3f5d58a428d9079fce90745b13a3e716160",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxaarch64bionicstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxaarch64bionicstaticdebug.zip",
-        sha256 = "5a5f59da3dab51b85cfbf29f66f4c909e4f0edfbd73d85353bd52d6097322411",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxaarch64bionicstaticdebug.zip",
+        sha256 = "226805ae0b60284e754915e850c8438af40fde6720354c2b29c15abfb543bde8",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxraspbianstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.3.1/wpimath-cpp-2022.3.1-linuxraspbianstaticdebug.zip",
-        sha256 = "efd2f7f2cd47630f963201f42fc332ce1f8957049e779d4ae2964cf253e39a2b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpimath/wpimath-cpp/2022.4.1/wpimath-cpp-2022.4.1-linuxraspbianstaticdebug.zip",
+        sha256 = "b1baebd2e334acacab21aa7b78728d0d97c18a2001bef17f7d5428d6a015799a",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_headers",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-headers.zip",
-        sha256 = "30538817968f6f905008fa3e4b9cb034ab7a896307fedd9568b0df5412941c2d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-headers.zip",
+        sha256 = "c06dfa93a47d2c400f0686c3adaf902e9dd0d7ee810e3406886e07e83ad8a238",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-sources.zip",
-        sha256 = "6ef1b513452a7abb1894af3013623e097e17d7adce9197a956206e903adb8ac7",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-sources.zip",
+        sha256 = "fe5c6b7143d09c9b99d7381d26d6104edced9376dcdb33fed06f0fe1ce8fd99f",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxx86-64.zip",
-        sha256 = "11b477e7e8f398265e9a5cec16f8fdf85dd9ac96aedd4ea43b5088f496061a01",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxx86-64.zip",
+        sha256 = "5d50d46b563b554feb10a6a7a54cce68172008a7a336874d8332ae390e4bbbb5",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-osxx86-64.zip",
-        sha256 = "085445d4df4b17f2284dfac64ed57e1a2de5be9be4ef517f016a75663de6b2de",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-osxx86-64.zip",
+        sha256 = "aef7e14f9e18eb524b747cae10934363b46086e9c4d42d945a132f09d5c6baa8",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-windowsx86-64.zip",
-        sha256 = "2871c88c0d7ebc6d13005d698d641f23653d6de446fb630815470d38adab17b5",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-windowsx86-64.zip",
+        sha256 = "d8a6b469308e63c79df42dfb49eff8aa65530bc99b5e748e955a35be5e9e104e",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-windowsx86.zip",
-        sha256 = "e5c4851ddab8d6eb57934c8e9dc578b812404dac99dda6dd3dd90d53e5c2a048",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-windowsx86.zip",
+        sha256 = "1982d7262ea50540201a3a1946ff204b989a20103a918c917f5e4a557a201690",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxx86-64static.zip",
-        sha256 = "60d1f330888b0529a3605dd8c50d171a8f91ddfd23f5747f2d818a346c8adf94",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxx86-64static.zip",
+        sha256 = "a1fe578b2f65a986c74e394adcecc4c42be06bb86e573bbf9cce99f28034ce10",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-osxx86-64static.zip",
-        sha256 = "1a818074ccd054daa258b1f909e84c7078b8bb4a464e0af4ac4fa0d26f8aeff9",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-osxx86-64static.zip",
+        sha256 = "a267ecbb19164366a5d09d3b6da37f721c68427a30ee47baf487ae58e9200cd8",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-windowsx86-64static.zip",
-        sha256 = "507f520d94cc655abed8beb30c4a8920917877ae60133a632d40fa5f349842e3",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-windowsx86-64static.zip",
+        sha256 = "4f4f7418b3be8743a2f0977a58e8338026b06c01124a194792db6ccfc3438dc9",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-windowsx86static.zip",
-        sha256 = "7866e20f8e072814d41bb65d7e43735aa1571374341ea59eac172d99b848bb58",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-windowsx86static.zip",
+        sha256 = "29c9db1075215756afa9f26d0f548b1ed2429c4686d74fb31080c8dc150b93c3",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "49df8a88e0d8b94babb13d2012119f463cba45d9baf4d1eed3d36c779ae5c29f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "85b6dd44c2ddfe8b375c872cc9b9041a7d633cf28907762dbafbbfa4c26f0f4b",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-osxx86-64debug.zip",
-        sha256 = "c77ed323d42a53d3a1c19862f36840ca838b4b73c427cd18af2c9f87302d4e8c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-osxx86-64debug.zip",
+        sha256 = "5c176cfe937b20f509edec3da3d9a054697540773b913d03eb0db3f438909c50",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "2af4a2909cf500cd9e7509a0110c0c1c734a72640e33bb9bf2aab0ec6fdab484",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "b584960789b436a06741d4a54c9733b89720efa40e77790e9c9a70d3c5c1d91f",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-windowsx86debug.zip",
-        sha256 = "ce815b53fb267c54c053be6cd439c58e94fffbeb3427e82ee3071d6b3d876670",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-windowsx86debug.zip",
+        sha256 = "d5c19113a9b89d42c0c0221bf4b6269892fcc76f6f1febdd1ebd3b07b95ccb3e",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "726ab1892f6ccdf182a173ba24007aac0dab1cca4a09fc58a36319d1df6c06b9",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "7d9c46c7c3b5e1b0ea7b5fcefc4b7c55a9ba5af29396717443adfc63eee19a3c",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "8987d9f55793918604c4647075b9f80038d1c9160ad5e7034e7a94beaafb63b8",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "94dffc4055c76edaee5bc320e07c4309539575139d7b6c5bc316eb517e8e2b2e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "285926cbcc5ea3355dbace475da1f1ba46c47d2bfc7bc365ae592bf20c3cf12e",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "573de99a1058c3f504167dd4cb7b8c77a85b1d919e6e7043ebe0b8e5077bf5ca",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "8a00e222916ff67708557aacdebea7c14370ea01f3010b0ae5a0ff531f504f4a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "1e30dd09d465fe1a47f9e29fc7eb9dc9f4cd0f2638999bb912ca066d97d46b6f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxathena",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxathena.zip",
-        sha256 = "d0cd66dd6d1f15e4ed98dd45cb9d1145f18a627937245bf2a2695ffa5ee21c32",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxathena.zip",
+        sha256 = "dbc000d7305841e5ab09d86b5f2d2cfd5dcd07ad383809eaf3444c02367c93f6",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxaarch64bionic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxaarch64bionic.zip",
-        sha256 = "4c15d7bdf6e395b65eedfca0e01a1a9b66e86e056b992c502eb8a85301bea7c1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxaarch64bionic.zip",
+        sha256 = "138bf34367cf510e9685f49e737a97250a72aa8dfe9940b9a5640af15101101a",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxraspbian",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxraspbian.zip",
-        sha256 = "46bbd8a8e597d22d696ebc7f50f31a1d74e2f77cc56b9a7aa6433613fc93d9cd",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxraspbian.zip",
+        sha256 = "bd32e8060864f66e4eb29f9591f4439b9d69ee94d040e8ef5d1452ce7c2d1937",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxathenastatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxathenastatic.zip",
-        sha256 = "3aa91c3fc731ff4cd0b86a615de54bab108b52fd9045c56520ecccca006b8aa2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxathenastatic.zip",
+        sha256 = "50144baa69de1e29efd69b7ea4fbf6143a323ccef3e63e6466a2ff664b251ea7",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxaarch64bionicstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxaarch64bionicstatic.zip",
-        sha256 = "34afe4e91a53c10ee55aba58caae28a9de20b13bf0a2d76406a5f2d9fa328982",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxaarch64bionicstatic.zip",
+        sha256 = "ec0ddf2a284759eba963b65e1c5511b2de77d1fa8d84c140505d989aa13128ac",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxraspbianstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxraspbianstatic.zip",
-        sha256 = "f796cf29c331977d4853a735a4f66d453f309559de3b87e988756fbfe072f586",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxraspbianstatic.zip",
+        sha256 = "fdeef4ec0f666e80fb1de48cfbd284023cf8ac62df7fbcf7978849ae0b98d007",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxathenadebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxathenadebug.zip",
-        sha256 = "21638a39d3117166c9a2a21a70bb7fa32e531ad8d6011c3223e5bc2b6327321b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxathenadebug.zip",
+        sha256 = "937d167bfefeb362c81738ab5cb2adad06ebbd65d6bb3f4692705051df70dadb",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxaarch64bionicdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxaarch64bionicdebug.zip",
-        sha256 = "8182e67c8419fd13a20dd5cc84f37687e95778d95a84cbe4c82ece8c57f98562",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxaarch64bionicdebug.zip",
+        sha256 = "c28ddc716594e01b345559fa24afbb49a4764830e4131e3136315268f83959a8",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxraspbiandebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxraspbiandebug.zip",
-        sha256 = "cdbe15d3812dca591540b88fe1adb2959279eff3c7c33e02b8fca19c80623544",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxraspbiandebug.zip",
+        sha256 = "f8297f1ba07fdc75aa30a3aa824affa7018941871f4930abdc1b9102aa4ea1e1",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxathenastaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxathenastaticdebug.zip",
-        sha256 = "4edc287ad51e71f7bb211b547fb0dfc6a8253e72e8126eae05fff00c7e26da0f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxathenastaticdebug.zip",
+        sha256 = "d95507fd2bf124281239cef57e75780f7ded72c664663e80dba70783ef517ef3",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxaarch64bionicstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxaarch64bionicstaticdebug.zip",
-        sha256 = "58eca0069bb3e59d942012bb0e184c8d85ad810e3a743c9de1b03dc5a3315585",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxaarch64bionicstaticdebug.zip",
+        sha256 = "1e0cee24a434a0650c0c2f56b8bd387f5943323096edb46e712d5fa20557552e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_hal_hal-cpp_linuxraspbianstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.3.1/hal-cpp-2022.3.1-linuxraspbianstaticdebug.zip",
-        sha256 = "08175b1c0d47b65f0f30b431a575327a100f71dbd018a83fe7deffdd1bad6c68",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2022.4.1/hal-cpp-2022.4.1-linuxraspbianstaticdebug.zip",
+        sha256 = "327c814bf876b7ae7f85afdb39397b92ccc95c5b54701c60f4412b24e8feccd7",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-headers.zip",
-        sha256 = "144431c4aeb28d9fd4ddd44614ca7b6f9fc0b87b8488394175b66d76979beb83",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-headers.zip",
+        sha256 = "8f2327f191227d0bffdf0d41c7362333ede63a97b751c62b06c0ba243fa9ac2a",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-sources.zip",
-        sha256 = "16df84376424a7e94b1944bbed31c62f8289548046a077b9c7e62f43d8350142",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-sources.zip",
+        sha256 = "913519b9aa466584e8f5c7e38fb1297ab3dccbf2744e2e038a602efd2d217486",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxx86-64.zip",
-        sha256 = "af7de76b24702c30504ccd6d92d2265eb5f1402cbf08b418217e8643adca78b5",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxx86-64.zip",
+        sha256 = "b8d59db14bcc353b0f2e48407d4f54d6f7c8949c268a4dbed7ac7222b1b261a8",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-osxx86-64.zip",
-        sha256 = "2d7eaf19f375c98cc37f5f6efd8ea428fd142f4e422233a22db60f452b15a746",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-osxx86-64.zip",
+        sha256 = "545920724653507d075ef1314108d0479d4e863c08f9f72b2b68974c701e9ddd",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-windowsx86-64.zip",
-        sha256 = "60f5aa44a9dbc4465302a3086f4932a48e2e6cf6f06d9e544182395c95982c1b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-windowsx86-64.zip",
+        sha256 = "90753f1c38c0d6eef1654d76d47cf582f19151ff7d16fb77383261b74b3d1adb",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-windowsx86.zip",
-        sha256 = "74a915e8265fd5d99a703e7384736937dfb154e83095d47989ca744f2436b0ea",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-windowsx86.zip",
+        sha256 = "e1b0fb32ce69426f238dc349cafe20072d4da4b664c41935f5119048bdf2aceb",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxx86-64static.zip",
-        sha256 = "d9c337fde542608aa37c407b16f22d28a54f62b5b4d819417d6aa4e4f422975b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxx86-64static.zip",
+        sha256 = "afea5f2d9affdf5209580c83f4daab8b19a959cbc8604b87b6e48dbddfb8c50b",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-osxx86-64static.zip",
-        sha256 = "64bc000d76f5511e74cd48f3fa8eb7859d55b9686e61b2413c04d53bca461f96",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-osxx86-64static.zip",
+        sha256 = "59ea9fe72487798d8f9629efe73b218570b53522f30147e05c8411da966b375b",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-windowsx86-64static.zip",
-        sha256 = "c328e2aa1394addac9863159d920daf48f12a353836853c4cd17dcf131e18f25",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-windowsx86-64static.zip",
+        sha256 = "db05ebf83f09e1bffacbba8b25495039350293d1454553e661430ef76dfda25c",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-windowsx86static.zip",
-        sha256 = "fa1ed16fb061a3b14744d193363e5a3338a0f92ef93bc8b435e77f6a7a5164b1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-windowsx86static.zip",
+        sha256 = "01d216c6292b1a9d9459cb375724004dd58ba49dc207737b1ecfdb2f6c71d43f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "95a4c47352fdb1c7f619d085a3828780c4b6c3ffb0bce3724b6fd92d25fa904e",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "8409ea97e9c2352d5e84b51d74ce3e7ade895cdb5db1185c27f499208a287121",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-osxx86-64debug.zip",
-        sha256 = "5640021011bf18d8e7d7675dce25dc51a900842f4d08db5f563b02efb0b8ef91",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-osxx86-64debug.zip",
+        sha256 = "036f0cdd14d1e16feb9a2a1f6c9a2a7bb1fc539c240b72ef17cdf981f78e6f69",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "81f037df06d74c56d4a5fb89e0862ce89644c4d77a3891c7161816b124a6cd26",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "8b437f684a1cc9106ca11febc251672dbef86a1cc71a1af320e4510348b20d5b",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-windowsx86debug.zip",
-        sha256 = "525bf358f9805cbdc4b0bd5d4ebf9c96c96c2e565dedcb4440c5511a1b1727ac",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-windowsx86debug.zip",
+        sha256 = "1369040b66019412c0f7cbed23c30f4757f95bdd1739f99c7fe151c2fd967e11",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "95624b75b752fca611c8f1f37ab96b603021d3ed02a5123870052983dcf92a6f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "5c0f501838d2deb271b8b0feb7d50c2152d0a8ea984eba89261085e43f651af3",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "bf91674d9f258dda392b63dccc4405316b25f3973cd95249915db19be98eb823",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "5aeb3ad2a768aec5fb4fb8776a826a8273239e22d11aca8cbd719b5035483ca9",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "f0e51490a0c4a06aa12915364d989d68cc38fd2a14edc4c225d3b11fce4eb1eb",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "d1a47374355dd71dc8f4858b0d3393401edb07631138e3c074fff43a6b227b9d",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "d9d0c174d06d5a1121dfbb0f0179ddbf02ea71a148abd6a93e44c0bbee0ba25f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "6a5dc879b2e383d4a14fac34730d15ff358347a22ebd3ac758115981b88a49f9",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxathena",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxathena.zip",
-        sha256 = "e2330da4c4a424416fb4f1cfd670ca55aa86e4ea1f397718f0fcaf013230fc4b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxathena.zip",
+        sha256 = "f8ca79badc438c20ed6d690b5a6c4c4e2d1a2c053c2b2e98ffa9dc0da0b4c9c7",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxaarch64bionic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxaarch64bionic.zip",
-        sha256 = "bd5fd176aa1de17355aec532db4b2dc1c9ca71f2af2e313420a3a2b3af156c5b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxaarch64bionic.zip",
+        sha256 = "5ccd330ce6c07f997783e27c05e6b49c44e8c0810c43ae5d0e63b00222a33bc7",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxraspbian",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxraspbian.zip",
-        sha256 = "2c2faac8563353644fd379d3fc4e4b2ec08ac3901ed1dafd44dc53c0ef8c7667",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxraspbian.zip",
+        sha256 = "3bbc6eac59dfecbda2b9715327b36f76ab1be4819aa62e57281c7439a37948d2",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxathenastatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxathenastatic.zip",
-        sha256 = "ebaf4a815d5bb1c4c4624ff1f437e9c1649b717096f153e8f2923995b93e71ac",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxathenastatic.zip",
+        sha256 = "5ea6da5062a9f1708de66e438f979bfec0c5b436b00ece07048ca414a6ac20d2",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxaarch64bionicstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxaarch64bionicstatic.zip",
-        sha256 = "0d122fcffd79d1549ad1c60dc855165b3e5cd4ed99006d3a046ec5f87bc47237",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxaarch64bionicstatic.zip",
+        sha256 = "feff00c03db7f5ec4a1ac3050b7fb558b2c64cc341b125cc4387615ad4ae6888",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxraspbianstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxraspbianstatic.zip",
-        sha256 = "755ff3a9b6925b2029b8d5e6050749bcb8211b5bd62376c326a66e549cdc5409",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxraspbianstatic.zip",
+        sha256 = "40be230ff611f9f2dfaeda475b747dab475d5c284ce30d1a52744f6dfb5ed695",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxathenadebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxathenadebug.zip",
-        sha256 = "991572fbe617c97d5677fc5d1b0c91cb4b7a90ff24a7320606d3c0b1a9015444",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxathenadebug.zip",
+        sha256 = "0b1e50f0d2ba7d9e75764408be472d6b1508ca84b39854df38ca2abcf8fc6630",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxaarch64bionicdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxaarch64bionicdebug.zip",
-        sha256 = "7e97aba6069eb49c993e256c4268913a536f973149acdb1ea1ce771e79847a5f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxaarch64bionicdebug.zip",
+        sha256 = "7171dedbfecb848755c732605f9f25a90ba3a4801bbc90ab34ad902bb8078881",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxraspbiandebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxraspbiandebug.zip",
-        sha256 = "9b183a590a781ca32e53a9482c07929fbdebc4006b91d52881d8fde065eb3565",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxraspbiandebug.zip",
+        sha256 = "371faa3f85bc4e688ad8cd8b7e7ed68c1d6c47603f54c2f28f9e5a29d16770fd",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxathenastaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxathenastaticdebug.zip",
-        sha256 = "69297219a219fff3e1f8e7a1baeafbcc7bba8271b79b3eddc80e143d2091be4c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxathenastaticdebug.zip",
+        sha256 = "87e83cfddaee4006f5383faf7ee66792d631022fb816830287a7d4bc97bc8ffe",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxaarch64bionicstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxaarch64bionicstaticdebug.zip",
-        sha256 = "d0a19c292b559bd453a0d36445d0c7dd94016046f406968b8e61694f29ed9a2f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxaarch64bionicstaticdebug.zip",
+        sha256 = "c669653b81b2b7b932b1406d58a1025e963ac358a10e25b33574a695a6c86e37",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_linuxraspbianstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.3.1/ntcore-cpp-2022.3.1-linuxraspbianstaticdebug.zip",
-        sha256 = "0e0dfcd61ad6a1a36652be8dfd6a5d726a575ce250961da58e3e0495fc6064ae",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2022.4.1/ntcore-cpp-2022.4.1-linuxraspbianstaticdebug.zip",
+        sha256 = "b1a927c2060ae1ab6e18a54a1afbc01eab56b4dd1bde98c2ce820e64787bc48c",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_headers",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-headers.zip",
-        sha256 = "8dedb7e250ef85dc295af3acfa28dacd50b8e401315f5876efe0bdc7b07e9a6b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-headers.zip",
+        sha256 = "060bebd3adc43066b751df1efa172cf72cb63376567647c993e74ec180f6dbd0",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-sources.zip",
-        sha256 = "8f66f029af1d0b184cadb7ce1ae0d06d35a570765a65e13a1878d12553e01993",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-sources.zip",
+        sha256 = "739fbf928732cb26632023513de830e5e7020bab6dabd48cc4956ac20db8cdff",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxx86-64.zip",
-        sha256 = "26d7e0f89b0a6db8089263906d19b055b27126651513e64a010c4090a52a3e2e",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxx86-64.zip",
+        sha256 = "cde6a69116445679be91c4de45be888ce6e31ee4dbba7b73db47d9c468426afe",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-osxx86-64.zip",
-        sha256 = "fd6fc22e5e64a71128269e87e0ed78905dc6dd7adf242a52b0b8d668d045e4e6",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-osxx86-64.zip",
+        sha256 = "262918fdf626345c43fa3354ee8c6dfdc0dc5172d16c0e81eb19febf776bbc48",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-windowsx86-64.zip",
-        sha256 = "b226bb259ef9bdf8809537da72c5f99e586e8f5b1c841043d52778dba4dbf97c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-windowsx86-64.zip",
+        sha256 = "d10a45d1f359fc272d30a50b578c47b00637e1b505224f6338b1a10aa30c29ea",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-windowsx86.zip",
-        sha256 = "791530a994d9eb6fd9f7e2677874076e1837e45c0937af1b1295bddd71ca18d5",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-windowsx86.zip",
+        sha256 = "8ac91a14ef59e9c1d62518b4aa5938bb80b36b9695ca3908b9f60c5e93d3df10",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxx86-64static.zip",
-        sha256 = "7dcb9949831cdbeff08d2a5fa4978c04cb95684b23dacb2e19bde8c401049279",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxx86-64static.zip",
+        sha256 = "16fc162045cc4abe308fb9f60e91a7fc6f85c88cc8fb2693a0709257491dc1db",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-osxx86-64static.zip",
-        sha256 = "a8ceea0e2afcc07a32ffe5b5311244aa74e94355699f05e597b09bd99670d81f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-osxx86-64static.zip",
+        sha256 = "c5992b1f3eef8278673c5fb644ba74b968b33d23fb6ed13709236e377585f89b",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-windowsx86-64static.zip",
-        sha256 = "09a998ee72499fa54e75d92ab8e7f71c6fba18f7c7ec97b2c225fa5c441cad5d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-windowsx86-64static.zip",
+        sha256 = "4cd5d4401ce481c688a563b4a5cf5720b396d00ec1d53241b21c19676522933a",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-windowsx86static.zip",
-        sha256 = "a83ea711e0dcdaf5fe51e6ea285bf91921f681477abaecd4da6b70b36bcae867",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-windowsx86static.zip",
+        sha256 = "f55cc96eb733da9d08b9e9f95b061f9e60da8e2dfc93f6d60ff31fafd43bb314",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "f9c02e8e9fdc5decf347b7a78e45de71465c42a9041faeedd713a9c8acb9e05a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "0e6bfd819a5fe1d2190b1003afcb3674c8de05ddf5efe396bb7e6b63191a97a9",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-osxx86-64debug.zip",
-        sha256 = "a87fae3656f2ab97482cb174302662e56e80688ff7faadd37100781b98db47fe",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-osxx86-64debug.zip",
+        sha256 = "3ffa750031a9f47315af1947a8d815540d3231f3104ece2135a0120ed1257792",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "17429ea928c90a046bbfce4237466f8733d19a4d8a1a77c1d1e5ab539cb69c24",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "3ba439b0c2a9885ea7c2068ec252033f46f2789f0044aa1a19a816d9efc971b8",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-windowsx86debug.zip",
-        sha256 = "dd3e7342a6a10cfe3c3dc2f8a13a2168127f3f9e53b8f98e126f9f4aef7f6c2d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-windowsx86debug.zip",
+        sha256 = "8cec83c60a04fa41d18bec40ec0e4e2f3dfba3dc402f1698054ede842ed19cb2",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "ad742d63a195ded98fe698cd8505681d314fde5befecb2744788f27d4da8c216",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "12857c8f1ab149267c270474f1ee2ee50f471565c41b3fcf29dd3ec30611f398",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "4c2ec55b537759e3e06337bce26ab109ba8ad70069588a3e30c082e4a6203dd8",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "f708d3f03f8dc7c8f3984962516075960e7c99a54b6a7be78e767f9638b6c8d0",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "ccc7507eee6c5f3804b79a00badead4250396f98b7e3731e6d7b8329bf63c753",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "f031f1eda422e8481e975c0ab7de7adac22f03292fe54a2ca1ebac8e98648bdc",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "9dd0ac5d84d7999edccd3456496cde3d133b2ae8e34fcf2834355a5ab16f0fd6",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "fbb3023a791ce5a57a6fd333c0752f0c5492bba0a57e18c671c30bc5f98f0d22",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxathena",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxathena.zip",
-        sha256 = "2138ac93b6d201233587e9a1012fbc0cda44a7598525f1ae947362e0012d4a52",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxathena.zip",
+        sha256 = "16cc25cfcc27aba00276dcd4354f4180608c6c1d663cba2cb79bc788f19d07b4",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxaarch64bionic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxaarch64bionic.zip",
-        sha256 = "ba35d2fbdd4ceecc86ac0f5ce41444c7151cd0d5c6c25a669e9d5fbbabb406dc",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxaarch64bionic.zip",
+        sha256 = "5c2ba7efad13003688e26da945ef8ead73fbb57417bb26ba0d7c8d006036619e",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxraspbian",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxraspbian.zip",
-        sha256 = "1d5ba0e2cbb5e08fa22c1b15fc6b3cedbd27a5d1be79b568ecb285d9a14cb7b5",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxraspbian.zip",
+        sha256 = "0dea2a266c512ca4e10f3df7458e8dbb8e47d3e6f1f00407fcbd11918809364d",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxathenastatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxathenastatic.zip",
-        sha256 = "c98593fd661d93a8d63e4a34e60c3c19688b552b815177c5178a0b2aaf490d7c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxathenastatic.zip",
+        sha256 = "62cc2d51b71831e70688328bbf68d335f71570fdadc882c52e1bd24f8e590414",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxaarch64bionicstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxaarch64bionicstatic.zip",
-        sha256 = "61c805a23179f5ff2c19dc2a28c46aa2b05b67fd9a016d327b3bce543314cab9",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxaarch64bionicstatic.zip",
+        sha256 = "ca745c1e55bd84ad52c40332b7e9e8ac92ce8c6f49089090d68ed7344f7a5108",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxraspbianstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxraspbianstatic.zip",
-        sha256 = "ba49a8879fc3bf6455b937fd46edab28c85e83113d4c817d903dbc9834e2a323",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxraspbianstatic.zip",
+        sha256 = "d83d32c98f57ce7601b900eba2134d76d8bf1d476e94db44df0cae1408017578",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxathenadebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxathenadebug.zip",
-        sha256 = "b26f6c4369866f367fb5422fdcac83f6c32a739f818dbcb9f9032046ce508620",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxathenadebug.zip",
+        sha256 = "44919869231c09e1cc5f8fe3ba6b576ed0ed089bd3c59d6ecf89bc887f9d2ee0",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxaarch64bionicdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxaarch64bionicdebug.zip",
-        sha256 = "8b9461e94b5b9b30c0a133de555d6baf3a04cd73fded14e3cc4782bafdcbd439",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxaarch64bionicdebug.zip",
+        sha256 = "2e1afb8895d5f2e303092120bd9466c70c6b1e56c640edc1334083842fb6a36d",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxraspbiandebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxraspbiandebug.zip",
-        sha256 = "0723fa0545277343df31fe9d23bb3e26a1eb0f3416086ba5a05796e6f6bc3042",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxraspbiandebug.zip",
+        sha256 = "9ada8e866fe621f08741976dd2adc280b50bcdf7dc9fa6d71ef694ea26fe8b8b",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxathenastaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxathenastaticdebug.zip",
-        sha256 = "f1cb3813f5201fdcc07fe533208408c86c83a8100fbfc7f00a4f91c24364c7d7",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxathenastaticdebug.zip",
+        sha256 = "3b9a737de1a3c910b274130c5be7012d8133082144ca34aaecf07ae57420484a",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxaarch64bionicstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxaarch64bionicstaticdebug.zip",
-        sha256 = "2e6e71b8b405e6be21335e0061af3b0a8072cd31d2c2909e2073b9adeb554c4e",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxaarch64bionicstaticdebug.zip",
+        sha256 = "4bca7e85a296282e7abd9cd2ee258007a85fe38d77eed0f0256ebff5edc67fbb",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxraspbianstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.3.1/cscore-cpp-2022.3.1-linuxraspbianstaticdebug.zip",
-        sha256 = "dd564aba2f2f318999ee1ebdc00b3d70e4add6ad32307b65e784af159d647a24",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2022.4.1/cscore-cpp-2022.4.1-linuxraspbianstaticdebug.zip",
+        sha256 = "07eedf260192ddc954dcdb17e8314dd886b6ef8c02d46120348f411e40fa0153",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-headers.zip",
-        sha256 = "cd5b6fe228e47fbfe5a5afefb421b19f9ca43f616340a0a7588bdf366b7bae82",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-headers.zip",
+        sha256 = "bd2f42c7d5aa1a42fb668a9f084b59db450e378f3bc6b22fc2a4ee3540e450f2",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-sources.zip",
-        sha256 = "cafc35d1109bc449520d12117f9b9b44e01d2e92eb0bf286f7bdd1649ff6b3ca",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-sources.zip",
+        sha256 = "18d940af537c3141df5a8e04a34858e2dc7cffb263a68e8917ad4c59531ae2f1",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxx86-64.zip",
-        sha256 = "baa1b09e3449e44a6d8bb7897ab681d9a4dce0ac02a25bc692bc6ee5bb8f0fbd",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxx86-64.zip",
+        sha256 = "dcd87be0d065fe3567e2829f315351bb7a73d27fe8d709d6f007bf4493ad882a",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-osxx86-64.zip",
-        sha256 = "fee7ca8766d0fcbfebf47ca61e846efde5b65ca337135817f3e68a073cdbbea2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-osxx86-64.zip",
+        sha256 = "12a727d0a12b4a53640a49420dfd9a2ef2249f9b4bae88e624a45e60a64f4078",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-windowsx86-64.zip",
-        sha256 = "ae15e43bff434134ec9fc91b93099a35bd15589ad33c20edcaacb64d42e4aed1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-windowsx86-64.zip",
+        sha256 = "6c713cdc53134deeb93ea73c47e2ddc72b05ed8d0505e1ec910721bc5f0ecf56",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-windowsx86.zip",
-        sha256 = "54933aeb524a8b86eb666da7df1cf6b22f1cb65d5da2da4895383e3cbf28bcb0",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-windowsx86.zip",
+        sha256 = "b071c88839b4ef7abf1d855598ddda67a1c3344cc0cf1f7ff42c33b576e384d1",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxx86-64static.zip",
-        sha256 = "5958825828e28638b0e134c6b715850474d516d550078e7d6b33027545a1d6cf",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxx86-64static.zip",
+        sha256 = "0bb3880fde6b3d2de1611607e4495d84c05ffb09938d0092b548b805ca489960",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-osxx86-64static.zip",
-        sha256 = "106f411e1ad77f9550d0e283b90295df078546094d2bff68afb2ff9aad85d0b0",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-osxx86-64static.zip",
+        sha256 = "c4521bb3b2d9ca5792f88f3fed31cb15e4cef201ff6aa85658d4fc352de49d9f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-windowsx86-64static.zip",
-        sha256 = "28f0c2cb631a262784a45090b5614d487cc0c97dd4f8ac939d8117c5bf9bab36",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-windowsx86-64static.zip",
+        sha256 = "387b554c28b8d9ccd8b8f2c53ab1091f826cb8997ad783ee4b6074f6b3f8ef16",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-windowsx86static.zip",
-        sha256 = "52edf6b8e7772b15fcebde2a5e36953b3cc41c0a7c34ac4789e23f4157c2cf93",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-windowsx86static.zip",
+        sha256 = "ed79f0db888d2707a8958b0d3a74af9f622ab0aa019529928c1ccdeaf0407df6",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "e5c27c7e6af3e59aec25123bf5bac5cde90e03f027b617311ebea79842d18327",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "92cbf2508d1959ed0e7d16f69f20931c9caa314d1971b8a5e6834952191032eb",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-osxx86-64debug.zip",
-        sha256 = "e3f0e6d2a43cb389c3d4f512a15a76322a65cffffc8f00e023a612f24f0cd30b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-osxx86-64debug.zip",
+        sha256 = "11011344a7f6723cce8afea725c8601de9bfd17d4e2f55d66a423810fba69742",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "0b4faa945f93281659416531fcaa86c06da05e506a530d7d2f9bc1da342800f5",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "8e65075a4a4898e3203faae5b67edfc035ebc649d4f3d79ef5867a90deee29b7",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-windowsx86debug.zip",
-        sha256 = "84d6a24de5f2ad2e506b1e0494831b815642e6799f1fb3620a744243ff0a2c45",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-windowsx86debug.zip",
+        sha256 = "1a525ba41264dcf78bd194c40e1f9b7d05a6892d02c82c10e9d1e0854efc9b81",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "894c438ca82d64fe55a614cde6e99c05513576a29b3dcefbcb7ae2a5d634fb6b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "343d40bea5878963bd454f054f5c0b137aca8f468049b6ee921f543646632cd3",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "4f52d9eea9a326f11bd00e336cc265938f547c6135a976ec0ed8f6ff985e23aa",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "b5933a6355811c8583ecad7eced21cb935457645ba92c1be474ef4461b6f5104",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "87e0f9480562d77530ef59c3d818f8cd382a3ccbda011b653694c4a2eca5ecaa",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "dedbd345c87175f883e07ddb1ee50afaad952b0ffcc71cb0820627240dff132b",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "943472aaf1604d1c64c45925dddcf384bd91886a067a4480d91f06a390ae2f71",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "afdc5d5d3f5569c844f6bc8b52ccd215f7d64c4bfafa9db6f4390e7c3299f2d0",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxathena",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxathena.zip",
-        sha256 = "a320c34a5269affe3edacbe21233fad4f8f84f2820a2a0fabeed776b3f234bcf",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxathena.zip",
+        sha256 = "239464512911b974a7e57469e0a78f2463fc4a27876c5ce1e3639150794462d2",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxaarch64bionic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxaarch64bionic.zip",
-        sha256 = "8938e5403edd405afb7a66af9c7fead1d4406b476acd1997f4b5fd2d4182c7af",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxaarch64bionic.zip",
+        sha256 = "448194560db2c22c74d699c3d0f279114bea86d85e102a3853e7cb990a700a56",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxraspbian",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxraspbian.zip",
-        sha256 = "0c4168a9f2c1c75d4acfb7990cbe07f1c9ce9e9cf68041c6791bc9d47bf1223a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxraspbian.zip",
+        sha256 = "8e80c8af959ca6998347804d3613895206ef20ee4bfbb264270589caabfed1d0",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxathenastatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxathenastatic.zip",
-        sha256 = "e312a1705f51e565873d43257779426ea14dfe7a14d49f5c595979ff7d85f603",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxathenastatic.zip",
+        sha256 = "02d89da364948fc98c6de02cdbe675c68e9e5b4846b660bb0920371d929e0d86",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxaarch64bionicstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxaarch64bionicstatic.zip",
-        sha256 = "8ad53d12b438b455bbe515014686305b57fa1829463d10ed084047f6fa7854f2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxaarch64bionicstatic.zip",
+        sha256 = "063cf53cfb34288bc8238d8b8bc41f0ec39efcc0c4c61858479ed9724491bb63",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxraspbianstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxraspbianstatic.zip",
-        sha256 = "b500cf800954fece5108ca7d201de88f73c4398a725ee485b900978e3078a624",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxraspbianstatic.zip",
+        sha256 = "a62574ea8df7c5a902555cc8d51876f850056c6b693277fd42fcdbc0a96aa7b9",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxathenadebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxathenadebug.zip",
-        sha256 = "8ffb890b7dc3d922c3e2e554e1159158d2f0270784a9a3e39b59dc243019398f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxathenadebug.zip",
+        sha256 = "4f2ea8d6d9ec9e6f35a9e25d2858bd73d2e13e7bd79b330d75472bc4f7b6a907",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxaarch64bionicdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxaarch64bionicdebug.zip",
-        sha256 = "eb0c60851317240627353083c8be2f4403c99f22e0d78c858d42333dfba93f70",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxaarch64bionicdebug.zip",
+        sha256 = "2643e769edd118b28aa3d550347a9e8bbb6733de0f98416d26a63285dbd73a5f",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxraspbiandebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxraspbiandebug.zip",
-        sha256 = "8de4423093dd8e1b8e58e7b68e4cadfe518593df794cd068096111c447403997",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxraspbiandebug.zip",
+        sha256 = "73f97000c45ee7b14f42c1484bff26e961f975c4f3c846cd96b2524ccd9fc8ca",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxathenastaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxathenastaticdebug.zip",
-        sha256 = "41152da30e5a22a03562797f154c8c051910963550a36bf364ba2d00dc967c33",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxathenastaticdebug.zip",
+        sha256 = "69d867e3a12e46663ca9577da5e86cf5008b4d491e0688e551e729028f70c4bf",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxaarch64bionicstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxaarch64bionicstaticdebug.zip",
-        sha256 = "564df3e69239cae68b6ce5bdfeae8c77f14d812759cb80be6896705932ee9bfd",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxaarch64bionicstaticdebug.zip",
+        sha256 = "86ed9d135a8f3aebda75415657bd18bb65c766bf0a1fb861178f2e35903849f2",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxraspbianstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.3.1/cameraserver-cpp-2022.3.1-linuxraspbianstaticdebug.zip",
-        sha256 = "6cadaa6b30288698e7e2ccfcb6334bf332f79607fe0c4db6c7cc5ecd7ac00157",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2022.4.1/cameraserver-cpp-2022.4.1-linuxraspbianstaticdebug.zip",
+        sha256 = "061291d4b685dee03e81e9e505f7afedd55ba4b6b24c8bc199e52f07bdaeef32",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-headers.zip",
-        sha256 = "08d44dbb083e1fa78cb368f40008dac1ce0657e085efb6e638cf57bed1cc0ccb",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-headers.zip",
+        sha256 = "2bace11347c8ad7676b281eff860bacc2bce343753413d34f41f5a0533164646",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-sources.zip",
-        sha256 = "a40ae7128ff5ef97987e9a210818dd777265083f085b05f20fd377dbf157ef1e",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-sources.zip",
+        sha256 = "9e350fd40baf05fd7a6e0bafcf549e642fad764ac060df26f14d5139f3b5d7ff",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxx86-64.zip",
-        sha256 = "8a40480db72768416d827c053a7345d3148247b76de73518fd5d419c417b6555",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxx86-64.zip",
+        sha256 = "10ec146208a1ebee18b4f97b3a936434482fa527b5f8dc49790c74e085a837c8",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-osxx86-64.zip",
-        sha256 = "ec7d4804ae45676cf4f8aa23c3745b479b15792864dcbfef9c220ae82c92dc00",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-osxx86-64.zip",
+        sha256 = "3df3d3f50814a68eeb3ab054eaaaf6c7f154e5ce99b6c9d888a3a0bb640f1341",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-windowsx86-64.zip",
-        sha256 = "0831a9a74cc5e55ce1485a3e9d58528a0495d01f72297cfaff7da962cbbe645e",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-windowsx86-64.zip",
+        sha256 = "d9bb402c78589ca16fa9a7b052d7f778d78f93050e66ddc076c00b3f8f614c17",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-windowsx86.zip",
-        sha256 = "4b5c60303f8cb2263f01d99318900be0727d28a98a4599cefe57308fb6a1235d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-windowsx86.zip",
+        sha256 = "08acbbc17b1df1e2a8c1312f14f69a42ff82d22fec0a8f82367cbe92858a9aed",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxx86-64static.zip",
-        sha256 = "8635df216d0170daff2750052d8959865660e9c147e183d451f9215b14510b71",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxx86-64static.zip",
+        sha256 = "df0dee2dd280c63e601940f0897f626e1bed05b73a1c71fbf34ccf574786b837",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-osxx86-64static.zip",
-        sha256 = "b00fd2a8dc536ea774113c4a2269ecd6c3dcfd04f7f8255d86219a94e5eaa76f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-osxx86-64static.zip",
+        sha256 = "9009cc501a3b4f49fa5a2ffae93fc04fbf20e9380cfe9f02836aa29aa6a29b3f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-windowsx86-64static.zip",
-        sha256 = "4a252231dd3fa0e8409ba0f2365402f91d2eb64278be56f1fb72e94967ea93f6",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-windowsx86-64static.zip",
+        sha256 = "ffcc5e5cead44f4e54f000140cb18bd9ef6e6fd5188ca0d8b4a0a36c6ced4003",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-windowsx86static.zip",
-        sha256 = "f61c5dd888fe9d69a5e2835ef44d14c7534c9ddc7f730cf44cf93e0e16bb59a1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-windowsx86static.zip",
+        sha256 = "2a5f5a013f54b384c2d95d8fa8591b3db5289534a92d4225f4ca3d2313159b06",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "e2a0ea47ed730d0908cef36098ccf2148ba5916647fc1b342cf008905de8a016",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "43317903d22928ada7adfd2183789cd291fe01fc30c7799d562aeaf3bad880b8",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-osxx86-64debug.zip",
-        sha256 = "315f76eae4d457c498947ac373070af4c23af918911e449051680e9f58917a7a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-osxx86-64debug.zip",
+        sha256 = "5b3608a15363ed8f2b5ac256e19fef44dca6c46981a48357d53421446d116dca",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "b8e92769c3951868c023604506e8293e77491fc714a60ae6e6ebe1f9de48dd06",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "5afc7d321d5aca59a1d88025921055bdc058cd5cbce69ff953da8075175ee56f",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-windowsx86debug.zip",
-        sha256 = "f86f68b418607f83cd7ea306a605497bb1249e379c9ee3166f621352036f2ec1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-windowsx86debug.zip",
+        sha256 = "7613c617f8a539aa2e03b681db0a6319342e8034f3439805e5a517711546a840",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "b747d109be9de20b18649a4c68c3a7db6a69e2b98787316eceb1aee094100f08",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "cc9bbd84872b9c839bf2ed8992eab35ed1e5f762f812d248e8d838ba5fd5a68a",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "098754fc462d05d778690514da430e31cf83d28d0c3a03d8a0b1f6b69731e58d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "f659893573859e62c04dbbab28a0a03db2db90e58b59ca707d05e1d6d916f2ba",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "2a55c686b4ed1856087e4b61b769745f802a345015f8115fcb2cb4e5a676dd0b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "d5bb58d4b16a2d3d693a9ff252c4067cc09386bd78e85ede16c0af9199c0ae67",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "b25f522fe4b1c57e69adc978247a142cb8fbb4e49abf96c88802b81f822be6d7",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "86be7e70d6e532b1f2e1bb46716708347a2ea0a644f5d8ca6a67bf0ce43efd86",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxathena",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxathena.zip",
-        sha256 = "03b59f53190c01df9069541dab1411301885904d5937dad47464ea23254fcc54",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxathena.zip",
+        sha256 = "c54776c48f2e2328467ee0a87b84da5a5170b79e100372071c06af33d1fb24ce",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxaarch64bionic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxaarch64bionic.zip",
-        sha256 = "1beadf25cd504ba4d5e00fe7315aff7a1c3f700d074ddb8b5ad1a225738eaa42",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxaarch64bionic.zip",
+        sha256 = "d6757a135b3611f7c2d27ff4c733cb7a882a70045e47c100475baa3358200a24",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxraspbian",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxraspbian.zip",
-        sha256 = "66298d4852d53a65cfc8aa3de04f65f649893a1f206ea2efcdf9b0fe2e85305a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxraspbian.zip",
+        sha256 = "bcd37ae60adaec3429ef6019f21157f5e5bbaa8e5eed7585f0374708288a3e13",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxathenastatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxathenastatic.zip",
-        sha256 = "29e9c868c92120b811a8815d870f96378102a7d7621daf4551fbe8643e5803ad",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxathenastatic.zip",
+        sha256 = "03ca3b45e7b5bf11f2a328d5b5e2f4137bbcd734752c3bafa1b3e167185cf9ad",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxaarch64bionicstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxaarch64bionicstatic.zip",
-        sha256 = "a622c13bebf26fce9eef25812743ce8c982c484681c2c0d7d4aeb26a51ff3844",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxaarch64bionicstatic.zip",
+        sha256 = "10cf521ee37dc88aaaf5dccf06bae2a5b81bafb3a3be4ecc25122d9eb0f53338",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxraspbianstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxraspbianstatic.zip",
-        sha256 = "d6800678032d72dead85e657533a70d9651a9646631ddfd8205b5c1dd656abc9",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxraspbianstatic.zip",
+        sha256 = "95110e6029ce1327b2be8c11468e56eb3893c620cd73c9139d2768ab2947ba9a",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxathenadebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxathenadebug.zip",
-        sha256 = "c7bce106d2e2c4ac5fd6999db66e52cdf520f5953bff7649f1ebb6659560b3ed",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxathenadebug.zip",
+        sha256 = "e1ef0e727ce348e6c40352b4fe4efedc1ebe136092f3aacfefcf8992c0de813b",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxaarch64bionicdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxaarch64bionicdebug.zip",
-        sha256 = "e31054732175b96ce9756a088d296fe6e09f55c3766e8e9a72e37e01ae312ab4",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxaarch64bionicdebug.zip",
+        sha256 = "353aafd9bc0f14de0d5eb30f3f63e64b322ace9e73e723d274580866e8350825",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxraspbiandebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxraspbiandebug.zip",
-        sha256 = "c80ce5a6e7c2054cdf2938e434988280471e9123a82e3fa16f9f4efb45552d51",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxraspbiandebug.zip",
+        sha256 = "40f342013670ec6f732db3689481fb54a6bb7443ecb3018cf961ed6bdb7daf8a",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxathenastaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxathenastaticdebug.zip",
-        sha256 = "5f4438e968b9c9967a25b92ee835c14ce63c8f96bc2798dd18fab6608e92f49e",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxathenastaticdebug.zip",
+        sha256 = "54cb31d2823de7cc89acaa68b53ea745454bee27542b067fc3d4b28e0ff14c54",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxaarch64bionicstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxaarch64bionicstaticdebug.zip",
-        sha256 = "0cd0ba3936e5f5e7ed642bbfcf7989224047eedb5f797841e8822842601767c9",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxaarch64bionicstaticdebug.zip",
+        sha256 = "920e1225cad13ba9fe4913081d2433906b08ba0beefc28621f7d7e679271cce0",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxraspbianstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.3.1/wpilibc-cpp-2022.3.1-linuxraspbianstaticdebug.zip",
-        sha256 = "dcc7fbb075bd4362001504e7ddc6500cf5539d436049cfcf68f0b22680be2264",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2022.4.1/wpilibc-cpp-2022.4.1-linuxraspbianstaticdebug.zip",
+        sha256 = "3e79e17d1de2f9473c99d739a9aedca7c0d84c8c43e2bec1c50c6e78abe80235",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-headers.zip",
-        sha256 = "e09ac861c660167411cf2bf4e15d69ca2ee28743f50a57326a0a107fff6678f5",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-headers.zip",
+        sha256 = "5de1aebb74722bd6a31ef3d3c89a101062e95ebcf5550d876f8ff51909de3fff",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-sources.zip",
-        sha256 = "e60691c422da5bbabf46269815ca6507df4d038cc5302e4f75728af49d5ced91",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-sources.zip",
+        sha256 = "189c699b31465d20e025b55ca11add92e2f6fc34073d6a87d3d8542037d8282a",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxx86-64.zip",
-        sha256 = "775a0f1fa6669f94e0e0eb748dfc4603501209d9237fc175e10f94234c56b276",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxx86-64.zip",
+        sha256 = "5017c957c7d2217a83c7849bbfe1b59c9e62a2b041f16aeac57a6343c250dcf9",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-osxx86-64.zip",
-        sha256 = "6eeab13703d9470e6c8be8f7e54704f517539a76af51c4be94ab9ceee489dbfa",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-osxx86-64.zip",
+        sha256 = "b0435d76b3ce207766c0d7eb5bf8cdde93716b01405cb5e76d0d275c6eb025d5",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-windowsx86-64.zip",
-        sha256 = "a5aac1d6f953f635696073fc6912946f8a13559cfd3873d92fd226a8aace775a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-windowsx86-64.zip",
+        sha256 = "573e3599ac7e69b9c7c619587516ba8f901bfaeae061655afdd9534a00d780a3",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-windowsx86.zip",
-        sha256 = "e713c7012dda36490bd1c87ed1eafeb9d44119ced4f4b372813d2d66511b7026",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-windowsx86.zip",
+        sha256 = "2145bfab84e7bd2655e2a9adfaf79c59395f1c46803a5b84d921077d946f2f13",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxx86-64static.zip",
-        sha256 = "b44d16cf68ef0a3798b9fc4559335350dcc8a37d8f211c5dc8e951b4da10bbc8",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxx86-64static.zip",
+        sha256 = "22cc59b24118c497875181c8310cb281b4f15f2b8247a19fb98521771059fec6",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-osxx86-64static.zip",
-        sha256 = "2f32558ec744239e7a2a9cda6eba328ff942a833b7fa9884a00fa55b572f3c77",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-osxx86-64static.zip",
+        sha256 = "972b5dab0b6701f8e4a58477f5eefdcc504c7095d96577b6638cc8adfd20fe6c",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-windowsx86-64static.zip",
-        sha256 = "4e576cb44428412c59971c1e40c8fb258776979784cc2086a29ce34e1521a71c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-windowsx86-64static.zip",
+        sha256 = "a7b4ab47d17765da551907b3a1ebf60bc73f30f10a5503f591c2634426bf1b3c",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-windowsx86static.zip",
-        sha256 = "cc27f37ea157c780adf3bdc4fd6c9bbabd8c19fc427b82286fd1ea41fe9b947a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-windowsx86static.zip",
+        sha256 = "59881e1008f527fc6b0b80048b7ebcf51596a7e1b4c82b6050197646c8a989ba",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "566b185b36d6a9ff07e48d62d04ce089836e1214a1b8e7d0231879109de4cb63",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "ee553fac1384737cc3f1a79d50911aedacffb61bdc875ece644bf9df2d0431b2",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-osxx86-64debug.zip",
-        sha256 = "6e5a209d166ac2cc90d26a7e155e79c3c20438775362a465f422fc103f6aa137",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-osxx86-64debug.zip",
+        sha256 = "9676a699442c42052c8b64e05157d82b41e6205eb3660544360c9e1d52e2d0ed",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "a9a6e11351ca580b78a42d1c7040bc2cd5e5c0e5f489fd9b0077558726320407",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "bf0383d8eb25224c71c099c9ca1056fa64e42f73a6316acb4c199b7e0d4bb640",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-windowsx86debug.zip",
-        sha256 = "ff193e963ab229e773f921f2e5ead9b52894ea9d2f0c44d80c61c5d9965dd1c3",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-windowsx86debug.zip",
+        sha256 = "4fedd1fa39e40d536ef022f0a2e817a374d64869bd7448c3d237ef486c67424c",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "58991dd631bdab8393c9895e429a3d6179884e8cb2e33d2eb986616714cfef93",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "051de47f0365ed7bfc5594d8ad270bc3d7c7f42b2c53f5fc39668aba796c31cb",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "f0bf771789bbabbf0dfc88dd136977f48cb026eab342ec88d493e709c70cf492",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "51ef5059327866718a1eee8f9beb2b06ba62a0cd66153cc1602de049a66bdfc6",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "64976fb0013f75185468b8b86b0772b2dca01034a966f2357a72a6d40e09fe93",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "14b04b711f42a0249206a73a524118466fe772b95b9b690eaa1a907e97fdef10",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "e164974c4558e96435c844c892379df664a3390b177e23c526c330f82628a46d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "ad15089ec909a00c9ff58eb56b9c203efe8cad095918f23c9d7edb25e5e1d74e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxathena",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxathena.zip",
-        sha256 = "b7897a83641f8e61be5151683293d7682748e17e8eefc149b2e4df1b7537f0d3",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxathena.zip",
+        sha256 = "ff3879bb6113b6bae374996d1680ca9cf113bff22482bdf3967c9cf107ae2a5f",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxaarch64bionic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxaarch64bionic.zip",
-        sha256 = "04875d61abba2653e798dd60a850213f3b070a55876195e6166bdbb419dfd638",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxaarch64bionic.zip",
+        sha256 = "bf499214f013fd2da2ab01be0f2b62b66dcbf6888105bb837345ad787cae5dff",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxraspbian",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxraspbian.zip",
-        sha256 = "3cbbe74176f440ee506bc8ef386691205c1fdf431adde5fa148faa7adc61af30",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxraspbian.zip",
+        sha256 = "1e162c17eeba6ab744c5fe8567d8e9deda6b6841c48cadcba86db9fc3bbea0d9",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxathenastatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxathenastatic.zip",
-        sha256 = "fd1ef74c0379b0a9d41fa39e480326cfcb63cfe56767eac747f4dd5c8c9deda7",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxathenastatic.zip",
+        sha256 = "2a8fdf7cd6d242b50856ff787dae4824297aa5170bef99cf97e11dbbe459135f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxaarch64bionicstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxaarch64bionicstatic.zip",
-        sha256 = "678adfa05fd48b9632b81e62e8cc34860a96c462805485fb52aab7f8c617d692",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxaarch64bionicstatic.zip",
+        sha256 = "3a2c386d3df60aa612da9b6510f822cd862d9256d053052afbe4a55a79b615f3",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxraspbianstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxraspbianstatic.zip",
-        sha256 = "7ce1a69cc5334ff4fb2c4bac9d80758abe5298927942ad380f98234416d630a8",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxraspbianstatic.zip",
+        sha256 = "21516387dd452e5f434fe53240ddb99b6c4912983af43b461eb566b35064620f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxathenadebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxathenadebug.zip",
-        sha256 = "c07427082a5ad37ff4bba638da6b13613691a12100ad95db10e394da2da89dcf",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxathenadebug.zip",
+        sha256 = "a5b2b421595ff333f4d4fc074ae38f6bb5ee7e69cd4d20b5787cd841bc2113a7",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxaarch64bionicdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxaarch64bionicdebug.zip",
-        sha256 = "9efeae3b66b3ce876f780c5387c0a4f7c5ca8b648135d386c108e2710cee9e33",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxaarch64bionicdebug.zip",
+        sha256 = "c6fff20503a4276b9b536ec3e7c458abe87347d6d09cd7421eb8bf07cf335a93",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxraspbiandebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxraspbiandebug.zip",
-        sha256 = "171730bbc74b4347e45ef6df3243b4180024bd8fab49dc2a12ffbcd872ac1ae2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxraspbiandebug.zip",
+        sha256 = "e0ac931222abe672b65e178e9185a0ea74446d6d4d1521eeda38560fe0d0124f",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxathenastaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxathenastaticdebug.zip",
-        sha256 = "c022a71e44dbe5f91b5f73741d2e3ef59e546e859d4bb93d25543cd9e45c4a95",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxathenastaticdebug.zip",
+        sha256 = "5eb4fc0bcbf48fd16cf9a1d09a6995f1fc650f9587e968deb39d986129a76abd",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxaarch64bionicstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxaarch64bionicstaticdebug.zip",
-        sha256 = "a8e195f42df8fcfc0a4b1b465bc03892ad5283275721daed61f1930fd34e2149",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxaarch64bionicstaticdebug.zip",
+        sha256 = "bb3930424954a2220b2ddd900cf0507865428c1ddc74875f8d413b246d9c912f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxraspbianstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.3.1/wpilibNewCommands-cpp-2022.3.1-linuxraspbianstaticdebug.zip",
-        sha256 = "f053f751522fd061614073bab1e777d92a66a4759b24ae1894df9ad059ab6fb5",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2022.4.1/wpilibNewCommands-cpp-2022.4.1-linuxraspbianstaticdebug.zip",
+        sha256 = "9f486c6843bc9705e0380ed06968426dd7b98e2591c0bc9a58df7aeeddc1df4f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_headers",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-headers.zip",
-        sha256 = "e58b114544eaf08954f390f94752ab250cc04142f10ea36d160b07e750601571",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-headers.zip",
+        sha256 = "e483109a7952eedc04757a9690a5ca4a57c1eea705e2fbd353816a35d6290db4",
         build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-sources.zip",
-        sha256 = "76f6a144ab47ec52b4957c57a0366a91221f0922a5112e1455ecee73eefcb659",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-sources.zip",
+        sha256 = "790dd1a22b3598039d80c6d219fba019b49ddde5412fb661cf719d1cca18c381",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxx86-64.zip",
-        sha256 = "a78d92300ad6e9e188e9a0d8eac7cb27d5dfc3f47351af28dd47b2ea9fa971c2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxx86-64.zip",
+        sha256 = "a1e7f9fd434cefd6baa24e2bb28bf5cdde48bc8f1fe62e880dfca4e9795f4a45",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-osxx86-64.zip",
-        sha256 = "4b69de5a167206af3ae668a29cd5a423d46f8c02eed13df7bf9d1e7bafab7f50",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-osxx86-64.zip",
+        sha256 = "ee0f720c5c8ac28b9a5a2be5af457167519eae800e678a2e852077874504bf87",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-windowsx86-64.zip",
-        sha256 = "4cbb4a0de241d67f5797fff3d87748e11c1beb2034b2ec026b677d067c28d74c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-windowsx86-64.zip",
+        sha256 = "94631a60d9d2a6b8d24a04fc1a87469050b78b0b1cab32ed6c5c7c20d474f6a9",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-windowsx86.zip",
-        sha256 = "faedddbe825c26f969382a6b6c4efda5ca83f54236aef53da2e2136761f70e0b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-windowsx86.zip",
+        sha256 = "06040fc667095a0e44eb6f4b23e0d6301a93ec602df08b006c17f8c15a588760",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxx86-64static.zip",
-        sha256 = "899fab875b68ea42a81676381838d5f8bb4dca9f30f30dec5999621da72ec6bf",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxx86-64static.zip",
+        sha256 = "804cc3b58d5c9a50af813e7d606b660166340837b03b1a7d7eb56f592f52a7d1",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-osxx86-64static.zip",
-        sha256 = "5af4e9bfb789d321f671651ceebc6e0a77fddb162ac8c4f1165247166923b4a3",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-osxx86-64static.zip",
+        sha256 = "e768b9fcb66a004cc9b3c1556b0bcb88695d7354a8145c7a92960c07633163b4",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-windowsx86-64static.zip",
-        sha256 = "b8ee5b3afcb60b674fd6215feafd8853e2538536e5a8513ece64f3351a1fd9fe",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-windowsx86-64static.zip",
+        sha256 = "2475991414fe0b3f4fe6276a4b2c9aff3f2938853400f1039cae3580516ef2e9",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-windowsx86static.zip",
-        sha256 = "1fa65e271a4948df8c9dd56e39b95ec38bbbf028d1a794f4cba9c08c6377725d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-windowsx86static.zip",
+        sha256 = "b0078b4f1a26ca5ee36bf302c18693174c3cb15b94f9315a2a2a57070ab0e86c",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "a3c4a3a6bcd579bc4f32a2c377e28838a6fffcba74a5e88b6302ab53f4e5ea8a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "6cdd6ba30761f2d7cd7e813836a8db49de5eaf41ccea2b650caa99e6a8818583",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-osxx86-64debug.zip",
-        sha256 = "4f934f781ed91a6e1ab9408f2a4b009d75aea846bf259f903f9c61e08dd2ef0f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-osxx86-64debug.zip",
+        sha256 = "a455c8ee8e9bcbc565099ff8ba27ceff40fb7877b7d8ec748ee25e1f7c6450e5",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "e419f83f43da9776d9785addcfd1cc1ebd7caa6de656daed2ba3ce0fccffaac4",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "f962c1233f55c2da3d3bcee729412752cde695f7d681e884ed170930bcdd4a23",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-windowsx86debug.zip",
-        sha256 = "605f9f3b643c88f17bfced5a224a99d82e9c21e0d3710d0c1b9406d9f1128cb1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-windowsx86debug.zip",
+        sha256 = "6e61e5ba022ed27de79fb4dc50f39314ee3fe9f5849d6e27aad7d05710f143d4",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "a7b3e76de9ab3a00f4dfd4c6ab6ecbe5c6e89163574dc01d68501d0e29421ea9",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "88947d9bf8404f7c31f8cb12874907421bd31685f7772fa5fae5491028da2a07",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "43af96fc72f48bb56d3143baaad0aaf2644a3ba3efc2df261026645f733e2ec3",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "92d41408a24d1034d909d57559c7c18d3a485cacc368a5a102fef964128ccada",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "a8b4ce84c030683f8f7a6ed5793c57ff7f334050e8151c4215fc8fec5ec79df7",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "ddead8f3ea7a14edc3f43ab2457402126081d56e99b3c3b17edbdde2aeac325c",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "2d5cb69bcd3d239679070c4e353c3679e09a23c708957302fb1f86197d7ce74d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "20ccbbabca4dc86f6bc89017a7037cfecc1c51e83b7f9767ec9cb7676d6191be",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxathena",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxathena.zip",
-        sha256 = "f9e715c9c66fd6e4e244476cbcfa69c4e7ed99e1b0a9a24ffcc8e66c8a00b4f0",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxathena.zip",
+        sha256 = "e8bf1ff25ab5e2efe2e5b8199bf64c35362e7167aa5ee787d2e1da9da5a2f05e",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxaarch64bionic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxaarch64bionic.zip",
-        sha256 = "0341fe10b9e9922280646e67c6c657a4090d955f693e8b147072af0add3aef06",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxaarch64bionic.zip",
+        sha256 = "9844982f5e873b7b77839d9913d43bdc947ad4782debd8a747082a0e507ac492",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxraspbian",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxraspbian.zip",
-        sha256 = "e0e688eb896c7f9d305c0089a58ef41cafc700721dee8bcea9745582203dd19b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxraspbian.zip",
+        sha256 = "01a7fb8b42c49b7f706906b1d617f800c9cdcf3b5d6405f5e95e705979aab3d2",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxathenastatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxathenastatic.zip",
-        sha256 = "3dedb00896df19f260c8277bb05456661c3c0dabbd0b0bf9a0b270e6c90615f1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxathenastatic.zip",
+        sha256 = "adf51528e460a8d415d860f77eb4897cb3ad3eb4c102b479d386af35d740bfb8",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxaarch64bionicstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxaarch64bionicstatic.zip",
-        sha256 = "bccb3ec925f9be19f01d1fd68cdb72a52b50ebd86bfad873ddbdf85908eabee6",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxaarch64bionicstatic.zip",
+        sha256 = "ceaa5b7961e6eae92ade97a4b22f4730504b8585f37f19ad226c540620bd6db4",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxraspbianstatic",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxraspbianstatic.zip",
-        sha256 = "04b0772278e40deca104fa35af9f35c216ce962a9cc8385dac21d214f278e84d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxraspbianstatic.zip",
+        sha256 = "11b260c65435346ec88b433a01518533940564f2a482b20b51a5f918b1793ab0",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxathenadebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxathenadebug.zip",
-        sha256 = "8e564acf9d1327e6c0671d23eba3bb21c80621a5e4baf508115d79ef573fc677",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxathenadebug.zip",
+        sha256 = "999b394160ac62a0286c99742973ffe383098c116ae0768d64c029c6e0dabf9b",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxaarch64bionicdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxaarch64bionicdebug.zip",
-        sha256 = "5175964ffa80c04c4e56a102a65e1df4885f71b23872137fb262b24ecbb54482",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxaarch64bionicdebug.zip",
+        sha256 = "dfde7546c0f867301317b042b1bc320d37a5f9494906f330c6aa114136514997",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxraspbiandebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxraspbiandebug.zip",
-        sha256 = "e21169559b28447c6fb4767ba701a4dd245e9d3d4657b7c5894a7986d1e6cf71",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxraspbiandebug.zip",
+        sha256 = "59b35b7cae022b1b7246c91632ec1a2a341c0debd8e7505d358fded964eb1dca",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxathenastaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxathenastaticdebug.zip",
-        sha256 = "26109c9945a98f722cd9fef8a1051ece341cb6ea87947802d356de24890352ef",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxathenastaticdebug.zip",
+        sha256 = "4f6d2b62dd7767ef4551502d87b05baa34cd5a25723c297ef92d9869b5c7949b",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxaarch64bionicstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxaarch64bionicstaticdebug.zip",
-        sha256 = "1645f7ff8b7c7e0d79f03a1e1aaf0d8494ad4e5048c70720eda1305bdb70d250",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxaarch64bionicstaticdebug.zip",
+        sha256 = "fa74b32769f5a1d49c7e6de624a82210ee3cb5e2e6b92a75a09a7c351b79cb9d",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_wpiliboldcommands_wpiliboldcommands-cpp_linuxraspbianstaticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.3.1/wpilibOldCommands-cpp-2022.3.1-linuxraspbianstaticdebug.zip",
-        sha256 = "0a8ebcb18e64b0dc29bc956fe924999186cda210f8d827e57480d76eccc0a63d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibOldCommands/wpilibOldCommands-cpp/2022.4.1/wpilibOldCommands-cpp-2022.4.1-linuxraspbianstaticdebug.zip",
+        sha256 = "c28190a90475d4ae0152714fe906c684d9cfb218990a27a445fe6bd93168bad2",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-sources.zip",
-        sha256 = "f1d8fd0e639569bb8e7c0cc22a81965852bdd0e83c0ad1cd87adc1b9acc62b2c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-sources.zip",
+        sha256 = "01e67dd7f97df19f9c8db01c5f471f403be408c24f5460b674517607be92c09e",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-linuxx86-64.zip",
-        sha256 = "6144ae22f597d9ca21ef9309a7c7da3cce95aef629d3a2ac953a20c940939ba1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-linuxx86-64.zip",
+        sha256 = "660b89907fa8c5b7b8f1f6b25d2872695792e4f9fb719de203e3ba087cc46b0b",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-osxx86-64.zip",
-        sha256 = "19347c9919a4b06e0fbddc8cd66e5501d29a4e29a9f352f39d195be8800ec130",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-osxx86-64.zip",
+        sha256 = "18918ecc5613380ca4dcd375c06f690ddd86e0ab4e59b6b5c9e29c6d1b348b62",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-windowsx86-64.zip",
-        sha256 = "e7ec80af722ab3a8c99d6bf393f95e32dd6e09994d07b52190aad9a4c42440a2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-windowsx86-64.zip",
+        sha256 = "cf17a1d23d456293649afdffe0c491a312d917c59112c7b8a039952488e58bdc",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-windowsx86.zip",
-        sha256 = "c29cbdedf3cc86a0ac1ecf92ec35700556bd26bedf8a3cdae05b23f13933b665",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-windowsx86.zip",
+        sha256 = "60c1065be57c0b4473bf7b6e4124fc45bd12764a159888d124b589e74f4988d6",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-linuxx86-64static.zip",
-        sha256 = "92f7b0a955d1eeb3c63202023dda05f9119c0aa598b4e211e99074ae19c08c1f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-linuxx86-64static.zip",
+        sha256 = "c0b9b5669e9c18412277aed7bbe1dd309571eccd6ba2fcebb862b9e3d7881bc5",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-osxx86-64static.zip",
-        sha256 = "6d21749576015131e0b88b39cedaa87b9a67a38867229396c28d84047ca26b98",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-osxx86-64static.zip",
+        sha256 = "b13c39f8bec254d28c5f099faec6c4dbf1421984992260306b44b4ac54f0c21d",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-windowsx86-64static.zip",
-        sha256 = "13d2a664dc97b6fa2fe851febc4a0eb75d91726b3fb285968f1ac98708f892e8",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-windowsx86-64static.zip",
+        sha256 = "3f837c57ed2a83b472daffb874e3c13b0bc81e86bcab2945507e05aebdf719a4",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-windowsx86static.zip",
-        sha256 = "9a319341f0eed274d183fdf2246388e60b988fea3a545bd4f1b8d6ac3cf00ee9",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-windowsx86static.zip",
+        sha256 = "1bbb1548a22ce7f047b7f5d21a4eab5f56b492057a7d12d32145168d65d1cd0c",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "dca7f0c63311273a863b4ed298b5c1f41c73705859f05981a7b97bd179dec93d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "427e6956bd39a756534fd4143938b30cc4e443dc4ca13af666005d7626b3da83",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-osxx86-64debug.zip",
-        sha256 = "b3295364fd371a7256a01e8b3d0c74313ad72706f91c554c2c04bcc8a28a6f38",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-osxx86-64debug.zip",
+        sha256 = "1b382aa584c49ad1813944a74bf57ad594261c91a9f24e82c2abea7311caf6f1",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "33bdd5f3be10f5be72269042bd648ac995f9c50144616b0b892a8715371f0117",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "dfb17b606519609e6375ab6d976f02deac8d2271485620b875be00d09f0e813e",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-windowsx86debug.zip",
-        sha256 = "e6908eb83562ac962596cd8d413915ef05666b4efd75207ade4e2ef6e88fb1c2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-windowsx86debug.zip",
+        sha256 = "dbb08f4157eb57abc2012ea4e2406a37a9a08e30a756428a9865db9e7944ecd3",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "77925f540b92056f98d2b91da9d500399d8ac3820ad7c1133b28b6e8de7ec992",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "baae4b45daf4229247cbc163c34ba080c819c550ae292bd51d997cd309f8e313",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "d3912442a261014688caec858a0821ab8650614cceffc66c92c69f1afef8d35e",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "0dfc8384c279791807a487f91906a372bc96bf9360c57112751169d162dfd0ab",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "dbec05fe555496e7bd9f76185aa5a017f42cedaa468de0d077f34ef8661414e5",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "bbe5df47d4ffd33008d58a542d10977de324e747b2dfb0ff6581bf9c152e36ac",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.3.1/halsim_ds_socket-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "2928cfec59d11cd345d677e1136f8aaeca67577c642075f86321f79976baf5c9",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2022.4.1/halsim_ds_socket-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "2df86c59e798a80cd057ac3975bb77bc0116de6f144cfc853af14b846dbbf66f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-sources.zip",
-        sha256 = "c4bf777464215581d99e208bceb77c0e6daeb7047b0e22dd399904e3b5cf4a58",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-sources.zip",
+        sha256 = "77de77281fe77486ffa0830f7e95ab56f33f95b1297eb3609c94dd879bda6ca7",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-linuxx86-64.zip",
-        sha256 = "182d81197bde187737131802e9df0e4aa32eac6a925e8d9fbddbc29fe107fc3e",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-linuxx86-64.zip",
+        sha256 = "21ce18897aaaf3fafc12581598025073e5034378ddf55cdb094f9d0dfcfccf7e",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-osxx86-64.zip",
-        sha256 = "3dc1ea448b05985882f4bf356d8ba8f34abded52303c62312ee39235e1c9fd5d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-osxx86-64.zip",
+        sha256 = "796d32875d73cee8830e7451f23230c9c4763d3690e62a1329955d88de388c57",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-windowsx86-64.zip",
-        sha256 = "4ff4c97108467f8d08986f6cf64bbd82b4a117e367d04394dcf18286ae95fd80",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-windowsx86-64.zip",
+        sha256 = "bd998732d7c48f2f4a519da107f8a98dfff46e40e18fa6a278e508cc6f8ff803",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-windowsx86.zip",
-        sha256 = "2859ba8b42aee1ebc9cee4841c564840135d9e533a52b9d6b541d1ca6b77aeee",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-windowsx86.zip",
+        sha256 = "80a12eb6406b49abb89aa798e9dbe499957cf464f7db7e8632a9eae091604ad2",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-linuxx86-64static.zip",
-        sha256 = "4e4ae249eec0ecbcae9d81a2374d19ded2d3e49da284d7e6457f12fa467878fe",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-linuxx86-64static.zip",
+        sha256 = "f62682f502ec906b8d837d9281fe2431dd2114cf6e5a44d8eb7f8f6f155cfa97",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-osxx86-64static.zip",
-        sha256 = "b5191d62d6bbf42b56fdcf007b1107b0b8aa981f319091a39475e865257c9e98",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-osxx86-64static.zip",
+        sha256 = "bd554de7846c9e42962734434e10e4bfbe19ef170a5ee27885250f43ae8c2329",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-windowsx86-64static.zip",
-        sha256 = "0e8edf901204d7e54f4898f4949a3fcba6e21f9ba8f7a1142b643a25f8bcc446",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-windowsx86-64static.zip",
+        sha256 = "9efdf860d43a182352248885ffbb09c1834fb0f5403d39dba986bfc661de86f2",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-windowsx86static.zip",
-        sha256 = "565e0b24772cb021293053e313f5fb36cd93983d508a553519981d8c625ccf11",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-windowsx86static.zip",
+        sha256 = "fb0c7b2dabcca28e9325d543d29dc4f808d9fcbcd61a569be8dfed2bc6074a11",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "e46b3465c55effffe5082d9db28f661deff7508f13d67113c9363e8a86a6741d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "eab4c7a350a036ecca59c0d5ebf57031cb35d29de75082287d303dc9f55e75da",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-osxx86-64debug.zip",
-        sha256 = "016d9fe7bc10c018653b6d40e7e8266ccbeef95c741e51befb2363fbba6132f4",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-osxx86-64debug.zip",
+        sha256 = "c958c08c035703f8feb4ee7469b65c62c2bd364a2432545fd7d8514aed358478",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "3d90de01423999eedc8b12e0913563a328bde899e3eccf4307008e683b7840c2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "e986dfc28c6aaeca65d34ab65b04889112193e4bdbecc71efd0e702679d6acc4",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-windowsx86debug.zip",
-        sha256 = "de684223966ea1a20ced3b19afb136a6dc3dc7a339b6d967fa166de661c034ea",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-windowsx86debug.zip",
+        sha256 = "6656db238b8292648e16363a69f6325c3baa75e3c59350234bfee46a05bc5379",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "54bb7291fcbb8b6f2b80cd31df99c57d56fb33e00c57aff3a513bf7fc1e1a452",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "47f5ca541c677e137bcf2eaeb05f0e28cb16038ad5b08f8f86aed2b1a2bcb2f1",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "241d02e4c42e922639e6b6236e70f0eead648c89b62000461f87271673421f8b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "b0c85bc0cdbb730a558c3b5a11f0193a3745208471a71273e2e5317b55e943ea",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "232d96ac6c6515269470fe41087f3b284df39b74cafe5da35fa48fca6198ebc0",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "30914495eded09c61e0741463f91888f000ff33b8f2e3b76592b49f154b89a52",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_gui_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.3.1/halsim_gui-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "28310b65abc4261c6bf60adefad748bcdd3161371434120dadd752441c2440a2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2022.4.1/halsim_gui-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "9ae25e9310b8c2e4ec80e68e10ad051240ae42381ed36756bd250a549d920769",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-sources.zip",
-        sha256 = "dd4c890d83c1420937aa2279d1d6b0f5827b2186fb49064acd626c97f65f9695",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-sources.zip",
+        sha256 = "6bf7401a06adcbc612b82dba0fdd1f5e2793a19cc306871678f8d464dd3fc7d1",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-linuxx86-64.zip",
-        sha256 = "5d868a19aa9141da24b5e7851e537de18012f0cd530d7e3488b062877d64fcae",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-linuxx86-64.zip",
+        sha256 = "ce7db93bff64c2845be334fc2d1ebea5c80550c6dcc13acf524910ef870cf6c7",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-osxx86-64.zip",
-        sha256 = "7de5347216d218bb5ca229a0a974592586f342543911138f0165cfe07bb54200",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-osxx86-64.zip",
+        sha256 = "f2955f6f59dd40f094fdd10020c52817106d6b3d5a059589bfe326c8eaf950fc",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-windowsx86-64.zip",
-        sha256 = "9770c4de069a23c96fec1dbc08cf5fe4af8d71c43be919e57248a2d3aded29e1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-windowsx86-64.zip",
+        sha256 = "f310170d0899b2c6c8359cf2546c474b8a49d5bfc704e051521bb4e6ef2cbf2c",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-windowsx86.zip",
-        sha256 = "98c8a60ff89fadeb152e869eb4094ac3222301070640fffbf28355fee43c7c6d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-windowsx86.zip",
+        sha256 = "753fd8d84b1ef76ec9f8a188f9580a39ba64a3ada7127ff572f3348134bc26f6",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-linuxx86-64static.zip",
-        sha256 = "c5c9914f4d26479a65cc9700b0eafda03653ced8e87e0a3f3ae143ea4843918e",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-linuxx86-64static.zip",
+        sha256 = "3646ead44cf204f8c3491f04437ec7678966325142f0380193fd9cfd50b5b525",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-osxx86-64static.zip",
-        sha256 = "2fe557ed36730855760d1dca0de3d8c5801799feaf1c1bb5df6862b2aeed3fc3",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-osxx86-64static.zip",
+        sha256 = "dc9c4f23abe96a95e343315fbc6614987dffab97b0e945d347f2a6676aef4297",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-windowsx86-64static.zip",
-        sha256 = "2ece2588d4755c31ac9ec95835990b53c88f8ae64d4d133c2d7333d9516b59dc",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-windowsx86-64static.zip",
+        sha256 = "093fefea58e48e7a2af6e8b6bccc7f8bf98a313ff063f32efbb801abb2a049d5",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-windowsx86static.zip",
-        sha256 = "c8ead9f537c5d83568bf7d4e5392384ad0da545da0d36aefabbc51dc3bfa5041",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-windowsx86static.zip",
+        sha256 = "13116f53302190002d12e25fda328e486909306f16aca4877528a3bbb327a589",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "e5ee028a275fef00d5f440fa20750f1329b1b115b68b66d17f2fa7c88be5a879",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "9e0cecf7e42adc331356468635d9838e603a001cb851945a9789410456c6b6fd",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-osxx86-64debug.zip",
-        sha256 = "e2d8e7c31d1ff9a6877c568978bc0b2a5d678645a8bf1a9ba230e66fcbe48af4",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-osxx86-64debug.zip",
+        sha256 = "bcd7ebf19892004097589e0386d774445ca1604ef2920cbe78d06d0470f38eef",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "d88cd5ddce56f842fb3879592042fdd46eb754d47e09334e8c633991d3df7acc",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "513a9c03de913450f4e41e7433cb7febb52b29802521433c30409f3aa95ddc81",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-windowsx86debug.zip",
-        sha256 = "065d7d7076cca553aa663c63e5206ec592282b9554815ac67971d3ac6897245b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-windowsx86debug.zip",
+        sha256 = "32ee4d066dc17e1f94c77dad144cc2ee920276345acfc87bb855d7e973cfcfd6",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "e6b40353e31ee072cbc37d1cf72e5225fc44a86940b8a2dfbbf833ca5cf014fb",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "e1e5473c41f5be36373b7646a862c4efb6386de1230a62c260875bbab89fddd3",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "ca5298b3fd4930aaa55e92d1162bca21e955ccce70709e9c8d1993e09c28c872",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "0708aa19e95cc1acbf92dd61deb355f0ac0f82115122f50106486190de41210e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "f71a6a02b69d59643829c8ba0079a8c3df6ba81cd1347a0e036a909d7bef98a1",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "821381f2a54f24e67a3e56c169d597e7895ca6a94a0177c1dc95c276155224ee",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.3.1/halsim_ws_client-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "178e2083df708adfba785a91fb037388b2b7149ec5292d7b70a7cfc9ecc00308",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2022.4.1/halsim_ws_client-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "44a82667123a54cea917bf8c66576a45cb693be5ba96d785d0e58c541277d36e",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_sources",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-sources.zip",
-        sha256 = "8e4a53e8769b58456a76d1e13e7b4db56c0b615810e65f9cc72a72917cc9e4d7",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-sources.zip",
+        sha256 = "c970a684569e3f424ad6533e36d32b0871893de9951e9fd48fd936d7d12d3f8d",
         build_file_content = cc_library_sources,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-linuxx86-64.zip",
-        sha256 = "7b53fae1648fe6ef693db94c57999dda6b4c8eef8e0969fdc1715a42ef90105d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-linuxx86-64.zip",
+        sha256 = "3e3a434708302cf1b3710eed2b575e6e52b53c041602f9ad0ebf5fd548db068a",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-osxx86-64.zip",
-        sha256 = "638680ce16a2e401cba08afe58218de85aaa5681d70a8a88276e4d9f86409837",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-osxx86-64.zip",
+        sha256 = "22d3c7380acf4ee76aec8385354a5566ff6e1d95177d19435f2370478eaac01c",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-windowsx86-64.zip",
-        sha256 = "2d02091165ef1215861acf028e231eb0d58e7dc322878d3e5d6d10f2bfd6b2ee",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-windowsx86-64.zip",
+        sha256 = "a1e2b3c75e1f12e471e53775416cff084bb1d376055feed05feddab63320d080",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-windowsx86.zip",
-        sha256 = "0726d211100adefc8301441c859e8a3c078ce8e213e6dcccca20c2e435872723",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-windowsx86.zip",
+        sha256 = "3b66035e1ae6bfdedf0eb17ebde6b03a1192624815d02b32fff3585bc908874a",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-linuxx86-64static.zip",
-        sha256 = "42dcdedb842033c6f0780f293b1c3d3d2e935c97418356a2f962ab3f64f20d30",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-linuxx86-64static.zip",
+        sha256 = "d09045b13f635e316ca531b4deb9c528e899423a9451ec7f2230c8aaa1a92c0d",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_osxx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-osxx86-64static.zip",
-        sha256 = "3f2f7ac87668a8dd5ccdede01a0473a5e2b7772a969def929cbe35e1a76c7904",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-osxx86-64static.zip",
+        sha256 = "b3d853554ea657a1ed581bc59b7691d576809908a75744ad1ba413f098b7acd4",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-windowsx86-64static.zip",
-        sha256 = "070bff1fbbe0d837ac856150e81c93744bce0c270568122ca8fef091e39abb92",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-windowsx86-64static.zip",
+        sha256 = "3afcf4d885a373ac84578d8995fd81e7f5448c77c0bcd8ad4ea42b89010c73a4",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_windowsx86static",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-windowsx86static.zip",
-        sha256 = "069f6b39ece2d3793b0158467f1c68ec0a5949067b15fbd451264b03771a383f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-windowsx86static.zip",
+        sha256 = "d662e153b73a111ee5459c7676868689a5c3ea3f4815d47aa7b33bc9a2ff818b",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-linuxx86-64debug.zip",
-        sha256 = "1788bd5b6821764a29a64aaa31cec1220a269fee477cee0063e24d0796ffbea6",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-linuxx86-64debug.zip",
+        sha256 = "4272985338f5c329863ed0c8ae3091f29d4fe8f4be0d0e121bcf3d9bf57ad4f7",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_osxx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-osxx86-64debug.zip",
-        sha256 = "b4905cbfa29eba2411e62bdd7a266a3a6da3349c4356851cd9f97109cc04594d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-osxx86-64debug.zip",
+        sha256 = "ea9bfd0557d1ef04b8b1a0619b314809e4a57c5e657c1ecc29dad1522ed23f73",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-windowsx86-64debug.zip",
-        sha256 = "d0490739f47ab40b0d265c4eaaccfc48bd35a4a190a2e5f7c4e61d9d1f63c64f",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-windowsx86-64debug.zip",
+        sha256 = "f099e9388b1faa4f13ceb7d0b262f5d0bdf3dbe9cedaa94d65f9415bce1814a2",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_windowsx86debug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-windowsx86debug.zip",
-        sha256 = "a234e0b157c4bd05b087b5206453376e8254d4a104d6fff8ae162f1626846502",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-windowsx86debug.zip",
+        sha256 = "06fe0453f3c4ff2c794cd7f919e3e4fd294af80f31a2cd6754077a017e1c70fc",
         build_file_content = cc_library_shared,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-linuxx86-64staticdebug.zip",
-        sha256 = "dd705d2065873e2b4d73db5c4823c59a54cc3c85d6d3a47bcdfd41f765827c90",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-linuxx86-64staticdebug.zip",
+        sha256 = "61422e6015eeef2d048ed8391606a44c2b46fc364807812d013b26ecb1a9b82f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_osxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-osxx86-64staticdebug.zip",
-        sha256 = "3efa73ac60f907d16ca6c71b27bc3538eae252c2a178fca953a98a7b7a45e8ad",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-osxx86-64staticdebug.zip",
+        sha256 = "6184ae7903ac71830339ccca8d51878a09aae0e843fb953f13e16a942f0f96a9",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-windowsx86-64staticdebug.zip",
-        sha256 = "d24874cf8b8817241cb17397eb4c1d7bcaa1b7e8a96627e7437eb25fb90c3877",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-windowsx86-64staticdebug.zip",
+        sha256 = "54abcb78f6e5028dd700f52ead4610330441412d812f9fbff3a8bde8f125065f",
         build_file_content = cc_library_static,
     )
     maybe(
         http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_server_windowsx86staticdebug",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.3.1/halsim_ws_server-2022.3.1-windowsx86staticdebug.zip",
-        sha256 = "09ef635ace28364875d722658dfe053345ef20195272f982b7dfd56f42919565",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2022.4.1/halsim_ws_server-2022.4.1-windowsx86staticdebug.zip",
+        sha256 = "6b1707f9dbecf320d1269609d15672758955675c61feaf638b7736d2fea94c20",
         build_file_content = cc_library_static,
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_smartdashboard_linux64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SmartDashboard/2022.3.1/SmartDashboard-2022.3.1-linux64.jar",
-        sha256 = "3b465c5ab6c7e818a34a7b7290ae47ccf8371ccbc22bc8564c9e548eafed9bea",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SmartDashboard/2022.4.1/SmartDashboard-2022.4.1-linux64.jar",
+        sha256 = "98d5f5224b18de70c8d2007dfc0c1d016d9e6f4096dbdad4855eb39581588d69",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_smartdashboard_mac64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SmartDashboard/2022.3.1/SmartDashboard-2022.3.1-mac64.jar",
-        sha256 = "18d62bcb38dc3a19a3e442469868a61fddd237d98eb677cf601bc789d8f99a72",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SmartDashboard/2022.4.1/SmartDashboard-2022.4.1-mac64.jar",
+        sha256 = "ea5e4f80dfcc188abc3f06463868a450636f67d0be93466381f757f66ad6aa1d",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_smartdashboard_win64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SmartDashboard/2022.3.1/SmartDashboard-2022.3.1-win64.jar",
-        sha256 = "6ff95ee11d0200a2afccf0eaf6baae97d7d9c10daeb5abb4a44b0543ddb427b6",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SmartDashboard/2022.4.1/SmartDashboard-2022.4.1-win64.jar",
+        sha256 = "2b8711273773eb48f93f3762c96cfed7421fbc86ff7bacb5630ae8b00a2f0fee",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_pathweaver_linux64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2022.3.1/PathWeaver-2022.3.1-linux64.jar",
-        sha256 = "721872bc9b8632b3ac81f142130b0bbc0dae92d6412c92bfc0fbca9831820d0c",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2022.4.1/PathWeaver-2022.4.1-linux64.jar",
+        sha256 = "7d879fd19c1cf5f4cea895998cf4213b51865e46effe3d9a46e7492b7ddfb2ae",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_pathweaver_mac64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2022.3.1/PathWeaver-2022.3.1-mac64.jar",
-        sha256 = "8e50b96a70589016bb06959ffbe93ca8730c7fc15ad85a17a7e0f3698527c286",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2022.4.1/PathWeaver-2022.4.1-mac64.jar",
+        sha256 = "1f67ff04ed45347f1e186a2c06e10085b25f6449cd3264257497029c5c3e8944",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_pathweaver_win64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2022.3.1/PathWeaver-2022.3.1-win64.jar",
-        sha256 = "c91eff2453da0aa43c87d65ef11867b59cf0569c0574a1be6c8816be84585687",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2022.4.1/PathWeaver-2022.4.1-win64.jar",
+        sha256 = "51517f6dc96dc1d393ce5b1e591f136670d236b117f7affd2e50a8c8575b60a5",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_robotbuilder",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/RobotBuilder/2022.3.1/RobotBuilder-2022.3.1.jar",
-        sha256 = "90798f631e72021cb923fc48e33a5034c979486ada2dcc3e46f584def30a8982",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/RobotBuilder/2022.4.1/RobotBuilder-2022.4.1.jar",
+        sha256 = "f904d707e787658aeffe0bfea5a2e838eedaa987a1cdfca9abff1ae7d1d8ff4c",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_shuffleboard_shuffleboard_linux64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/shuffleboard/shuffleboard/2022.3.1/shuffleboard-2022.3.1-linux64.jar",
-        sha256 = "bbacdf55546afe376e5502dd42e55f8f3f4261ca198b1d36e28ec40eba7b40a4",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/shuffleboard/shuffleboard/2022.4.1/shuffleboard-2022.4.1-linux64.jar",
+        sha256 = "892837c44981a904daca81cc5b4abc6de981204906026174af41da5db290d6d2",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_shuffleboard_shuffleboard_mac64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/shuffleboard/shuffleboard/2022.3.1/shuffleboard-2022.3.1-mac64.jar",
-        sha256 = "1e55b4687f4d2a658ec9e16b8525a6ac10a7f2d61dc41b9875f93ae5bd2c1246",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/shuffleboard/shuffleboard/2022.4.1/shuffleboard-2022.4.1-mac64.jar",
+        sha256 = "b1063c70dec55b9e21d0c3b290a32f6559e2929aa3bb4786a58e495b47802cce",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_shuffleboard_shuffleboard_win64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/shuffleboard/shuffleboard/2022.3.1/shuffleboard-2022.3.1-win64.jar",
-        sha256 = "15764849f38f86dac4e5627d463c5e864a366f117cf24fcccd5953fdc45353d4",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/shuffleboard/shuffleboard/2022.4.1/shuffleboard-2022.4.1-win64.jar",
+        sha256 = "292bf0d0f1c7c1a658565a9386e7a0847d6e38f911ee2ff72a1a6d6602f433f6",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_glass_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/Glass/2022.3.1/Glass-2022.3.1-linuxx86-64.zip",
-        sha256 = "9117a6652981e2081ff4b8c9c92a04c8d627a06138e5c423abe4baf14f95c4ef",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/Glass/2022.4.1/Glass-2022.4.1-linuxx86-64.zip",
+        sha256 = "a59fe5318897fdee118f2c40c628a7eee5f0318d34aa18f9535020a683eda013",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_glass_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/Glass/2022.3.1/Glass-2022.3.1-osxx86-64.zip",
-        sha256 = "d5d6ea6137865e6ce5237c3cae05a21b48e300528c8a6fc29e81856f5d45e045",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/Glass/2022.4.1/Glass-2022.4.1-osxx86-64.zip",
+        sha256 = "377b06c5efa708923f036292b1eb9e033557deb86771a5df63db6719bb102216",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_glass_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/Glass/2022.3.1/Glass-2022.3.1-windowsx86-64.zip",
-        sha256 = "a96ed69635ded9db44e38b2548bcae22bd2740a127ac423dc6e183802fa28d1d",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/Glass/2022.4.1/Glass-2022.4.1-windowsx86-64.zip",
+        sha256 = "1d9e0bb42a8f6cc1743acde1ee184de8423f544701ead85a543c29f890c364df",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_glass_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/Glass/2022.3.1/Glass-2022.3.1-windowsx86.zip",
-        sha256 = "3da56f75e17ab1d60f8b7680de1f6a5321dd95201a263766e68aaa421c19783a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/Glass/2022.4.1/Glass-2022.4.1-windowsx86.zip",
+        sha256 = "fe3a7784a443e1caab72b6c77f9e278b1d69a9b01b6c20a2cf9780f1c2ea67a6",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_outlineviewer_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/OutlineViewer/2022.3.1/OutlineViewer-2022.3.1-linuxx86-64.zip",
-        sha256 = "8d45cfa3165cab3fef4230cf6a4838d2ed88e155995e6194f326ae44da776d3a",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/OutlineViewer/2022.4.1/OutlineViewer-2022.4.1-linuxx86-64.zip",
+        sha256 = "035548b2f658ca4eab6622c7a1788c986a13d16d8a8d71b61ca9f2bdcdfce0f0",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_outlineviewer_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/OutlineViewer/2022.3.1/OutlineViewer-2022.3.1-osxx86-64.zip",
-        sha256 = "e9ed22b76a3968a7d5a03dfbf0548a31e4f13bab55e3ffdb3cab0aa7ab04c7b2",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/OutlineViewer/2022.4.1/OutlineViewer-2022.4.1-osxx86-64.zip",
+        sha256 = "fac328f554dce264b4a11077fc7081910e29f2cb319464d72af5e9c739122d4a",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_outlineviewer_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/OutlineViewer/2022.3.1/OutlineViewer-2022.3.1-windowsx86-64.zip",
-        sha256 = "12c6f2e09ee6df47c03f7810a0100626636634ad47043acb4cda8c5dca649843",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/OutlineViewer/2022.4.1/OutlineViewer-2022.4.1-windowsx86-64.zip",
+        sha256 = "9f1c1261fcd00b8b5bcabb4d70727cb9686a0a10fc96f79d0672911f3ce81c19",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_outlineviewer_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/OutlineViewer/2022.3.1/OutlineViewer-2022.3.1-windowsx86.zip",
-        sha256 = "303584938894d3ae82e70525e1ede28f8f8ba9582ba390bbe947f10fa6223044",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/OutlineViewer/2022.4.1/OutlineViewer-2022.4.1-windowsx86.zip",
+        sha256 = "aaf97f297961106a63a12db35aa2b04a14fb880a01b606fff65cad0a7b7a4be3",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_sysid_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SysId/2022.3.1/SysId-2022.3.1-linuxx86-64.zip",
-        sha256 = "cd8fec2af0c641434557c4d962f27c2f3a85984750dddd36015a79e0f302474b",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SysId/2022.4.1/SysId-2022.4.1-linuxx86-64.zip",
+        sha256 = "64e2e9753a7d56ccb51c6e318ec90130a987756316f7164047341a75aac869ea",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_sysid_osxx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SysId/2022.3.1/SysId-2022.3.1-osxx86-64.zip",
-        sha256 = "8ded568e703e3450bc84e7dc95002a7fdf4897b8d02546a8c2a4aadc0be22e19",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SysId/2022.4.1/SysId-2022.4.1-osxx86-64.zip",
+        sha256 = "afa69b29c14748e4a048b0a7850a71118847882a3447b566e0b4232b9308944f",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_sysid_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SysId/2022.3.1/SysId-2022.3.1-windowsx86-64.zip",
-        sha256 = "65c023a592b4175f62b29c815bd71413ca402e4b0200493f597256d2a1b14324",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SysId/2022.4.1/SysId-2022.4.1-windowsx86-64.zip",
+        sha256 = "df336afb861f0e4120dd6f1f6641c5c739f23e849a4a169d7a6664370b13c899",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
     maybe(
         http_archive,
         name = "bazelrio_edu_wpi_first_tools_sysid_windowsx86",
-        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SysId/2022.3.1/SysId-2022.3.1-windowsx86.zip",
-        sha256 = "18a6d81accca08b93d643ee8a819660b19f8185fca1f80278a99f684e2248dbd",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/SysId/2022.4.1/SysId-2022.4.1-windowsx86.zip",
+        sha256 = "4b60819b7fd90306a2f5f45f9eb65bf9d0eba651c18b64e4148435a162b2877f",
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
 

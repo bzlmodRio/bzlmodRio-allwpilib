@@ -1,6 +1,6 @@
 module(
     name = "bzlmodrio-allwpilib",
-    version = "2022.3.1",
+    version = "2022.4.1",
     compatibility_level = 2022,
 )
 
