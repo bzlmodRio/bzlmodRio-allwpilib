@@ -1,10 +1,8 @@
+package wpilibj;
 
-
-package bazelrio_test;
-
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.cameraserver.CameraServer;
 
 /**
  * Do NOT add any static variables to this class, or any initialization at all. Unless you know what
@@ -12,20 +10,17 @@ import edu.wpi.first.cameraserver.CameraServer;
  * call.
  */
 public final class Main {
-
-    private static class Robot extends TimedRobot {
-
-      @Override
-      public void robotInit() {
-        CameraServer.startAutomaticCapture();
-      }
-
-      @Override
-      public void robotPeriodic() {
-        System.out.println("Robot Periodic");
-      }
-
+  private static class Robot extends TimedRobot {
+    @Override
+    public void robotInit() {
+      CameraServer.startAutomaticCapture();
     }
+
+    @Override
+    public void robotPeriodic() {
+      System.out.println("Robot Periodic");
+    }
+  }
 
   private Main() {}
 

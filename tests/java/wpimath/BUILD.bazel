@@ -1,5 +1,6 @@
 load("@rules_bazelrio//:java_rules.bzl", "bazelrio_java_binary", "bazelrio_java_test")
 load("@rules_jvm_external//:defs.bzl", "artifact")
+load("//styleguide:java_styleguide.bzl", "java_styleguide")
 
 bazelrio_java_binary(
     name = "main",
@@ -48,3 +49,5 @@ bazelrio_java_test(
         "@maven//:org_junit_jupiter_junit_jupiter_params",
     ],
 )
+
+java_styleguide(name = "wpimath")

@@ -1,9 +1,8 @@
 #include "robot-cpp/robot.hpp"
 
+#include <cameraserver/CameraServer.h>
 #include <frc2/command/CommandScheduler.h>
 #include <frc2/command/button/JoystickButton.h>
-
-#include "cameraserver/CameraServer.h"
 
 #include "robot-cpp/commands/elevator_setpoint_command.hpp"
 #include "robot-cpp/commands/joystick_drive_command.hpp"
@@ -30,4 +29,3 @@ void Robot::RobotInit() {
 }
 
 void Robot::RobotPeriodic() { frc2::CommandScheduler::GetInstance().Run(); }
-

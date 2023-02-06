@@ -1,3 +1,5 @@
+load("//styleguide:java_styleguide.bzl", "java_styleguide")
+
 java_library(
     name = "subsystems",
     srcs = glob(["*.java"]),
@@ -8,3 +10,5 @@ java_library(
         "@bzlmodrio-allwpilib//libraries/java/wpimath",
     ],
 )
+
+java_styleguide(name = "commands")

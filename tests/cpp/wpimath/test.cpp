@@ -1,8 +1,8 @@
 
-#include "gtest/gtest.h"
 #include "frc/geometry/Pose2d.h"
+#include "gtest/gtest.h"
 
-TEST(BasicTest, BasicTest) {
+TEST(BasicTest, Basic) {
   const frc::Pose2d initial{1_m, 2_m, 45_deg};
   const frc::Transform2d transform{frc::Translation2d{5_m, 0_m}, 5_deg};
 

@@ -1,10 +1,10 @@
 
+#include <cscore.h>
+
 #include "gtest/gtest.h"
 
-#include "cscore.h"
-
 class CameraSourceTest : public ::testing::Test {
- protected:
+protected:
   CameraSourceTest() = default;
 };
 

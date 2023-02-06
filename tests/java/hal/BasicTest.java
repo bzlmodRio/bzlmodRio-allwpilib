@@ -1,10 +1,7 @@
+package hal;
 
-package bazelrio_test;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
 import edu.wpi.first.hal.HAL;
+import org.junit.jupiter.api.Test;
 
 class BasicTest {
   @Test

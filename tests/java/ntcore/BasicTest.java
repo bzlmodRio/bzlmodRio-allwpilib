@@ -1,11 +1,7 @@
-
-package bazelrio_test;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
+package ntcore;
 
 import edu.wpi.first.networktables.NetworkTablesJNI;
+import org.junit.jupiter.api.Test;
 
 class BasicTest {
   @Test

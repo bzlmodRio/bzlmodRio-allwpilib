@@ -1,8 +1,8 @@
 #pragma once
 
 #include <frc/Encoder.h>
-#include <frc/motorcontrol/PWMVictorSPX.h>
 #include <frc/controller/PIDController.h>
+#include <frc/motorcontrol/PWMVictorSPX.h>
 #include <frc/simulation/EncoderSim.h>
 #include <frc/simulation/FlywheelSim.h>
 #include <frc2/command/SubsystemBase.h>
@@ -10,7 +10,7 @@
 #include "robot-cpp/subsystems/ports.hpp"
 
 class Shooter : public frc2::SubsystemBase {
- public:
+public:
   Shooter();
 
   void Periodic() override;
@@ -22,7 +22,7 @@ class Shooter : public frc2::SubsystemBase {
 
   double GetRpm();
 
- private:
+private:
   void Log();
 
   frc::PWMVictorSPX m_motor{kShooterMotorPort};

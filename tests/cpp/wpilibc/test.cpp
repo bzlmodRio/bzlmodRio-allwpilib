@@ -1,12 +1,11 @@
 
-#include "frc/simulation/BuiltInAccelerometerSim.h"
-
 #include <hal/Accelerometer.h>
 #include <hal/HALBase.h>
 
+#include "frc/simulation/BuiltInAccelerometerSim.h"
 #include "gtest/gtest.h"
 
-TEST(BasicTest, BasicTest) {
+TEST(BasicTest, Basic) {
   HAL_Initialize(500, 0);
 
   frc::sim::BuiltInAccelerometerSim sim;
@@ -17,7 +16,7 @@ TEST(BasicTest, BasicTest) {
   bool lastValue = false;
 
   auto cb = sim.RegisterActiveCallback(
-      [&](std::string_view name, const HAL_Value* value) {
+      [&](std::string_view name, const HAL_Value *value) {
         wasTriggered = true;
         lastValue = value->data.v_boolean;
       },

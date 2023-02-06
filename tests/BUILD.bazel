@@ -1,53 +1,89 @@
 alias(
     name = "Glass",
     actual = "@bzlmodrio-allwpilib//libraries/tools/glass",
-    tags = ["no-roborio"],
+    tags = [
+        "no-bullseye",
+        "no-raspi",
+        "no-roborio",
+    ],
 )
 
 alias(
     name = "OutlineViewer",
     actual = "@bzlmodrio-allwpilib//libraries/tools/outlineviewer",
-    tags = ["no-roborio"],
+    tags = [
+        "no-bullseye",
+        "no-raspi",
+        "no-roborio",
+    ],
 )
 
 alias(
     name = "roboRIOTeamNumberSetter",
     actual = "@bzlmodrio-allwpilib//libraries/tools/roborioteamnumbersetter",
-    tags = ["no-roborio"],
+    tags = [
+        "no-bullseye",
+        "no-raspi",
+        "no-roborio",
+    ],
 )
 
 alias(
     name = "DataLogTool",
     actual = "@bzlmodrio-allwpilib//libraries/tools/datalogtool",
-    tags = ["no-roborio"],
+    tags = [
+        "no-bullseye",
+        "no-raspi",
+        "no-roborio",
+    ],
 )
 
 alias(
     name = "SysId",
     actual = "@bzlmodrio-allwpilib//libraries/tools/sysid",
-    tags = ["no-roborio"],
+    tags = [
+        "no-bullseye",
+        "no-raspi",
+        "no-roborio",
+    ],
 )
 
 alias(
     name = "SmartDashboard",
     actual = "@bzlmodrio-allwpilib//libraries/tools/SmartDashboard",
-    tags = ["no-roborio"],
+    tags = [
+        "no-bullseye",
+        "no-raspi",
+        "no-roborio",
+    ],
 )
 
 alias(
     name = "PathWeaver",
     actual = "@bzlmodrio-allwpilib//libraries/tools/PathWeaver",
-    tags = ["no-roborio"],
+    tags = [
+        "no-bullseye",
+        "no-raspi",
+        "no-roborio",
+    ],
 )
 
 alias(
     name = "RobotBuilder",
     actual = "@bzlmodrio-allwpilib//libraries/tools/RobotBuilder",
-    tags = ["no-roborio"],
+    tags = [
+        "no-bullseye",
+        "no-raspi",
+        "no-roborio",
+    ],
 )
 
 alias(
     name = "Shuffleboard",
     actual = "@bzlmodrio-allwpilib//libraries/tools/Shuffleboard",
-    tags = ["no-roborio"],
+    tags = [
+        "no-bullseye",
+        "no-raspi",
+        "no-roborio",
+    ],
 )

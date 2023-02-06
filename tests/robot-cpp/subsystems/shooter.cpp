@@ -11,7 +11,7 @@ constexpr double kF = 12.0 / 4700;
 constexpr frc::DCMotor kGearbox = frc::DCMotor::Vex775Pro(2);
 constexpr double kGearing = 4;
 constexpr units::kilogram_square_meter_t kInertia{0.008};
-}  // namespace
+} // namespace
 
 Shooter::Shooter()
     : m_controller(kP, kI, kD), m_flywheelSim(kGearbox, kGearing, kInertia) {}

@@ -1,3 +1,5 @@
+load("//styleguide:cc_styleguide.bzl", "cc_styleguide")
+
 cc_library(
     name = "subsystems",
     srcs = glob(["*.cpp"]),
@@ -8,3 +10,5 @@ cc_library(
         "@bzlmodrio-allwpilib//libraries/cpp/wpilibc",
     ],
 )
+
+cc_styleguide(name = "subsystems")

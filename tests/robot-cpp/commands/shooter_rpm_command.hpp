@@ -7,13 +7,13 @@
 
 class ShooterRpmCommand
     : public frc2::CommandHelper<frc2::CommandBase, ShooterRpmCommand> {
- public:
-  ShooterRpmCommand(Shooter& shooter, double rpm);
+public:
+  ShooterRpmCommand(Shooter &shooter, double rpm);
   void Execute() override;
   bool IsFinished() override;
   void End(bool interrupted) override;
 
- private:
-  Shooter& m_shooter;
+private:
+  Shooter &m_shooter;
   const double m_rpm;
 };

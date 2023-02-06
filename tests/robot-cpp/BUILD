@@ -1,4 +1,5 @@
 load("@rules_bazelrio//:robot_rules.bzl", "robot_cc_binary")
+load("//styleguide:cc_styleguide.bzl", "cc_styleguide")
 
 cc_library(
     name = "robot-lib",
@@ -28,3 +29,5 @@ robot_cc_binary(
     lib_name = "robot-main",
     team_number = 9999,
 )
+
+cc_styleguide(name = "robot")

@@ -1,4 +1,5 @@
 load("@rules_bazelrio//:halsim_defs.bzl", "halsim_cc_binary")
+load("//styleguide:cc_styleguide.bzl", "cc_styleguide")
 
 halsim_cc_binary(
     name = "main",
@@ -6,3 +7,5 @@ halsim_cc_binary(
     # deps = ["@com_github_google_glog//:glog"],
     halsim_deps = ["@bzlmodrio-allwpilib//libraries/cpp/halsim_ws_client"],
 )
+
+cc_styleguide(name = "wpiutil")

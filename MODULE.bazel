@@ -4,13 +4,13 @@ module(
     compatibility_level = 2023,
 )
 
-bazel_dep(name = "platforms", version = "0.0.4")
-bazel_dep(name = "rules_java", version = "5.1.0")
-bazel_dep(name = "rules_jvm_external", version = "4.4.2")
+bazel_dep(name = "platforms", version = "0.0.6")
+bazel_dep(name = "rules_java", version = "5.4.0")
+bazel_dep(name = "rules_jvm_external", version = "4.5")
 bazel_dep(name = "rules_bazelrio", version = "0.0.9")
-bazel_dep(name = "rules_roborio_toolchain", version = "2023-7")
-bazel_dep(name = "bzlmodrio-opencv", version = "4.6.0-4")
-bazel_dep(name = "bzlmodrio-ni", version = "2023.3.0")
+bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2023-7")
+bazel_dep(name = "bzlmodrio-opencv", version = "4.6.0-4-1")
+bazel_dep(name = "bzlmodrio-ni", version = "2023.3.0-1")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(

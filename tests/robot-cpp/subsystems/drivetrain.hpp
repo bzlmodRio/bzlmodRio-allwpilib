@@ -2,10 +2,10 @@
 
 #include <frc/ADXRS450_Gyro.h>
 #include <frc/Encoder.h>
-#include <frc/motorcontrol/PWMVictorSPX.h>
-#include <frc/motorcontrol/MotorControllerGroup.h>
 #include <frc/drive/DifferentialDrive.h>
 #include <frc/kinematics/DifferentialDriveOdometry.h>
+#include <frc/motorcontrol/MotorControllerGroup.h>
+#include <frc/motorcontrol/PWMVictorSPX.h>
 #include <frc/simulation/ADXRS450_GyroSim.h>
 #include <frc/simulation/DifferentialDrivetrainSim.h>
 #include <frc/simulation/EncoderSim.h>
@@ -16,7 +16,7 @@
 #include "robot-cpp/subsystems/ports.hpp"
 
 class DriveTrain : public frc2::SubsystemBase {
- public:
+public:
   DriveTrain();
 
   void ArcadeDrive(double throttle, double rotation);
@@ -33,7 +33,7 @@ class DriveTrain : public frc2::SubsystemBase {
 
   void SimulationPeriodic() override;
 
- private:
+private:
   void Log();
 
   frc::PWMVictorSPX m_leftMotorA{kDrivetrainMotorLeftAPort};

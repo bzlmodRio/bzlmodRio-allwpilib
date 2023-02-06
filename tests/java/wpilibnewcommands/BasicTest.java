@@ -1,20 +1,16 @@
+package wpilibnewcommands;
 
-package bazelrio_test;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import edu.wpi.first.wpilibj2.command.StartEndCommand;
-import edu.wpi.first.wpilibj2.command.CommandGroupBase;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.simulation.DriverStationSim;
+import edu.wpi.first.wpilibj2.command.CommandScheduler;
+import edu.wpi.first.wpilibj2.command.StartEndCommand;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class BasicTest {
-  
   public class ConditionHolder {
     private boolean m_condition;
 
@@ -26,7 +22,7 @@ class BasicTest {
       return m_condition;
     }
   }
-  
+
   @BeforeEach
   void commandSetup() {
     CommandScheduler.getInstance().cancelAll();

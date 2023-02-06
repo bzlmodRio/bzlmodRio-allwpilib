@@ -1,10 +1,7 @@
+package cscore;
 
-package bazelrio_test;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import org.junit.jupiter.api.Test;
 import edu.wpi.first.cscore.CameraServerJNI;
+import org.junit.jupiter.api.Test;
 
 class BasicTest {
   @Test

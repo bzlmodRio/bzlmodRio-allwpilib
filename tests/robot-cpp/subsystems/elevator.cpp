@@ -24,13 +24,13 @@ constexpr double kArmEncoderDistPerPulse =
     2.0 * 3.14 * kElevatorDrumRadius.to<double>() / 4096.0;
 
 frc::DCMotor kElevatorGearbox = frc::DCMotor::Vex775Pro(4);
-}  // namespace
+} // namespace
 
 Elevator::Elevator()
     : frc2::PIDSubsystem(frc2::PIDController{kP, kI, kD}),
       m_elevatorSim(kElevatorGearbox, kElevatorGearing, kCarriageMass,
-                    kElevatorDrumRadius, kMinElevatorHeight,
-                    kMaxElevatorHeight, true) {
+                    kElevatorDrumRadius, kMinElevatorHeight, kMaxElevatorHeight,
+                    true) {
   m_controller.SetTolerance(0.005);
   m_encoder.SetDistancePerPulse(kArmEncoderDistPerPulse);
 

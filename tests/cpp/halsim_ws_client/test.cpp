@@ -1,6 +1,4 @@
 
 #include "gtest/gtest.h"
 
-TEST(BasicTest, BasicTest) {
-    EXPECT_TRUE(true);
-}
+TEST(BasicTest, Basic) { EXPECT_TRUE(true); }

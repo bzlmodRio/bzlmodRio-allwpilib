@@ -1,9 +1,7 @@
+package wpinet;
 
-package bazelrio_test;
-
-import java.io.IOException;
 import edu.wpi.first.net.WPINetJNI;
-
+import java.io.IOException;
 import org.junit.jupiter.api.Test;
 
 class BasicTest {

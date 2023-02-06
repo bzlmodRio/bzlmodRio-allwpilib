@@ -1,7 +1,8 @@
 
-#include "gtest/gtest.h"
-#include "hal/HAL.h"
+#include <hal/HAL.h>
 
-TEST(BasicTest, BasicTest) {
+#include "gtest/gtest.h"
+
+TEST(BasicTest, Basic) {
   EXPECT_EQ(HAL_RuntimeType::HAL_Runtime_Simulation, HAL_GetRuntimeType());
 }
