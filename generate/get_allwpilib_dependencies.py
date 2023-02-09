@@ -128,7 +128,7 @@ def _executable_tool(
 
 def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False):
     year = "2023"
-    version = f"{year}.2.1"
+    version = f"{year}.3.2"
     opencv_version = None  # "3.4.7-4"
     ni_version = None  # ""
 
