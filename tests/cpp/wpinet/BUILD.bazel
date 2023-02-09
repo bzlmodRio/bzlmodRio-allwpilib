@@ -20,4 +20,4 @@ cc_test(
     ],
 )
 
-cc_styleguide(name = "wpiutil")
+cc_styleguide(name = "wpinet")

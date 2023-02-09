@@ -8,4 +8,4 @@ halsim_cc_binary(
     halsim_deps = ["@bzlmodrio-allwpilib//libraries/cpp/halsim_ds_socket"],
 )
 
-cc_styleguide(name = "wpiutil")
+cc_styleguide(name = "halsim_ds_socket")
