@@ -1,5 +1,5 @@
 load("@rules_bazelrio//:halsim_defs.bzl", "halsim_cc_binary")
-load("//styleguide:cc_styleguide.bzl", "cc_styleguide")
+load("@rules_wpi_styleguide//styleguide:cc_styleguide.bzl", "cc_styleguide")
 
 halsim_cc_binary(
     name = "main",

@@ -14,6 +14,20 @@ bazel_dep(name = "bzlmodrio-ni", version = "2023.3.0-1")
 bazel_dep(name = "rules_pmd", version = "6.39.0")
 bazel_dep(name = "rules_checkstyle", version = "10.1")
 bazel_dep(name = "rules_wpiformat", version = "2022.30")
+bazel_dep(name = "rules_wpi_styleguide", version = "2022.30")
+
+local_path_override(
+    module_name = "rules_wpi_styleguide",
+    path = "../../rules_wpi_styleguide",
+)
+local_path_override(
+    module_name = "rules_pmd",
+    path = "../../rules_pmd",
+)
+local_path_override(
+    module_name = "rules_checkstyle",
+    path = "../../rules_checkstyle",
+)
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(

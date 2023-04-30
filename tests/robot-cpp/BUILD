@@ -1,5 +1,5 @@
 load("@rules_bazelrio//:robot_rules.bzl", "robot_cc_binary")
-load("//styleguide:cc_styleguide.bzl", "cc_styleguide")
+load("@rules_wpi_styleguide//styleguide:cc_styleguide.bzl", "cc_styleguide")
 
 cc_library(
     name = "robot-lib",

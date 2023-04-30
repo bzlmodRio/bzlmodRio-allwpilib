@@ -7,26 +7,39 @@ load("@bzlmodrio-ni//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_ni_cpp_depend
 load("@rules_bzlmodrio_toolchains//:maven_deps.bzl", "setup_legacy_setup_toolchains_dependencies")
 load("@rules_bzlmodrio_toolchains//toolchains:load_toolchains.bzl", "load_toolchains")
 load("@rules_bazelrio//:nonbzlmod_setup.bzl", "setup_rules_bazelrio")
+# load("@rules_python//python:repositories.bzl", "py_repositories")
+
+# load("@rules_python//python:repositories.bzl", "python_register_toolchains")
 
 def _setup_toolchains():
     setup_legacy_setup_toolchains_dependencies()
 
+    # py_repositories()
+
     load_toolchains()
 
-    native.register_toolchains(
-        "@local_roborio//:macos",
-        "@local_roborio//:linux",
-        "@local_roborio//:windows",
-        "@local_raspi_32//:macos",
-        "@local_raspi_32//:linux",
-        "@local_raspi_32//:windows",
-        "@local_bullseye_32//:macos",
-        "@local_bullseye_32//:linux",
-        "@local_bullseye_32//:windows",
-        "@local_bullseye_64//:macos",
-        "@local_bullseye_64//:linux",
-        "@local_bullseye_64//:windows",
-    )
+
+    # python_register_toolchains(
+    #     name = "python3_9",
+    #     # Available versions are listed in @rules_python//python:versions.bzl.
+    #     # We recommend using the same version your team is already standardized on.
+    #     python_version = "3.10",
+    # )
+
+    # native.register_toolchains(
+    #     "@local_roborio//:macos",
+    #     "@local_roborio//:linux",
+    #     "@local_roborio//:windows",
+    #     "@local_raspi_32//:macos",
+    #     "@local_raspi_32//:linux",
+    #     "@local_raspi_32//:windows",
+    #     "@local_bullseye_32//:macos",
+    #     "@local_bullseye_32//:linux",
+    #     "@local_bullseye_32//:windows",
+    #     "@local_bullseye_64//:macos",
+    #     "@local_bullseye_64//:linux",
+    #     "@local_bullseye_64//:windows",
+    # )
 
 def _setup_cpp_dependencies():
     setup_legacy_bzlmodrio_allwpilib_cpp_dependencies()
