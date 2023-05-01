@@ -24,9 +24,6 @@ setup_dependencies()
 
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 
-
-# load("@python3_9//:defs.bzl", "interpreter")
-
 maven_artifacts, maven_repositories = get_java_dependenicies()
 
 # Add junit
@@ -53,22 +50,22 @@ local_repository(
     path = "../../rules_wpi_styleguide"
 )
 
-load("@rules_wpi_styleguide//dependencies:download_styleguide_deps.bzl", "download_styleguide_deps")
 
-download_styleguide_deps()
+# Download dependencies
+load("@rules_wpi_styleguide//dependencies:load_rule_dependencies.bzl", "load_styleguide_rule_dependencies")
 
-load("@rules_wpi_styleguide//dependencies:load_styleguide_deps.bzl", "load_styleguide_deps")
+load_styleguide_rule_dependencies()
 
-load_styleguide_deps()
+# Download transative dependencies
+load("@rules_wpi_styleguide//dependencies:load_dependencies.bzl", "load_styleguide_dependencies")
 
+load_styleguide_dependencies()
+
+# Setup dependencies
 load("@rules_wpi_styleguide//dependencies:setup_styleguide.bzl", "setup_styleguide")
 
 setup_styleguide()
 
-load("@rules_wpiformat_pip//:requirements.bzl", "install_deps")
+load("@rules_wpi_styleguide//dependencies:load_pins.bzl", "load_styleguide_pins")
 
-install_deps()
-
-
-load("@rules_pmd_dependencies//:defs.bzl", "pinned_maven_install")
-pinned_maven_install()
+load_styleguide_pins()
