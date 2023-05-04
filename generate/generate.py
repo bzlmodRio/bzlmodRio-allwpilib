@@ -33,6 +33,18 @@ def main():
     generate_module_project_files(REPO_DIR, group, mandatory_dependencies)
     generate_group(output_dir, group, force_tests=args.force_tests)
 
+    manual_cleanup(REPO_DIR)
+
+def manual_cleanup(REPO_DIR):
+    # Manual cleanup
+    hal_build = os.path.join(REPO_DIR, "libraries", "cpp", "hal", "BUILD.bazel")
+    with open(hal_build, 'r') as f:
+        contents = f.read()
+
+    contents = contents.replace("@bzlmodrio-ni//libraries/cpp/ni:static", "@bzlmodrio-ni//libraries/cpp/ni:shared")
+    with open(hal_build, 'w') as f:
+        f.write(contents)
+
 
 if __name__ == "__main__":
     """
