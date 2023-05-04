@@ -3,22 +3,27 @@ local_path_override(
     module_name = "bzlmodrio-allwpilib",
     path = "..",
 )
+
 local_path_override(
     module_name = "rules_pmd",
     path = "../../rules_pmd",
 )
+
 local_path_override(
     module_name = "rules_checkstyle",
     path = "../../rules_checkstyle",
 )
+
 local_path_override(
     module_name = "rules_spotless",
     path = "../../rules_spotless",
 )
+
 local_path_override(
     module_name = "rules_wpiformat",
     path = "../../rules_wpiformat",
 )
+
 local_path_override(
     module_name = "rules_wpi_styleguide",
     path = "../../rules_wpi_styleguide",
