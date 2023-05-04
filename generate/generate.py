@@ -35,14 +35,18 @@ def main():
 
     manual_cleanup(REPO_DIR)
 
+
 def manual_cleanup(REPO_DIR):
     # Manual cleanup
     hal_build = os.path.join(REPO_DIR, "libraries", "cpp", "hal", "BUILD.bazel")
-    with open(hal_build, 'r') as f:
+    with open(hal_build, "r") as f:
         contents = f.read()
 
-    contents = contents.replace("@bzlmodrio-ni//libraries/cpp/ni:static", "@bzlmodrio-ni//libraries/cpp/ni:shared")
-    with open(hal_build, 'w') as f:
+    contents = contents.replace(
+        "@bzlmodrio-ni//libraries/cpp/ni:static",
+        "@bzlmodrio-ni//libraries/cpp/ni:shared",
+    )
+    with open(hal_build, "w") as f:
         f.write(contents)
 
 
