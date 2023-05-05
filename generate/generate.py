@@ -7,7 +7,6 @@ from bazelrio_gentool.generate_module_project_files import (
     create_default_mandatory_settings,
 )
 from bazelrio_gentool.clean_existing_version import clean_existing_version
-from bazelrio_gentool.utils import TEMPLATE_BASE_DIR, render_template
 from bazelrio_gentool.cli import add_generic_cli, GenericCliArgs
 import argparse
 

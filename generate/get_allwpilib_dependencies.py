@@ -1,5 +1,3 @@
-import sys
-
 from get_opencv_dependencies import get_opencv_dependencies
 from get_ni_dependencies import get_ni_dependencies
 from bazelrio_gentool.deps.dependency_container import (
