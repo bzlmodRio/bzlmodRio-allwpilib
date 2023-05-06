@@ -15,6 +15,19 @@ jobs:
     name: "Publish Module"
     runs-on: ubuntu-latest
     steps:
+    - name: Set up Go 1.15.x
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.15.x
+      id: go
+
+    - uses: actions/checkout@v3
+
+    - name: Install Buildifier
+      run: |
+        cd $(mktemp -d)
+        GO111MODULE=on go get github.com/bazelbuild/buildtools/buildifier@6.0.0
+
     # Checkout repository
     - uses: actions/checkout@v3
       with:
@@ -47,12 +60,26 @@ jobs:
 
 
     # Run update
-    - run: bazel run //:auto_update
+    - name: Run update
+      run: bazel run //:auto_update
       working-directory: libraries/bzlmodrio-allwpilib/generate
+
+    - name: Generate if changed TEMP
+      run: git --no-pager diff --exit-code HEAD
+      working-directory: libraries/bzlmodrio-allwpilib/generate
+
+    - name: Generate if changed
+      run: | 
+        bazel run //:generate
+        buildifier --lint=fix -r ..
+      working-directory: libraries/bzlmodrio-allwpilib/generate
+      if: ${{ failure() }}
+
 
     # Create pull requests
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
+      if: ${{ always() }}
       env:
         GITHUB_TOKEN: ${{ secrets.AUTO_UPDATE_KEY }}
       with:
