@@ -18,7 +18,7 @@ jobs:
     # Checkout repository
     - uses: actions/checkout@v3
       with:
-        path: rules/bzlmodrio-allwpilib
+        path: libraries/bzlmodrio-allwpilib
 
     # Checkout gentool
     - uses: actions/checkout@v3
