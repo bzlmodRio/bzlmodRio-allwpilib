@@ -1,10 +1,8 @@
 name: Auto Update
-on: [pull_request, push]
-# on:
-#   workflow_dispatch:
-#   push:
-#     tags:
-#     - '*'
+on:
+  push:
+    branches-ignore:    
+      - 'autoupdate'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref }}
@@ -65,21 +63,21 @@ jobs:
       working-directory: libraries/bzlmodrio-allwpilib/generate
 
     - name: Generate if changed TEMP
-      run: git --no-pager diff --exit-code HEAD
+      run: |
+        git --no-pager diff --exit-code HEAD
+        if [[ $? -ne 0 ]]; then
+          echo "Something changed, need to re-generate
+          bazel run //:generate
+          buildifier --lint=fix -r ..
+        else
+          echo "No changes!"
+        fi;
       working-directory: libraries/bzlmodrio-allwpilib/generate
-
-    - name: Generate if changed
-      run: | 
-        bazel run //:generate
-        buildifier --lint=fix -r ..
-      working-directory: libraries/bzlmodrio-allwpilib/generate
-      if: ${{ failure() }}
 
 
     # Create pull requests
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
-      if: ${{ always() }}
       env:
         GITHUB_TOKEN: ${{ secrets.AUTO_UPDATE_KEY }}
       with:
