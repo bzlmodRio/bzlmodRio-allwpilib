@@ -64,8 +64,7 @@ jobs:
 
     - name: Generate if changed TEMP
       run: |
-        git --no-pager diff --exit-code HEAD
-        if [[ $? -ne 0 ]]; then
+        if [[ $(git --no-pager diff --exit-code HEAD) -ne 0 ]]; then
           echo "Something changed, need to re-generate
           bazel run //:generate
           buildifier --lint=fix -r ..
