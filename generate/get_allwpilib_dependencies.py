@@ -134,14 +134,14 @@ def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False):
         get_opencv_dependencies(),
         use_local_version=use_local_opencv,
         override_version=opencv_version,
-        local_rel_folder="../../bzlmodRio-opencv",
+        local_rel_folder="../../libraries/bzlmodRio-opencv",
         remote_repo="bzlmodRio-opencv",
     )
     ni_dependency = ModuleDependency(
         get_ni_dependencies(),
         use_local_version=use_local_ni,
         override_version=ni_version,
-        local_rel_folder="../../bzlmodRio-ni",
+        local_rel_folder="../../libraries/bzlmodRio-ni",
         remote_repo="bzlmodRio-ni",
     )
 

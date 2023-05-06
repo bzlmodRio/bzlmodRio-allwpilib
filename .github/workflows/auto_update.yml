@@ -28,6 +28,25 @@ jobs:
         path: gentool
         ref: refactor_dev
 
+    # Checkout name
+    - uses: actions/checkout@v3
+      with:
+        repository: 'bzlmodRio/bzlmodrio-opencv.git'
+        fetch-depth: 0
+        path: rules/bzlmodrio-allwpilib/../../libraries/bzlmodRio-opencv
+        ref: refactor_dev
+
+    # Checkout name
+    - uses: actions/checkout@v3
+      with:
+        repository: 'bzlmodRio/bzlmodrio-ni.git'
+        fetch-depth: 0
+        path: rules/bzlmodrio-allwpilib/../../libraries/bzlmodRio-ni
+        ref: refactor_dev
+
+
+
+
     # Checkout BCR
     - uses: actions/checkout@v3
       with:
