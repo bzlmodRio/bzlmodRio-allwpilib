@@ -28,36 +28,27 @@ jobs:
         path: gentool
         ref: refactor_dev
 
-    # Checkout name
+    # Checkout bzlmodrio-opencv
     - uses: actions/checkout@v3
       with:
         repository: 'bzlmodRio/bzlmodrio-opencv.git'
         fetch-depth: 0
-        path: rules/bzlmodrio-allwpilib/../../libraries/bzlmodRio-opencv
+        path: libraries/bzlmodrio-allwpilib/../../libraries/bzlmodRio-opencv
         ref: refactor_dev
 
-    # Checkout name
+    # Checkout bzlmodrio-ni
     - uses: actions/checkout@v3
       with:
         repository: 'bzlmodRio/bzlmodrio-ni.git'
         fetch-depth: 0
-        path: rules/bzlmodrio-allwpilib/../../libraries/bzlmodRio-ni
+        path: libraries/bzlmodrio-allwpilib/../../libraries/bzlmodRio-ni
         ref: refactor_dev
 
 
-
-
-    # Checkout BCR
-    - uses: actions/checkout@v3
-      with:
-        repository: 'bzlmodRio/bazel-central-registry.git'
-        fetch-depth: 0
-        path: bazel-central-registry
-        ref: refactor_dev
 
     # Run update
     - run: bazel run //:auto_update
-      working-directory: rules/bzlmodrio-allwpilib/generate
+      working-directory: libraries/bzlmodrio-allwpilib/generate
 
     # Create pull requests
     - name: Create Pull Request
@@ -65,7 +56,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.AUTO_UPDATE_KEY }}
       with:
-        path: rules/bzlmodrio-allwpilib
+        path: libraries/bzlmodrio-allwpilib
         base: refactor_dev
         token: ${{ secrets.AUTO_UPDATE_KEY }}
         reviewers: pjreiniger
