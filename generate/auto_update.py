@@ -4,7 +4,6 @@ from bazelrio_gentool.auto_update_utils import get_latest_tag, split_tag
 
 
 def main():
-
     latest_tag = get_latest_tag("wpilibsuite", "allwpilib")
 
     new_year, new_version = split_tag(latest_tag)
