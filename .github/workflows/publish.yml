@@ -19,6 +19,27 @@ jobs:
       with:
         path: rules/bzlmodrio-allwpilib
 
+
+
+    # Checkout bzlmodrio-opencv
+    - uses: actions/checkout@v3
+      with:
+        repository: 'bzlmodRio/bzlmodrio-opencv.git'
+        fetch-depth: 0
+        path: libraries/bzlmodrio-allwpilib/../../libraries/bzlmodRio-opencv
+        ref: refactor_dev
+
+    # Checkout bzlmodrio-ni
+    - uses: actions/checkout@v3
+      with:
+        repository: 'bzlmodRio/bzlmodrio-ni.git'
+        fetch-depth: 0
+        path: libraries/bzlmodrio-allwpilib/../../libraries/bzlmodRio-ni
+        ref: refactor_dev
+
+
+
+
     # Checkout gentool
     - uses: actions/checkout@v3
       with:
