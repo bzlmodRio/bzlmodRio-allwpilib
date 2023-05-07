@@ -17,7 +17,7 @@ jobs:
     # Checkout repository
     - uses: actions/checkout@v3
       with:
-        path: libraries/bzlmodrio-allwpilib
+        path: rules/bzlmodrio-allwpilib
 
 
 
@@ -58,7 +58,7 @@ jobs:
 
     # Run publishing
     - run: bazel run //:publish
-      working-directory: libraries/bzlmodrio-allwpilib/generate
+      working-directory: rules/bzlmodrio-allwpilib/generate
 
     # Create pull requests
     - name: Create Gentool Pull Request
