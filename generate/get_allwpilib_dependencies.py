@@ -1,5 +1,3 @@
-import sys
-
 from get_opencv_dependencies import get_opencv_dependencies
 from get_ni_dependencies import get_ni_dependencies
 from bazelrio_gentool.deps.dependency_container import (
@@ -128,7 +126,7 @@ def _executable_tool(
 
 def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False):
     year = "2023"
-    version = f"{year}.3.2"
+    version = "2023.3.2"
     opencv_version = None  # "3.4.7-4"
     ni_version = None  # ""
 
@@ -136,14 +134,14 @@ def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False):
         get_opencv_dependencies(),
         use_local_version=use_local_opencv,
         override_version=opencv_version,
-        local_rel_folder="../../bzlmodRio-opencv",
+        local_rel_folder="../../libraries/bzlmodRio-opencv",
         remote_repo="bzlmodRio-opencv",
     )
     ni_dependency = ModuleDependency(
         get_ni_dependencies(),
         use_local_version=use_local_ni,
         override_version=ni_version,
-        local_rel_folder="../../bzlmodRio-ni",
+        local_rel_folder="../../libraries/bzlmodRio-ni",
         remote_repo="bzlmodRio-ni",
     )
 
