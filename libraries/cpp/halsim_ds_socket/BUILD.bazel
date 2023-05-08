@@ -14,6 +14,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:shared",
@@ -30,6 +31,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/hal:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:static",
