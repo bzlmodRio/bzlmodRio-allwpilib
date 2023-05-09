@@ -1,4 +1,4 @@
-workspace(name = "bzlmodrio_ni_gentool")
+workspace(name = "bzlmodrio_allwpilib_gentool")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
