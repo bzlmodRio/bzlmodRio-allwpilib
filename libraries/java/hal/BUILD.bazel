@@ -1,3 +1,5 @@
+load("@rules_java//java:defs.bzl", "java_import")
+
 java_import(
     name = "hal",
     jars = ["@edu_wpi_first_hal_hal_java//jar:file"],
