@@ -53,6 +53,6 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":hal",
-        "@bzlmodrio-allwpilib//private/cpp/hal:jni",
+        # "@bzlmodrio-allwpilib//private/cpp/hal:jni",
     ],
 )

@@ -51,6 +51,6 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":wpinet",
-        "@bzlmodrio-allwpilib//private/cpp/wpinet:jni",
+        # "@bzlmodrio-allwpilib//private/cpp/wpinet:jni",
     ],
 )

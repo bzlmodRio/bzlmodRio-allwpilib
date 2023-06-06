@@ -53,6 +53,6 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":ntcore",
-        "@bzlmodrio-allwpilib//private/cpp/ntcore:jni",
+        # "@bzlmodrio-allwpilib//private/cpp/ntcore:jni",
     ],
 )

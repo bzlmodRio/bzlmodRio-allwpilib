@@ -55,6 +55,6 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":cscore",
-        "@bzlmodrio-allwpilib//private/cpp/cscore:jni",
+        # "@bzlmodrio-allwpilib//private/cpp/cscore:jni",
     ],
 )
