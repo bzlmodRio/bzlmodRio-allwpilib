@@ -43,14 +43,25 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+[cc_import(
+  name = "shared_" + lib,
+  shared_library = lib,
+) for lib in shared_srcs]
+
 cc_library(
     name = "shared_libs",
-    srcs = shared_srcs,
+    deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
-    deps = [
-        ":static_libs",
-    ]
 )
+
+# cc_library(
+#     name = "shared_libs",
+#     srcs = shared_srcs,
+#     visibility = ["//visibility:public"],
+#     deps = [
+#         # ":static_libs",
+#     ]
+# )
 
 cc_library(
     name = "shared_jni_libs",
