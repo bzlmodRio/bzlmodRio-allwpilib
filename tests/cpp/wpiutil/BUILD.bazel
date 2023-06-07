@@ -1,8 +1,8 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_test")
 load("@rules_wpi_styleguide//styleguide:cc_styleguide.bzl", "cc_styleguide")
 
-# THE_THING = "@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_osxuniversal//:shared_libs"
-THE_THING = "@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxx86-64//:shared_libs"
+THE_THING = "@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_osxuniversal//:shared_libs"
+# THE_THING = "@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxx86-64//:shared_libs"
 
 cc_binary(
     name = "main",
