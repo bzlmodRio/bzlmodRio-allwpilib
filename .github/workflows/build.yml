@@ -26,17 +26,17 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
-    - run: bazel ${{ matrix.bazel_options }} build -k ${{ matrix.config }} --verbose_failures --config=remote //cpp/wpiutil/... @bzlmodrio-allwpilib//... || true
+    - run: bazel ${{ matrix.bazel_options }} build -k ${{ matrix.config }} --verbose_failures --config=remote //cpp/wpiutil/... || true
       working-directory: tests
     - run: |
           echo "1"
-          ls /private/var/tmp/_bazel_runner/af6a40045ddf700f86b021c1ed6a3082/execroot/__main__/bazel-out/darwin-fastbuild/bin/cpp/ntcore/
+          ls bazel-out/darwin-fastbuild/bin/cpp/ntcore/ || true
           echo "2"
-          ls /private/var/tmp/_bazel_runner/af6a40045ddf700f86b021c1ed6a3082/execroot/__main__/bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles
+          ls bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles || true
           echo "3"
-          ls /private/var/tmp/_bazel_runner/af6a40045ddf700f86b021c1ed6a3082/execroot/__main__/bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles/__main__
+          ls bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles/__main__ || true
           echo "4"
-          ls /private/var/tmp/_bazel_runner/af6a40045ddf700f86b021c1ed6a3082/execroot/__main__/bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles/__main__/libntcore.dylib
+          ls bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles/__main__/libntcore.dylib || true
     - run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //cpp/wpiutil/... -k ${{ matrix.config }} --verbose_failures --config=remote
       working-directory: tests
 
