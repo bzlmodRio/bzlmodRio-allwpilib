@@ -54,37 +54,19 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         sha256 = "61092799518b0bdd890eeee08ae8fe40efa628824dc0ab4d5f78a9ccafd6e160",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -96,37 +78,19 @@ cc_library(
         sha256 = "a878040c8fd8ddd20ac55389335f9dd5964927d6d18ccab1477a0fde8b075c3f",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -138,37 +102,19 @@ cc_library(
         sha256 = "1bb33b1d081c7be991bd874e3c9154a16dd0f55501bd33ad0aef638529af8f97",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -180,37 +126,19 @@ cc_library(
         sha256 = "1f7568fdbeb0cd00940f0e15b051095811ce7db4e2a46a4bc2ef652b81bea463",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -222,37 +150,19 @@ cc_library(
         sha256 = "64c24d71bca5c88dd3017f2b85c3c696d07b24cab9d7e9f3d2e81e4fccf5396e",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -299,37 +209,19 @@ cc_library(
         sha256 = "e371ea074e336a2d292cd6c60b0935335549b2135f4f0a24ced0b498d122a64d",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -341,37 +233,19 @@ cc_library(
         sha256 = "db565110c493dae8ab9f24bc54d59bbc19e0583f497bf065402da6448864d693",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -383,37 +257,19 @@ cc_library(
         sha256 = "58978289d09b53b4ce313a6183b034e357e1c20aa93f760d82064638643844d4",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -425,37 +281,19 @@ cc_library(
         sha256 = "d4366d1af6b9360b2778752655398815d4d6c2b338f3049b3eac0161131cbf76",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -467,37 +305,19 @@ cc_library(
         sha256 = "6bfe8a1227c1a2df1f8c609e6a37c420d46c4eef8c869583020571202efd4373",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -544,37 +364,19 @@ cc_library(
         sha256 = "2e756f3cbda5898921a881f29222ec244abdeb174e93b6f1702511a866cfd6d6",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -593,37 +395,19 @@ cc_library(
         sha256 = "7fe3ec53110b9693ef4fe4d6651a5fa92a40d1f3cb104d8b41481ca86128caca",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-  deps = [
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -656,38 +440,19 @@ cc_library(
         sha256 = "62c8d9ef02183e453a8629b97aff4dc094abfef4486b717ab01616287ea7da73",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -699,38 +464,19 @@ cc_library(
         sha256 = "8b191c8538f1798812b244772d523e179dbcf3c81b10fdd2b8ee37d7d463df9b",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -742,38 +488,19 @@ cc_library(
         sha256 = "dcbc06a4a2fa5385aed0a8c7af43a7775654e0aa699642984a9d1465b7be5959",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -785,38 +512,19 @@ cc_library(
         sha256 = "a327ee0e4b084d8d59bde460cc4edcd210a15264a9c50737515599ebec51e6bd",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -828,38 +536,19 @@ cc_library(
         sha256 = "39da09b824404e9904472680fbedb5e076923ed410382d34a28c90d7fc5328a4",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -906,38 +595,19 @@ cc_library(
         sha256 = "405624660327817a38514fa912cd6581bc5ce1a3b22422d6e224916d8e9a1c01",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -949,38 +619,19 @@ cc_library(
         sha256 = "0b382bea724921248ae53421176073623f0207752c2956931da5b8ae4bd05cb4",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -992,38 +643,19 @@ cc_library(
         sha256 = "ffa4ac8ca68cc80dcf04114eb3f348f4a47bf8642dedb79ae09a34606313c030",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1035,38 +667,19 @@ cc_library(
         sha256 = "b66c18a99537baf4c40c4bc2ccac06ed691cb9eb58c8f5c2f853862dbfe0954f",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1078,38 +691,19 @@ cc_library(
         sha256 = "163334835d377443794e2d90fa286d6abcd4124e1f7218960fa2ed6521167814",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1156,38 +750,19 @@ cc_library(
         sha256 = "cb47d6cb4ac886b133f9f9bded33af22461d910f7f0085d83fa0f4a3e26ffa0b",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1206,38 +781,19 @@ cc_library(
         sha256 = "0e4d975e446f967aa42c456d52c78c7f4c1516255423466899a37eb6e729fcaa",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1270,38 +826,19 @@ cc_library(
         sha256 = "0af745c2a0b7322f28b7b8346825a6beb30ccc97f708e90a220e1e08b205713d",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1313,38 +850,19 @@ cc_library(
         sha256 = "37cf340addb947536ce283b0ef0370422ec7aaf1b1ecd6a5e622d1f7e9b6c89c",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1356,38 +874,19 @@ cc_library(
         sha256 = "bd165c34ad1f9d35cced4f0bf3c528406595e228806badc977801b87f982cd25",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1399,38 +898,19 @@ cc_library(
         sha256 = "f5ce48e97b65b80d74629832a1c98d32b07734550f6f21786a4bc29864ce03e9",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1442,38 +922,19 @@ cc_library(
         sha256 = "3ccd74ba2fc065d8543c3dc56d592312aefd3bb29d78f16fb38d294fcac1dbbb",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1520,38 +981,19 @@ cc_library(
         sha256 = "3e3c41d1aa42cc68c3336e35dd77f2b4b91f326b348636156e4a5c4fb0b088f5",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1563,38 +1005,19 @@ cc_library(
         sha256 = "e1c3d9af83cda74f019d0b54f4046e5649fa2da1fc2c4cb4baf85c1e35458aa8",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1606,38 +1029,19 @@ cc_library(
         sha256 = "d2685c367c9178006a9490bd0c1dc0c44d68544ae197ec8117ad979c4a576f68",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1649,38 +1053,19 @@ cc_library(
         sha256 = "d46b6398c5cf4ba4d6d684e257d0febf0e1d5c2e16f21d7a46b27730ae70d852",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1692,38 +1077,19 @@ cc_library(
         sha256 = "a5dd48ad652701b95afb9edf120145391c812e1cff45a9d24b1163da8444ddad",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1770,38 +1136,19 @@ cc_library(
         sha256 = "7cb445de735ab8bce5591105a299ec4f6bce9376f4909edfa13bc84d04cdbfb2",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1820,38 +1167,19 @@ cc_library(
         sha256 = "058ce6c50121f52000277a85ae464911b23b94f629b82a6e91b857c9831124d5",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1884,39 +1212,19 @@ cc_library(
         sha256 = "87054e7abb4d3099a0aff0027b1a679ee466dc56dc2f9b99b3d1ee73939051a3",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1928,39 +1236,19 @@ cc_library(
         sha256 = "60233eafcda6713e4feee3caeab5134ddb0126a83ea1d64bc78d31ccf30560f9",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -1972,39 +1260,19 @@ cc_library(
         sha256 = "3d001b858611fea6060b2d313bdd9eb8d7b5438200315dba175e24c6cbe8301c",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2016,39 +1284,19 @@ cc_library(
         sha256 = "84d145c5ff7ccd3c0ff35f929e0817c883f8f415681a13e7eb8e4893e144c385",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2060,39 +1308,19 @@ cc_library(
         sha256 = "629ae1a92cce440944d041c3082d4aceb262714be8d0db15e0cb0dc539f59aee",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2139,39 +1367,19 @@ cc_library(
         sha256 = "e419e7e0c0a5d261d19b7704382a9a962622ac59a1d0609d6d60398b921d848a",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2183,39 +1391,19 @@ cc_library(
         sha256 = "ce948e727481b8e587c810cc5eefc687812a5c68b62a73cf3ab4a136f7ef7083",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2227,39 +1415,19 @@ cc_library(
         sha256 = "df29977e70115e5cbf857b9067f4d1269c7c6318da0f80fb6341a1b0e03527e1",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2271,39 +1439,19 @@ cc_library(
         sha256 = "15de2bf1b2c60b5c471afc9e9605043a6cc27849940593590e943068a2241b0f",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2315,39 +1463,19 @@ cc_library(
         sha256 = "005ebd51b492fed8f920b09a83ca036bcc4e0f1912dacfd784443701355f6387",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2394,39 +1522,19 @@ cc_library(
         sha256 = "2671726b97e1da07f057445751c517cf43ec827820db1d9aea1771284432dd6d",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2445,39 +1553,19 @@ cc_library(
         sha256 = "e09f1ac53daeb940490c59113526e8a2418b6cf73be43d0ce0506d5eaefa05f7",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2510,38 +1598,19 @@ cc_library(
         sha256 = "9242d4371b6ae0755c9aab519ec4ba3131cd87e6c84968b876f74a758f2efe35",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2553,38 +1622,19 @@ cc_library(
         sha256 = "4b4059a9308fc48294bf2384da8dc44bd816e9dd5fc2d792fe74a995673092ee",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2596,38 +1646,19 @@ cc_library(
         sha256 = "c12dca0e8c7615f5c97dc2b59be1a8244099d8299d19a13da47ff9eec4ecbe21",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2639,38 +1670,19 @@ cc_library(
         sha256 = "50935904f5d79df525635d466fcce281e43f2d931191e41497b3eb5d8d2675a2",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2682,38 +1694,19 @@ cc_library(
         sha256 = "6b19cd0755ae7990037c61f9a7760a65bb421d81a356d4c4c5950a8b74f7241c",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2760,38 +1753,19 @@ cc_library(
         sha256 = "9c65d706a6e09a0e23c17f3affc11c96e8ef0e6349865982a946b985ced9e477",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2803,38 +1777,19 @@ cc_library(
         sha256 = "db58a06a256c937a3f56b6c2a340c2246e46e1ca57204f89c4f74cf5e5fba94e",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2846,38 +1801,19 @@ cc_library(
         sha256 = "46c99e48a0f185763c086b75bc24176e392afc80eb5381ea5f5b2033dd30b904",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2889,38 +1825,19 @@ cc_library(
         sha256 = "2f12ebd40ea73f1a6f7438774425d428a86fa4b95af0e1f462de956d5db7ee3c",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -2932,38 +1849,19 @@ cc_library(
         sha256 = "325a2591cb0c1549648c39ddd46897ce36b250bb6ca34aded70e59a209ce8756",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3010,38 +1908,19 @@ cc_library(
         sha256 = "e36b1d6a351ace18ed2f7cd352c9ec1fec068b65ee70f23b5f7afe9a474bc5f8",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3060,38 +1939,19 @@ cc_library(
         sha256 = "4affc21e8d2b0e984cd805fb5149b11ab7554b180a9127344f411fcd58d4f507",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3124,39 +1984,19 @@ cc_library(
         sha256 = "55f1961e19b35c110735fa8b389cbce09d75e931bda80fa254aa808ceea1f032",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3168,39 +2008,19 @@ cc_library(
         sha256 = "3c3f18f4482b878d66a36881065da92585d3afac4667add6fde42859942311f1",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3212,39 +2032,19 @@ cc_library(
         sha256 = "31b1f01abeee1be55b511a3cac897ab7c85a64a048813a39b97916ca9eba9e88",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3256,39 +2056,19 @@ cc_library(
         sha256 = "734474eff040e64ffa518eb5a04776e93101580639b1339d58d1754360f0954f",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3300,39 +2080,19 @@ cc_library(
         sha256 = "7fb9da919250ae877100cf8dae469e3407fe94e604ae75a8d52bf99d90bfc3b9",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3379,39 +2139,19 @@ cc_library(
         sha256 = "967e12a22f6f1dbc152ab0e47035c0fd6c41197da0d21d7ec10de940a3610670",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3423,39 +2163,19 @@ cc_library(
         sha256 = "39be6da98729ee8bc9c2a28adab9dc2c1cf95b1937046c14fdeed1e1d15bd950",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3467,39 +2187,19 @@ cc_library(
         sha256 = "66a52114fe0317016753cf423b5ac6ed1c262156391cf97cb0e50619d1e60cf0",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3511,39 +2211,19 @@ cc_library(
         sha256 = "a4bdb475519489f789639e50cd79492451c3d077d236e600d0555bc2d86c23a2",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3555,39 +2235,19 @@ cc_library(
         sha256 = "6b235a5fa2c21dbacc586bcb75ab84ca800ed5bab6bdadcd0dc083c0dbfd58d8",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3634,39 +2294,19 @@ cc_library(
         sha256 = "1c91cff67331f72e95fc658fa38f68d5d69dd0471d591b0bbff0a116f1796f25",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3685,39 +2325,19 @@ cc_library(
         sha256 = "f0c5ee0c5e3fa67d1872d8e3104a0842e1e92a21a8c6f005bf67cf3dfc9bec6d",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3750,40 +2370,19 @@ cc_library(
         sha256 = "a1310aa894700ae18ebe9bdee0f12255c6c38714f94afc5b4f99bbfa9403e225",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3795,40 +2394,19 @@ cc_library(
         sha256 = "8c7ad595d4a9a3f3e46e12d716aa6a7ca4de9de0e81dcfb167a0acbc7415cf89",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3840,40 +2418,19 @@ cc_library(
         sha256 = "c47bcb4b5bb1268e3c1e08f843da09ba14c47e2905ada5cd6bc83eadb1c19643",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3885,40 +2442,19 @@ cc_library(
         sha256 = "341309f15d97913b33a1a3789203488b8806810f4ad3d035486b6cc6b540e4d0",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -3930,40 +2466,19 @@ cc_library(
         sha256 = "dcd259d02537ba4f5afd957d6eedfb49e25c56dc7e765cf1d1ef6266068ff021",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4010,40 +2525,19 @@ cc_library(
         sha256 = "29ca7dbe46d2396a4347509184bdfd67ca42894ce62176f187b7c384b6cfcb59",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4055,40 +2549,19 @@ cc_library(
         sha256 = "6b4a47466921b37d7eca66aeb4f2e1b787372ec2c2d6f139f14f9d54d194d2bf",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4100,40 +2573,19 @@ cc_library(
         sha256 = "f238cecbd278bba77a7b882b07cbdfc594a7bf52ee19b026fb808bbd335c57a4",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4145,40 +2597,19 @@ cc_library(
         sha256 = "a5d1bc2d420ff07d829c4fbc4a9339f64acb4c6105906983500b2509ba86fb8c",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4190,40 +2621,19 @@ cc_library(
         sha256 = "d0fd650530312f0b839ba2ef61d70f5d49de1b19807bad9499736121bb69bf99",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4270,40 +2680,19 @@ cc_library(
         sha256 = "03c3a6c1afbcd9110d11fd45e5e74cab60e57cb4eca1c281e39fc27fabaa303b",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4322,40 +2711,19 @@ cc_library(
         sha256 = "76e0a02e95550e323b72416c0e4ef48a23bfa240f380a1a4b6c3e31e6db12285",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4388,41 +2756,19 @@ cc_library(
         sha256 = "fc2becc38650de5b540eb45e290fd4187d398da155d1d6e4a463cf72938e01bb",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4434,41 +2780,19 @@ cc_library(
         sha256 = "5cb39315528732ab4f47deecdc289200b9c8bb9bb9b18a00ff67fe565603a248",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4480,41 +2804,19 @@ cc_library(
         sha256 = "08d0f13bf704e8247e8f56535b85ea829a0ed4826f2caa6732eb1e59de5ab3ad",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4526,41 +2828,19 @@ cc_library(
         sha256 = "b1ab10ef453fd9c7e1f0a10f88dfa72371e3a73764523cee978170b5d058d23d",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4572,41 +2852,19 @@ cc_library(
         sha256 = "3582ab3b1bc0e3e12b25ee6c3efd25bc9ce17cb33f1a85b5c2f34830e8f85d71",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4653,41 +2911,19 @@ cc_library(
         sha256 = "5c9fef57f7cb80272298ce769199b349ff51457f883c7d957a403c719b7d55b7",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4699,41 +2935,19 @@ cc_library(
         sha256 = "ad08c0976a6b4d1766c841333d3894f04eaa06bcc4025185b52ca4f71b372615",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4745,41 +2959,19 @@ cc_library(
         sha256 = "c7541bed71bda3d7845e40d102e3d13804a812a7ba888956c9b5d4cb49527ad4",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4791,41 +2983,19 @@ cc_library(
         sha256 = "3556c5d5efffc6694b7c200102b6a904e667842f93b203ac79278c39d32b82d5",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4837,41 +3007,19 @@ cc_library(
         sha256 = "0e06f8cb5de267e0b27ea8b2be8c75013ed41201f4a2d6c48fef69b31c9c46df",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4918,41 +3066,19 @@ cc_library(
         sha256 = "d91ea8f0a28ee75e154b60f9a3a271f68a36c252c5640d07b2435bd9b8c84d3d",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -4971,41 +3097,19 @@ cc_library(
         sha256 = "5825049eda0886825e167c8403d788d79ddae5d715ea9a096872879fbf21bc27",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5038,44 +3142,19 @@ cc_library(
         sha256 = "a3a6bc7c37391b4d070144478273b3eafabeb358636ba69faab7f6d11cb1d969",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5087,44 +3166,19 @@ cc_library(
         sha256 = "d46bb3d7b6a807f567fcbbe07d3d10010d98abbb5d7c6cb5cf6c206d1c84da47",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5136,44 +3190,19 @@ cc_library(
         sha256 = "1b5c98495ab1cca127b3af906660fa6bb27f6a5aedda22b2693043c3932b7589",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5185,44 +3214,19 @@ cc_library(
         sha256 = "5aeb964bcd48c89a040cbf00adaa90a99e71e61f986989f08807de4df7be1c97",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5234,44 +3238,19 @@ cc_library(
         sha256 = "da062f5ab583d3c8207781d076e53d0507d40ef3b7b6d140bef51c01b6e66320",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5318,44 +3297,19 @@ cc_library(
         sha256 = "854c07cb5edc98f19e3e009a70e88a01c7e61c6082381fe1fa4246f3d3f905af",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5367,44 +3321,19 @@ cc_library(
         sha256 = "1a030f9c2617d02dce56bb8312f83c0605c94e2e5fd68d0e344b8b805b247629",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5416,44 +3345,19 @@ cc_library(
         sha256 = "c3e7c395a894ce32fe724fe717f3f2a0c9f557f732bbc47fea21761a6282a39a",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5465,44 +3369,19 @@ cc_library(
         sha256 = "4c53feec48caf7e2dfa3125713600711f65cb4bdbe92bec4bd6295c1eac13ed1",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5514,44 +3393,19 @@ cc_library(
         sha256 = "87e694fc86a514f0838720c1dce5be8f617d81a1fd4186c48ea0ce1be6b5beda",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5598,44 +3452,19 @@ cc_library(
         sha256 = "30184fd937ec2c4d3ea286afee3c4b53c68eca07124117ffbf1ed7e683c1ab4e",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5654,44 +3483,19 @@ cc_library(
         sha256 = "6371e15a6096eebe0876b5e906ba43320468a920d24bfbe8a107ac1c2594ecdb",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5724,45 +3528,19 @@ cc_library(
         sha256 = "6d218bea93a3dbf8d595a967422f4e22d8811969fae9dc373ba45de130c1d615",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5774,45 +3552,19 @@ cc_library(
         sha256 = "6bdf0e834907ca4b7145b2e1d08c6367445a05a6fda82800ad2655dd068e5538",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5824,45 +3576,19 @@ cc_library(
         sha256 = "05d7f7e8fe9ba9da6dcfee0c668f4e823e39b9c288124f48b81f37bfb1942fcf",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5874,45 +3600,19 @@ cc_library(
         sha256 = "c7d6fb689d1cb5ae6cd882b6e40db52c614f56ce60e1595d0ae3f38411ad6492",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -5924,45 +3624,19 @@ cc_library(
         sha256 = "b245a1cb1c9ceb0a1165fd6175cbc7d6012fa823cd21c417133ba98ba323ba62",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6009,45 +3683,19 @@ cc_library(
         sha256 = "5e8fb584e9f449107e9f00b8607184c0b44c3214605c85cea0626a2c7397160d",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6059,45 +3707,19 @@ cc_library(
         sha256 = "0e0e4dc7cc7533d99f714017bb2985d2b19aac77a270a2f3fd47edc3e323c59b",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6109,45 +3731,19 @@ cc_library(
         sha256 = "5cb4c10cf0570052e41f6daf52e8c1bc2aa8260bbf9670a14ef054b34cda4fcb",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6159,45 +3755,19 @@ cc_library(
         sha256 = "49ce2ada53560d61c512091d56e3a37425c2a723f0e042a91c16ff5bcc263487",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6209,45 +3779,19 @@ cc_library(
         sha256 = "142f37b9212e31fba6adf370cfc989e836be0ec059f133a41caa29313eb7032e",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6294,45 +3838,19 @@ cc_library(
         sha256 = "684643b1df8f8a961dbfd76b1445058cb24bc7be296b9a10591d54f1398e5ae1",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6351,45 +3869,19 @@ cc_library(
         sha256 = "f1b482ea0b186cfc42f333ecda87b3360a19ad3109c32ee25c40fd211c7f1e0d",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-"@bzlmodrio-opencv//libraries/cpp/opencv:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6415,40 +3907,19 @@ cc_library(
         sha256 = "c9037a81ebab0031c975e8448bc8d93202c350ab0f92b2d7c1e4c0bce6dc6c10",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6460,40 +3931,19 @@ cc_library(
         sha256 = "e1a0b716cab0a185cd4d072d0c3db4b2308038e76fac82f3eb8ac68c5e154865",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6505,40 +3955,19 @@ cc_library(
         sha256 = "180dcadb97af1344828382f10cfcb568d8ce6e2f41ef9ad7748cde0ded1e9f45",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6550,40 +3979,19 @@ cc_library(
         sha256 = "e7bb2c5849a78f80eb8bc7648f2b0b9b1afeff2a25f12e7a61ac9042725528a7",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6595,40 +4003,19 @@ cc_library(
         sha256 = "312138ef4f927f4fbdcd134a0246533f13de343c302be9293a6249a10adbd5de",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6675,40 +4062,19 @@ cc_library(
         sha256 = "f43df42f4f526ac6e1649b8afaaa0eb681251735d8ef69e0bcc510ff94324ea1",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6720,40 +4086,19 @@ cc_library(
         sha256 = "fd1e74c73826a3d039e8fd23ae4f3689caede81c55ce248c6984390e4a6c6746",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6765,40 +4110,19 @@ cc_library(
         sha256 = "b8c4c945cc177b22e482ffcccade2acae13933232102ea0b1c82dd80cb5989fa",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6810,40 +4134,19 @@ cc_library(
         sha256 = "32e84e3318d2f8801e9e80f71bf13671b128a952b2c2e643035fa17ca770597d",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6855,40 +4158,19 @@ cc_library(
         sha256 = "08ae81eaaa9b59983bcb7463d71918eff5337604aa3e96bbdabd77bbda23b35a",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6942,40 +4224,19 @@ cc_library(
         sha256 = "f64ef3ef0d29bd10b5e4587abb738b032fef6bdf9bb64b38557ceda0fec582f0",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -6987,40 +4248,19 @@ cc_library(
         sha256 = "f89028cf57cd98ace6a7f6fecc1f93f822432ce6610f71d3a8e795637d8feffe",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7032,40 +4272,19 @@ cc_library(
         sha256 = "84bf53cab55cae5b31fde931623502523f5b2fd17acba5d02a3bfd51052e2a0b",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7077,40 +4296,19 @@ cc_library(
         sha256 = "d8bc71e87afd0b1d5359efd5d1e101a85debb50a91bcc33d04faacb0f4144635",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7122,40 +4320,19 @@ cc_library(
         sha256 = "f0cff333c28b36201711e6ed8979ba0b10e8226b689d4c583e092cae7c7279b9",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7202,40 +4379,19 @@ cc_library(
         sha256 = "4b7a9df89a3e6b07d191271f789fa93621c6c6649d90459c0852c59e64a52313",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7247,40 +4403,19 @@ cc_library(
         sha256 = "705449eca2979f3e09a95990f3a2949197f03a9d8ecfc322854a9a44cc50d8ec",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7292,40 +4427,19 @@ cc_library(
         sha256 = "6d2e55ebbece07c16d4a9c7a1d6bb388be6eca1a08e56fd6a296550bb8f8750f",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7337,40 +4451,19 @@ cc_library(
         sha256 = "8d169a4e8fb11d38cd54e23ee2d7d5c8d9db91f14cccb72ee5cd2c35b5f79b08",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7382,40 +4475,19 @@ cc_library(
         sha256 = "d11efba6bc58e5c8d06b1893575240954cd7859260c13523cb87a798a485eed6",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7469,40 +4541,19 @@ cc_library(
         sha256 = "c0210080b9f5b47b1bd7514863d94e4ba3c96421e5b12342534e3c6db37d4def",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7514,40 +4565,19 @@ cc_library(
         sha256 = "a8862308f9cd04eb9bfe6fca91eda3f33c893555d28f1cb21f93b5948bf97d00",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7559,40 +4589,19 @@ cc_library(
         sha256 = "fa6dfc94807d551b1f2b43b2a024a2b4eed2d13f86b965773ee41fd24330d32f",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7604,40 +4613,19 @@ cc_library(
         sha256 = "4c14f0beeee507eb193e333491b0f1df31bd84428c23baf608aa84f93c8a6be6",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7649,40 +4637,19 @@ cc_library(
         sha256 = "176f352cbcfa980d2474c9479a7f4cb99bd342fd2cae002ffa712f043a258f88",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7729,40 +4696,19 @@ cc_library(
         sha256 = "2b64435ac78ed759abec2cd499663f9e128a80eb79542fc90860766bcb78cb41",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7774,40 +4720,19 @@ cc_library(
         sha256 = "8d05675597e86da3c239d28cfbb01608e7ab7e2d450b7266218d2cd905894cc5",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7819,40 +4744,19 @@ cc_library(
         sha256 = "0d122f7316fbf4ef474a8ce497d054569d9e926b5f4cbf6ca1a33a4362cc03e5",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7864,40 +4768,19 @@ cc_library(
         sha256 = "4473a9f9496d38b1495da0a61c4e1ee326b0ffef63ccf92a887f985db3efc6c2",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7909,40 +4792,19 @@ cc_library(
         sha256 = "e4b56da6e0ccd51dca8700ba0db400b1196676d1b9d54c30b5fbfad5efc9a2ec",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -7996,40 +4858,19 @@ cc_library(
         sha256 = "bbf810d2940b67b6dc9f0b471705a778f1b3228c575ab4705d25b41dfce77ad6",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -8041,40 +4882,19 @@ cc_library(
         sha256 = "8dba53017b25131a503a803b5f91bd39d5a42c16f777f7393507ba9388e800db",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -8086,40 +4906,19 @@ cc_library(
         sha256 = "fa6cc770c644aa40745355de18e5ac2d019abdfe95a4eed9066634887a3eba5a",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -8131,40 +4930,19 @@ cc_library(
         sha256 = "aed7582ea137ea580cc1c3676f5f01b6e2cb692a80d7d690c82fafce6cdcbcbc",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -8176,40 +4954,19 @@ cc_library(
         sha256 = "e01b2df14a47b0daab48a7b7e621c6456c29464fefb491f3af9720e74ca8f228",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -8256,40 +5013,19 @@ cc_library(
         sha256 = "367b4858560b93a7a079ffd464a01e141ca0e1e679588178e5496f7827c0f57e",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -8301,40 +5037,19 @@ cc_library(
         sha256 = "86062a762ec310fcd8a78294f724c542dfdf38bc1a88292106ab74db8fbe9cf4",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -8346,40 +5061,19 @@ cc_library(
         sha256 = "c37205bd50ed00c1bd257be76c93f8856e042f36a78f14f01b942836f0a139d6",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -8391,40 +5085,19 @@ cc_library(
         sha256 = "cf110a35afadc438132ecb4fd112d0a0f1a1cf23c2e26a1ee99027bc6a003800",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
@@ -8436,40 +5109,19 @@ cc_library(
         sha256 = "5b8ca092a615a84133edde5b7140a2df38f7f969294c431748ff2834a6942995",
         build_file_content =
             """
-static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
-shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
-shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
+#static_srcs = glob(["**/*.lib", "**/*.a"], exclude=["**/*jni.lib"])
+_shared_srcs = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*jni.dylib", "**/*.so.debug", "**/libopencv_java*.dylib"])
+_shared_srcs2 = glob(["**/*.dll", "**/*.so*", "**/*.dylib"], exclude=["**/*jni.dll", "**/*jni.so", "**/*.so.debug", "**/libopencv_java*.dylib"])
+#shared_jni_srcs = glob(["**/*jni.dll", "**/*jni.so*", "**/*.jni.dylib", "**/libopencv_java*.dylib"], exclude=["**/*.so.debug"])
 
-cc_library(
-    name = "static_libs",
-    srcs = static_srcs,
-    visibility = ["//visibility:public"],
-)
+print(_shared_srcs)
+print(_shared_srcs2)
 
-print(shared_srcs)
-
-[cc_import(
-  name = "shared_" + lib,
-  shared_library = lib,
-
-  deps = [
-"@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-"@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-
-  ],
-) for lib in shared_srcs]
-
-cc_library(
-    name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
-    visibility = ["//visibility:public"],
-    linkstatic = 0,
-)
-
-cc_library(
-    name = "shared_jni_libs",
-    srcs = shared_jni_srcs,
+cc_import(
+  name = "shared_libs",
+  shared_library = "linux/x86-64/shared/libwpiutil.so",
+  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
 """,
