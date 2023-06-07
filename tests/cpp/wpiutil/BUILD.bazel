@@ -13,7 +13,6 @@ cc_test(
     srcs = ["test.cpp"],
     tags = [
         "bazelrio-cpp-test",
-        "no-sandbox",
     ],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil",
