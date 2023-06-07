@@ -30,13 +30,23 @@ jobs:
       working-directory: tests
     - run: |
           echo "1"
-          ls bazel-out/darwin-fastbuild/bin/cpp/ntcore/ || true
+          ls
+          echo "1"
+          ls bazel-out
+          echo "1"
+          ls bazel-out/darwin-fastbuild
+          echo "1"
+          ls bazel-out/darwin-fastbuild/bin || true
+          echo "1"
+          ls bazel-out/darwin-fastbuild/bin/cpp || true
+          echo "1"
+          ls bazel-out/darwin-fastbuild/bin/cpp/wpiutil/ || true
           echo "2"
-          ls bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles || true
+          ls bazel-out/darwin-fastbuild/bin/cpp/wpiutil/test.runfiles || true
           echo "3"
-          ls bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles/__main__ || true
+          ls bazel-out/darwin-fastbuild/bin/cpp/wpiutil/test.runfiles/__main__ || true
           echo "4"
-          ls bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles/__main__/libntcore.dylib || true
+          ls bazel-out/darwin-fastbuild/bin/cpp/wpiutil/test.runfiles/__main__/libwpiutil.dylib || true
       working-directory: tests
     - run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //cpp/wpiutil/... -k ${{ matrix.config }} --verbose_failures --config=remote
       working-directory: tests
