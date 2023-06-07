@@ -37,6 +37,7 @@ jobs:
           ls bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles/__main__ || true
           echo "4"
           ls bazel-out/darwin-fastbuild/bin/cpp/ntcore/test.runfiles/__main__/libntcore.dylib || true
+      working-directory: tests
     - run: bazel ${{ matrix.bazel_options }} ${{ matrix.command }} //cpp/wpiutil/... -k ${{ matrix.config }} --verbose_failures --config=remote
       working-directory: tests
 
