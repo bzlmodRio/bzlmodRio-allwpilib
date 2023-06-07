@@ -39,8 +39,10 @@ jobs:
           ls bazel-out/darwin-fastbuild/bin || true
           echo "1"
           ls bazel-out/darwin-fastbuild/bin/cpp || true
-          echo "1"
+          echo "AAAAA"
           ls bazel-out/darwin-fastbuild/bin/cpp/wpiutil/ || true
+          echo "BBBBB"
+          cat bazel-out/darwin-fastbuild/bin/cpp/wpiutil/test.runfiles_manifest || true
           echo "2"
           ls bazel-out/darwin-fastbuild/bin/cpp/wpiutil/test.runfiles || true
           echo "3"
