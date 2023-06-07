@@ -1,5 +1,3 @@
-load("@rules_java//java:defs.bzl", "java_import")
-
 java_import(
     name = "cameraserver",
     jars = ["@edu_wpi_first_cameraserver_cameraserver_java//jar:file"],

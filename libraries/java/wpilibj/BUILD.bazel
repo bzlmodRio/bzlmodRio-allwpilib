@@ -1,5 +1,3 @@
-load("@rules_java//java:defs.bzl", "java_import")
-
 java_import(
     name = "wpilibj",
     jars = ["@edu_wpi_first_wpilibj_wpilibj_java//jar:file"],
