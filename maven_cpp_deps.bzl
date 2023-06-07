@@ -64,8 +64,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -88,8 +88,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -112,8 +112,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -136,8 +136,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -160,8 +160,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -219,8 +219,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -243,8 +243,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -267,8 +267,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -291,8 +291,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -315,8 +315,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -374,8 +374,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -405,8 +405,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -450,8 +450,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -474,8 +474,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -498,8 +498,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -522,8 +522,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -546,8 +546,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -605,8 +605,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -629,8 +629,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -653,8 +653,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -677,8 +677,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -701,8 +701,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -760,8 +760,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -791,8 +791,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -836,8 +836,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -860,8 +860,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -884,8 +884,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -908,8 +908,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -932,8 +932,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -991,8 +991,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1015,8 +1015,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1039,8 +1039,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1063,8 +1063,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1087,8 +1087,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1146,8 +1146,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1177,8 +1177,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1222,8 +1222,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1246,8 +1246,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1270,8 +1270,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1294,8 +1294,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1318,8 +1318,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1377,8 +1377,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1401,8 +1401,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1425,8 +1425,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1449,8 +1449,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1473,8 +1473,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1532,8 +1532,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1563,8 +1563,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1608,8 +1608,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1632,8 +1632,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1656,8 +1656,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1680,8 +1680,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1704,8 +1704,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1763,8 +1763,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1787,8 +1787,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1811,8 +1811,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1835,8 +1835,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1859,8 +1859,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1918,8 +1918,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1949,8 +1949,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -1994,8 +1994,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2018,8 +2018,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2042,8 +2042,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2066,8 +2066,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2090,8 +2090,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2149,8 +2149,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2173,8 +2173,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2197,8 +2197,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2221,8 +2221,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2245,8 +2245,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2304,8 +2304,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2335,8 +2335,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2380,8 +2380,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2404,8 +2404,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2428,8 +2428,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2452,8 +2452,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2476,8 +2476,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2535,8 +2535,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2559,8 +2559,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2583,8 +2583,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2607,8 +2607,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2631,8 +2631,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2690,8 +2690,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2721,8 +2721,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2766,8 +2766,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2790,8 +2790,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2814,8 +2814,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2838,8 +2838,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2862,8 +2862,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2921,8 +2921,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2945,8 +2945,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2969,8 +2969,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -2993,8 +2993,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3017,8 +3017,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3076,8 +3076,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3107,8 +3107,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3152,8 +3152,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3176,8 +3176,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3200,8 +3200,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3224,8 +3224,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3248,8 +3248,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3307,8 +3307,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3331,8 +3331,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3355,8 +3355,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3379,8 +3379,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3403,8 +3403,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3462,8 +3462,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3493,8 +3493,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3538,8 +3538,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3562,8 +3562,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3586,8 +3586,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3610,8 +3610,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3634,8 +3634,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3693,8 +3693,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3717,8 +3717,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3741,8 +3741,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3765,8 +3765,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3789,8 +3789,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3848,8 +3848,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3879,8 +3879,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3917,8 +3917,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3941,8 +3941,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3965,8 +3965,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -3989,8 +3989,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4013,8 +4013,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4072,8 +4072,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4096,8 +4096,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4120,8 +4120,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4144,8 +4144,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4168,8 +4168,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4234,8 +4234,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4258,8 +4258,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4282,8 +4282,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4306,8 +4306,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4330,8 +4330,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4389,8 +4389,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4413,8 +4413,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4437,8 +4437,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4461,8 +4461,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4485,8 +4485,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_gui_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4551,8 +4551,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4575,8 +4575,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4599,8 +4599,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4623,8 +4623,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4647,8 +4647,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4706,8 +4706,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4730,8 +4730,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4754,8 +4754,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4778,8 +4778,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4802,8 +4802,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4868,8 +4868,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4892,8 +4892,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4916,8 +4916,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4940,8 +4940,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -4964,8 +4964,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -5023,8 +5023,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -5047,8 +5047,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -5071,8 +5071,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -5095,8 +5095,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
@@ -5119,8 +5119,8 @@ print(_shared_srcs2)
 
 cc_import(
   name = "shared_libs",
-  shared_library = "linux/x86-64/shared/libwpiutil.so",
-  # shared_library = "osx/universal/shared/libwpiutil.dylib",
+  # shared_library = "linux/x86-64/shared/libwpiutil.so",
+  shared_library = "osx/universal/shared/libwpiutil.dylib",
   deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     visibility = ["//visibility:public"],
 )
