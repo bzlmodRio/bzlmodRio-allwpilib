@@ -64,6 +64,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -75,8 +77,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -103,6 +106,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -114,8 +119,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -184,6 +190,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -195,8 +203,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -223,6 +232,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -234,8 +245,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -297,6 +309,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -308,8 +322,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -336,6 +351,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -347,8 +364,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -375,6 +393,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -386,8 +406,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -414,6 +435,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -425,8 +448,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -453,6 +477,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -464,8 +490,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -527,6 +554,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -538,8 +567,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -573,6 +603,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -584,8 +616,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -633,6 +666,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -645,8 +680,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -673,6 +709,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -685,8 +723,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -713,6 +752,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -725,8 +766,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -753,6 +795,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -765,8 +809,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -793,6 +838,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -805,8 +852,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -868,6 +916,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -880,8 +930,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -908,6 +959,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -920,8 +973,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -948,6 +1002,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -960,8 +1016,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -988,6 +1045,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1000,8 +1059,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1028,6 +1088,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1040,8 +1102,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1103,6 +1166,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1115,8 +1180,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1150,6 +1216,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1162,8 +1230,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1211,6 +1280,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1223,8 +1294,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1251,6 +1323,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1263,8 +1337,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1291,6 +1366,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1303,8 +1380,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1331,6 +1409,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1343,8 +1423,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1371,6 +1452,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1383,8 +1466,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1446,6 +1530,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1458,8 +1544,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1486,6 +1573,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1498,8 +1587,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1526,6 +1616,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1538,8 +1630,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1566,6 +1659,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1578,8 +1673,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1606,6 +1702,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1618,8 +1716,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1681,6 +1780,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1693,8 +1794,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1728,6 +1830,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1740,8 +1844,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1789,6 +1894,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1802,8 +1909,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1830,6 +1938,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1843,8 +1953,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1871,6 +1982,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1884,8 +1997,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1912,6 +2026,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1925,8 +2041,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -1953,6 +2070,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -1966,8 +2085,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2029,6 +2149,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2042,8 +2164,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2070,6 +2193,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2083,8 +2208,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2111,6 +2237,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2124,8 +2252,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2152,6 +2281,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2165,8 +2296,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2193,6 +2325,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2206,8 +2340,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2269,6 +2404,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2282,8 +2419,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2317,6 +2455,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2330,8 +2470,9 @@ hdrs = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2379,6 +2520,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2391,8 +2534,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2419,6 +2563,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2431,8 +2577,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2459,6 +2606,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2471,8 +2620,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2499,6 +2649,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2511,8 +2663,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2539,6 +2692,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2551,8 +2706,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2614,6 +2770,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2626,8 +2784,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2654,6 +2813,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2666,8 +2827,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2694,6 +2856,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2706,8 +2870,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2734,6 +2899,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2746,8 +2913,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2774,6 +2942,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2786,8 +2956,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2849,6 +3020,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2861,8 +3034,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2896,6 +3070,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2908,8 +3084,9 @@ hdrs = ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_hal_hal-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2957,6 +3134,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -2970,8 +3149,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -2998,6 +3178,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3011,8 +3193,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3039,6 +3222,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3052,8 +3237,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3080,6 +3266,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3093,8 +3281,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3121,6 +3310,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3134,8 +3325,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3197,6 +3389,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3210,8 +3404,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3238,6 +3433,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3251,8 +3448,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3279,6 +3477,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3292,8 +3492,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3320,6 +3521,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3333,8 +3536,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3361,6 +3565,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3374,8 +3580,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3437,6 +3644,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3450,8 +3659,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3485,6 +3695,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3498,8 +3710,9 @@ hdrs = ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3547,6 +3760,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3561,8 +3776,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3589,6 +3805,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3603,8 +3821,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3631,6 +3850,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3645,8 +3866,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3673,6 +3895,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3687,8 +3911,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3715,6 +3940,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3729,8 +3956,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3792,6 +4020,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3806,8 +4036,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3834,6 +4065,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3848,8 +4081,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3876,6 +4110,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3890,8 +4126,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3918,6 +4155,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3932,8 +4171,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -3960,6 +4200,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -3974,8 +4216,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4037,6 +4280,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4051,8 +4296,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4086,6 +4332,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4100,8 +4348,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4149,6 +4398,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4164,8 +4415,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4192,6 +4444,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4207,8 +4461,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4235,6 +4490,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4250,8 +4507,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4278,6 +4536,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4293,8 +4553,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4321,6 +4582,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4336,8 +4599,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4399,6 +4663,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4414,8 +4680,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4442,6 +4709,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4457,8 +4726,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4485,6 +4755,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4500,8 +4772,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4528,6 +4801,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4543,8 +4818,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4571,6 +4847,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4586,8 +4864,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4649,6 +4928,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4664,8 +4945,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4699,6 +4981,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4714,8 +4998,9 @@ hdrs = ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4763,6 +5048,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4781,8 +5068,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4809,6 +5097,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4827,8 +5117,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4855,6 +5146,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4873,8 +5166,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4901,6 +5195,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4919,8 +5215,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -4947,6 +5244,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -4965,8 +5264,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5028,6 +5328,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5046,8 +5348,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5074,6 +5377,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5092,8 +5397,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5120,6 +5426,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5138,8 +5446,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5166,6 +5475,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5184,8 +5495,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5212,6 +5524,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5230,8 +5544,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5293,6 +5608,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5311,8 +5628,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5346,6 +5664,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5364,8 +5684,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5413,6 +5734,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5432,8 +5755,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5460,6 +5784,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5479,8 +5805,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5507,6 +5834,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5526,8 +5855,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5554,6 +5884,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5573,8 +5905,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5601,6 +5934,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5620,8 +5955,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5683,6 +6019,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5702,8 +6040,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5730,6 +6069,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5749,8 +6090,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5777,6 +6119,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5796,8 +6140,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5824,6 +6169,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5843,8 +6190,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5871,6 +6219,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5890,8 +6240,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -5953,6 +6304,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -5972,8 +6325,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6007,6 +6361,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6026,8 +6382,9 @@ hdrs = ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers
 
 cc_library(
     name = "shared_libs",
-    deps = ["shared_" + lib for lib in shared_srcs],
+    deps = ["shared_" + lib for lib in shared_srcs] + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6068,6 +6425,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6084,6 +6443,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6110,6 +6470,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6126,6 +6488,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6152,6 +6515,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6168,6 +6533,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6194,6 +6560,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6210,6 +6578,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6236,6 +6605,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6252,6 +6623,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6313,6 +6685,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6329,6 +6703,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6355,6 +6730,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6371,6 +6748,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6397,6 +6775,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6413,6 +6793,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6439,6 +6820,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6455,6 +6838,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6481,6 +6865,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6497,6 +6883,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6565,6 +6952,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6581,6 +6970,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6607,6 +6997,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6623,6 +7015,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6649,6 +7042,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6665,6 +7060,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6691,6 +7087,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6707,6 +7105,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6733,6 +7132,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6749,6 +7150,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6810,6 +7212,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6826,6 +7230,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6852,6 +7257,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6868,6 +7275,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6894,6 +7302,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6910,6 +7320,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6936,6 +7347,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6952,6 +7365,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -6978,6 +7392,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -6994,6 +7410,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7062,6 +7479,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7078,6 +7497,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7104,6 +7524,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7120,6 +7542,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7146,6 +7569,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7162,6 +7587,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7188,6 +7614,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7204,6 +7632,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7230,6 +7659,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7246,6 +7677,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7307,6 +7739,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7323,6 +7757,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7349,6 +7784,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7365,6 +7802,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7391,6 +7829,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7407,6 +7847,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7433,6 +7874,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7449,6 +7892,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7475,6 +7919,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7491,6 +7937,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7559,6 +8006,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7575,6 +8024,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7601,6 +8051,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7617,6 +8069,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7643,6 +8096,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7659,6 +8114,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7685,6 +8141,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7701,6 +8159,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7727,6 +8186,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7743,6 +8204,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7804,6 +8266,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7820,6 +8284,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7846,6 +8311,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7862,6 +8329,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7888,6 +8356,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7904,6 +8374,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7930,6 +8401,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7946,6 +8419,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
@@ -7972,6 +8446,8 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
+print(shared_srcs)
+
 [cc_import(
   name = "shared_" + lib,
   shared_library = lib,
@@ -7988,6 +8464,7 @@ cc_library(
     name = "shared_libs",
     deps = ["shared_" + lib for lib in shared_srcs],
     visibility = ["//visibility:public"],
+    linkstatic = 0,
 )
 
 cc_library(
