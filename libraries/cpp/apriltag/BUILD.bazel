@@ -1,3 +1,5 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 alias(
     name = "apriltag",
     actual = ":shared",
@@ -9,8 +11,8 @@ cc_library(
     linkstatic = 1,
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/apriltag:shared",
     ],
@@ -21,8 +23,8 @@ cc_library(
     linkstatic = 1,
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/apriltag:static",
     ],

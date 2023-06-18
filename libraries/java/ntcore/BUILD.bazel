@@ -1,3 +1,5 @@
+load("@rules_java//java:defs.bzl", "java_import")
+
 java_import(
     name = "ntcore",
     jars = ["@edu_wpi_first_ntcore_ntcore_java//jar:file"],

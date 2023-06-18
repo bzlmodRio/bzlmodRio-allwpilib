@@ -1,3 +1,5 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 alias(
     name = "wpilibNewCommands",
     actual = ":shared",
@@ -9,14 +11,14 @@ cc_library(
     linkstatic = 1,
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-        "@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
-        "@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
-        "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-        "@bzlmodrio-opencv//libraries/cpp/opencv:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
+        "@bzlmodrio-opencv//libraries/cpp/opencv:shared",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/wpilibNewCommands:shared",
     ],
@@ -27,14 +29,14 @@ cc_library(
     linkstatic = 1,
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
-        "@bzlmodrio-allwpilib//libraries/cpp/cscore:static",
-        "@bzlmodrio-allwpilib//libraries/cpp/ntcore:static",
-        "@bzlmodrio-allwpilib//libraries/cpp/hal:static",
         "@bzlmodrio-allwpilib//libraries/cpp/cameraserver:static",
-        "@bzlmodrio-opencv//libraries/cpp/opencv:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/cscore:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/hal:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/ntcore:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpilibc:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+        "@bzlmodrio-opencv//libraries/cpp/opencv:static",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/wpilibNewCommands:static",
     ],

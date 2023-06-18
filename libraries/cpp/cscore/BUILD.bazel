@@ -1,3 +1,5 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 alias(
     name = "cscore",
     actual = ":shared",
@@ -9,8 +11,8 @@ cc_library(
     linkstatic = 1,
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
         "@bzlmodrio-opencv//libraries/cpp/opencv:shared",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/cscore:shared",
@@ -22,8 +24,8 @@ cc_library(
     linkstatic = 1,
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
         "@bzlmodrio-opencv//libraries/cpp/opencv:static",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/cscore:static",
