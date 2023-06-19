@@ -1,3 +1,5 @@
+load("@rules_java//java:defs.bzl", "java_import")
+
 java_import(
     name = "cscore",
     jars = ["@edu_wpi_first_cscore_cscore_java//jar:file"],

@@ -1,3 +1,4 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
 load("@rules_wpi_styleguide//styleguide:cc_styleguide.bzl", "cc_styleguide")
 
 cc_library(

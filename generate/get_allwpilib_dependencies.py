@@ -171,7 +171,13 @@ def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False):
         group,
         "cameraserver",
         has_jni=False,
-        dependencies=["wpiutil-cpp", "cscore-cpp", "ntcore-cpp", "opencv-cpp"],
+        dependencies=[
+            "wpiutil-cpp",
+            "cscore-cpp",
+            "ntcore-cpp",
+            "wpinet-cpp",
+            "opencv-cpp",
+        ],
     )
     _cc_dependency(
         group,
@@ -185,6 +191,7 @@ def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False):
             "hal-cpp",
             "cameraserver-cpp",
             "opencv-cpp",
+            "wpinet-cpp",
         ],
     )
     _cc_dependency(
@@ -200,6 +207,7 @@ def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False):
             "cameraserver-cpp",
             "opencv-cpp",
             "wpilibc-cpp",
+            "wpinet-cpp",
         ],
     )
 
@@ -303,16 +311,16 @@ def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False):
     )
 
     _halsim_dependency(
-        group, "halsim_ds_socket", dependencies=["hal-cpp", "wpiutil-cpp"]
+        group, "halsim_ds_socket", dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp"]
     )
     _halsim_dependency(
         group, "halsim_gui", dependencies=["hal-cpp", "wpiutil-cpp", "ntcore-cpp"]
     )
     _halsim_dependency(
-        group, "halsim_ws_client", dependencies=["hal-cpp", "wpiutil-cpp"]
+        group, "halsim_ws_client", dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp"]
     )
     _halsim_dependency(
-        group, "halsim_ws_server", dependencies=["hal-cpp", "wpiutil-cpp"]
+        group, "halsim_ws_server", dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp"]
     )
 
     group.create_java_dependency(

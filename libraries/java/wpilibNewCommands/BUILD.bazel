@@ -1,3 +1,5 @@
+load("@rules_java//java:defs.bzl", "java_import")
+
 java_import(
     name = "wpilibNewCommands",
     jars = ["@edu_wpi_first_wpilibnewcommands_wpilibnewcommands_java//jar:file"],
