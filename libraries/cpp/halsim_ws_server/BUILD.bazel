@@ -1,3 +1,5 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 alias(
     name = "halsim_ws_server",
     actual = ":shared",
@@ -8,14 +10,14 @@ cc_library(
     name = "shared",
     linkstatic = 1,
     target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:shared",
@@ -26,14 +28,14 @@ cc_library(
     name = "static",
     linkstatic = 1,
     target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bullseye32:bullseye32": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bullseye64:bullseye64": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/hal:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
     ] + [
         "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:static",
