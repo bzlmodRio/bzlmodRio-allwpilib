@@ -157,7 +157,13 @@ def get_allwpilib_dependencies(use_local_opencv=False, use_local_ni=False):
     _cc_dependency(
         group, "apriltag", has_jni=True, dependencies=["wpiutil-cpp", "wpimath-cpp"]
     )
-    _cc_dependency(group, "hal", has_jni=True, dependencies=["wpiutil-cpp", "ni"], artifact_install_name="wpiHal")
+    _cc_dependency(
+        group,
+        "hal",
+        has_jni=True,
+        dependencies=["wpiutil-cpp", "ni"],
+        artifact_install_name="wpiHal",
+    )
     _cc_dependency(
         group, "ntcore", has_jni=True, dependencies=["wpiutil-cpp", "wpinet-cpp"]
     )
