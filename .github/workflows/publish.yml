@@ -39,7 +39,7 @@ jobs:
         repository: 'bzlmodRio/bzlmodrio-opencv.git'
         fetch-depth: 0
         path: libraries/bzlmodrio-allwpilib/../../libraries/bzlmodRio-opencv
-        ref: refactor_dev
+        ref: main
 
     # Checkout bzlmodrio-ni
     - uses: actions/checkout@v3
@@ -47,7 +47,7 @@ jobs:
         repository: 'bzlmodRio/bzlmodrio-ni.git'
         fetch-depth: 0
         path: libraries/bzlmodrio-allwpilib/../../libraries/bzlmodRio-ni
-        ref: refactor_dev
+        ref: main
 
 
 
