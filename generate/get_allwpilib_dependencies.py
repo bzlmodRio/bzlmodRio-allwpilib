@@ -121,7 +121,7 @@ def _executable_tool(
         group_id=group_id,
         resources=native_platforms,
         lower_target_name=lower_target_name,
-        fail_on_hash_miss=not ("alpha" in maven_dep.version)
+        fail_on_hash_miss=not ("alpha" in maven_dep.version),
     )
 
 
