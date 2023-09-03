@@ -87,7 +87,7 @@ jobs:
         base: refactor_dev
         token: ${{ secrets.AUTO_UPDATE_KEY }}
         reviewers: pjreiniger
-        branch: autoupdate/bzlmodrio-allwpilib_update
+        branch: autoupdate/bzlmodrio-allwpilib_update_${{ env.NEW_VERSION }}
         title: "Auto Update bzlmodrio-allwpilib module to '${{ env.NEW_VERSION }}'"
 
     - name: Create BCR Pull Request
@@ -99,5 +99,5 @@ jobs:
         base: bzlmodrio
         token: ${{ secrets.AUTO_UPDATE_KEY }}
         reviewers: pjreiniger
-        branch: autoupdate/bzlmodrio-allwpilib_update
+        branch: autoupdate/bzlmodrio-allwpilib_update_${{ env.NEW_VERSION }}
         title: "Auto Update latest bzlmodrio-allwpilib to '${{ env.NEW_VERSION }}'"

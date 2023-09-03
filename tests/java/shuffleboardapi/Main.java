@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@SuppressWarnings("rawtypes")
 public class Main {
   @Description(
       group = "com.gos.codelabs.shuffleboard.sd_widgets",
