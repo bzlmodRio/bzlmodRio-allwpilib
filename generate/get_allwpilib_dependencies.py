@@ -121,6 +121,7 @@ def _executable_tool(
         group_id=group_id,
         resources=native_platforms,
         lower_target_name=lower_target_name,
+        fail_on_hash_miss=not ("alpha" in maven_dep.version)
     )
 
 
@@ -128,7 +129,7 @@ def get_allwpilib_dependencies(
     use_local_opencv=False,
     use_local_ni=False,
     opencv_version_override="4.6.0-4",
-    ni_version_override=None,
+    ni_version_override="2023.3.0",
 ):
     year = "2023"
     version = "2023.4.3"
