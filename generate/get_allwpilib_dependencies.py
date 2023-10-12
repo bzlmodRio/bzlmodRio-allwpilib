@@ -131,8 +131,8 @@ def get_allwpilib_dependencies(
     opencv_version_override="4.6.0-4",
     ni_version_override="2023.3.0",
 ):
-    year = "2023"
-    version = "2023.4.3"
+    year = "2024"
+    version = "2024.1.1-beta-1"
 
     opencv_dependency = ModuleDependency(
         get_opencv_dependencies(),

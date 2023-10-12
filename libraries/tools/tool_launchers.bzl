@@ -43,7 +43,6 @@ def java_tool_launcher(name, main_class, base_repo_name):
     java_binary(
         name = name,
         main_class = main_class,
-        javacopts = ["-Werror"],
         runtime_deps = select({
             "@bazel_tools//src/conditions:darwin": ["@" + base_repo_name + "_macx64//jar"],
             "@bazel_tools//src/conditions:linux_x86_64": ["@" + base_repo_name + "_linuxx64//jar"],
