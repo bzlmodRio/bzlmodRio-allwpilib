@@ -37,16 +37,17 @@ def main():
 
 def manual_cleanup(REPO_DIR):
     # Manual cleanup
-    hal_build = os.path.join(REPO_DIR, "libraries", "cpp", "hal", "BUILD.bazel")
-    with open(hal_build, "r") as f:
-        contents = f.read()
+    for lib in ["hal", "wpiutil"]:
+        lib_build = os.path.join(REPO_DIR, "libraries", "cpp", lib, "BUILD.bazel")
+        with open(lib_build, "r") as f:
+            contents = f.read()
 
-    contents = contents.replace(
-        "@bzlmodrio-ni//libraries/cpp/ni:static",
-        "@bzlmodrio-ni//libraries/cpp/ni:shared",
-    )
-    with open(hal_build, "w") as f:
-        f.write(contents)
+        contents = contents.replace(
+            "@bzlmodrio-ni//libraries/cpp/ni:static",
+            "@bzlmodrio-ni//libraries/cpp/ni:shared",
+        )
+        with open(lib_build, "w") as f:
+            f.write(contents)
 
 
 if __name__ == "__main__":
