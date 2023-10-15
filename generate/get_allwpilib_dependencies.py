@@ -13,6 +13,7 @@ def _default_native_shared_platforms():
         "linuxx86-64",
         "osxuniversal",
         "windowsx86-64",
+        "windowsarm64",
     ]
 
 
@@ -155,7 +156,7 @@ def get_allwpilib_dependencies(
     group.add_module_dependency(opencv_dependency)
     group.add_module_dependency(ni_dependency, meta_deps=["ni"])
 
-    _cc_dependency(group, "wpiutil", has_jni=True)
+    _cc_dependency(group, "wpiutil", has_jni=True, dependencies=["ni"],)
     _cc_dependency(group, "wpinet", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(group, "wpimath", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(
@@ -347,7 +348,7 @@ def get_allwpilib_dependencies(
         group,
         "SysId",
         lower_target_name=True,
-        native_platforms=["linuxx86-64", "osxuniversal", "windowsx86-64"],
+        native_platforms=["linuxx86-64", "osxuniversal", "windowsx86-64", "windowsarm64"],
     )
     _java_tool(
         group,
