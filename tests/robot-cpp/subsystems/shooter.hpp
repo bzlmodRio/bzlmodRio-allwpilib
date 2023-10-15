@@ -5,11 +5,11 @@
 #include <frc/motorcontrol/PWMVictorSPX.h>
 #include <frc/simulation/EncoderSim.h>
 #include <frc/simulation/FlywheelSim.h>
-#include <frc2/command/SubsystemBase.h>
+#include <frc2/command/Subsystem.h>
 
 #include "robot-cpp/subsystems/ports.hpp"
 
-class Shooter : public frc2::SubsystemBase {
+class Shooter : public frc2::Subsystem {
 public:
   Shooter();
 
@@ -27,7 +27,7 @@ private:
 
   frc::PWMVictorSPX m_motor{kShooterMotorPort};
   frc::Encoder m_encoder{kShooterEncoderPortA, kShooterEncoderPortB};
-  frc2::PIDController m_controller;
+  frc::PIDController m_controller;
 
   frc::sim::EncoderSim m_encoderSim{m_encoder};
   frc::sim::FlywheelSim m_flywheelSim;

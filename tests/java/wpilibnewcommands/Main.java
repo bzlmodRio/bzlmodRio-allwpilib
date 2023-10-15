@@ -4,8 +4,8 @@ import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.simulation.DriverStationSim;
-import edu.wpi.first.wpilibj2.command.CommandBase;
-import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.Subsystem;
 
 /**
  * Do NOT add any static variables to this class, or any initialization at all. Unless you know what
@@ -13,14 +13,14 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
  * call.
  */
 public final class Main {
-  private static class ExampleSubsystem extends SubsystemBase {
+  private static class ExampleSubsystem implements Subsystem {
     @Override
     public void periodic() {
       System.out.println("subsystem Periodic");
     }
   }
 
-  private static class ExampleCommand extends CommandBase {
+  private static class ExampleCommand extends Command {
     ExampleCommand(ExampleSubsystem sub) {
       addRequirements(sub);
     }

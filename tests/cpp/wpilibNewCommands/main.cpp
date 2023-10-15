@@ -1,20 +1,20 @@
 
 #include <cameraserver/CameraServer.h>
 #include <frc/TimedRobot.h>
-#include <frc2/command/CommandBase.h>
+#include <frc2/command/Command.h>
 #include <frc2/command/CommandHelper.h>
-#include <frc2/command/SubsystemBase.h>
+#include <frc2/command/Subsystem.h>
 
 #include <iostream>
 
-class ExampleSubsystem : public frc2::SubsystemBase {
+class ExampleSubsystem : public frc2::Subsystem {
   void Periodic() override { std::cout << "Subsystem periodic" << std::endl; }
 };
 
 class ExampleCommand
-    : public frc2::CommandHelper<frc2::CommandBase, ExampleCommand> {
+    : public frc2::CommandHelper<frc2::Command, ExampleCommand> {
 public:
-  explicit ExampleCommand(ExampleSubsystem &sub) { AddRequirements({&sub}); }
+  explicit ExampleCommand(ExampleSubsystem &sub) { AddRequirements(&sub); }
 
   void Execute() override { std::cout << "Command periodic" << std::endl; }
 };

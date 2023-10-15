@@ -13,6 +13,7 @@ def _default_native_shared_platforms():
         "linuxx86-64",
         "osxuniversal",
         "windowsx86-64",
+        "windowsarm64",
     ]
 
 
@@ -128,11 +129,11 @@ def _executable_tool(
 def get_allwpilib_dependencies(
     use_local_opencv=False,
     use_local_ni=False,
-    opencv_version_override="4.6.0-4",
-    ni_version_override="2023.3.0",
+    opencv_version_override="4.8.0-1",
+    ni_version_override="2024.1.1",
 ):
-    year = "2023"
-    version = "2023.4.3"
+    year = "2024"
+    version = "2024.1.1-beta-1"
 
     opencv_dependency = ModuleDependency(
         get_opencv_dependencies(),
@@ -155,7 +156,12 @@ def get_allwpilib_dependencies(
     group.add_module_dependency(opencv_dependency)
     group.add_module_dependency(ni_dependency, meta_deps=["ni"])
 
-    _cc_dependency(group, "wpiutil", has_jni=True)
+    _cc_dependency(
+        group,
+        "wpiutil",
+        has_jni=True,
+        dependencies=["ni"],
+    )
     _cc_dependency(group, "wpinet", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(group, "wpimath", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(
@@ -347,7 +353,12 @@ def get_allwpilib_dependencies(
         group,
         "SysId",
         lower_target_name=True,
-        native_platforms=["linuxx86-64", "osxuniversal", "windowsx86-64"],
+        native_platforms=[
+            "linuxx86-64",
+            "osxuniversal",
+            "windowsx86-64",
+            "windowsarm64",
+        ],
     )
     _java_tool(
         group,
