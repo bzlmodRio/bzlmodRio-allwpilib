@@ -36,7 +36,7 @@ def download_dependencies():
     # bzlmodrio-ni
     http_archive(
         name = "bzlmodrio-ni",
-        sha256 = "07389511771222245c17b29908f539b8c84ec9acbfdf2abe940f4317f92bea77",
+        sha256 = "cc15dcf0e83a46aa27aede4f4627bdf67170c413b15568787ac73ab371c0c10a",
         url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2024.1.1/bzlmodRio-ni-2024.1.1.tar.gz",
     )
 
