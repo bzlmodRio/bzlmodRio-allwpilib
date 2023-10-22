@@ -48,23 +48,31 @@ def manual_cleanup(REPO_DIR):
     # Manual cleanup
     for lib in ["hal", "wpiutil"]:
         lib_build = os.path.join(REPO_DIR, "libraries", "cpp", lib, "BUILD.bazel")
-        helper(lib_build, lambda contents: contents.replace(
-            "@bzlmodrio-ni//libraries/cpp/ni:static",
-            "@bzlmodrio-ni//libraries/cpp/ni:shared",
-        ))
+        helper(
+            lib_build,
+            lambda contents: contents.replace(
+                "@bzlmodrio-ni//libraries/cpp/ni:static",
+                "@bzlmodrio-ni//libraries/cpp/ni:shared",
+            ),
+        )
 
-        
     filepath = os.path.join(REPO_DIR, "libraries", "tools", "tool_launchers.bzl")
-    helper(filepath, lambda contents: contents.replace(
-        "main_class = main_class,",
-        'main_class = main_class,\n        javacopts = ["-Werror"],',
-    ))
-        
+    helper(
+        filepath,
+        lambda contents: contents.replace(
+            "main_class = main_class,",
+            'main_class = main_class,\n        javacopts = ["-Werror"],',
+        ),
+    )
+
     filepath = os.path.join(REPO_DIR, "libraries", "tools", "RobotBuilder", "BUILD")
-    helper(filepath, lambda contents: contents.replace(
-        'name = "RobotBuilder",',
-        'name = "RobotBuilder",\n    javacopts = ["-Werror"],',
-    ))
+    helper(
+        filepath,
+        lambda contents: contents.replace(
+            'name = "RobotBuilder",',
+            'name = "RobotBuilder",\n    javacopts = ["-Werror"],',
+        ),
+    )
 
 
 if __name__ == "__main__":
