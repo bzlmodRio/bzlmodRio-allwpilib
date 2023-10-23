@@ -9,6 +9,9 @@ java_import(
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:jni",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
         "@bzlmodrio-allwpilib//libraries/java/wpiutil",
+        artifact("com.fasterxml.jackson.core:jackson-annotations"),
+        artifact("com.fasterxml.jackson.core:jackson-core"),
+        artifact("com.fasterxml.jackson.core:jackson-databind"),
         artifact("org.ejml:ejml-simple"),
     ],
 )

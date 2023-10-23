@@ -133,7 +133,7 @@ def get_allwpilib_dependencies(
     ni_version_override="2024.1.1",
 ):
     year = "2024"
-    version = "2024.1.1-beta-1"
+    version = "2024.1.1-beta-2"
 
     opencv_dependency = ModuleDependency(
         get_opencv_dependencies(),
@@ -232,9 +232,10 @@ def get_allwpilib_dependencies(
         "wpiutil",
         dependencies=["wpiutil-cpp"],
         maven_deps=[
-            ("com.fasterxml.jackson.core:jackson-annotations", "2.12.4"),
-            ("com.fasterxml.jackson.core:jackson-core", "2.12.4"),
-            ("com.fasterxml.jackson.core:jackson-databind", "2.12.4"),
+            ("com.fasterxml.jackson.core:jackson-annotations", "2.15.2"),
+            ("com.fasterxml.jackson.core:jackson-core", "2.15.2"),
+            ("com.fasterxml.jackson.core:jackson-databind", "2.15.2"),
+            ("us.hebi.quickbuf:quickbuf-runtime", "1.3.2"),
         ],
     )
     _java_dependency(
@@ -244,7 +245,12 @@ def get_allwpilib_dependencies(
         group,
         "wpimath",
         dependencies=["wpiutil-java", "wpiutil-cpp", "wpimath-cpp"],
-        maven_deps=[("org.ejml:ejml-simple", "0.41")],
+        maven_deps=[
+            ("com.fasterxml.jackson.core:jackson-annotations", "2.15.2"),
+            ("com.fasterxml.jackson.core:jackson-core", "2.15.2"),
+            ("com.fasterxml.jackson.core:jackson-databind", "2.15.2"),
+            ("org.ejml:ejml-simple", "0.43.1"),
+        ],
     )
     _java_dependency(group, "apriltag", dependencies=["wpimath-java", "apriltag-cpp"])
     _java_dependency(
@@ -320,9 +326,9 @@ def get_allwpilib_dependencies(
         "fieldImages",
         dependencies=[],
         maven_deps=[
-            ("com.fasterxml.jackson.core:jackson-annotations", "2.12.4"),
-            ("com.fasterxml.jackson.core:jackson-core", "2.12.4"),
-            ("com.fasterxml.jackson.core:jackson-databind", "2.12.4"),
+            ("com.fasterxml.jackson.core:jackson-annotations", "2.15.2"),
+            ("com.fasterxml.jackson.core:jackson-core", "2.15.2"),
+            ("com.fasterxml.jackson.core:jackson-databind", "2.15.2"),
         ],
     )
 
