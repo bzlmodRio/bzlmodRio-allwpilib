@@ -249,7 +249,7 @@ def get_allwpilib_dependencies(
             ("com.fasterxml.jackson.core:jackson-annotations", "2.15.2"),
             ("com.fasterxml.jackson.core:jackson-core", "2.15.2"),
             ("com.fasterxml.jackson.core:jackson-databind", "2.15.2"),
-            ("org.ejml:ejml-simple", "0.43.1")
+            ("org.ejml:ejml-simple", "0.43.1"),
         ],
     )
     _java_dependency(group, "apriltag", dependencies=["wpimath-java", "apriltag-cpp"])
