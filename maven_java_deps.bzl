@@ -83,10 +83,11 @@ setup_bzlmodrio_allwpilib_java_dependencies = module_extension(
 
 def get_bzlmodrio_allwpilib_java_dependencies():
     artifacts = [
-        "com.fasterxml.jackson.core:jackson-annotations:2.12.4",
-        "com.fasterxml.jackson.core:jackson-core:2.12.4",
-        "com.fasterxml.jackson.core:jackson-databind:2.12.4",
-        "org.ejml:ejml-simple:0.41",
+        "com.fasterxml.jackson.core:jackson-annotations:2.15.2",
+        "com.fasterxml.jackson.core:jackson-core:2.15.2",
+        "com.fasterxml.jackson.core:jackson-databind:2.15.2",
+        "org.ejml:ejml-simple:0.43.1",
+        "us.hebi.quickbuf:quickbuf-runtime:1.3.2",
     ]
     repositories = [
         "https://repo1.maven.org/maven2",

@@ -10,5 +10,6 @@ java_import(
         artifact("com.fasterxml.jackson.core:jackson-annotations"),
         artifact("com.fasterxml.jackson.core:jackson-core"),
         artifact("com.fasterxml.jackson.core:jackson-databind"),
+        artifact("us.hebi.quickbuf:quickbuf-runtime"),
     ],
 )
