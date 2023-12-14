@@ -20,7 +20,7 @@ public final class Main {
     System.out.println("Hello World");
     System.out.println(System.getProperty("user.dir"));
 
-    CircularBuffer queue = new CircularBuffer(8);
+    CircularBuffer<Double> queue = new CircularBuffer<Double>(8);
 
     for (double value : m_values) {
       queue.addLast(value);

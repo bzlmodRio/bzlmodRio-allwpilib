@@ -130,10 +130,10 @@ def get_allwpilib_dependencies(
     use_local_opencv=False,
     use_local_ni=False,
     opencv_version_override="2024.4.8.0-1",
-    ni_version_override="2024.1.1",
+    ni_version_override="2024.2.0",
 ):
     year = "2024"
-    version = "2024.1.1-beta-3"
+    version = "2024.1.1-beta-4"
 
     opencv_dependency = ModuleDependency(
         get_opencv_dependencies(),
@@ -241,10 +241,11 @@ def get_allwpilib_dependencies(
     _java_dependency(
         group, "wpinet", dependencies=["wpiutil-java", "wpiutil-cpp", "wpinet-cpp"]
     )
+    _java_dependency(group, "wpiunits", dependencies=[])
     _java_dependency(
         group,
         "wpimath",
-        dependencies=["wpiutil-java", "wpiutil-cpp", "wpimath-cpp"],
+        dependencies=["wpiutil-java", "wpiutil-cpp", "wpimath-cpp", "wpiunits-java"],
         maven_deps=[
             ("com.fasterxml.jackson.core:jackson-annotations", "2.15.2"),
             ("com.fasterxml.jackson.core:jackson-core", "2.15.2"),
