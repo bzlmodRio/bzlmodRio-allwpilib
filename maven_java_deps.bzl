@@ -14,6 +14,12 @@ def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
+        name = "edu_wpi_first_wpiunits_wpiunits_java",
+        artifact = "edu.wpi.first.wpiunits:wpiunits-java:2024.1.1-beta-4",
+        artifact_sha256 = "accdbd48d234b067b2c2d4ac767dc236de04233f81a13ab8a19d642c937e9aa7",
+        server_urls = ["https://frcmaven.wpi.edu/release"],
+    )
+    jvm_maven_import_external(
         name = "edu_wpi_first_wpimath_wpimath_java",
         artifact = "edu.wpi.first.wpimath:wpimath-java:2024.1.1-beta-4",
         artifact_sha256 = "a27432f8e4faf6d1f98015a6f21513d23f21eee276ea50f18e5a7c7514fe6a82",

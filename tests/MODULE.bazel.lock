@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 3,
-  "moduleFileHash": "f7ce0949bdb4b665792e5de98c32086fca2a02e05b347ee7e5d60321ee97a16f",
+  "moduleFileHash": "5d9c0b2f4c11d267d1da847de14defc18f4843e5ff0d332f2e0f0d9fc0f048f9",
   "flags": {
     "cmdRegistries": [
       "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/"
@@ -14,7 +14,7 @@
   },
   "localOverrideHashes": {
     "bazel_tools": "0cc38516259ab87144b82461dd874e139f093d8e356667c3a3c5a52441ac448f",
-    "bzlmodrio-allwpilib": "a2ecc9a35914cc7d3e4264a116695f8f880536e25b8dec54aac4f3ebccb53be0"
+    "bzlmodrio-allwpilib": "3d6c9272815a21e731286d139fbc983963b367d8ccba872b62267e8567b00216"
   },
   "moduleDepGraph": {
     "<root>": {
@@ -77,7 +77,7 @@
         "rules_bazelrio": "rules_bazelrio@0.0.13",
         "rules_bzlmodrio_toolchains": "rules_bzlmodrio_toolchains@2024-1",
         "bzlmodrio-opencv": "bzlmodrio-opencv@2024.4.8.0-1",
-        "bzlmodrio-ni": "bzlmodrio-ni@2024.1.1",
+        "bzlmodrio-ni": "bzlmodrio-ni@2024.2.0",
         "rules_pmd": "rules_pmd@6.43.0",
         "rules_checkstyle": "rules_checkstyle@10.1",
         "rules_wpiformat": "rules_wpiformat@2022.30",
@@ -615,6 +615,7 @@
             "edu_wpi_first_wpilibnewcommands_wpilibnewcommands_java": "edu_wpi_first_wpilibnewcommands_wpilibnewcommands_java",
             "edu_wpi_first_wpimath_wpimath_java": "edu_wpi_first_wpimath_wpimath_java",
             "edu_wpi_first_wpinet_wpinet_java": "edu_wpi_first_wpinet_wpinet_java",
+            "edu_wpi_first_wpiunits_wpiunits_java": "edu_wpi_first_wpiunits_wpiunits_java",
             "edu_wpi_first_wpiutil_wpiutil_java": "edu_wpi_first_wpiutil_wpiutil_java"
           },
           "devImports": [],
@@ -631,7 +632,7 @@
         "rules_bazelrio": "rules_bazelrio@0.0.13",
         "rules_bzlmodrio_toolchains": "rules_bzlmodrio_toolchains@2024-1",
         "bzlmodrio-opencv": "bzlmodrio-opencv@2024.4.8.0-1",
-        "bzlmodrio-ni": "bzlmodrio-ni@2024.1.1",
+        "bzlmodrio-ni": "bzlmodrio-ni@2024.2.0",
         "bazel_tools": "bazel_tools@_",
         "local_config_platform": "local_config_platform@_"
       }
@@ -1174,10 +1175,10 @@
         }
       }
     },
-    "bzlmodrio-ni@2024.1.1": {
+    "bzlmodrio-ni@2024.2.0": {
       "name": "bzlmodrio-ni",
-      "version": "2024.1.1",
-      "key": "bzlmodrio-ni@2024.1.1",
+      "version": "2024.2.0",
+      "key": "bzlmodrio-ni@2024.2.0",
       "repoName": "bzlmodrio-ni",
       "executionPlatformsToRegister": [],
       "toolchainsToRegister": [],
@@ -1185,9 +1186,9 @@
         {
           "extensionBzlFile": "@bzlmodrio-ni//:maven_cpp_deps.bzl",
           "extensionName": "setup_bzlmodrio_ni_cpp_dependencies",
-          "usingModule": "bzlmodrio-ni@2024.1.1",
+          "usingModule": "bzlmodrio-ni@2024.2.0",
           "location": {
-            "file": "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2024.1.1/MODULE.bazel",
+            "file": "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2024.2.0/MODULE.bazel",
             "line": 13,
             "column": 52
           },
@@ -1208,9 +1209,9 @@
         {
           "extensionBzlFile": "@bzlmodrio-ni//:maven_java_deps.bzl",
           "extensionName": "setup_bzlmodrio_ni_java_dependencies",
-          "usingModule": "bzlmodrio-ni@2024.1.1",
+          "usingModule": "bzlmodrio-ni@2024.2.0",
           "location": {
-            "file": "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2024.1.1/MODULE.bazel",
+            "file": "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2024.2.0/MODULE.bazel",
             "line": 25,
             "column": 53
           },
@@ -1234,11 +1235,11 @@
         "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
         "ruleClassName": "http_archive",
         "attributes": {
-          "name": "bzlmodrio-ni~2024.1.1",
+          "name": "bzlmodrio-ni~2024.2.0",
           "urls": [
-            "https://github.com/bzlmodRio/bzlmodrio-ni/releases/download/2024.1.1/bzlmodrio-ni-2024.1.1.tar.gz"
+            "https://github.com/bzlmodRio/bzlmodrio-ni/releases/download/2024.2.0/bzlmodrio-ni-2024.2.0.tar.gz"
           ],
-          "integrity": "sha256-zBXc8Og6Rqonrt5PRie99nFwxBOxVWh4esc6s3HAwQo=",
+          "integrity": "sha256-9BAZJdJgw4X2pcCnlFFpLbNfQzyri4zECS3Tq5NCRVk=",
           "strip_prefix": "",
           "remote_patches": {},
           "remote_patch_strip": 0
@@ -6811,7 +6812,7 @@
     },
     "@bzlmodrio-allwpilib~override//:maven_java_deps.bzl%setup_bzlmodrio_allwpilib_java_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "FZEbK1nt1Bpi9Xoy/4oezn5fMZSS+oI0TZ/6vAsFPAo=",
+        "bzlTransitiveDigest": "vm5EOqpBR4Ioe+SPNOeQzQRUtNY0l55cVZ437CJTRHI=",
         "accumulatedFileDigests": {},
         "envVariables": {},
         "generatedRepoSpecs": {
@@ -6831,6 +6832,78 @@
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_ntcore_ntcore_java",
               "artifact_sha256": "b83242fbb802aaad363b484bd6c750d020aebff8f374a85eee878f0615cfcf35"
+            }
+          },
+          "edu_wpi_first_wpilibj_wpilibj_java": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:jvm.bzl",
+            "ruleClassName": "jvm_import_external",
+            "attributes": {
+              "artifact_urls": [
+                "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibj/wpilibj-java/2024.1.1-beta-4/wpilibj-java-2024.1.1-beta-4.jar"
+              ],
+              "srcjar_urls": [],
+              "canonical_id": "edu.wpi.first.wpilibj:wpilibj-java:2024.1.1-beta-4",
+              "rule_name": "java_import",
+              "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
+              "tags": [
+                "maven_coordinates=edu.wpi.first.wpilibj:wpilibj-java:2024.1.1-beta-4"
+              ],
+              "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpilibj_wpilibj_java",
+              "artifact_sha256": "62b8a6a3993aa4d9a0fe4ff8fa43b1099c08b833236422fc712ee4fdd44e9fb5"
+            }
+          },
+          "edu_wpi_first_shuffleboard_api": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:jvm.bzl",
+            "ruleClassName": "jvm_import_external",
+            "attributes": {
+              "artifact_urls": [
+                "https://frcmaven.wpi.edu/release/edu/wpi/first/shuffleboard/api/2024.1.1-beta-4/api-2024.1.1-beta-4.jar"
+              ],
+              "srcjar_urls": [],
+              "canonical_id": "edu.wpi.first.shuffleboard:api:2024.1.1-beta-4",
+              "rule_name": "java_import",
+              "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
+              "tags": [
+                "maven_coordinates=edu.wpi.first.shuffleboard:api:2024.1.1-beta-4"
+              ],
+              "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_shuffleboard_api",
+              "artifact_sha256": "03889c2ad3ca9e8a53e19606930956fc1ad652b037fa817603269c04e6864bc9"
+            }
+          },
+          "edu_wpi_first_wpinet_wpinet_java": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:jvm.bzl",
+            "ruleClassName": "jvm_import_external",
+            "attributes": {
+              "artifact_urls": [
+                "https://frcmaven.wpi.edu/release/edu/wpi/first/wpinet/wpinet-java/2024.1.1-beta-4/wpinet-java-2024.1.1-beta-4.jar"
+              ],
+              "srcjar_urls": [],
+              "canonical_id": "edu.wpi.first.wpinet:wpinet-java:2024.1.1-beta-4",
+              "rule_name": "java_import",
+              "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
+              "tags": [
+                "maven_coordinates=edu.wpi.first.wpinet:wpinet-java:2024.1.1-beta-4"
+              ],
+              "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpinet_wpinet_java",
+              "artifact_sha256": "35e0bda12ee22c2dc5967d9a919f358ba0cc0326d8283be65af42e1c634e232e"
+            }
+          },
+          "edu_wpi_first_cameraserver_cameraserver_java": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:jvm.bzl",
+            "ruleClassName": "jvm_import_external",
+            "attributes": {
+              "artifact_urls": [
+                "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-java/2024.1.1-beta-4/cameraserver-java-2024.1.1-beta-4.jar"
+              ],
+              "srcjar_urls": [],
+              "canonical_id": "edu.wpi.first.cameraserver:cameraserver-java:2024.1.1-beta-4",
+              "rule_name": "java_import",
+              "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
+              "tags": [
+                "maven_coordinates=edu.wpi.first.cameraserver:cameraserver-java:2024.1.1-beta-4"
+              ],
+              "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_cameraserver_cameraserver_java",
+              "artifact_sha256": "6eaad31276ed646b1e42717926cd4e8a2bfde4f618075c3ea0c0b7a563d72791"
             }
           },
           "edu_wpi_first_wpilibnewcommands_wpilibnewcommands_java": {
@@ -6887,40 +6960,22 @@
               "artifact_sha256": "f0dfcb4692c4c5c9e1ec4a5b1f5ed30b3f282d46a74daa58993dfbb340bccc39"
             }
           },
-          "edu_wpi_first_wpilibj_wpilibj_java": {
+          "edu_wpi_first_wpiunits_wpiunits_java": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:jvm.bzl",
             "ruleClassName": "jvm_import_external",
             "attributes": {
               "artifact_urls": [
-                "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibj/wpilibj-java/2024.1.1-beta-4/wpilibj-java-2024.1.1-beta-4.jar"
+                "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiunits/wpiunits-java/2024.1.1-beta-4/wpiunits-java-2024.1.1-beta-4.jar"
               ],
               "srcjar_urls": [],
-              "canonical_id": "edu.wpi.first.wpilibj:wpilibj-java:2024.1.1-beta-4",
+              "canonical_id": "edu.wpi.first.wpiunits:wpiunits-java:2024.1.1-beta-4",
               "rule_name": "java_import",
               "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
               "tags": [
-                "maven_coordinates=edu.wpi.first.wpilibj:wpilibj-java:2024.1.1-beta-4"
+                "maven_coordinates=edu.wpi.first.wpiunits:wpiunits-java:2024.1.1-beta-4"
               ],
-              "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpilibj_wpilibj_java",
-              "artifact_sha256": "62b8a6a3993aa4d9a0fe4ff8fa43b1099c08b833236422fc712ee4fdd44e9fb5"
-            }
-          },
-          "edu_wpi_first_shuffleboard_api": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:jvm.bzl",
-            "ruleClassName": "jvm_import_external",
-            "attributes": {
-              "artifact_urls": [
-                "https://frcmaven.wpi.edu/release/edu/wpi/first/shuffleboard/api/2024.1.1-beta-4/api-2024.1.1-beta-4.jar"
-              ],
-              "srcjar_urls": [],
-              "canonical_id": "edu.wpi.first.shuffleboard:api:2024.1.1-beta-4",
-              "rule_name": "java_import",
-              "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
-              "tags": [
-                "maven_coordinates=edu.wpi.first.shuffleboard:api:2024.1.1-beta-4"
-              ],
-              "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_shuffleboard_api",
-              "artifact_sha256": "03889c2ad3ca9e8a53e19606930956fc1ad652b037fa817603269c04e6864bc9"
+              "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpiunits_wpiunits_java",
+              "artifact_sha256": "accdbd48d234b067b2c2d4ac767dc236de04233f81a13ab8a19d642c937e9aa7"
             }
           },
           "edu_wpi_first_fieldimages_fieldimages_java": {
@@ -6939,24 +6994,6 @@
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_fieldimages_fieldimages_java",
               "artifact_sha256": "4aa25cb766fc2d4b1891c71fd5805c9e776c9c7f3841f0b5ea7a4a5ac872c522"
-            }
-          },
-          "edu_wpi_first_wpinet_wpinet_java": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:jvm.bzl",
-            "ruleClassName": "jvm_import_external",
-            "attributes": {
-              "artifact_urls": [
-                "https://frcmaven.wpi.edu/release/edu/wpi/first/wpinet/wpinet-java/2024.1.1-beta-4/wpinet-java-2024.1.1-beta-4.jar"
-              ],
-              "srcjar_urls": [],
-              "canonical_id": "edu.wpi.first.wpinet:wpinet-java:2024.1.1-beta-4",
-              "rule_name": "java_import",
-              "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
-              "tags": [
-                "maven_coordinates=edu.wpi.first.wpinet:wpinet-java:2024.1.1-beta-4"
-              ],
-              "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpinet_wpinet_java",
-              "artifact_sha256": "35e0bda12ee22c2dc5967d9a919f358ba0cc0326d8283be65af42e1c634e232e"
             }
           },
           "edu_wpi_first_hal_hal_java": {
@@ -7011,24 +7048,6 @@
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpimath_wpimath_java",
               "artifact_sha256": "a27432f8e4faf6d1f98015a6f21513d23f21eee276ea50f18e5a7c7514fe6a82"
-            }
-          },
-          "edu_wpi_first_cameraserver_cameraserver_java": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:jvm.bzl",
-            "ruleClassName": "jvm_import_external",
-            "attributes": {
-              "artifact_urls": [
-                "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-java/2024.1.1-beta-4/cameraserver-java-2024.1.1-beta-4.jar"
-              ],
-              "srcjar_urls": [],
-              "canonical_id": "edu.wpi.first.cameraserver:cameraserver-java:2024.1.1-beta-4",
-              "rule_name": "java_import",
-              "rule_load": "load(\"@rules_java//java:defs.bzl\", \"java_import\")",
-              "tags": [
-                "maven_coordinates=edu.wpi.first.cameraserver:cameraserver-java:2024.1.1-beta-4"
-              ],
-              "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_cameraserver_cameraserver_java",
-              "artifact_sha256": "6eaad31276ed646b1e42717926cd4e8a2bfde4f618075c3ea0c0b7a563d72791"
             }
           }
         }
