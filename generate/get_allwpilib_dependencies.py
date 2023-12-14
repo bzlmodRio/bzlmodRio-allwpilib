@@ -241,9 +241,7 @@ def get_allwpilib_dependencies(
     _java_dependency(
         group, "wpinet", dependencies=["wpiutil-java", "wpiutil-cpp", "wpinet-cpp"]
     )
-    _java_dependency(
-        group, "wpiunits", dependencies=[]
-    )
+    _java_dependency(group, "wpiunits", dependencies=[])
     _java_dependency(
         group,
         "wpimath",
