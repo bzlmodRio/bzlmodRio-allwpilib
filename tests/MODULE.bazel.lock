@@ -6812,7 +6812,7 @@
     },
     "@bzlmodrio-allwpilib~override//:maven_java_deps.bzl%setup_bzlmodrio_allwpilib_java_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "vm5EOqpBR4Ioe+SPNOeQzQRUtNY0l55cVZ437CJTRHI=",
+        "bzlTransitiveDigest": "ezRjmIJtyxvUkCH0QFtXNZu4QKr5BVGAXfxKTUyobF0=",
         "accumulatedFileDigests": {},
         "envVariables": {},
         "generatedRepoSpecs": {
@@ -6831,7 +6831,7 @@
                 "maven_coordinates=edu.wpi.first.ntcore:ntcore-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_ntcore_ntcore_java",
-              "artifact_sha256": "b83242fbb802aaad363b484bd6c750d020aebff8f374a85eee878f0615cfcf35"
+              "artifact_sha256": "33610277da63c8f463dbbf804309222ab65a811ae99d4cfe56e0bbaf9366f4cc"
             }
           },
           "edu_wpi_first_wpilibj_wpilibj_java": {
@@ -6849,7 +6849,7 @@
                 "maven_coordinates=edu.wpi.first.wpilibj:wpilibj-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpilibj_wpilibj_java",
-              "artifact_sha256": "62b8a6a3993aa4d9a0fe4ff8fa43b1099c08b833236422fc712ee4fdd44e9fb5"
+              "artifact_sha256": "485e77eb5f4698ad697220003d55d6a80f8c1219898cbf09ed89944a236b917a"
             }
           },
           "edu_wpi_first_shuffleboard_api": {
@@ -6885,7 +6885,7 @@
                 "maven_coordinates=edu.wpi.first.wpinet:wpinet-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpinet_wpinet_java",
-              "artifact_sha256": "35e0bda12ee22c2dc5967d9a919f358ba0cc0326d8283be65af42e1c634e232e"
+              "artifact_sha256": "b04a7e17ca2d376c2db5388438f93f87e30c7d9857099d3d1a0239fb809abc8d"
             }
           },
           "edu_wpi_first_cameraserver_cameraserver_java": {
@@ -6903,7 +6903,7 @@
                 "maven_coordinates=edu.wpi.first.cameraserver:cameraserver-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_cameraserver_cameraserver_java",
-              "artifact_sha256": "6eaad31276ed646b1e42717926cd4e8a2bfde4f618075c3ea0c0b7a563d72791"
+              "artifact_sha256": "e69686e18f08d1ce1e3fdee4cf7eea50e0487133506e554c6a43c68be48fc4ea"
             }
           },
           "edu_wpi_first_wpilibnewcommands_wpilibnewcommands_java": {
@@ -6921,7 +6921,7 @@
                 "maven_coordinates=edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpilibnewcommands_wpilibnewcommands_java",
-              "artifact_sha256": "56f923892691e6290349644c2ef0870916781d114224c00889fe8801218ed2ac"
+              "artifact_sha256": "584805cf47e5136b71c54a33ba82e7fd85b364aa47d3f3e5cfabface729e8abd"
             }
           },
           "edu_wpi_first_apriltag_apriltag_java": {
@@ -6939,7 +6939,7 @@
                 "maven_coordinates=edu.wpi.first.apriltag:apriltag-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_apriltag_apriltag_java",
-              "artifact_sha256": "83864d0d06748fbdc1a0f7a5ba2c3c1365fe4e882a6a12ac7500e47785cfcbc5"
+              "artifact_sha256": "22263ad28a69a89d6e68daa951fdbb258974b3af5d7eb90bcb907cc225f7f819"
             }
           },
           "edu_wpi_first_cscore_cscore_java": {
@@ -6957,7 +6957,7 @@
                 "maven_coordinates=edu.wpi.first.cscore:cscore-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_cscore_cscore_java",
-              "artifact_sha256": "f0dfcb4692c4c5c9e1ec4a5b1f5ed30b3f282d46a74daa58993dfbb340bccc39"
+              "artifact_sha256": "c3a9c0ad916879adbab0a1424eb543a8a467ceea4db765fb60b4dbb30d2564f6"
             }
           },
           "edu_wpi_first_wpiunits_wpiunits_java": {
@@ -6975,7 +6975,7 @@
                 "maven_coordinates=edu.wpi.first.wpiunits:wpiunits-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpiunits_wpiunits_java",
-              "artifact_sha256": "accdbd48d234b067b2c2d4ac767dc236de04233f81a13ab8a19d642c937e9aa7"
+              "artifact_sha256": "e48a560ecd90df178927e66b2a68aa7907eb1cbd3311ed50cc213c1a55e32c0c"
             }
           },
           "edu_wpi_first_fieldimages_fieldimages_java": {
@@ -6993,7 +6993,7 @@
                 "maven_coordinates=edu.wpi.first.fieldImages:fieldImages-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_fieldimages_fieldimages_java",
-              "artifact_sha256": "4aa25cb766fc2d4b1891c71fd5805c9e776c9c7f3841f0b5ea7a4a5ac872c522"
+              "artifact_sha256": "e7662a0cff30c19a5ecf7c1db3a740bc0b477c542bce2d54b2f8e27d3fcea437"
             }
           },
           "edu_wpi_first_hal_hal_java": {
@@ -7011,7 +7011,7 @@
                 "maven_coordinates=edu.wpi.first.hal:hal-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_hal_hal_java",
-              "artifact_sha256": "fcf8d38a195c9c4a945c9f3aa922033106b77ac9fb40b7360180e3b5ac63dc5f"
+              "artifact_sha256": "49f1f2db0fa93dbf41f08fca6d998cf6175d2355b2467f9f0c21c544ab454307"
             }
           },
           "edu_wpi_first_wpiutil_wpiutil_java": {
@@ -7029,7 +7029,7 @@
                 "maven_coordinates=edu.wpi.first.wpiutil:wpiutil-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpiutil_wpiutil_java",
-              "artifact_sha256": "18275b5a6eab43587ac3b0ab207b21dedd641054496eb0d16c32821e763d23d2"
+              "artifact_sha256": "745fd22ca288c4f580ba74a282e61d13e30f8e4c7b8463fb0ea307e8275b6335"
             }
           },
           "edu_wpi_first_wpimath_wpimath_java": {
@@ -7047,7 +7047,7 @@
                 "maven_coordinates=edu.wpi.first.wpimath:wpimath-java:2024.1.1-beta-4"
               ],
               "name": "bzlmodrio-allwpilib~override~setup_bzlmodrio_allwpilib_java_dependencies~edu_wpi_first_wpimath_wpimath_java",
-              "artifact_sha256": "a27432f8e4faf6d1f98015a6f21513d23f21eee276ea50f18e5a7c7514fe6a82"
+              "artifact_sha256": "b37c29a7e24785b6dd8c0dcf6506bba20880f7ecc0d1e1f361f44d3c341ba513"
             }
           }
         }
