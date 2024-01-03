@@ -22,7 +22,7 @@ bazelrio_java_test(
     srcs = ["BasicTest.java"],
     args = [
         "--select-package",
-        "bazelrio_test",
+        "wpimath",
     ],
     env = {
         "LD_LIBRARY_PATH": ".",
