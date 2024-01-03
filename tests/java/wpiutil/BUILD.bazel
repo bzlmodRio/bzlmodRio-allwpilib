@@ -8,7 +8,7 @@ bazelrio_java_binary(
     jvm_flags = [
         "-Djava.library.path=.",
     ],
-    main_class = "bazelrio_test.Main",
+    main_class = "wpiutil.Main",
     deps = [
         "@bzlmodrio-allwpilib//libraries/java/wpiutil",
     ],
@@ -19,7 +19,7 @@ bazelrio_java_test(
     srcs = ["BasicTest.java"],
     args = [
         "--select-package",
-        "bazelrio_test",
+        "wpiutil",
     ],
     env = {
         "LD_LIBRARY_PATH": ".",

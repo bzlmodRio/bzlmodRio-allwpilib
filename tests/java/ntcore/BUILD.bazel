@@ -8,7 +8,7 @@ bazelrio_java_binary(
     jvm_flags = [
         "-Djava.library.path=.",
     ],
-    main_class = "bazelrio_test.Main",
+    main_class = "ntcore.Main",
     deps = [
         "@bzlmodrio-allwpilib//libraries/java/ntcore",
         "@bzlmodrio-allwpilib//libraries/java/wpiutil",
@@ -20,7 +20,7 @@ bazelrio_java_test(
     srcs = ["BasicTest.java"],
     args = [
         "--select-package",
-        "bazelrio_test",
+        "ntcore",
     ],
     env = {
         "LD_LIBRARY_PATH": ".",
