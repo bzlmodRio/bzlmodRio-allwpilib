@@ -8,7 +8,7 @@ bazelrio_java_binary(
     jvm_flags = [
         "-Djava.library.path=.",
     ],
-    main_class = "bazelrio_test.Main",
+    main_class = "wpinet.Main",
     deps = [
         "@bzlmodrio-allwpilib//libraries/java/wpinet",
     ],
