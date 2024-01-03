@@ -14,9 +14,9 @@
   },
   "localOverrideHashes": {
     "bzlmodrio-gentool": "db7447ee32a7775d4e37d3d8a65b09d78efaf600b8e240895e3e754cf95fd1b3",
-    "bzlmodrio-ni-gentool": "cb6e1a25c382dbedec7abc6854627f2cc82f8cb1af732ed13ce1b3d7f7b36da1",
+    "bzlmodrio-ni-gentool": "2277c537ab9ceebefa8871c8f8e8a320614f3d788ab4e7791294088c0752e4e8",
     "bazel_tools": "922ea6752dc9105de5af957f7a99a6933c0a6a712d23df6aad16a9c399f7e787",
-    "bzlmodrio-opencv-gentool": "265c6856a18b46e803ce006d4030237ffe6c4b45b4483c3b91666f21255ba5d8"
+    "bzlmodrio-opencv-gentool": "ae608b218f77479eb7598561d0b64285b05dc8181b471a026c13a0f1440c49ab"
   },
   "moduleDepGraph": {
     "<root>": {
