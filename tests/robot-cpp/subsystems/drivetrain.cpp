@@ -13,7 +13,6 @@ DriveTrain::DriveTrain()
           frc::sim::DifferentialDrivetrainSim::CreateKitbotSim(
               frc::sim::DifferentialDrivetrainSim::KitbotMotor::DualCIMPerSide,
               12.0, 6_in)) {
-
   m_leftMotorA.AddFollower(m_leftMotorB);
   m_rightMotorA.AddFollower(m_rightMotorB);
 
