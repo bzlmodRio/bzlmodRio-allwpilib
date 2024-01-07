@@ -13,6 +13,9 @@ DriveTrain::DriveTrain()
           frc::sim::DifferentialDrivetrainSim::CreateKitbotSim(
               frc::sim::DifferentialDrivetrainSim::KitbotMotor::DualCIMPerSide,
               12.0, 6_in)) {
+  m_leftMotorA.AddFollower(m_leftMotorB);
+  m_rightMotorA.AddFollower(m_rightMotorB);
+
   // Circumference = diameter * pi. 360 tick simulated encoders.
   m_leftEncoder.SetDistancePerPulse(units::foot_t{4_in}.to<double>() *
                                     std::numbers::pi / 360.0);

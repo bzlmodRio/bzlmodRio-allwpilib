@@ -11,7 +11,6 @@ import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.RobotController;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.motorcontrol.MotorController;
-import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup;
 import edu.wpi.first.wpilibj.motorcontrol.PWMVictorSPX;
 import edu.wpi.first.wpilibj.simulation.ADXRS450_GyroSim;
 import edu.wpi.first.wpilibj.simulation.DifferentialDrivetrainSim;
@@ -40,14 +39,16 @@ public class DriveTrain extends SubsystemBase {
   private DifferentialDrivetrainSim m_drivetrainSimulator;
 
   public DriveTrain() {
-    m_leftMotor =
-        new MotorControllerGroup(
-            new PWMVictorSPX(PortMap.kDrivetrainMotorLeftAPort),
-            new PWMVictorSPX(PortMap.kDrivetrainMotorLeftBPort));
-    m_rightMotor =
-        new MotorControllerGroup(
-            new PWMVictorSPX(PortMap.kDrivetrainMotorRightAPort),
-            new PWMVictorSPX(PortMap.kDrivetrainMotorRightBPort));
+    PWMVictorSPX leftLeader = new PWMVictorSPX(PortMap.kDrivetrainMotorLeftAPort);
+    PWMVictorSPX leftFollower = new PWMVictorSPX(PortMap.kDrivetrainMotorLeftBPort);
+    leftLeader.addFollower(leftFollower);
+    m_leftMotor = leftLeader;
+
+    PWMVictorSPX rightLeader = new PWMVictorSPX(PortMap.kDrivetrainMotorRightAPort);
+    PWMVictorSPX rightFollower = new PWMVictorSPX(PortMap.kDrivetrainMotorRightBPort);
+    rightLeader.addFollower(rightFollower);
+    m_rightMotor = rightLeader;
+
     m_drive = new DifferentialDrive(m_leftMotor, m_rightMotor);
 
     m_leftEncoder =
