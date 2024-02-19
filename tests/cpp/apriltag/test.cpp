@@ -1,6 +1,6 @@
 
 #include "frc/apriltag/AprilTagDetector.h"
-#include "frc/apriltag/AprilTagFields.h"
+#include "frc/apriltag/AprilTagFieldLayout.h"
 #include "gtest/gtest.h"
 
 TEST(BasicTest, Basic) {
