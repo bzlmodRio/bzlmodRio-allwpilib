@@ -1,48 +1,31 @@
-load("@rules_cc//cc:defs.bzl", "cc_library")
-
 alias(
     name = "hal",
     actual = ":shared",
     visibility = ["//visibility:public"],
 )
 
-cc_library(
-    name = "shared",
-    linkstatic = 1,
-    target_compatible_with = select({
-        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
-        "//conditions:default": [],
-    }),
-    visibility = ["//visibility:public"],
-    deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-        "@bzlmodrio-ni//libraries/cpp/ni:shared",
-    ] + [
-        "@bzlmodrio-allwpilib//private/cpp/hal:shared",
-    ],
-)
-
-cc_library(
+alias(
     name = "static",
-    linkstatic = 1,
+    actual = "@bzlmodrio-allwpilib//private/cpp/hal:static",
     target_compatible_with = select({
         "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["//visibility:public"],
-    deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
-        "@bzlmodrio-ni//libraries/cpp/ni:shared",
-    ] + [
-        "@bzlmodrio-allwpilib//private/cpp/hal:static",
-    ],
 )
 
-cc_library(
-    name = "jni",
+alias(
+    name = "shared",
+    actual = "@bzlmodrio-allwpilib//private/cpp/hal:shared",
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
     visibility = ["//visibility:public"],
-    deps = [
-        ":hal",
-        "@bzlmodrio-allwpilib//private/cpp/hal:jni",
-    ],
+)
+
+alias(
+    name = "jni",
+    actual = "@bzlmodrio-allwpilib//private/cpp/hal:jni",
+    visibility = ["//visibility:public"],
 )

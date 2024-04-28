@@ -1,43 +1,27 @@
-load("@rules_cc//cc:defs.bzl", "cc_library")
-
 alias(
     name = "halsim_ds_socket",
     actual = ":shared",
     visibility = ["//visibility:public"],
 )
 
-cc_library(
-    name = "shared",
-    linkstatic = 1,
+alias(
+    name = "static",
+    actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:static",
     target_compatible_with = select({
         "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["//visibility:public"],
-    deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-    ] + [
-        "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:shared",
-    ],
 )
 
-cc_library(
-    name = "static",
-    linkstatic = 1,
+alias(
+    name = "shared",
+    actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:shared",
     target_compatible_with = select({
         "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["//visibility:public"],
-    deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/hal:static",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
-    ] + [
-        "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:static",
-    ],
 )
