@@ -1,48 +1,31 @@
-load("@rules_cc//cc:defs.bzl", "cc_library")
-
 alias(
     name = "apriltag",
     actual = ":shared",
     visibility = ["//visibility:public"],
 )
 
-cc_library(
-    name = "shared",
-    linkstatic = 1,
-    target_compatible_with = select({
-        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
-        "//conditions:default": [],
-    }),
-    visibility = ["//visibility:public"],
-    deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-    ] + [
-        "@bzlmodrio-allwpilib//private/cpp/apriltag:shared",
-    ],
-)
-
-cc_library(
+alias(
     name = "static",
-    linkstatic = 1,
+    actual = "@bzlmodrio-allwpilib//private/cpp/apriltag:static",
     target_compatible_with = select({
         "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["//visibility:public"],
-    deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
-    ] + [
-        "@bzlmodrio-allwpilib//private/cpp/apriltag:static",
-    ],
 )
 
-cc_library(
-    name = "jni",
+alias(
+    name = "shared",
+    actual = "@bzlmodrio-allwpilib//private/cpp/apriltag:shared",
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
     visibility = ["//visibility:public"],
-    deps = [
-        ":apriltag",
-        "@bzlmodrio-allwpilib//private/cpp/apriltag:jni",
-    ],
+)
+
+alias(
+    name = "jni",
+    actual = "@bzlmodrio-allwpilib//private/cpp/apriltag:jni",
+    visibility = ["//visibility:public"],
 )

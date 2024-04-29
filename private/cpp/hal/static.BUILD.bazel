@@ -3,4 +3,8 @@ cc_library(
     name = "static_libs",
     srcs = glob(["**/*.lib", "**/*.a"]),
     visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+        "@bzlmodrio-ni//libraries/cpp/ni:shared",
+    ],
 )
