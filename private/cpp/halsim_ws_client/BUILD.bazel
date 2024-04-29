@@ -3,10 +3,10 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 cc_library(
     name = "shared_interface",
     srcs = select({
-        "@rules_bazelrio//conditions:windows": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64//:static_libs"],
-        "@rules_bazelrio//conditions:windows_arm64": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsarm64//:static_libs"],
-        "@rules_bazelrio//conditions:windows_arm64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsarm64debug//:static_libs"],
-        "@rules_bazelrio//conditions:windows_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64debug//:static_libs"],
+        "@rules_bazelrio//conditions:windows": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64//:shared_interface"],
+        "@rules_bazelrio//conditions:windows_arm64": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsarm64//:shared_interface"],
+        "@rules_bazelrio//conditions:windows_arm64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsarm64debug//:shared_interface"],
+        "@rules_bazelrio//conditions:windows_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64debug//:shared_interface"],
     }),
     linkstatic = True,
     tags = ["manual"],
