@@ -12,7 +12,6 @@ from bazelrio_gentool.manual_cleanup_helper import manual_cleanup_helper
 import argparse
 
 
-
 def main():
     SCRIPT_DIR = os.environ["BUILD_WORKSPACE_DIRECTORY"]
     REPO_DIR = os.path.join(SCRIPT_DIR, "..")
