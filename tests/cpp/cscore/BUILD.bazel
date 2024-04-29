@@ -16,7 +16,7 @@ cc_test(
         "no-sandbox",
     ],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/cscore:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/cscore",
         "@googletest//:gtest_main",
     ],
 )

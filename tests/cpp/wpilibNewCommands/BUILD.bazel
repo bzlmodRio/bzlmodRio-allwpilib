@@ -16,7 +16,7 @@ cc_test(
         "no-sandbox",
     ],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpilibNewCommands:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpilibNewCommands",
         "@googletest//:gtest_main",
     ],
 )
