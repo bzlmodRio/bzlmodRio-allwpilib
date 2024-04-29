@@ -8,7 +8,9 @@ from bazelrio_gentool.generate_module_project_files import (
 )
 from bazelrio_gentool.clean_existing_version import clean_existing_version
 from bazelrio_gentool.cli import add_generic_cli, GenericCliArgs
+from bazelrio_gentool.manual_cleanup_helper import manual_cleanup_helper
 import argparse
+
 
 
 def main():
@@ -36,19 +38,11 @@ def main():
 
 
 def manual_cleanup(REPO_DIR):
-    def helper(filename, callback):
-        with open(filename, "r") as f:
-            contents = f.read()
-
-        contents = callback(contents)
-
-        with open(filename, "w") as f:
-            f.write(contents)
 
     # Manual cleanup
     for lib in ["hal", "wpiutil"]:
-        lib_build = os.path.join(REPO_DIR, "libraries", "cpp", lib, "BUILD.bazel")
-        helper(
+        lib_build = os.path.join(REPO_DIR, "private", "cpp", lib, "static.BUILD.bazel")
+        manual_cleanup_helper(
             lib_build,
             lambda contents: contents.replace(
                 "@bzlmodrio-ni//libraries/cpp/ni:static",
@@ -57,7 +51,7 @@ def manual_cleanup(REPO_DIR):
         )
 
     filepath = os.path.join(REPO_DIR, "libraries", "tools", "tool_launchers.bzl")
-    helper(
+    manual_cleanup_helper(
         filepath,
         lambda contents: contents.replace(
             "main_class = main_class,",
@@ -66,7 +60,7 @@ def manual_cleanup(REPO_DIR):
     )
 
     filepath = os.path.join(REPO_DIR, "libraries", "tools", "RobotBuilder", "BUILD")
-    helper(
+    manual_cleanup_helper(
         filepath,
         lambda contents: contents.replace(
             'name = "RobotBuilder",',
