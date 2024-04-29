@@ -16,7 +16,7 @@ cc_test(
         "no-sandbox",
     ],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/cameraserver",
+        "@bzlmodrio-allwpilib//libraries/cpp/cameraserver:static",
         "@googletest//:gtest_main",
     ],
 )

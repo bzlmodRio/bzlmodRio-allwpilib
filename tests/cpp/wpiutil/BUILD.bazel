@@ -16,7 +16,7 @@ cc_test(
         "no-sandbox",
     ],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
         "@googletest//:gtest_main",
     ],
 )
