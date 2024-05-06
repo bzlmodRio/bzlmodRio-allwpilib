@@ -75,3 +75,16 @@ load("@rules_wpi_styleguide//dependencies:load_pins.bzl", "load_styleguide_pins"
 
 load_styleguide_pins()
 #####################
+
+http_archive(
+    name = "rules_bzlmodrio_jdk",
+    integrity = "sha256-lomuqGaQPqVLzlGyfDb/mlEyAGPFAV6dF+pr0GINGxg=",
+    strip_prefix = "rules_bzlmodrio_jdk-32d4c03e8343a17dbc0b4bdf1a482e77a3d37058",
+    urls = [
+        "https://github.com/bzlmodRio/rules_bzlmodrio_jdk/archive/32d4c03e8343a17dbc0b4bdf1a482e77a3d37058.zip",
+    ],
+)
+
+load("@rules_bzlmodrio_jdk//:maven_deps.bzl", "setup_legacy_setup_jdk_dependencies")
+
+setup_legacy_setup_jdk_dependencies()

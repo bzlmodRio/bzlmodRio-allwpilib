@@ -6,8 +6,8 @@ local_path_override(
 
 bazel_dep(name = "googletest", version = "1.14.0")
 bazel_dep(name = "rules_cc", version = "0.0.9")
-bazel_dep(name = "rules_java", version = "6.4.0")
-bazel_dep(name = "rules_jvm_external", version = "5.3")
+bazel_dep(name = "rules_java", version = "7.5.0")
+bazel_dep(name = "rules_jvm_external", version = "6.1")
 bazel_dep(name = "rules_bazelrio", version = "0.0.14")
 bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2024-1")
 bazel_dep(name = "bzlmodrio-opencv", version = "2024.4.8.0-1")
@@ -17,6 +17,29 @@ bazel_dep(name = "rules_checkstyle", version = "10.1")
 bazel_dep(name = "rules_wpiformat", version = "2024.34")
 bazel_dep(name = "rules_wpi_styleguide", version = "1.0.0")
 bazel_dep(name = "rules_spotless", version = "2.34.0")
+bazel_dep(name = "rules_bzlmodrio_jdk", version = "2.34.0")
+
+# local_path_override(
+#     module_name = "rules_bazelrio",
+#     path = "../../../rules/rules_bazelrio",
+# )
+
+# git_override(
+#     module_name = "rules_bazelrio",
+#     commit = "2d935acc892e24e1b74f82b729f85a49d9c547aa",
+#     remote = "https://github.com/bzlmodRio/rules_bazelrio",
+# )
+
+# local_path_override(
+#     module_name = "rules_bzlmodrio_jdk",
+#     path = "../../../rules/rules_bzlmodrio_jdk",
+# )
+
+git_override(
+    module_name = "rules_bzlmodrio_jdk",
+    commit = "32d4c03e8343a17dbc0b4bdf1a482e77a3d37058",
+    remote = "https://github.com/bzlmodRio/rules_bzlmodrio_jdk",
+)
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(

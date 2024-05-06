@@ -4,9 +4,9 @@ def download_dependencies():
     # JVM External
     http_archive(
         name = "rules_jvm_external",
-        sha256 = "d31e369b854322ca5098ea12c69d7175ded971435e55c18dd9dd5f29cc5249ac",
-        strip_prefix = "rules_jvm_external-5.3",
-        url = "https://github.com/bazelbuild/rules_jvm_external/releases/download/5.3/rules_jvm_external-5.3.tar.gz",
+        sha256 = "",
+        strip_prefix = "rules_jvm_external-6.1",
+        url = "https://github.com/bazelbuild/rules_jvm_external/releases/download/6.1/rules_jvm_external-6.1.tar.gz",
     )
 
     # Bazelrio Rules
