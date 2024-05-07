@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 6,
-  "moduleFileHash": "5ad5830d3dbb20e5c804953e820a491279014ccdd18b2ec8ac742e382b8eb281",
+  "moduleFileHash": "f55622d5e115f79d556f384fddf211f862f22da9ab6ad9b4fb752bd6a8ee692d",
   "flags": {
     "cmdRegistries": [
       "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/"
@@ -31,7 +31,7 @@
           "usingModule": "<root>",
           "location": {
             "file": "@@//:MODULE.bazel",
-            "line": 32,
+            "line": 22,
             "column": 22
           },
           "imports": {
@@ -59,7 +59,7 @@
               "devDependency": false,
               "location": {
                 "file": "@@//:MODULE.bazel",
-                "line": 33,
+                "line": 23,
                 "column": 14
               }
             }
@@ -83,7 +83,7 @@
         "rules_wpiformat": "rules_wpiformat@2024.34",
         "rules_wpi_styleguide": "rules_wpi_styleguide@1.0.0",
         "rules_spotless": "rules_spotless@2.34.0",
-        "rules_bzlmodrio_jdk": "rules_bzlmodrio_jdk@_",
+        "rules_bzlmodrio_jdk": "rules_bzlmodrio_jdk@17.0.8-7",
         "bazel_tools": "bazel_tools@_",
         "local_config_platform": "local_config_platform@_"
       }
@@ -1857,10 +1857,10 @@
         }
       }
     },
-    "rules_bzlmodrio_jdk@_": {
+    "rules_bzlmodrio_jdk@17.0.8-7": {
       "name": "rules_bzlmodrio_jdk",
-      "version": "17.0.8+7",
-      "key": "rules_bzlmodrio_jdk@_",
+      "version": "17.0.8-7",
+      "key": "rules_bzlmodrio_jdk@17.0.8-7",
       "repoName": "rules_bzlmodrio_jdk",
       "executionPlatformsToRegister": [],
       "toolchainsToRegister": [
@@ -1874,9 +1874,9 @@
         {
           "extensionBzlFile": "@rules_bzlmodrio_jdk//:maven_deps.bzl",
           "extensionName": "deps",
-          "usingModule": "rules_bzlmodrio_jdk@_",
+          "usingModule": "rules_bzlmodrio_jdk@17.0.8-7",
           "location": {
-            "file": "@@rules_bzlmodrio_jdk~//:MODULE.bazel",
+            "file": "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_jdk/17.0.8-7/MODULE.bazel",
             "line": 10,
             "column": 21
           },
@@ -1904,6 +1904,19 @@
         "rules_bzlmodrio_toolchains": "rules_bzlmodrio_toolchains@2024-1",
         "bazel_tools": "bazel_tools@_",
         "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "urls": [
+            "https://github.com/bzlmodRio/rules_bzlmodrio_jdk/releases/download/17.0.8-7/rules_bzlmodrio_jdk-17.0.8-7.tar.gz"
+          ],
+          "integrity": "sha256-Ns1GjIZ4F+xGDXbCjsDM0tn6xKLPlmrzk1JDqKSggQg=",
+          "strip_prefix": "",
+          "remote_patches": {},
+          "remote_patch_strip": 0
+        }
       }
     },
     "bazel_tools@_": {
