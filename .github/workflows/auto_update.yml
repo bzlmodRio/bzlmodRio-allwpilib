@@ -100,13 +100,12 @@ jobs:
 
     # Create pull requests
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v4
+      uses: peter-evans/create-pull-request@v6
       env:
         GITHUB_TOKEN: ${{ secrets.AUTO_UPDATE_KEY }}
       with:
         path: libraries/bzlmodrio-allwpilib
         base: main
         token: ${{ secrets.AUTO_UPDATE_KEY }}
-        reviewers: pjreiniger
         branch: autoupdate_${{ env.NEW_VERSION }}
         title: "Auto Update to '${{ env.NEW_VERSION }}'"
