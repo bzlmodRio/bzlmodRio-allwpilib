@@ -15,8 +15,10 @@ constexpr units::kilogram_square_meter_t kInertia{0.008};
 } // namespace
 
 Shooter::Shooter()
-    : m_controller(kP, kI, kD), m_flywheelSim(frc::LinearSystemId::FlywheelSystem(
-      kGearbox, kInertia, kGearing), kGearbox) { }
+    : m_controller(kP, kI, kD),
+      m_flywheelSim(
+          frc::LinearSystemId::FlywheelSystem(kGearbox, kInertia, kGearing),
+          kGearbox) {}
 
 void Shooter::Stop() { m_motor.Set(0); }
 
