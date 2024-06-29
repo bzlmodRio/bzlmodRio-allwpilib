@@ -346,11 +346,11 @@ def get_allwpilib_dependencies(
         group, "halsim_ws_server", dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp"]
     )
 
-    group.create_java_dependency(
-        "api",
-        group_id=f"edu.wpi.first.shuffleboard",
-        parent_folder="shuffleboard-api",
-    )
+    # group.create_java_dependency(
+    #     "api",
+    #     group_id=f"edu.wpi.first.shuffleboard",
+    #     parent_folder="shuffleboard-api",
+    # )
 
     _executable_tool(group, "Glass", lower_target_name=True)
     _executable_tool(group, "OutlineViewer", lower_target_name=True)
