@@ -373,26 +373,26 @@ def get_allwpilib_dependencies(
         main_class="edu.wpi.first.smartdashboard.SmartDashboard",
         native_platforms=["linuxx64", "macx64", "winx64"],
     )
-    _java_tool(group, "PathWeaver", main_class="edu.wpi.first.pathweaver.Main")
-    _java_tool(
-        group,
-        "RobotBuilder",
-        main_class="robotbuilder.RobotBuilder",
-        native_platforms=[""],
-    )
-    _java_tool(
-        group,
-        "Shuffleboard",
-        main_class="edu.wpi.first.shuffleboard.app.Main",
-        native_platforms=[
-            "linuxarm32",
-            "linuxarm64",
-            "linuxx64",
-            "macarm64",
-            "macx64",
-            "winx64",
-        ],
-    )
+    # _java_tool(group, "PathWeaver", main_class="edu.wpi.first.pathweaver.Main")
+    # _java_tool(
+    #     group,
+    #     "RobotBuilder",
+    #     main_class="robotbuilder.RobotBuilder",
+    #     native_platforms=[""],
+    # )
+    # _java_tool(
+    #     group,
+    #     "Shuffleboard",
+    #     main_class="edu.wpi.first.shuffleboard.app.Main",
+    #     native_platforms=[
+    #         "linuxarm32",
+    #         "linuxarm64",
+    #         "linuxx64",
+    #         "macarm64",
+    #         "macx64",
+    #         "winx64",
+    #     ],
+    # )
 
     return group
 
