@@ -1,7 +1,7 @@
 package fieldimages;
 
-import edu.wpi.fields.FieldConfig;
-import edu.wpi.fields.Fields;
+import edu.wpi.first.fields.FieldConfig;
+import edu.wpi.first.fields.Fields;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;

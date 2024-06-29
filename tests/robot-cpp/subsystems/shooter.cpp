@@ -1,6 +1,7 @@
 #include "robot-cpp/subsystems/shooter.hpp"
 
 #include <frc/smartdashboard/SmartDashboard.h>
+#include <frc/system/plant/LinearSystemId.h>
 
 namespace {
 constexpr double kP = 0.01;
@@ -14,7 +15,8 @@ constexpr units::kilogram_square_meter_t kInertia{0.008};
 } // namespace
 
 Shooter::Shooter()
-    : m_controller(kP, kI, kD), m_flywheelSim(kGearbox, kGearing, kInertia) {}
+    : m_controller(kP, kI, kD), m_flywheelSim(frc::LinearSystemId::FlywheelSystem(
+      kGearbox, kInertia, kGearing), kGearbox) { }
 
 void Shooter::Stop() { m_motor.Set(0); }
 
