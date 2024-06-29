@@ -57,33 +57,3 @@ alias(
         "no-roborio",
     ],
 )
-
-alias(
-    name = "PathWeaver",
-    actual = "@bzlmodrio-allwpilib//libraries/tools/PathWeaver",
-    tags = [
-        "no-bullseye",
-        "no-raspi",
-        "no-roborio",
-    ],
-)
-
-alias(
-    name = "RobotBuilder",
-    actual = "@bzlmodrio-allwpilib//libraries/tools/RobotBuilder",
-    tags = [
-        "no-bullseye",
-        "no-raspi",
-        "no-roborio",
-    ],
-)
-
-alias(
-    name = "Shuffleboard",
-    actual = "@bzlmodrio-allwpilib//libraries/tools/Shuffleboard",
-    tags = [
-        "no-bullseye",
-        "no-raspi",
-        "no-roborio",
-    ],
-)
