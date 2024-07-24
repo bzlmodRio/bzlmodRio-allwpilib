@@ -5,6 +5,12 @@ alias(
 )
 
 alias(
+    name = "header_files",
+    actual = "@bzlmodrio-allwpilib//private/cpp/cscore:header_files",
+    visibility = ["//visibility:public"],
+)
+
+alias(
     name = "static",
     actual = "@bzlmodrio-allwpilib//private/cpp/cscore:static",
     target_compatible_with = select({
@@ -21,6 +27,12 @@ alias(
         "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared_raw",
+    actual = "@bzlmodrio-allwpilib//private/cpp/cscore:shared_raw",
     visibility = ["//visibility:public"],
 )
 
