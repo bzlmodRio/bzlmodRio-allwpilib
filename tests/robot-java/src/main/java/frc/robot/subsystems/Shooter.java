@@ -5,7 +5,10 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.math.controller.PIDController;
+import edu.wpi.first.math.numbers.N1;
+import edu.wpi.first.math.system.LinearSystem;
 import edu.wpi.first.math.system.plant.DCMotor;
+import edu.wpi.first.math.system.plant.LinearSystemId;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.RobotController;
@@ -45,7 +48,10 @@ public class Shooter extends SubsystemBase {
 
     if (RobotBase.isSimulation()) {
       m_encoderSim = new EncoderSim(m_encoder);
-      m_flywheelSim = new FlywheelSim(kGearbox, kGearing, kInertia);
+
+      LinearSystem<N1, N1, N1> plant =
+          LinearSystemId.createFlywheelSystem(kGearbox, kGearing, kInertia);
+      m_flywheelSim = new FlywheelSim(plant, kGearbox);
     }
   }
 

@@ -25,3 +25,9 @@ alias(
     }),
     visibility = ["//visibility:public"],
 )
+
+alias(
+    name = "shared_raw",
+    actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:shared_raw",
+    visibility = ["//visibility:public"],
+)

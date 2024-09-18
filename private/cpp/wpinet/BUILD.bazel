@@ -1,5 +1,11 @@
 load("@rules_cc//cc:defs.bzl", "cc_library")
 
+alias(
+    name = "header_files",
+    actual = "@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:header_files",
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+)
+
 cc_library(
     name = "shared_interface",
     srcs = select({
@@ -18,8 +24,8 @@ cc_library(
     deps = ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers//:headers"],
 )
 
-cc_library(
-    name = "shared",
+filegroup(
+    name = "shared_raw",
     srcs = select({
         "@rules_bazelrio//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_linuxx86-64//:shared"],
         "@rules_bazelrio//conditions:linux_x86_64_debug": ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_linuxx86-64debug//:shared"],
@@ -36,6 +42,12 @@ cc_library(
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_linuxathena//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio_debug": ["@bazelrio_edu_wpi_first_wpinet_wpinet-cpp_linuxathenadebug//:shared"],
     }),
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+)
+
+cc_library(
+    name = "shared",
+    srcs = [":shared_raw"],
     target_compatible_with = select({
         "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "//conditions:default": [],
