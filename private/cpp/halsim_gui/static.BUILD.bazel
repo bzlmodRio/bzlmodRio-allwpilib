@@ -6,6 +6,7 @@ cc_library(
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/hal:static",
         "@bzlmodrio-allwpilib//libraries/cpp/ntcore:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
     ],
 )

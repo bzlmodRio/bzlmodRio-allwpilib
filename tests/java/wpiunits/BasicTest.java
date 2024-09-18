@@ -8,6 +8,6 @@ import org.junit.jupiter.api.Test;
 class BasicTest {
   @Test
   void testOf() {
-    assertTrue(Units.Volts.times(Units.Amps, "", "").equivalent(Units.Watts));
+    assertTrue(Units.Volts.mult(Units.Amps, "", "").equivalent(Units.Watts));
   }
 }

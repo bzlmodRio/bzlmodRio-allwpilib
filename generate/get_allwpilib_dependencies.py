@@ -337,7 +337,9 @@ def get_allwpilib_dependencies(
         group, "halsim_ds_socket", dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp"]
     )
     _halsim_dependency(
-        group, "halsim_gui", dependencies=["hal-cpp", "wpiutil-cpp", "ntcore-cpp"]
+        group,
+        "halsim_gui",
+        dependencies=["hal-cpp", "wpimath-cpp", "wpiutil-cpp", "ntcore-cpp"],
     )
     _halsim_dependency(
         group, "halsim_ws_client", dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp"]
