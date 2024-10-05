@@ -129,8 +129,8 @@ def _executable_tool(
 def get_allwpilib_dependencies(
     use_local_opencv=False,
     use_local_ni=False,
-    opencv_version_override="2024.4.8.0-1",
-    ni_version_override="2024.2.0",
+    opencv_version_override="2024.4.8.0-4.bcr1",
+    ni_version_override="2024.2.1.bcr1",
 ):
     year = "2024"
     version = "2024.3.2"
