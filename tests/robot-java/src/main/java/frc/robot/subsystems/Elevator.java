@@ -66,13 +66,13 @@ public class Elevator extends SubsystemBase {
     SmartDashboard.putNumber("Elevator Height", m_encoder.getDistance());
   }
 
-  public void setMotorVoltage(double output) {
+  public void setVoltage(double output) {
     m_motor.set(output);
   }
 
   public void goToHeight(double height) {
     double pidVoltage = m_pidController.calculate(m_encoder.getDistance(), height);
-    setMotorVoltage(pidVoltage);
+    setVoltage(pidVoltage);
   }
 
   public boolean isAtHeight() {
