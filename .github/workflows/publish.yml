@@ -33,22 +33,14 @@ jobs:
         files: "${{ env.ARCHIVE_NAME }}"
 
 
-    # Checkout bzlmodrio-opencv
+
+    # Checkout backdoor generation of wpilibsuite libraries
     - uses: actions/checkout@v4
       with:
-        repository: 'bzlmodRio/bzlmodrio-opencv.git'
+        repository: 'bzlmodRio/wpilibsuite_generator.git'
         fetch-depth: 0
-        path: libraries/bzlmodrio-allwpilib/../../libraries/bzlmodRio-opencv
+        path: libraries/bzlmodrio-choreolib/../../wpilibsuite_gen
         ref: main
-
-    # Checkout bzlmodrio-ni
-    - uses: actions/checkout@v4
-      with:
-        repository: 'bzlmodRio/bzlmodrio-ni.git'
-        fetch-depth: 0
-        path: libraries/bzlmodrio-allwpilib/../../libraries/bzlmodRio-ni
-        ref: main
-
 
 
 

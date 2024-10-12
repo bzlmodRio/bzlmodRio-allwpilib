@@ -42,20 +42,13 @@ jobs:
         ref: refactor_dev
 
 
-    # Checkout bzlmodrio-opencv
-    - uses: actions/checkout@v4
-      with:
-        repository: 'bzlmodRio/bzlmodrio-opencv.git'
-        fetch-depth: 0
-        path: libraries/bzlmodrio-allwpilib/../../libraries/bzlmodRio-opencv
-        ref: main
 
-    # Checkout bzlmodrio-ni
+    # Checkout backdoor generation of wpilibsuite libraries
     - uses: actions/checkout@v4
       with:
-        repository: 'bzlmodRio/bzlmodrio-ni.git'
+        repository: 'bzlmodRio/wpilibsuite_generator.git'
         fetch-depth: 0
-        path: libraries/bzlmodrio-allwpilib/../../libraries/bzlmodRio-ni
+        path: libraries/bzlmodrio-choreolib/../../wpilibsuite_gen
         ref: main
 
 
