@@ -45,13 +45,12 @@ void Elevator::SetVoltage(double output) {
 }
 
 void Elevator::GoToHeight(units::meter_t height) {
-    double pidVoltage = m_controller.Calculate(m_encoder.GetDistance(), height.to<double>());
-    SetVoltage(pidVoltage);
+  double pidVoltage =
+      m_controller.Calculate(m_encoder.GetDistance(), height.to<double>());
+  SetVoltage(pidVoltage);
 }
 
-bool Elevator::IsAtHeight() {
-  return m_controller.AtSetpoint();
-}
+bool Elevator::IsAtHeight() { return m_controller.AtSetpoint(); }
 
 void Elevator::Periodic() { Log(); }
 
