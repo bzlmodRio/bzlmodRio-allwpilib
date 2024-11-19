@@ -133,7 +133,7 @@ def get_allwpilib_dependencies(
     ni_version_override="2025.0.0",
 ):
     year = "2025"
-    version = "2025.1.1-beta-1"
+    version = "2025.1.1-beta-2"
     patch = ".bcr1"
 
     opencv_dependency = ModuleDependency(
