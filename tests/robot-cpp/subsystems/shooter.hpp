@@ -10,7 +10,7 @@
 #include "robot-cpp/subsystems/ports.hpp"
 
 class Shooter : public frc2::Subsystem {
-public:
+ public:
   Shooter();
 
   void Periodic() override;
@@ -22,7 +22,7 @@ public:
 
   double GetRpm();
 
-private:
+ private:
   void Log();
 
   frc::PWMVictorSPX m_motor{kShooterMotorPort};

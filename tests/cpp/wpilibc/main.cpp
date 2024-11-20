@@ -5,7 +5,7 @@
 #include <iostream>
 
 class Robot : public frc::TimedRobot {
-public:
+ public:
   void RobotInit() override { frc::CameraServer::StartAutomaticCapture(); }
 
   void RobotPeriodic() override { std::cout << "Hello world" << std::endl; }
