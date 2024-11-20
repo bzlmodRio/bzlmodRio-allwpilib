@@ -152,7 +152,11 @@ def get_allwpilib_dependencies(
     )
 
     group = DependencyContainer(
-        "bzlmodrio-allwpilib", version, year, "https://frcmaven.wpi.edu/release", patch=patch
+        "bzlmodrio-allwpilib",
+        version,
+        year,
+        "https://frcmaven.wpi.edu/release",
+        patch=patch,
     )
     group.add_module_dependency(opencv_dependency)
     group.add_module_dependency(ni_dependency, meta_deps=["ni"])
