@@ -4,7 +4,7 @@
 #include "gtest/gtest.h"
 
 class CameraSourceTest : public ::testing::Test {
-protected:
+ protected:
   CameraSourceTest() = default;
 };
 

@@ -3,6 +3,7 @@
 #include <wpi/raw_ostream.h>
 
 #include <iostream>
+#include <string>
 
 int main() {
   wpi::json xxx = "{}"_json;
