@@ -1,5 +1,6 @@
 import os
 import re
+
 from bazelrio_gentool.auto_update_utils import get_latest_tag, split_tag
 
 
