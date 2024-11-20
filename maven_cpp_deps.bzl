@@ -3013,31 +3013,31 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_pathweaver_linuxarm32",
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2025.1.1-beta-2/PathWeaver-2025.1.1-beta-2-linuxarm32.jar",
-        sha256 = "3545bb6884d71b21170dcb7f0e52c5512433bc222281f58c0570ea2460c8fc94",
+        sha256 = "e01e2fb5bebcb0f4a053489351fd2c96517cc62e6b0fac606c32c610f51d862a",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_pathweaver_linuxarm64",
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2025.1.1-beta-2/PathWeaver-2025.1.1-beta-2-linuxarm64.jar",
-        sha256 = "ca4e40f7cde08beef6c5fa5954aa937814055e4e30d9b776f9efe79b3830363b",
+        sha256 = "408b7edb973dfcb9e6f92c31bd4a8d1636b3a0dda45e8bd74132134e11a8624a",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_pathweaver_linuxx64",
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2025.1.1-beta-2/PathWeaver-2025.1.1-beta-2-linuxx64.jar",
-        sha256 = "f43e5894b8d985be7559221bcab7b0cbaec69306fef09d3acf8975c240fa276a",
+        sha256 = "e3ba89356f554b59ac7c9f43e46bf7610e1ae82ec1405516f2823b69f5ae8e59",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_pathweaver_macx64",
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2025.1.1-beta-2/PathWeaver-2025.1.1-beta-2-macx64.jar",
-        sha256 = "b9e067178ba3003b13c4979050c8f3bf5d59c104037f2010238bb8fb0467aaa8",
+        sha256 = "2b88374b4eac3a18f2745f59ca4afd16e026e60f921808b92c0c270b0cc4e733",
     )
     maybe(
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_pathweaver_winx64",
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/PathWeaver/2025.1.1-beta-2/PathWeaver-2025.1.1-beta-2-winx64.jar",
-        sha256 = "141e42d1f1fb5b5d7e7fdf3b664662cef103ce9fb734ac3c71a5fabcaea54d7e",
+        sha256 = "edae08b7ccaf295498470fbb1a8e5f3641907bbc35210bd9388b4ac2e766e917",
     )
     maybe(
         http_jar,
