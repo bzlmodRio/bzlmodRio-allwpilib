@@ -3,6 +3,8 @@
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <frc/system/plant/LinearSystemId.h>
 
+#include "frc/RobotController.h"
+
 namespace {
 constexpr double kP = 0.01;
 constexpr double kI = 0.0;

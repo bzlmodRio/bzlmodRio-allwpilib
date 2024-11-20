@@ -1,9 +1,9 @@
-from get_opencv_dependencies import get_opencv_dependencies
-from get_ni_dependencies import get_ni_dependencies
 from bazelrio_gentool.deps.dependency_container import (
     DependencyContainer,
     ModuleDependency,
 )
+from get_ni_dependencies import get_ni_dependencies
+from get_opencv_dependencies import get_opencv_dependencies
 
 
 def _default_native_shared_platforms():
@@ -133,7 +133,7 @@ def get_allwpilib_dependencies(
     ni_version_override="2025.0.0",
 ):
     year = "2025"
-    version = "2025.1.1-beta-1"
+    version = "2025.1.1-beta-2"
     patch = ".bcr1"
 
     opencv_dependency = ModuleDependency(
@@ -152,7 +152,11 @@ def get_allwpilib_dependencies(
     )
 
     group = DependencyContainer(
-        "bzlmodrio-allwpilib", version, year, "https://frcmaven.wpi.edu/release", patch=patch
+        "bzlmodrio-allwpilib",
+        version,
+        year,
+        "https://frcmaven.wpi.edu/release",
+        patch=patch,
     )
     group.add_module_dependency(opencv_dependency)
     group.add_module_dependency(ni_dependency, meta_deps=["ni"])
