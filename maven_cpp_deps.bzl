@@ -3043,7 +3043,7 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         http_jar,
         name = "bazelrio_edu_wpi_first_tools_robotbuilder",
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/RobotBuilder/2025.1.1-beta-3/RobotBuilder-2025.1.1-beta-3.jar",
-        sha256 = "774109f5949d6a1682348b1283d14c263b5c112921840c2182c532904fd0b601",
+        sha256 = "f0064a3059fb2dd4f5cbe8daf84f14dc2ab5d7e5679f6c1ae1bacdbee324738d",
     )
     maybe(
         http_jar,

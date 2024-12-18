@@ -2,6 +2,7 @@ import os
 
 from bazelrio_gentool.publish_module import publish_module
 from bazelrio_gentool.utils import TEMPLATE_BASE_DIR
+
 from get_allwpilib_dependencies import get_allwpilib_dependencies
 
 
