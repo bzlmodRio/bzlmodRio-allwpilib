@@ -9,7 +9,6 @@ from bazelrio_gentool.generate_module_project_files import (
     generate_module_project_files,
 )
 from bazelrio_gentool.manual_cleanup_helper import manual_cleanup_helper
-
 from get_allwpilib_dependencies import get_allwpilib_dependencies
 
 
