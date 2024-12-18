@@ -129,11 +129,11 @@ def _executable_tool(
 def get_allwpilib_dependencies(
     use_local_opencv=False,
     use_local_ni=False,
-    opencv_version_override="2024.4.8.0-4.bcr1",
+    opencv_version_override="2025.4.10.0-2",
     ni_version_override="2025.0.0",
 ):
     year = "2025"
-    version = "2025.1.1-beta-2"
+    version = "2025.1.1-beta-3"
     patch = ""
 
     opencv_dependency = ModuleDependency(
