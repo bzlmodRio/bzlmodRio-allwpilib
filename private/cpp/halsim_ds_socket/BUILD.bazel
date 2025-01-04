@@ -11,7 +11,6 @@ cc_library(
     linkstatic = True,
     tags = ["manual"],
     target_compatible_with = select({
-        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
@@ -29,10 +28,10 @@ filegroup(
         "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsarm64//:shared"],
         "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsarm64debug//:shared"],
         "@rules_bzlmodrio_toolchains//conditions:windows_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86-64debug//:shared"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bookworm32:bookworm32": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm32//:shared"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bookworm32:bookworm32_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm32debug//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm64//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm64debug//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm32//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm32debug//:shared"],
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
@@ -42,7 +41,6 @@ cc_library(
     name = "shared",
     srcs = [":shared_raw"],
     target_compatible_with = select({
-        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
@@ -62,7 +60,6 @@ cc_library(
     name = "static",
     linkstatic = 1,
     target_compatible_with = select({
-        "@rules_bzlmodrio_toolchains//constraints/is_raspi32:raspi32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
@@ -76,9 +73,9 @@ cc_library(
         "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsarm64static//:static_libs"],
         "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsarm64staticdebug//:static_libs"],
         "@rules_bzlmodrio_toolchains//conditions:windows_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsx86-64staticdebug//:static_libs"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bookworm32:bookworm32": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm32static//:static_libs"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bookworm32:bookworm32_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm32staticdebug//:static_libs"],
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm64static//:static_libs"],
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm64staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm32static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm32staticdebug//:static_libs"],
     }),
 )
