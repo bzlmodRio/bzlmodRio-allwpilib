@@ -34,9 +34,6 @@ def main():
         REPO_DIR,
         group,
         mandatory_dependencies,
-        include_bullseye_compiler=False,
-        include_bookworm32_compiler=True,
-        include_bookworm64_compiler=True,
     )
     generate_group(output_dir, group, force_tests=args.force_tests)
 
