@@ -36,7 +36,7 @@ def executable_tool_launcher(name, base_repo_name, macos_app = None):
         args = repo_name + subpath + exe_name,
         deps = ["@bazel_tools//tools/bash/runfiles"],
         visibility = ["//visibility:public"],
-        tags = ["no-roborio", "no-bullseye32", "no-bullseye64", "no-raspi", "no-bookworm32", "no-bookworm64"],
+        tags = ["no-roborio", "no-systemcore", "no-bullseye32", "no-bullseye64", "no-bookworm32", "no-bookworm64", "no-raspibullseye32", "no-raspibookworm32"],
     )
 
 def java_tool_launcher(name, main_class, base_repo_name):
@@ -50,5 +50,5 @@ def java_tool_launcher(name, main_class, base_repo_name):
             "@bazel_tools//src/conditions:windows": ["@" + base_repo_name + "_winx64//jar"],
         }),
         visibility = ["//visibility:public"],
-        tags = ["no-roborio", "no-bullseye32", "no-bullseye64", "no-raspi", "no-bookworm32", "no-bookworm64"],
+        tags = ["no-roborio", "no-systemcore", "no-bullseye32", "no-bullseye64", "no-bookworm32", "no-bookworm64", "no-raspibullseye32", "no-raspibookworm32"],
     )

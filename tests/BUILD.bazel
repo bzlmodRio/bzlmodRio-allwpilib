@@ -6,8 +6,10 @@ alias(
         "no-bookworm64",
         "no-bullseye32",
         "no-bullseye64",
-        "no-raspi",
+        "no-raspibookworm32",
+        "no-raspibullseye32",
         "no-roborio",
+        "no-systemcore",
     ],
 )
 
@@ -19,8 +21,10 @@ alias(
         "no-bookworm64",
         "no-bullseye32",
         "no-bullseye64",
-        "no-raspi",
+        "no-raspibookworm32",
+        "no-raspibullseye32",
         "no-roborio",
+        "no-systemcore",
     ],
 )
 
@@ -32,8 +36,10 @@ alias(
         "no-bookworm64",
         "no-bullseye32",
         "no-bullseye64",
-        "no-raspi",
+        "no-raspibookworm32",
+        "no-raspibullseye32",
         "no-roborio",
+        "no-systemcore",
     ],
 )
 
@@ -45,8 +51,10 @@ alias(
         "no-bookworm64",
         "no-bullseye32",
         "no-bullseye64",
-        "no-raspi",
+        "no-raspibookworm32",
+        "no-raspibullseye32",
         "no-roborio",
+        "no-systemcore",
     ],
 )
 
@@ -58,8 +66,10 @@ alias(
         "no-bookworm64",
         "no-bullseye32",
         "no-bullseye64",
-        "no-raspi",
+        "no-raspibookworm32",
+        "no-raspibullseye32",
         "no-roborio",
+        "no-systemcore",
     ],
 )
 
@@ -71,8 +81,10 @@ alias(
         "no-bookworm64",
         "no-bullseye32",
         "no-bullseye64",
-        "no-raspi",
+        "no-raspibookworm32",
+        "no-raspibullseye32",
         "no-roborio",
+        "no-systemcore",
     ],
 )
 
@@ -84,8 +96,10 @@ alias(
         "no-bookworm64",
         "no-bullseye32",
         "no-bullseye64",
-        "no-raspi",
+        "no-raspibookworm32",
+        "no-raspibullseye32",
         "no-roborio",
+        "no-systemcore",
     ],
 )
 
@@ -97,8 +111,10 @@ alias(
         "no-bookworm64",
         "no-bullseye32",
         "no-bullseye64",
-        "no-raspi",
+        "no-raspibookworm32",
+        "no-raspibullseye32",
         "no-roborio",
+        "no-systemcore",
     ],
 )
 
@@ -110,7 +126,9 @@ alias(
         "no-bookworm64",
         "no-bullseye32",
         "no-bullseye64",
-        "no-raspi",
+        "no-raspibookworm32",
+        "no-raspibullseye32",
         "no-roborio",
+        "no-systemcore",
     ],
 )
