@@ -1,4 +1,5 @@
 load("@rules_java//java:defs.bzl", "java_binary")
+load("@rules_shell//shell:sh_binary.bzl", "sh_binary")
 
 def executable_tool_launcher(name, base_repo_name, macos_app = None):
     macos_subpath = "osx/x86-64"
@@ -28,8 +29,7 @@ def executable_tool_launcher(name, base_repo_name, macos_app = None):
         "@bazel_tools//src/conditions:linux_x86_64": [base_repo_name + "_linuxx86-64"],
         "@bazel_tools//src/conditions:windows": [base_repo_name + "_windowsx86-64"],
     })
-
-    native.sh_binary(
+    sh_binary(
         name = name,
         srcs = ["//libraries/tools:executable_launcher.sh"],
         data = data,
