@@ -29,6 +29,7 @@ def executable_tool_launcher(name, base_repo_name, macos_app = None):
         "@bazel_tools//src/conditions:linux_x86_64": [base_repo_name + "_linuxx86-64"],
         "@bazel_tools//src/conditions:windows": [base_repo_name + "_windowsx86-64"],
     })
+
     sh_binary(
         name = name,
         srcs = ["//libraries/tools:executable_launcher.sh"],
