@@ -44,8 +44,8 @@ def download_dependencies():
     # bzlmodrio-opencv
     http_archive(
         name = "bzlmodrio-opencv",
-        sha256 = "58c0069fc323259f3993750fe8245798f0db8b2fbf3772c5136253fa92912a16",
-        url = "https://github.com/bzlmodRio/bzlmodRio-opencv/releases/download/2025.4.10.0-3/bzlmodRio-opencv-2025.4.10.0-3.tar.gz",
+        sha256 = "6e8544fae07ed5b4fedc146f6ad083d0d8947e3efb5332a20abc46601a52a1b5",
+        url = "https://github.com/bzlmodRio/bzlmodRio-opencv/releases/download/2025.4.10.0-3.bcr2/bzlmodRio-opencv-2025.4.10.0-3.bcr2.tar.gz",
     )
 
     # bzlmodrio-ni
