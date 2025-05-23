@@ -4,8 +4,6 @@ cc_library(
     srcs = glob(["**/*.lib", "**/*.a"], allow_empty=True),
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/cameraserver:static",
-        "@bzlmodrio-allwpilib//libraries/cpp/cscore:static",
         "@bzlmodrio-allwpilib//libraries/cpp/hal:static",
         "@bzlmodrio-allwpilib//libraries/cpp/ntcore:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
