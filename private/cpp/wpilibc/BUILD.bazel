@@ -52,7 +52,7 @@ cc_library(
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-        "@bzlmodrio-opencv//libraries/cpp/opencv:shared",
+        # "@bzlmodrio-opencv//libraries/cpp/opencv:shared",
     ] + select({
         "@rules_bzlmodrio_toolchains//conditions:windows": [":shared_interface"],
         "//conditions:default": [],

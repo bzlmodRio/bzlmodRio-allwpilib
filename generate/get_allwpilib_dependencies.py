@@ -85,7 +85,7 @@ def _halsim_dependency(group, parent_folder, resources=None, **kwargs):
         group_id=f"edu.wpi.first.halsim",
         has_jni=False,
         parent_folder=parent_folder,
-        headers=None,
+        headers="headers",
         sources="sources",
         resources=resources,
         **kwargs,

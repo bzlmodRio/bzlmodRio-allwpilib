@@ -9,6 +9,6 @@ cc_library(
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
-        "@bzlmodrio-opencv//libraries/cpp/opencv:static",
+        # "@bzlmodrio-opencv//libraries/cpp/opencv:static",
     ],
 )

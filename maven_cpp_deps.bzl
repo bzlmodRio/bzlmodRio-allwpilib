@@ -2669,6 +2669,13 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
+        "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2025.3.2/halsim_ds_socket-2025.3.2-headers.zip",
+        sha256 = "b800ec7cdba7e284d4855aa9dcfcfa97a1cada823d1afd91da768789e8b50c25",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_sources",
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2025.3.2/halsim_ds_socket-2025.3.2-sources.zip",
         sha256 = "3b50b3a19e2e5c974ac0ba2bfe639fb9fb136b17e04dfd94ea8b75614a50fdf0",
@@ -2853,6 +2860,13 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2025.3.2/halsim_ds_socket-2025.3.2-windowsarm64staticdebug.zip",
         sha256 = "abf8074a18ecc3e9b8fd597d4d1d4e11fe25642060d27d07092ae8a0fdc43b12",
         build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_halsim_halsim_gui_headers",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2025.3.2/halsim_gui-2025.3.2-headers.zip",
+        sha256 = "c530cad20f0479ec7ef91ec9d8d0afbba6a26a6e261cfb16afdd7eeeb49edfc1",
+        build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
@@ -3047,6 +3061,13 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
+        "bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2025.3.2/halsim_ws_client-2025.3.2-headers.zip",
+        sha256 = "449f09c6acaff8ec5e369c16ef17152f662d5f8708ea83e20e6fa1603259cefd",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_sources",
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2025.3.2/halsim_ws_client-2025.3.2-sources.zip",
         sha256 = "1f69a9c4ad20a5c46e1db700a121c49b0b2e66eed40e14e7a5e148c121163470",
@@ -3231,6 +3252,13 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2025.3.2/halsim_ws_client-2025.3.2-windowsarm64staticdebug.zip",
         sha256 = "d1f2d1ab7a8c19296a0b51c450b78e8e7f95d6c65d1d8ab8523dbdd3cf560609",
         build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_client:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2025.3.2/halsim_ws_server-2025.3.2-headers.zip",
+        sha256 = "b2ec40cc9319496b4f64b78b1053f84831fe6f7ace01bbf3f5f72f64fa628166",
+        build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,

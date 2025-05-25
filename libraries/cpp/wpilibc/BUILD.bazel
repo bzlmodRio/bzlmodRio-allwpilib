@@ -4,6 +4,14 @@ alias(
     visibility = ["//visibility:public"],
 )
 
+cc_library(
+    name = "hack_headers",
+    deps = [
+        "@bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_headers//:headers"
+    ],
+    visibility = ["//visibility:public"],
+)
+
 alias(
     name = "header_files",
     actual = "@bzlmodrio-allwpilib//private/cpp/wpilibc:header_files",
