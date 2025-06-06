@@ -39,7 +39,7 @@ def _make_all_native_platforms(platforms):
 
 
 def _default_embedded_platforms():
-    return []
+    return ["linuxsystemcore"]
 
 
 def _default_all_platforms():
