@@ -8,12 +8,12 @@ from get_opencv_dependencies import get_opencv_dependencies
 
 def _default_native_shared_platforms():
     return [
-        # "linuxarm32",
-        # "linuxarm64",
+        "linuxarm32",
+        "linuxarm64",
         "linuxx86-64",
-        # "osxuniversal",
-        # "windowsx86-64",
-        # "windowsarm64",
+        "osxuniversal",
+        "windowsx86-64",
+        "windowsarm64",
     ]
 
 

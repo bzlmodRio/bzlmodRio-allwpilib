@@ -7,12 +7,39 @@ alias(
 
 
 
+cc_library(
+    name = "shared_interface",
+    srcs = select({
+        "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsx86-64//:shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsarm64//:shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsarm64debug//:shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsx86-64debug//:shared_interface"],
+    }),
+    linkstatic = True,
+    tags = ["manual"],
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+    deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
+)
 
 filegroup(
     name = "shared_raw",
     srcs = select({
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxx86-64//:shared"],
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxx86-64debug//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:osx": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_osxuniversal//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:osx_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_osxuniversaldebug//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsx86-64//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsarm64//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsarm64debug//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsx86-64debug//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm64//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm64debug//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm32//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm32debug//:shared"],
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
@@ -22,17 +49,16 @@ cc_library(
     name = "shared",
     srcs = [":shared_raw"],
     target_compatible_with = select({
-        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
-        "@bazel_tools//src/conditions:windows": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",] + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",] + select({
+        "@rules_bzlmodrio_toolchains//conditions:windows": [":shared_interface"],
+        "//conditions:default": [],
+    }) + ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"],
     alwayslink = 1,
 )
 
@@ -40,9 +66,6 @@ cc_library(
     name = "static",
     linkstatic = 1,
     target_compatible_with = select({
-        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bookworm32:bookworm32": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
@@ -50,6 +73,16 @@ cc_library(
     deps = ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers//:headers"] + select({
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxx86-64static//:static_libs"],
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxx86-64staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:osx": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_osxuniversalstatic//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:osx_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_osxuniversalstaticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsx86-64static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsarm64static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsarm64staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsx86-64staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm64static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm64staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm32static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm32staticdebug//:static_libs"],
     }),
 )
 
@@ -58,13 +91,19 @@ cc_library(
     srcs = select({
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxx86-64//:jni"],
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxx86-64debug//:jni"],
+        "@rules_bzlmodrio_toolchains//conditions:osx": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_osxuniversal//:jni"],
+        "@rules_bzlmodrio_toolchains//conditions:osx_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_osxuniversaldebug//:jni"],
+        "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsx86-64//:jni"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsarm64//:jni"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsarm64debug//:jni"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsx86-64debug//:jni"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm64//:jni"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm64debug//:jni"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm32//:jni"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm32debug//:jni"],
     }),
     linkstatic = 1,
     target_compatible_with = select({
-        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
-        "@bazel_tools//src/conditions:windows": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@platforms//:incompatible"],
-        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
