@@ -1,33 +1,45 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 alias(
     name = "halsim_ws_server",
     actual = ":shared",
     visibility = ["//visibility:public"],
 )
-
 alias(
     name = "header_files",
     actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:header_files",
     visibility = ["//visibility:public"],
 )
 
+
 alias(
     name = "static",
-    actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:static",
     target_compatible_with = select({
+        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm32:bookworm32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["//visibility:public"],
+    actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:static",
 )
+
+
+
 
 alias(
     name = "shared",
-    actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:shared",
     target_compatible_with = select({
+        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
+        "@bazel_tools//src/conditions:windows": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@platforms//:incompatible"],
         "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["//visibility:public"],
+    actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:shared",
 )
 
 alias(
@@ -35,3 +47,4 @@ alias(
     actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:shared_raw",
     visibility = ["//visibility:public"],
 )
+

@@ -25,11 +25,6 @@ shared_srcs = glob([
     allow_empty = True,
 )
 shared_jni_srcs = glob(JNI_PATTERN, exclude=["**/*.so.debug"], allow_empty=True)
-filegroup(
-    name = "shared_interface",
-    srcs = static_srcs,
-    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
-)
 
 filegroup(
     name = "shared",

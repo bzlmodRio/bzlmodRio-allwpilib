@@ -1,25 +1,45 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 alias(
     name = "wpimath",
     actual = ":shared",
     visibility = ["//visibility:public"],
 )
-
 alias(
     name = "header_files",
     actual = "@bzlmodrio-allwpilib//private/cpp/wpimath:header_files",
     visibility = ["//visibility:public"],
 )
 
+
 alias(
     name = "static",
-    actual = "@bzlmodrio-allwpilib//private/cpp/wpimath:static",
+    target_compatible_with = select({
+        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm32:bookworm32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
     visibility = ["//visibility:public"],
+    actual = "@bzlmodrio-allwpilib//private/cpp/wpimath:static",
 )
+
+
+
 
 alias(
     name = "shared",
-    actual = "@bzlmodrio-allwpilib//private/cpp/wpimath:shared",
+    target_compatible_with = select({
+        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
+        "@bazel_tools//src/conditions:windows": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
     visibility = ["//visibility:public"],
+    actual = "@bzlmodrio-allwpilib//private/cpp/wpimath:shared",
 )
 
 alias(
@@ -28,8 +48,9 @@ alias(
     visibility = ["//visibility:public"],
 )
 
+
 alias(
     name = "jni",
-    actual = "@bzlmodrio-allwpilib//private/cpp/wpimath:jni",
     visibility = ["//visibility:public"],
+    actual = "@bzlmodrio-allwpilib//private/cpp/wpimath:jni",
 )

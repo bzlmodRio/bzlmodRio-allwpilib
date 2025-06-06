@@ -49,6 +49,9 @@ maven_install(
 # Styleguide
 #####################
 
+
+
+
 http_archive(
     name = "rules_wpi_styleguide",
     sha256 = "b8215443ef1a6cc8170bc76203e44f22516614c58935e22c6a94b63656e2c88a",
@@ -82,6 +85,7 @@ http_archive(
     strip_prefix = "rules_bzlmodrio_jdk-4ecd4cbc97dfbfe2ceefa627de1228e2f2ca5773",
     urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/4ecd4cbc97dfbfe2ceefa627de1228e2f2ca5773.tar.gz"],
 )
+
 
 load("@rules_bzlmodrio_jdk//:maven_deps.bzl", "setup_legacy_setup_jdk_dependencies")
 

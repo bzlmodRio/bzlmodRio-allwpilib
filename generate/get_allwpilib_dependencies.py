@@ -8,12 +8,12 @@ from get_opencv_dependencies import get_opencv_dependencies
 
 def _default_native_shared_platforms():
     return [
-        "linuxarm32",
-        "linuxarm64",
+        # "linuxarm32",
+        # "linuxarm64",
         "linuxx86-64",
-        "osxuniversal",
-        "windowsx86-64",
-        "windowsarm64",
+        # "osxuniversal",
+        # "windowsx86-64",
+        # "windowsarm64",
     ]
 
 
@@ -39,7 +39,7 @@ def _make_all_native_platforms(platforms):
 
 
 def _default_embedded_platforms():
-    return ["linuxathena"]
+    return []
 
 
 def _default_all_platforms():
@@ -132,9 +132,9 @@ def get_allwpilib_dependencies(
     opencv_version_override="2025.4.10.0-3.bcr2",
     ni_version_override="2025.2.0.bcr1",
 ):
-    year = "2025"
-    version = "2025.3.2"
-    patch = ".bcr1"
+    year = "2027"
+    version = "2025.3.2-123-g22d12d2"
+    patch = ""
 
     opencv_dependency = ModuleDependency(
         get_opencv_dependencies(),
@@ -155,7 +155,7 @@ def get_allwpilib_dependencies(
         "bzlmodrio-allwpilib",
         version,
         year,
-        "https://frcmaven.wpi.edu/release",
+        "https://frcmaven.wpi.edu/development-2027",
         patch=patch,
     )
     group.add_module_dependency(opencv_dependency)
@@ -387,15 +387,15 @@ def get_allwpilib_dependencies(
         group, "halsim_ws_server", dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp"]
     )
 
-    group.create_java_dependency(
-        "api",
-        group_id=f"edu.wpi.first.shuffleboard",
-        parent_folder="shuffleboard-api",
-    )
+    # group.create_java_dependency(
+    #     "api",
+    #     group_id=f"edu.wpi.first.shuffleboard",
+    #     parent_folder="shuffleboard-api",
+    # )
 
     _executable_tool(group, "Glass", lower_target_name=True)
     _executable_tool(group, "OutlineViewer", lower_target_name=True)
-    _executable_tool(group, "roboRIOTeamNumberSetter", lower_target_name=True)
+    # _executable_tool(group, "roboRIOTeamNumberSetter", lower_target_name=True)
     _executable_tool(group, "DataLogTool", lower_target_name=True)
     _executable_tool(
         group,
@@ -408,32 +408,32 @@ def get_allwpilib_dependencies(
             "windowsarm64",
         ],
     )
-    _java_tool(
-        group,
-        "SmartDashboard",
-        main_class="edu.wpi.first.smartdashboard.SmartDashboard",
-        native_platforms=["linuxx64", "macx64", "winx64"],
-    )
-    _java_tool(group, "PathWeaver", main_class="edu.wpi.first.pathweaver.Main")
-    _java_tool(
-        group,
-        "RobotBuilder",
-        main_class="robotbuilder.RobotBuilder",
-        native_platforms=[""],
-    )
-    _java_tool(
-        group,
-        "Shuffleboard",
-        main_class="edu.wpi.first.shuffleboard.app.Main",
-        native_platforms=[
-            "linuxarm32",
-            "linuxarm64",
-            "linuxx64",
-            "macarm64",
-            "macx64",
-            "winx64",
-        ],
-    )
+    # _java_tool(
+    #     group,
+    #     "SmartDashboard",
+    #     main_class="edu.wpi.first.smartdashboard.SmartDashboard",
+    #     native_platforms=["linuxx64", "macx64", "winx64"],
+    # )
+    # _java_tool(group, "PathWeaver", main_class="edu.wpi.first.pathweaver.Main")
+    # _java_tool(
+    #     group,
+    #     "RobotBuilder",
+    #     main_class="robotbuilder.RobotBuilder",
+    #     native_platforms=[""],
+    # )
+    # _java_tool(
+    #     group,
+    #     "Shuffleboard",
+    #     main_class="edu.wpi.first.shuffleboard.app.Main",
+    #     native_platforms=[
+    #         "linuxarm32",
+    #         "linuxarm64",
+    #         "linuxx64",
+    #         "macarm64",
+    #         "macx64",
+    #         "winx64",
+    #     ],
+    # )
 
     return group
 

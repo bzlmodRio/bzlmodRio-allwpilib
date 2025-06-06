@@ -62,14 +62,14 @@ def manual_cleanup(REPO_DIR):
         ),
     )
 
-    filepath = os.path.join(REPO_DIR, "libraries", "tools", "RobotBuilder", "BUILD")
-    manual_cleanup_helper(
-        filepath,
-        lambda contents: contents.replace(
-            'name = "RobotBuilder",',
-            'name = "RobotBuilder",\n    javacopts = ["-Werror"],',
-        ),
-    )
+    # filepath = os.path.join(REPO_DIR, "libraries", "tools", "RobotBuilder", "BUILD")
+    # manual_cleanup_helper(
+    #     filepath,
+    #     lambda contents: contents.replace(
+    #         'name = "RobotBuilder",',
+    #         'name = "RobotBuilder",\n    javacopts = ["-Werror"],',
+    #     ),
+    # )
 
 
 if __name__ == "__main__":
