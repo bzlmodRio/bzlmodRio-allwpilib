@@ -1,0 +1,56 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+alias(
+    name = "datalog",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+alias(
+    name = "header_files",
+    actual = "@bzlmodrio-allwpilib//private/cpp/datalog:header_files",
+    visibility = ["//visibility:public"],
+)
+
+
+alias(
+    name = "static",
+    target_compatible_with = select({
+        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm32:bookworm32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["//visibility:public"],
+    actual = "@bzlmodrio-allwpilib//private/cpp/datalog:static",
+)
+
+
+
+
+alias(
+    name = "shared",
+    target_compatible_with = select({
+        "@bazel_tools//src/conditions:darwin": ["@platforms//:incompatible"],
+        "@bazel_tools//src/conditions:windows": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@platforms//:incompatible"],
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["//visibility:public"],
+    actual = "@bzlmodrio-allwpilib//private/cpp/datalog:shared",
+)
+
+alias(
+    name = "shared_raw",
+    actual = "@bzlmodrio-allwpilib//private/cpp/datalog:shared_raw",
+    visibility = ["//visibility:public"],
+)
+
+
+alias(
+    name = "jni",
+    visibility = ["//visibility:public"],
+    actual = "@bzlmodrio-allwpilib//private/cpp/datalog:jni",
+)
