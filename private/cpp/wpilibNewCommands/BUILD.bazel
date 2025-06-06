@@ -40,6 +40,8 @@ filegroup(
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxarm64debug//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxarm32//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxarm32debug//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxsystemcore//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore_debug": ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxsystemcoredebug//:shared"],
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
@@ -61,8 +63,7 @@ cc_library(
         "@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-        "@bzlmodrio-opencv//libraries/cpp/opencv:shared",] + select({
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",] + select({
         "@rules_bzlmodrio_toolchains//conditions:windows": [":shared_interface"],
         "//conditions:default": [],
     }) + ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_headers//:headers"],
@@ -90,6 +91,8 @@ cc_library(
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxarm64staticdebug//:static_libs"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxarm32static//:static_libs"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxarm32staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxsystemcorestatic//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore_debug": ["@bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxsystemcorestaticdebug//:static_libs"],
     }),
 )
 

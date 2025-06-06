@@ -40,6 +40,8 @@ filegroup(
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm64debug//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm32//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm32debug//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxsystemcore//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore_debug": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxsystemcoredebug//:shared"],
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
@@ -84,6 +86,8 @@ cc_library(
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm64staticdebug//:static_libs"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm32static//:static_libs"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm32staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxsystemcorestatic//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore_debug": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxsystemcorestaticdebug//:static_libs"],
     }),
 )
 
@@ -102,6 +106,8 @@ cc_library(
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm64debug//:jni"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm32//:jni"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm32debug//:jni"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxsystemcore//:jni"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore_debug": ["@bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxsystemcoredebug//:jni"],
     }),
     linkstatic = 1,
     target_compatible_with = select({
