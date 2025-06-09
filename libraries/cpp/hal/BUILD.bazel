@@ -23,6 +23,12 @@ alias(
 )
 
 alias(
+    name = "shared_interface",
+    actual = "@bzlmodrio-allwpilib//private/cpp/hal:shared_interface",
+    visibility = ["//visibility:public"],
+)
+
+alias(
     name = "shared_raw",
     actual = "@bzlmodrio-allwpilib//private/cpp/hal:shared_raw",
     visibility = ["//visibility:public"],
