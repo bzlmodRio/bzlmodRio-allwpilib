@@ -1,6 +1,8 @@
 
+#include "frc/romi/RomiGyro.h"
 #include "gtest/gtest.h"
 
-TEST(BasicTest, BasicTest) {
-    EXPECT_TRUE(false);
+TEST(BasicTest, Basic) {
+  frc::RomiGyro gyro;
+  EXPECT_TRUE(true);
 }

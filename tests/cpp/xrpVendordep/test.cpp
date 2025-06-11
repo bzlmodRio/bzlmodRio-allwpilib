@@ -1,6 +1,8 @@
 
+#include "frc/xrp/XRPGyro.h"
 #include "gtest/gtest.h"
 
-TEST(BasicTest, BasicTest) {
-    EXPECT_TRUE(false);
+TEST(BasicTest, Basic) {
+  frc::XRPGyro gyro;
+  EXPECT_TRUE(true);
 }

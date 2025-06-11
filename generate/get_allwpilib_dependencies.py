@@ -228,38 +228,22 @@ def get_allwpilib_dependencies(
             "wpinet-cpp",
         ],
     )
-    
+
     _cc_dependency(
         group,
         "romiVendordep",
         has_jni=False,
         dependencies=[
-            # "wpiutil-cpp",
-            # "wpimath-cpp",
-            # "cscore-cpp",
-            # "ntcore-cpp",
-            # "hal-cpp",
-            # "cameraserver-cpp",
-            # "opencv-cpp",
-            # "wpilibc-cpp",
-            # "wpinet-cpp",
+            "wpilibc-cpp",
         ],
     )
-    
+
     _cc_dependency(
         group,
         "xrpVendordep",
         has_jni=False,
         dependencies=[
-            # "wpiutil-cpp",
-            # "wpimath-cpp",
-            # "cscore-cpp",
-            # "ntcore-cpp",
-            # "hal-cpp",
-            # "cameraserver-cpp",
-            # "opencv-cpp",
-            # "wpilibc-cpp",
-            # "wpinet-cpp",
+            "wpilibc-cpp",
         ],
     )
 

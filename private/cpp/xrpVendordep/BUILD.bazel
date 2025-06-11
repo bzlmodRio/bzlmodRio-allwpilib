@@ -46,7 +46,9 @@ cc_library(
     name = "shared",
     srcs = [":shared_raw"],
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
-    deps = [] + select({
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
+    ] + select({
         "@rules_bzlmodrio_toolchains//conditions:windows": [":shared_interface"],
         "//conditions:default": [],
     }) + ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_headers//:headers"],

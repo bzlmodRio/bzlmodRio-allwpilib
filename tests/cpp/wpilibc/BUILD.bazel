@@ -5,7 +5,7 @@ cc_binary(
     name = "main",
     srcs = ["main.cpp"],
     tags = ["no-sandbox"],
-    deps = ["@bzlmodrio-allwpilib//libraries/cpp/wpilibc"],
+    deps = ["@bzlmodrio-allwpilib//libraries/cpp/wpilibc", "@bzlmodrio-allwpilib//libraries/cpp/cameraserver"],
 )
 
 cc_test(
