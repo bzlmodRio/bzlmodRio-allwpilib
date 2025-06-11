@@ -23,6 +23,7 @@ alias(
 alias(
     name = "shared_interface",
     actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_client:shared_interface",
+    tags = ["manual"],
     visibility = ["//visibility:public"],
 )
 
