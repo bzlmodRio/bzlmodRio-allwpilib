@@ -10,3 +10,10 @@ cc_library(
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
     ],
 )
+
+
+cc_library(
+    name = "standalone_static_libs",
+    srcs = glob(["**/*.lib", "**/*.a"], allow_empty=True),
+    visibility = ["//visibility:public"],
+)

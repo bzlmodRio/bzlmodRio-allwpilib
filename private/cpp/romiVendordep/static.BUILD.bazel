@@ -6,3 +6,10 @@ cc_library(
     deps = [
     ],
 )
+
+
+cc_library(
+    name = "standalone_static_libs",
+    srcs = glob(["**/*.lib", "**/*.a"], allow_empty=True),
+    visibility = ["//visibility:public"],
+)

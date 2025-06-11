@@ -207,11 +207,8 @@ def get_allwpilib_dependencies(
         dependencies=[
             "wpiutil-cpp",
             "wpimath-cpp",
-            # "cscore-cpp",
             "ntcore-cpp",
             "hal-cpp",
-            # "cameraserver-cpp",
-            "opencv-cpp",
             "wpinet-cpp",
         ],
     )

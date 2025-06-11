@@ -21,6 +21,12 @@ alias(
 )
 
 alias(
+    name = "shared_interface",
+    actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:shared_interface",
+    visibility = ["//visibility:public"],
+)
+
+alias(
     name = "shared",
     actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:shared",
     target_compatible_with = select({

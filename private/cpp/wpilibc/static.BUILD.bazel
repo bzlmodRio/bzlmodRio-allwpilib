@@ -9,6 +9,12 @@ cc_library(
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
-        # "@bzlmodrio-opencv//libraries/cpp/opencv:static",
     ],
+)
+
+
+cc_library(
+    name = "standalone_static_libs",
+    srcs = glob(["**/*.lib", "**/*.a"], allow_empty=True),
+    visibility = ["//visibility:public"],
 )
