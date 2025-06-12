@@ -17,6 +17,12 @@ alias(
 )
 
 alias(
+    name = "standalone_static",
+    actual = "@bzlmodrio-allwpilib//private/cpp/cscore:standalone_static",
+    visibility = ["//visibility:public"],
+)
+
+alias(
     name = "shared_interface",
     actual = "@bzlmodrio-allwpilib//private/cpp/cscore:shared_interface",
     tags = ["manual"],

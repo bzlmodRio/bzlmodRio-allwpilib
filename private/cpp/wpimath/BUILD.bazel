@@ -78,6 +78,28 @@ cc_library(
 )
 
 cc_library(
+    name = "standalone_static",
+    linkstatic = 1,
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+    deps = ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_headers//:headers"] + select({
+        "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxx86-64static//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:linux_x86_64_debug": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxx86-64staticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:osx": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_osxuniversalstatic//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:osx_debug": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_osxuniversalstaticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86-64static//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsarm64static//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsarm64staticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_debug": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86-64staticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxarm64static//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxarm64staticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxarm32static//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxarm32staticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxathenastatic//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio_debug": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxathenastaticdebug//:standalone_static_libs"],
+    }),
+)
+
+cc_library(
     name = "jni",
     srcs = select({
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxx86-64//:jni"],

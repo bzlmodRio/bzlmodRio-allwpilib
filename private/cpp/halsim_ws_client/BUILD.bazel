@@ -86,3 +86,27 @@ cc_library(
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxarm32staticdebug//:static_libs"],
     }),
 )
+
+cc_library(
+    name = "standalone_static",
+    linkstatic = 1,
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+    deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers//:headers"] + select({
+        "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxx86-64static//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:linux_x86_64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxx86-64staticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:osx": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_osxuniversalstatic//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:osx_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_osxuniversalstaticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64static//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsarm64static//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsarm64staticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_windowsx86-64staticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxarm64static//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxarm64staticdebug//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxarm32static//:standalone_static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxarm32staticdebug//:standalone_static_libs"],
+    }),
+)

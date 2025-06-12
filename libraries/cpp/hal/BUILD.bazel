@@ -17,6 +17,12 @@ alias(
 )
 
 alias(
+    name = "standalone_static",
+    actual = "@bzlmodrio-allwpilib//private/cpp/hal:standalone_static",
+    visibility = ["//visibility:public"],
+)
+
+alias(
     name = "shared_interface",
     actual = "@bzlmodrio-allwpilib//private/cpp/hal:shared_interface",
     tags = ["manual"],
