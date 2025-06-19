@@ -85,7 +85,7 @@ def _halsim_dependency(group, parent_folder, resources=None, **kwargs):
         group_id=f"edu.wpi.first.halsim",
         has_jni=False,
         parent_folder=parent_folder,
-        headers=None,
+        headers="headers",
         sources="sources",
         resources=resources,
         **kwargs,
@@ -207,11 +207,8 @@ def get_allwpilib_dependencies(
         dependencies=[
             "wpiutil-cpp",
             "wpimath-cpp",
-            "cscore-cpp",
             "ntcore-cpp",
             "hal-cpp",
-            "cameraserver-cpp",
-            "opencv-cpp",
             "wpinet-cpp",
         ],
     )
@@ -229,6 +226,24 @@ def get_allwpilib_dependencies(
             "opencv-cpp",
             "wpilibc-cpp",
             "wpinet-cpp",
+        ],
+    )
+
+    _cc_dependency(
+        group,
+        "romiVendordep",
+        has_jni=False,
+        dependencies=[
+            "wpilibc-cpp",
+        ],
+    )
+
+    _cc_dependency(
+        group,
+        "xrpVendordep",
+        has_jni=False,
+        dependencies=[
+            "wpilibc-cpp",
         ],
     )
 

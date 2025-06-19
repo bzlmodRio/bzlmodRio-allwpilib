@@ -47,14 +47,11 @@ cc_library(
     srcs = [":shared_raw"],
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/cameraserver:shared",
-        "@bzlmodrio-allwpilib//libraries/cpp/cscore:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-        "@bzlmodrio-opencv//libraries/cpp/opencv:shared",
     ] + select({
         "@rules_bzlmodrio_toolchains//conditions:windows": [":shared_interface"],
         "//conditions:default": [],

@@ -5,6 +5,12 @@ alias(
 )
 
 alias(
+    name = "header_files",
+    actual = "@bzlmodrio-allwpilib//private/cpp/halsim_gui:header_files",
+    visibility = ["//visibility:public"],
+)
+
+alias(
     name = "static",
     actual = "@bzlmodrio-allwpilib//private/cpp/halsim_gui:static",
     target_compatible_with = select({
