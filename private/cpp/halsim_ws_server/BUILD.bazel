@@ -1,5 +1,11 @@
 load("@rules_cc//cc:defs.bzl", "cc_library")
 
+alias(
+    name = "header_files",
+    actual = "@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:header_files",
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+)
+
 cc_library(
     name = "shared_interface",
     srcs = select({
@@ -15,6 +21,7 @@ cc_library(
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+    deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
 )
 
 filegroup(
@@ -52,7 +59,7 @@ cc_library(
     ] + select({
         "@rules_bzlmodrio_toolchains//conditions:windows": [":shared_interface"],
         "//conditions:default": [],
-    }),
+    }) + ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"],
     alwayslink = 1,
 )
 
@@ -64,7 +71,7 @@ cc_library(
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
-    deps = select({
+    deps = ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers//:headers"] + select({
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_linuxx86-64static//:static_libs"],
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64_debug": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_linuxx86-64staticdebug//:static_libs"],
         "@rules_bzlmodrio_toolchains//conditions:osx": ["@bazelrio_edu_wpi_first_halsim_halsim_ws_server_osxuniversalstatic//:static_libs"],

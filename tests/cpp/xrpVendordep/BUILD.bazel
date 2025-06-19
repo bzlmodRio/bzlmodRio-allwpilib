@@ -5,10 +5,7 @@ cc_binary(
     name = "main",
     srcs = ["main.cpp"],
     tags = ["no-sandbox"],
-    deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/cameraserver",
-        "@bzlmodrio-allwpilib//libraries/cpp/wpilibc",
-    ],
+    deps = ["@bzlmodrio-allwpilib//libraries/cpp/xrpVendordep"],
 )
 
 cc_test(
@@ -19,9 +16,9 @@ cc_test(
         "no-sandbox",
     ],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/wpilibc",
+        "@bzlmodrio-allwpilib//libraries/cpp/xrpVendordep",
         "@googletest//:gtest_main",
     ],
 )
 
-cc_styleguide(name = "wpilibc")
+cc_styleguide(name = "xrpVendordep")

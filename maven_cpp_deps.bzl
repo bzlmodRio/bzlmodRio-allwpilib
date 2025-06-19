@@ -1820,8 +1820,6 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/wpilibc:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libwpilibc.dylib osx/universal/shared/libwpilibc.dylib",
-            "install_name_tool -change libcameraserver.dylib @rpath/libcameraserver.dylib osx/universal/shared/libwpilibc.dylib",
-            "install_name_tool -change libcscore.dylib @rpath/libcscore.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libwpilibc.dylib",
@@ -1914,8 +1912,6 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/wpilibc:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libwpilibc.dylib osx/universal/shared/libwpilibc.dylib",
-            "install_name_tool -change libcameraserver.dylib @rpath/libcameraserver.dylib osx/universal/shared/libwpilibc.dylib",
-            "install_name_tool -change libcscore.dylib @rpath/libcscore.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libwpilibc.dylib",
@@ -2241,6 +2237,469 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_headers",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-headers.zip",
+        sha256 = "59d836204c587f3b2b16798fd6eb36bb50a4cc72a934fa9b2c18927573fb64f8",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_sources",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-sources.zip",
+        sha256 = "598ee8874c16a339bdc57147bb536e1ce93785928e95707b27e07d6e20568416",
+        build_file_content = cc_library_sources,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm32",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm32.zip",
+        sha256 = "6f3da32ca4e3787f3dde78c9098cafb9e0735385825471169bbedd67a971a177",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm64.zip",
+        sha256 = "1db902bd8cc294ef41bab5f827d32cbb365c4839950952a0bec61883421568d1",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxx86-64.zip",
+        sha256 = "68f03608d31568cc3450708ceaa58b73189497927621940e9cfb7ca17198c186",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-osxuniversal.zip",
+        sha256 = "986395311ddcdc470d38e9a895dc6328f234c91592bffac504b63ac8ae39dc3e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libromiVendordep.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libromiVendordep.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsx86-64.zip",
+        sha256 = "f744ac36271eec427ca4c44135fc74e8fbafd53adda85123380ccc311d878e73",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsarm64.zip",
+        sha256 = "eaec890354f525977dca3622cf03d1f84e936785ccf43c6428f2fa3f92ba7cea",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm32static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm32static.zip",
+        sha256 = "d8f8e7ce1a43a003fd4f4c12ebacb3e634ecb4bbcd5e0d2fa2ab8116a0fb8ad2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm64static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm64static.zip",
+        sha256 = "57d31df48596673ae08d93e8b88a715adff023ec3623b2e1318768473be756d0",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxx86-64static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxx86-64static.zip",
+        sha256 = "8ef5ce858a56527b531d89e6b10755d1cd0a83b3b2c8e793147113122e966a27",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_osxuniversalstatic",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-osxuniversalstatic.zip",
+        sha256 = "082c7e5e516f68b29ea1699e012a58e3ac8de6447d73bf35bbf1df14909ba699",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsx86-64static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsx86-64static.zip",
+        sha256 = "5420b8edeb41f27019f17c0f202dd2a3fa62f98e1b713c7e11475ae596220e20",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsarm64static.zip",
+        sha256 = "95541209dd20426e83f535ae57cc194d593c24c058b3e791d49e7ec0f1bf7613",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm32debug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm32debug.zip",
+        sha256 = "5f9008ae518d9f64a0aeff469c359f883e25bb7cbb1634c8f8c21495263d5a4b",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm64debug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm64debug.zip",
+        sha256 = "519b01030a1bb455f74ed81e84ad1b691933f7efe9e84d6427131f522d276b3f",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxx86-64debug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxx86-64debug.zip",
+        sha256 = "d1f80fdba22f0cbb91c844dc291e0ba3ee8ec0cbdd6a1280a646ce434764c9fe",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_osxuniversaldebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-osxuniversaldebug.zip",
+        sha256 = "62bd16bafc296603d5d13873e65bdd23e27e00c77b5c708fa6c9eb986e4aeafd",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libromiVendordep.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libromiVendordep.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsx86-64debug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsx86-64debug.zip",
+        sha256 = "961b3d72cf6a9cf139125bf9824777e71339d799ba677616bcc66b738ee18c1d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsarm64debug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsarm64debug.zip",
+        sha256 = "3e4dbae1c01fb13b0c71360b0cb67b93ce5fcf32b4ef10bf3d0abd08b6817cc0",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm32staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm32staticdebug.zip",
+        sha256 = "dd3b994254aede976ba3d2f5e3b50750c7320c2e4b9ac2e4edd8dfb8c3ea40be",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm64staticdebug.zip",
+        sha256 = "44119e0653112526a84f9f151e2b5a44176139a48fd90564ca4117f08c20345c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxx86-64staticdebug.zip",
+        sha256 = "ee763ec5af8d5359c0a583fc0839ced3ae8b828f172b6316dba49e848afd8a02",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_osxuniversalstaticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-osxuniversalstaticdebug.zip",
+        sha256 = "ea33c7e8c8cfc2d4ad97d62f7ade69f0f8f0cc78d4eec9017f198b1dd2a4fc0a",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsx86-64staticdebug.zip",
+        sha256 = "342b93009b7432d04542a3da9ca7071bd4639d63abd0ceddd8fde56437af00b9",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsarm64staticdebug.zip",
+        sha256 = "e305a0e355be826343238a1078742cca49ea2a1d6683ea766816c01355cb0bdd",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxathena",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxathena.zip",
+        sha256 = "05efd7650f0e9f4fa1f0b26ee8eecca88322456840e115b2b6556e410f26b376",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxathenastatic",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxathenastatic.zip",
+        sha256 = "274dbef853b728f6ae74b2dcbfa30f85443a9accd20bee4ac03f3cef51e8df0b",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxathenadebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxathenadebug.zip",
+        sha256 = "ec61a1ba4972e35a5059cdb523f6a9e95e6445520982e5861de5b00642db2d14",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxathenastaticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxathenastaticdebug.zip",
+        sha256 = "6b7599c5eb32045313dcf8e9c58891ffbb6f081a7f761e13a6d7855d11a36a19",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/romiVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_headers",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-headers.zip",
+        sha256 = "4a4721d72b44c954c97ea86b55240583c55ede23a8c2e25c36dea78d41a260fe",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_sources",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-sources.zip",
+        sha256 = "5585cb1c63d6a0c0a95cc4a900d7e505ef0fc289b09ba704ae9b3b265348b578",
+        build_file_content = cc_library_sources,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm32.zip",
+        sha256 = "11034bdaebee11d9589b9bfd6939f5880300390d39caf88495ac3c43960bdc8f",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm64.zip",
+        sha256 = "8bff77233d162d6188380c6b0a0db7d7e27bbaf5938d84bad7a180118546a8b7",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxx86-64.zip",
+        sha256 = "03addbc8c900fb876f3508f708278499fdf9cb90f76df1c85dd3a16c6e990478",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-osxuniversal.zip",
+        sha256 = "5109237826c71e2790e8a118e693e028a836e0c1d3ff82a64d8d59ed922d52f5",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libxrpVendordep.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libxrpVendordep.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsx86-64.zip",
+        sha256 = "0a387158b5f5c02d71a5d977990fff344fc8e2cd49ea865827e9e0775f927b93",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsarm64.zip",
+        sha256 = "6180eb8feed17f35e9efac903f13f84ce792922d5cdcd255b9642aaa65c9f5bb",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm32static.zip",
+        sha256 = "ab722c513de01410d2a5eef3e0d2d7386db203fa8aaec32a05313abbf0c972cd",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm64static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm64static.zip",
+        sha256 = "342cf09a6a3bb317d94cc281e9a69c792824483aa6f6b7f34fe8c3a085f1dc27",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxx86-64static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxx86-64static.zip",
+        sha256 = "c9289479019f3f3ddd35955fc70d97905f9a33c793cabe2071aa3be3e7f4875a",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_osxuniversalstatic",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-osxuniversalstatic.zip",
+        sha256 = "c0d5e10c9f249af79740d599858ec9ef46822a998992ef9bab137cd574063cb5",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsx86-64static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsx86-64static.zip",
+        sha256 = "d23a4d48117c21f2d19c0c6a314480b6ff2a71d449b211e108eb86c32bfe08d2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsarm64static.zip",
+        sha256 = "d9dca0b1e1cc7816ad56a255ef37bad879c884ae7a5d85f4ec28f68cac609c7e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32debug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm32debug.zip",
+        sha256 = "0ea2e4fd934e838b3c4e6af65a23c419939158667a66fa30314432efb084a990",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm64debug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm64debug.zip",
+        sha256 = "e3bda59171a584a34078611bab505c9bdc896246d3515e10451df22cf0e0d93d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxx86-64debug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxx86-64debug.zip",
+        sha256 = "ec0c90f3d02969f0094174b2100c03ec9aa17ddaeb6660613b3fb09028c8ff4a",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_osxuniversaldebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-osxuniversaldebug.zip",
+        sha256 = "92f451806b7a55c30af5f67a7c06ed4deffcf131818be4a5bf33bc2e9858b7fe",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libxrpVendordep.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libxrpVendordep.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsx86-64debug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsx86-64debug.zip",
+        sha256 = "272b7054f7ffbbe82f55cbc0e48a9c675b8976fc2a8ea3606916b065d000d9e4",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsarm64debug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsarm64debug.zip",
+        sha256 = "25dd5fecfc4cefbc6b48b8d36914b736d6d0ae9f56f971efaf9fa71007384831",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm32staticdebug.zip",
+        sha256 = "c5e6fbe01abd1649346f9f71f0845e5b5847cd01ae82f0bcb4b318cd8f59c21d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm64staticdebug.zip",
+        sha256 = "eef1fe63577d39ca6c4b47247519722e622b0878f4d5ee332f237d0d9dc5d83a",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxx86-64staticdebug.zip",
+        sha256 = "628513d681e4933603a39f4c0c6ba648d1082a705f183be64abea08d4f257def",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_osxuniversalstaticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-osxuniversalstaticdebug.zip",
+        sha256 = "7dd4eb1dfda3c1300855cdcbd02508a10e6981832cc45825000120086f96cd93",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsx86-64staticdebug.zip",
+        sha256 = "a5fb7a742ceb9c30fe462a1bfbc9b98f9718e87301357c96dadd32b863459ae4",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsarm64staticdebug.zip",
+        sha256 = "fcccb4c89f14717bf67ef80f2af84e1bab8b28ef1e204ee8b9e10ec65018d2b2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathena",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxathena.zip",
+        sha256 = "cbcadf4babaaf19af4bdca8e554b6f91441930ccb9b5de57dbc9d1a17ecd54d2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathenastatic",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxathenastatic.zip",
+        sha256 = "bbb6ab33a81bb7846121d746d4fe4ad5ea9526148fc93719f1cf8b01757a85ed",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathenadebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxathenadebug.zip",
+        sha256 = "1e1922be84d116be24264657726132d2575d83dac21809634b51bbc9fa6667fc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathenastaticdebug",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxathenastaticdebug.zip",
+        sha256 = "5f6069c5954f3d70312398ccf422e888962a789e19cafff1c50a96bf69615698",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2025.3.2/halsim_ds_socket-2025.3.2-headers.zip",
+        sha256 = "b800ec7cdba7e284d4855aa9dcfcfa97a1cada823d1afd91da768789e8b50c25",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_sources",
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2025.3.2/halsim_ds_socket-2025.3.2-sources.zip",
         sha256 = "3b50b3a19e2e5c974ac0ba2bfe639fb9fb136b17e04dfd94ea8b75614a50fdf0",
@@ -2425,6 +2884,13 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2025.3.2/halsim_ds_socket-2025.3.2-windowsarm64staticdebug.zip",
         sha256 = "abf8074a18ecc3e9b8fd597d4d1d4e11fe25642060d27d07092ae8a0fdc43b12",
         build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_halsim_halsim_gui_headers",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2025.3.2/halsim_gui-2025.3.2-headers.zip",
+        sha256 = "c530cad20f0479ec7ef91ec9d8d0afbba6a26a6e261cfb16afdd7eeeb49edfc1",
+        build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,
@@ -2619,6 +3085,13 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
+        "bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2025.3.2/halsim_ws_client-2025.3.2-headers.zip",
+        sha256 = "449f09c6acaff8ec5e369c16ef17152f662d5f8708ea83e20e6fa1603259cefd",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
         "bazelrio_edu_wpi_first_halsim_halsim_ws_client_sources",
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2025.3.2/halsim_ws_client-2025.3.2-sources.zip",
         sha256 = "1f69a9c4ad20a5c46e1db700a121c49b0b2e66eed40e14e7a5e148c121163470",
@@ -2803,6 +3276,13 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2025.3.2/halsim_ws_client-2025.3.2-windowsarm64staticdebug.zip",
         sha256 = "d1f2d1ab7a8c19296a0b51c450b78e8e7f95d6c65d1d8ab8523dbdd3cf560609",
         build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_client:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers",
+        url = "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2025.3.2/halsim_ws_server-2025.3.2-headers.zip",
+        sha256 = "b2ec40cc9319496b4f64b78b1053f84831fe6f7ace01bbf3f5f72f64fa628166",
+        build_file_content = cc_library_headers,
     )
     maybe(
         http_archive,

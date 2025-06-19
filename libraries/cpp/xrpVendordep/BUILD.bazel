@@ -1,0 +1,29 @@
+alias(
+    name = "xrpVendordep",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "header_files",
+    actual = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:header_files",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "static",
+    actual = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:static",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared",
+    actual = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared_raw",
+    actual = "@bzlmodrio-allwpilib//private/cpp/xrpVendordep:shared_raw",
+    visibility = ["//visibility:public"],
+)

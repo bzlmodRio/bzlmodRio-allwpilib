@@ -20,10 +20,10 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bazel_skylib/1.6.1/source.json": "082ed5f9837901fada8c68c2f3ddc958bb22b6d654f71dd73f3df30d45d4b749",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/buildozer/7.1.2/MODULE.bazel": "2e8dd40ede9c454042645fd8d8d0cd1527966aa5c919de86661e62953cd73d84",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/buildozer/7.1.2/source.json": "c9028a501d2db85793a6996205c8de120944f50a0d570438fcae0457a5f9d1f8",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2025.2.0/MODULE.bazel": "fd025736011d827a3a690bb584a1e4e1748f66fd6c235cc9b597b734ae10db1a",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2025.2.0/source.json": "e6d857af816f6302f506f00da0544fab8d857b4399226139d5c2cb1af8d1a8f5",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2025.4.10.0-3/MODULE.bazel": "c0d38bd480a3dea8d31632634c485ad2f0a0ccb1961ad88c6fcf523e462b96b7",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2025.4.10.0-3/source.json": "7fe07bc2e22514997ae841ac597efdc623d6f3a558835e1fbe331d775a431163",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2025.2.0.bcr1/MODULE.bazel": "525cd4d04b63b8eaa4e9fb37d290d7a635e81b0cb99c096682dc309d384f89a5",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2025.2.0.bcr1/source.json": "af248c5739b6ac9809fceba756ec22bd58e0c6af4be4e7d99042c6af2138bf74",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2025.4.10.0-3.bcr2/MODULE.bazel": "17db4a9075fb5e69f6159b5f35fcccf9854ad377fcab59673db1d96aac4777e7",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2025.4.10.0-3.bcr2/source.json": "410a4fef0e8c0885a2200cc11b6a566252f3ae47b92291e135dda45f8bd684d6",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/googletest/1.11.0/MODULE.bazel": "3a83f095183f66345ca86aa13c58b59f9f94a2f81999c093d4eeaa2d262d12f4",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/googletest/1.11.0/source.json": "c73d9ef4268c91bd0c1cd88f1f9dfa08e814b1dbe89b5f594a9f08ba0244d206",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/platforms/0.0.10/MODULE.bazel": "8cb8efaf200bdeb2150d93e162c40f388529a25852b332cec879373771e48ed5",
@@ -40,9 +40,9 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/protobuf/3.19.6/MODULE.bazel": "9233edc5e1f2ee276a60de3eaa47ac4132302ef9643238f23128fea53ea12858",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_android/0.1.1/MODULE.bazel": "48809ab0091b07ad0182defb787c4c5328bd3a278938415c00a7b69b50c4d3a8",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_android/0.1.1/source.json": "e6986b41626ee10bdc864937ffb6d6bf275bb5b9c65120e6137d56e6331f089e",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr1/MODULE.bazel": "a4251b7577b3e1dcdf5ac97363672a79d0a000dffae768df5997e1489a0440db",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr2/MODULE.bazel": "c7db765cb7d20fd06b2c14768736ee4f7078c864fe6e85d2075f819b998e463f",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr2/source.json": "4f010895f72782b63b4f351fb13e340b87a3db1372a204361072c4e75900aa36",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1/MODULE.bazel": "81e540a541aac221fc84fc24124b8e5d07e2eff75942f44e67510c56794a5f22",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.1/MODULE.bazel": "cb2aa0747f84c6c3a78dad4e2049c154f08ab9d166b1273835a8174940365647",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.2/MODULE.bazel": "6915987c90970493ab97393024c156ea8fb9f3bea953b2f3ec05c34f19b5695c",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.8/MODULE.bazel": "964c85c82cfeb6f3855e6a07054fdb159aced38e99a5eecf7bce9d53990afa3e",
@@ -90,8 +90,8 @@
   "moduleExtensions": {
     "//:maven_cpp_deps.bzl%setup_bzlmodrio_allwpilib_cpp_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "rN4DP4kqkeslWHRau9sEA4uj7fY65f3j1pQV1z2zPC8=",
-        "usagesDigest": "Yxs2ckMqDuVZjyQ/zHJkW+4qt1BI6ENtVB3FWkW/eio=",
+        "bzlTransitiveDigest": "1AYw3CYQZAQzfTGqdd5lYimUWQHN+bu4nLP8Ko/Fa5g=",
+        "usagesDigest": "FwRwtU7pL8pKEXWq1KrXtvtxtic1MJcRCs4MoQLNVsQ=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -156,6 +156,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2025.3.2/wpilibNewCommands-cpp-2025.3.2-sources.zip",
               "sha256": "6eb31be315cc636bad4db3feb457e1e46e5d43d1b35088fe800dac6e88dacd6c",
               "build_file_content": "filegroup(\n     name = \"sources\",\n     srcs = glob([\"**\"]),\n     visibility = [\"//visibility:public\"],\n )\n "
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm64staticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm64staticdebug.zip",
+              "sha256": "44119e0653112526a84f9f151e2b5a44176139a48fd90564ca4117f08c20345c",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_wpinet_wpinet-cpp_linuxathenastaticdebug": {
@@ -234,6 +243,15 @@
               "sha256": "959db22749f2f25f850c5a99c752de779514e2b64de5fad26b835de7bfbdb1a2"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_osxuniversalstaticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-osxuniversalstaticdebug.zip",
+              "sha256": "7dd4eb1dfda3c1300855cdcbd02508a10e6981832cc45825000120086f96cd93",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_tools_roborioteamnumbersetter_windowsx86-64": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -261,8 +279,6 @@
               "build_file": "@@//private/cpp/wpilibc:shared.BUILD.bazel",
               "patch_cmds": [
                 "install_name_tool -id @rpath/libwpilibc.dylib osx/universal/shared/libwpilibc.dylib",
-                "install_name_tool -change libcameraserver.dylib @rpath/libcameraserver.dylib osx/universal/shared/libwpilibc.dylib",
-                "install_name_tool -change libcscore.dylib @rpath/libcscore.dylib osx/universal/shared/libwpilibc.dylib",
                 "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libwpilibc.dylib",
                 "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libwpilibc.dylib",
                 "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libwpilibc.dylib",
@@ -384,6 +400,15 @@
               "build_file": "@@//private/cpp/apriltag:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathena": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxathena.zip",
+              "sha256": "cbcadf4babaaf19af4bdca8e554b6f91441930ccb9b5de57dbc9d1a17ecd54d2",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_tools_shuffleboard_linuxx64": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_jar",
@@ -446,6 +471,15 @@
               "build_file": "@@//private/cpp/apriltag:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxathenastatic": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxathenastatic.zip",
+              "sha256": "274dbef853b728f6ae74b2dcbfa30f85443a9accd20bee4ac03f3cef51e8df0b",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm32staticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -453,6 +487,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2025.3.2/cscore-cpp-2025.3.2-linuxarm32staticdebug.zip",
               "sha256": "caf608ef20006f938cc711b3703402d79e1b474c6657adf16c9f0b0f2e6b143a",
               "build_file": "@@//private/cpp/cscore:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32staticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm32staticdebug.zip",
+              "sha256": "c5e6fbe01abd1649346f9f71f0845e5b5847cd01ae82f0bcb4b318cd8f59c21d",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_windowsarm64": {
@@ -554,6 +597,15 @@
               "build_file": "@@//private/cpp/wpilibc:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_halsim_halsim_gui_headers": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2025.3.2/halsim_gui-2025.3.2-headers.zip",
+              "sha256": "c530cad20f0479ec7ef91ec9d8d0afbba6a26a6e261cfb16afdd7eeeb49edfc1",
+              "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
           "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_windowsx86-64debug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -570,6 +622,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/ntcore/ntcore-cpp/2025.3.2/ntcore-cpp-2025.3.2-osxuniversalstaticdebug.zip",
               "sha256": "d87bceda756f64c0da4243a53eb7f709ab0072a8dcf0a28e3ff6428b2961dcd6",
               "build_file": "@@//private/cpp/ntcore:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm64staticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm64staticdebug.zip",
+              "sha256": "eef1fe63577d39ca6c4b47247519722e622b0878f4d5ee332f237d0d9dc5d83a",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_halsim_halsim_ws_server_linuxarm64static": {
@@ -653,6 +714,15 @@
               "build_file": "@@//private/cpp/cscore:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxx86-64staticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxx86-64staticdebug.zip",
+              "sha256": "628513d681e4933603a39f4c0c6ba648d1082a705f183be64abea08d4f257def",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_linuxarm32staticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -669,6 +739,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2025.3.2/hal-cpp-2025.3.2-windowsarm64staticdebug.zip",
               "sha256": "dc1639f751576840c6cbe9b2b39179a91c842869c4820e0aca504580ce210488",
               "build_file": "@@//private/cpp/hal:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm32staticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm32staticdebug.zip",
+              "sha256": "dd3b994254aede976ba3d2f5e3b50750c7320c2e4b9ac2e4edd8dfb8c3ea40be",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_tools_datalogtool_linuxx86-64": {
@@ -707,6 +786,15 @@
               "build_file": "@@//private/cpp/halsim_ws_client:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxathena": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxathena.zip",
+              "sha256": "05efd7650f0e9f4fa1f0b26ee8eecca88322456840e115b2b6556e410f26b376",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxarm32staticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -723,6 +811,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2025.3.2/wpilibNewCommands-cpp-2025.3.2-linuxathenastaticdebug.zip",
               "sha256": "7d42b536b8ce088ddbe0b2fe3011b3174ba6f93c642fa115c4f1253247cd703e",
               "build_file": "@@//private/cpp/wpilibNewCommands:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm32": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm32.zip",
+              "sha256": "6f3da32ca4e3787f3dde78c9098cafb9e0735385825471169bbedd67a971a177",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_halsim_halsim_gui_linuxarm32staticdebug": {
@@ -813,6 +910,15 @@
               "build_file": "@@//private/cpp/ntcore:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathenastatic": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxathenastatic.zip",
+              "sha256": "bbb6ab33a81bb7846121d746d4fe4ad5ea9526148fc93719f1cf8b01757a85ed",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxx86-64": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -829,6 +935,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2025.3.2/wpilibc-cpp-2025.3.2-windowsx86-64debug.zip",
               "sha256": "901f1639a5cf9cca6e8cffccfdf85c7d6f1b30c1e25ea99d9f87524c55f2da93",
               "build_file": "@@//private/cpp/wpilibc:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_halsim_halsim_ds_socket_headers": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ds_socket/2025.3.2/halsim_ds_socket-2025.3.2-headers.zip",
+              "sha256": "b800ec7cdba7e284d4855aa9dcfcfa97a1cada823d1afd91da768789e8b50c25",
+              "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
           "bazelrio_edu_wpi_first_wpiutil_wpiutil-cpp_linuxx86-64static": {
@@ -982,6 +1097,15 @@
               "build_file": "@@//private/cpp/cscore:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsarm64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsarm64.zip",
+              "sha256": "6180eb8feed17f35e9efac903f13f84ce792922d5cdcd255b9642aaa65c9f5bb",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_apriltag_apriltag-cpp_windowsx86-64static": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1034,6 +1158,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/cscore/cscore-cpp/2025.3.2/cscore-cpp-2025.3.2-sources.zip",
               "sha256": "de9cdec4386e4722df9962c312cbaf791080e664ddd9b10877fd52645d29583d",
               "build_file_content": "filegroup(\n     name = \"sources\",\n     srcs = glob([\"**\"]),\n     visibility = [\"//visibility:public\"],\n )\n "
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsx86-64static": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsx86-64static.zip",
+              "sha256": "5420b8edeb41f27019f17c0f202dd2a3fa62f98e1b713c7e11475ae596220e20",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_halsim_halsim_ws_server_osxuniversaldebug": {
@@ -1177,6 +1310,15 @@
               "build_file": "@@//private/cpp/hal:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm32.zip",
+              "sha256": "11034bdaebee11d9589b9bfd6939f5880300390d39caf88495ac3c43960bdc8f",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_halsim_halsim_ws_server_linuxx86-64staticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1195,6 +1337,15 @@
               "build_file": "@@//private/cpp/cameraserver:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm64.zip",
+              "sha256": "1db902bd8cc294ef41bab5f827d32cbb365c4839950952a0bec61883421568d1",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_tools_roborioteamnumbersetter_windowsarm64": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1211,6 +1362,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2025.3.2/wpiutil-cpp-2025.3.2-linuxx86-64debug.zip",
               "sha256": "e2138b80ba4eaeabcdc12629e152a171d84e56ecaba2e93b8281a9406cd3a90f",
               "build_file": "@@//private/cpp/wpiutil:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxathenadebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxathenadebug.zip",
+              "sha256": "ec61a1ba4972e35a5059cdb523f6a9e95e6445520982e5861de5b00642db2d14",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_cscore_cscore-cpp_headers": {
@@ -1274,6 +1434,24 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2025.3.2/wpilibc-cpp-2025.3.2-windowsarm64.zip",
               "sha256": "2d55355a1868413761ac0fa89028d8f4dd68fdc2119bdf586c1c92e4de160838",
               "build_file": "@@//private/cpp/wpilibc:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_osxuniversal": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-osxuniversal.zip",
+              "sha256": "986395311ddcdc470d38e9a895dc6328f234c91592bffac504b63ac8ae39dc3e",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel",
+              "patch_cmds": [
+                "install_name_tool -id @rpath/libromiVendordep.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libromiVendordep.dylib"
+              ]
             }
           },
           "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxx86-64static": {
@@ -1386,6 +1564,33 @@
               ]
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxx86-64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxx86-64.zip",
+              "sha256": "03addbc8c900fb876f3508f708278499fdf9cb90f76df1c85dd3a16c6e990478",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathenadebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxathenadebug.zip",
+              "sha256": "1e1922be84d116be24264657726132d2575d83dac21809634b51bbc9fa6667fc",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathenastaticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxathenastaticdebug.zip",
+              "sha256": "5f6069c5954f3d70312398ccf422e888962a789e19cafff1c50a96bf69615698",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm32debug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1393,6 +1598,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/hal/hal-cpp/2025.3.2/hal-cpp-2025.3.2-linuxarm32debug.zip",
               "sha256": "2e92963ea3d017d886f9dace488e3fafa3ae6d230743b7e49788e8be1963537e",
               "build_file": "@@//private/cpp/hal:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_sources": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-sources.zip",
+              "sha256": "5585cb1c63d6a0c0a95cc4a900d7e505ef0fc289b09ba704ae9b3b265348b578",
+              "build_file_content": "filegroup(\n     name = \"sources\",\n     srcs = glob([\"**\"]),\n     visibility = [\"//visibility:public\"],\n )\n "
             }
           },
           "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsarm64staticdebug": {
@@ -1467,6 +1681,15 @@
               "build_file": "@@//private/cpp/halsim_ds_socket:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm64debug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm64debug.zip",
+              "sha256": "e3bda59171a584a34078611bab505c9bdc896246d3515e10451df22cf0e0d93d",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_halsim_halsim_gui_linuxx86-64static": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1530,6 +1753,15 @@
               "build_file": "@@//private/cpp/cameraserver:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_headers": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-headers.zip",
+              "sha256": "4a4721d72b44c954c97ea86b55240583c55ede23a8c2e25c36dea78d41a260fe",
+              "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
           "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxarm64static": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1574,6 +1806,15 @@
               "build_file": "@@//private/cpp/ntcore:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_osxuniversalstatic": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-osxuniversalstatic.zip",
+              "sha256": "c0d5e10c9f249af79740d599858ec9ef46822a998992ef9bab137cd574063cb5",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_linuxarm64staticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1608,6 +1849,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/tools/Glass/2025.3.2/Glass-2025.3.2-osxuniversal.zip",
               "sha256": "4186ed866ac271e4778610e833aed20f9fcd0461f29ae3097fe751f6718658f8",
               "build_file_content": "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxx86-64debug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxx86-64debug.zip",
+              "sha256": "d1f80fdba22f0cbb91c844dc291e0ba3ee8ec0cbdd6a1280a646ce434764c9fe",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_tools_outlineviewer_windowsx86-64": {
@@ -1727,6 +1977,24 @@
               "build_file": "@@//private/cpp/halsim_gui:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsarm64static": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsarm64static.zip",
+              "sha256": "95541209dd20426e83f535ae57cc194d593c24c058b3e791d49e7ec0f1bf7613",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_halsim_halsim_ws_client_headers": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2025.3.2/halsim_ws_client-2025.3.2-headers.zip",
+              "sha256": "449f09c6acaff8ec5e369c16ef17152f662d5f8708ea83e20e6fa1603259cefd",
+              "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
           "bazelrio_edu_wpi_first_tools_roborioteamnumbersetter_osxuniversal": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1752,6 +2020,24 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2025.3.2/halsim_gui-2025.3.2-windowsx86-64.zip",
               "sha256": "dd170749a7c7316db770a7855cbbbb2873ded95f4eb3a181c83e29424b65b1a0",
               "build_file": "@@//private/cpp/halsim_gui:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsx86-64staticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsx86-64staticdebug.zip",
+              "sha256": "342b93009b7432d04542a3da9ca7071bd4639d63abd0ceddd8fde56437af00b9",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsx86-64debug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsx86-64debug.zip",
+              "sha256": "961b3d72cf6a9cf139125bf9824777e71339d799ba677616bcc66b738ee18c1d",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_linuxarm32static": {
@@ -1826,6 +2112,24 @@
               "build_file": "@@//private/cpp/apriltag:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_osxuniversaldebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-osxuniversaldebug.zip",
+              "sha256": "92f451806b7a55c30af5f67a7c06ed4deffcf131818be4a5bf33bc2e9858b7fe",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel",
+              "patch_cmds": [
+                "install_name_tool -id @rpath/libxrpVendordep.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libxrpVendordep.dylib"
+              ]
+            }
+          },
           "bazelrio_edu_wpi_first_tools_outlineviewer_linuxx86-64": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1866,6 +2170,24 @@
               "build_file": "@@//private/cpp/wpinet:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_osxuniversaldebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-osxuniversaldebug.zip",
+              "sha256": "62bd16bafc296603d5d13873e65bdd23e27e00c77b5c708fa6c9eb986e4aeafd",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel",
+              "patch_cmds": [
+                "install_name_tool -id @rpath/libromiVendordep.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libromiVendordep.dylib",
+                "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libromiVendordep.dylib"
+              ]
+            }
+          },
           "bazelrio_edu_wpi_first_halsim_halsim_ws_client_linuxarm64staticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1873,6 +2195,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2025.3.2/halsim_ws_client-2025.3.2-linuxarm64staticdebug.zip",
               "sha256": "347ee53c052c3d33bbeb897cea63b644adcbd902599a8c3179871478fa61ddb8",
               "build_file": "@@//private/cpp/halsim_ws_client:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsarm64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsarm64.zip",
+              "sha256": "eaec890354f525977dca3622cf03d1f84e936785ccf43c6428f2fa3f92ba7cea",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxx86-64": {
@@ -1929,6 +2260,15 @@
               "build_file": "@@//private/cpp/wpimath:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm64debug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm64debug.zip",
+              "sha256": "519b01030a1bb455f74ed81e84ad1b691933f7efe9e84d6427131f522d276b3f",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_cscore_cscore-cpp_windowsarm64staticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -1945,6 +2285,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2025.3.2/wpilibc-cpp-2025.3.2-linuxarm32debug.zip",
               "sha256": "1251c3cba9ed1a41a116823dc1f557e2051b0182336ade7bdc2db8f760a1e92d",
               "build_file": "@@//private/cpp/wpilibc:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm64static": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm64static.zip",
+              "sha256": "57d31df48596673ae08d93e8b88a715adff023ec3623b2e1318768473be756d0",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm64static": {
@@ -1972,6 +2321,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2025.3.2/wpilibNewCommands-cpp-2025.3.2-linuxx86-64staticdebug.zip",
               "sha256": "82c661144e0f5ca89014f5d2c9a7d4ba4749d02b01a662e70d5733c0cd056bd3",
               "build_file": "@@//private/cpp/wpilibNewCommands:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxx86-64debug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxx86-64debug.zip",
+              "sha256": "ec0c90f3d02969f0094174b2100c03ec9aa17ddaeb6660613b3fb09028c8ff4a",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsx86-64static": {
@@ -2010,6 +2368,15 @@
               "build_file": "@@//private/cpp/ntcore:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxathenastaticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxathenastaticdebug.zip",
+              "sha256": "6b7599c5eb32045313dcf8e9c58891ffbb6f081a7f761e13a6d7855d11a36a19",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_wpinet_wpinet-cpp_linuxathena": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -2019,6 +2386,15 @@
               "build_file": "@@//private/cpp/wpinet:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsarm64staticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsarm64staticdebug.zip",
+              "sha256": "fcccb4c89f14717bf67ef80f2af84e1bab8b28ef1e204ee8b9e10ec65018d2b2",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_windowsarm64debug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -2026,6 +2402,24 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2025.3.2/wpilibNewCommands-cpp-2025.3.2-windowsarm64debug.zip",
               "sha256": "82fb91f3f1c7147d35057908fe6b5ad3127d9df5118168fe7cb0069192b83232",
               "build_file": "@@//private/cpp/wpilibNewCommands:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm64.zip",
+              "sha256": "8bff77233d162d6188380c6b0a0db7d7e27bbaf5938d84bad7a180118546a8b7",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsx86-64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsx86-64.zip",
+              "sha256": "f744ac36271eec427ca4c44135fc74e8fbafd53adda85123380ccc311d878e73",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_tools_glass_linuxarm32": {
@@ -2110,6 +2504,15 @@
               "build_file_content": "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_sources": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-sources.zip",
+              "sha256": "598ee8874c16a339bdc57147bb536e1ce93785928e95707b27e07d6e20568416",
+              "build_file_content": "filegroup(\n     name = \"sources\",\n     srcs = glob([\"**\"]),\n     visibility = [\"//visibility:public\"],\n )\n "
+            }
+          },
           "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_osxuniversalstatic": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -2144,6 +2547,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2025.3.2/halsim_ws_server-2025.3.2-windowsarm64.zip",
               "sha256": "516ad15bcb8f3fa2d61db16497065ebb21b860c95ebb2633b77b988239f8f462",
               "build_file": "@@//private/cpp/halsim_ws_server:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_headers": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-headers.zip",
+              "sha256": "59d836204c587f3b2b16798fd6eb36bb50a4cc72a934fa9b2c18927573fb64f8",
+              "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
           "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsarm64debug": {
@@ -2182,6 +2594,15 @@
               "build_file": "@@//private/cpp/apriltag:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm64static": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm64static.zip",
+              "sha256": "342cf09a6a3bb317d94cc281e9a69c792824483aa6f6b7f34fe8c3a085f1dc27",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxathenastaticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -2207,6 +2628,24 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibNewCommands/wpilibNewCommands-cpp/2025.3.2/wpilibNewCommands-cpp-2025.3.2-linuxarm64.zip",
               "sha256": "45ad9408b534abb3b8ca2c90afdf45b8d9db38b856ea6228974caac6d807cacc",
               "build_file": "@@//private/cpp/wpilibNewCommands:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsarm64staticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsarm64staticdebug.zip",
+              "sha256": "e305a0e355be826343238a1078742cca49ea2a1d6683ea766816c01355cb0bdd",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxx86-64static": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxx86-64static.zip",
+              "sha256": "8ef5ce858a56527b531d89e6b10755d1cd0a83b3b2c8e793147113122e966a27",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_tools_glass_windowsarm64": {
@@ -2261,6 +2700,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpilibc/wpilibc-cpp/2025.3.2/wpilibc-cpp-2025.3.2-windowsx86-64.zip",
               "sha256": "1bc12c54b01911bb7c45c295df2f67282795bed9bcd4725520cfc480252fff26",
               "build_file": "@@//private/cpp/wpilibc:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm32debug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm32debug.zip",
+              "sha256": "5f9008ae518d9f64a0aeff469c359f883e25bb7cbb1634c8f8c21495263d5a4b",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_linuxarm32static": {
@@ -2362,6 +2810,15 @@
               "build_file": "@@//private/cpp/halsim_ds_socket:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32static": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm32static.zip",
+              "sha256": "ab722c513de01410d2a5eef3e0d2d7386db203fa8aaec32a05313abbf0c972cd",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_cameraserver_cameraserver-cpp_windowsx86-64staticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -2414,6 +2871,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_gui/2025.3.2/halsim_gui-2025.3.2-windowsx86-64debug.zip",
               "sha256": "32eb0351969825e4111ec96eb269293fed0c1898ce7a57f7a02c6365b97cff84",
               "build_file": "@@//private/cpp/halsim_gui:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32debug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxarm32debug.zip",
+              "sha256": "0ea2e4fd934e838b3c4e6af65a23c419939158667a66fa30314432efb084a990",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_halsim_halsim_ws_client_osxuniversal": {
@@ -2541,6 +3007,15 @@
               "build_file": "@@//private/cpp/halsim_ws_client:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_windowsarm64debug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-windowsarm64debug.zip",
+              "sha256": "3e4dbae1c01fb13b0c71360b0cb67b93ce5fcf32b4ef10bf3d0abd08b6817cc0",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_windowsarm64": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -2568,14 +3043,39 @@
               "build_file": "@@//private/cpp/wpilibc:shared.BUILD.bazel",
               "patch_cmds": [
                 "install_name_tool -id @rpath/libwpilibc.dylib osx/universal/shared/libwpilibc.dylib",
-                "install_name_tool -change libcameraserver.dylib @rpath/libcameraserver.dylib osx/universal/shared/libwpilibc.dylib",
-                "install_name_tool -change libcscore.dylib @rpath/libcscore.dylib osx/universal/shared/libwpilibc.dylib",
                 "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libwpilibc.dylib",
                 "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libwpilibc.dylib",
                 "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libwpilibc.dylib",
                 "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libwpilibc.dylib",
                 "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libwpilibc.dylib"
               ]
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_osxuniversal": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-osxuniversal.zip",
+              "sha256": "5109237826c71e2790e8a118e693e028a836e0c1d3ff82a64d8d59ed922d52f5",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel",
+              "patch_cmds": [
+                "install_name_tool -id @rpath/libxrpVendordep.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libxrpVendordep.dylib",
+                "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libxrpVendordep.dylib"
+              ]
+            }
+          },
+          "bazelrio_edu_wpi_first_halsim_halsim_ws_server_headers": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2025.3.2/halsim_ws_server-2025.3.2-headers.zip",
+              "sha256": "b2ec40cc9319496b4f64b78b1053f84831fe6f7ace01bbf3f5f72f64fa628166",
+              "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
           "bazelrio_edu_wpi_first_wpinet_wpinet-cpp_windowsarm64debug": {
@@ -2763,6 +3263,15 @@
               "build_file": "@@//private/cpp/cscore:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsarm64debug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsarm64debug.zip",
+              "sha256": "25dd5fecfc4cefbc6b48b8d36914b736d6d0ae9f56f971efaf9fa71007384831",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_halsim_halsim_gui_linuxarm64debug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -2841,6 +3350,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2025.3.2/wpiutil-cpp-2025.3.2-windowsarm64staticdebug.zip",
               "sha256": "5058572c0c65c04cdd2ef1a9ce6493a1470a96cc9f813f09f57bb4339e36237b",
               "build_file": "@@//private/cpp/wpiutil:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_osxuniversalstaticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-osxuniversalstaticdebug.zip",
+              "sha256": "ea33c7e8c8cfc2d4ad97d62f7ade69f0f8f0cc78d4eec9017f198b1dd2a4fc0a",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxathenadebug": {
@@ -2946,6 +3464,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/cameraserver/cameraserver-cpp/2025.3.2/cameraserver-cpp-2025.3.2-linuxathena.zip",
               "sha256": "f3b01f26f42f5203657d62239c966addb60e4640c9fe164b89bdf0d4005c0156",
               "build_file": "@@//private/cpp/cameraserver:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsx86-64static": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsx86-64static.zip",
+              "sha256": "d23a4d48117c21f2d19c0c6a314480b6ff2a71d449b211e108eb86c32bfe08d2",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_halsim_halsim_ws_server_linuxarm32": {
@@ -3180,6 +3707,15 @@
               ]
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsx86-64debug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsx86-64debug.zip",
+              "sha256": "272b7054f7ffbbe82f55cbc0e48a9c675b8976fc2a8ea3606916b065d000d9e4",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_cscore_cscore-cpp_linuxarm32static": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -3327,6 +3863,15 @@
               "build_file": "@@//private/cpp/ntcore:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_osxuniversalstatic": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-osxuniversalstatic.zip",
+              "sha256": "082c7e5e516f68b29ea1699e012a58e3ac8de6447d73bf35bbf1df14909ba699",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_wpilibnewcommands_wpilibnewcommands-cpp_linuxx86-64debug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -3372,6 +3917,15 @@
               "build_file": "@@//private/cpp/halsim_ws_client:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxx86-64staticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxx86-64staticdebug.zip",
+              "sha256": "ee763ec5af8d5359c0a583fc0839ced3ae8b828f172b6316dba49e848afd8a02",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_halsim_halsim_ws_server_windowsx86-64staticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -3379,6 +3933,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_server/2025.3.2/halsim_ws_server-2025.3.2-windowsx86-64staticdebug.zip",
               "sha256": "fffc7b8cf698a556c92b55c493d5dff2bcedf2741e0f3f273de599900ef18f2a",
               "build_file": "@@//private/cpp/halsim_ws_server:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsx86-64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsx86-64.zip",
+              "sha256": "0a387158b5f5c02d71a5d977990fff344fc8e2cd49ea865827e9e0775f927b93",
+              "build_file": "@@//private/cpp/xrpVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_wpimath_wpimath-cpp_windowsx86-64": {
@@ -3486,6 +4049,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/halsim/halsim_ws_client/2025.3.2/halsim_ws_client-2025.3.2-linuxx86-64debug.zip",
               "sha256": "aa9a97a1f1eb869b89331f88c7a6e9730cd6863b48987e982f3ecea0b76e3e0a",
               "build_file": "@@//private/cpp/halsim_ws_client:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxx86-64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxx86-64.zip",
+              "sha256": "68f03608d31568cc3450708ceaa58b73189497927621940e9cfb7ca17198c186",
+              "build_file": "@@//private/cpp/romiVendordep:shared.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_tools_pathweaver_linuxx64": {
@@ -3607,6 +4179,15 @@
               "build_file": "@@//private/cpp/wpinet:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_romivendordep_romivendordep-cpp_linuxarm32static": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/romiVendordep/romiVendordep-cpp/2025.3.2/romiVendordep-cpp-2025.3.2-linuxarm32static.zip",
+              "sha256": "d8f8e7ce1a43a003fd4f4c12ebacb3e634ecb4bbcd5e0d2fa2ab8116a0fb8ad2",
+              "build_file": "@@//private/cpp/romiVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_tools_pathweaver_macx64": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_jar",
@@ -3649,6 +4230,15 @@
               "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/wpiutil/wpiutil-cpp/2025.3.2/wpiutil-cpp-2025.3.2-windowsx86-64static.zip",
               "sha256": "2b96aa0a8f10d6370ba33a57b72e5c5f623eae08707c9f68d8450eae7a38664a",
               "build_file": "@@//private/cpp/wpiutil:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsarm64static": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsarm64static.zip",
+              "sha256": "d9dca0b1e1cc7816ad56a255ef37bad879c884ae7a5d85f4ec28f68cac609c7e",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
             }
           },
           "bazelrio_edu_wpi_first_wpilibc_wpilibc-cpp_windowsarm64static": {
@@ -3951,6 +4541,15 @@
               "build_file": "@@//private/cpp/wpilibc:static.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_windowsx86-64staticdebug": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-windowsx86-64staticdebug.zip",
+              "sha256": "a5fb7a742ceb9c30fe462a1bfbc9b98f9718e87301357c96dadd32b863459ae4",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_tools_robotbuilder": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_jar",
@@ -4218,6 +4817,15 @@
               "build_file": "@@//private/cpp/wpiutil:shared.BUILD.bazel"
             }
           },
+          "bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxx86-64static": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/edu/wpi/first/xrpVendordep/xrpVendordep-cpp/2025.3.2/xrpVendordep-cpp-2025.3.2-linuxx86-64static.zip",
+              "sha256": "c9289479019f3f3ddd35955fc70d97905f9a33c793cabe2071aa3be3e7f4875a",
+              "build_file": "@@//private/cpp/xrpVendordep:static.BUILD.bazel"
+            }
+          },
           "bazelrio_edu_wpi_first_halsim_halsim_gui_linuxarm64staticdebug": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_archive",
@@ -4249,7 +4857,7 @@
     "//:maven_java_deps.bzl%setup_bzlmodrio_allwpilib_java_dependencies": {
       "general": {
         "bzlTransitiveDigest": "z7o8hX1emquDvzv8svwOCQW0Qe85WsWQBPDpcTsvZ+M=",
-        "usagesDigest": "iT8vw1yQFzKm7vOKca4AGsFdX6LGzwBHcDSih/8NAcE=",
+        "usagesDigest": "NHCZPFt54/W8ve3hmogIptBsXjJAsKH5Qvyw4FXNSA4=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -4516,7 +5124,7 @@
     "@@bzlmodrio-opencv~//:maven_cpp_deps.bzl%setup_bzlmodrio_opencv_cpp_dependencies": {
       "general": {
         "bzlTransitiveDigest": "kmiXrZrHq7vGj8WmcQNpi8WxZtKfNjwaTpmlC1p3Q0g=",
-        "usagesDigest": "w+mjymWxdX4z5AaDY13a+5EF5TE13JPGobGrAI2iI5A=",
+        "usagesDigest": "MlO4EDMDZUi9yF7FUkIgxeUqZWErfXk/WGre00DpGzg=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -4948,7 +5556,7 @@
     "@@bzlmodrio-opencv~//:maven_java_deps.bzl%setup_bzlmodrio_opencv_java_dependencies": {
       "general": {
         "bzlTransitiveDigest": "2ZwamkH+VmDdy0ue/dFtUt2+KSm4F7hFiMHm4FMd8N4=",
-        "usagesDigest": "QdnInpMXrv6ybICR8ROKbvPq62Dj8KWSbVqzox+Q1AU=",
+        "usagesDigest": "k0ArYr4aBzrc0X8XAVkCUXj0ZZfTcglENLAQo5Ne0Gk=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -4995,6 +5603,141 @@
           }
         },
         "recordedRepoMappingEntries": []
+      }
+    },
+    "@@rules_bzlmodrio_jdk~//:maven_deps.bzl%deps": {
+      "general": {
+        "bzlTransitiveDigest": "peyObOsAjevTVPgKd5FlyL5aFMQ+F60yQkGHVq1Gtw0=",
+        "usagesDigest": "U+tCKAYT563wXiw5hz8oK2Hf7s4NG7RTkarVy+SX5mQ=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "roboriojdk_linux_arm64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "build_file_content": "load(\"@rules_java//java:defs.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
+              "sha256": "8257de06bf37f0c8f19f8d542e2ab5a4e17db3ca5f29d041bd0b02ab265db021",
+              "urls": [
+                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.12_7.tar.gz"
+              ],
+              "strip_prefix": "jdk-17.0.12+7"
+            }
+          },
+          "roboriojdk_mac_toolchain_config_repo": {
+            "bzlFile": "@@rules_java~//toolchains:remote_java_repository.bzl",
+            "ruleClassName": "_toolchain_config",
+            "attributes": {
+              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:macos\", \"@platforms//cpu:x86_64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_mac//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:macos\", \"@platforms//cpu:x86_64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_mac//:jdk\",\n)\n"
+            }
+          },
+          "roboriojdk_mac_arm64_toolchain_config_repo": {
+            "bzlFile": "@@rules_java~//toolchains:remote_java_repository.bzl",
+            "ruleClassName": "_toolchain_config",
+            "attributes": {
+              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:macos\", \"@platforms//cpu:aarch64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_mac_arm64//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:macos\", \"@platforms//cpu:aarch64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_mac_arm64//:jdk\",\n)\n"
+            }
+          },
+          "roboriojdk_mac": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "build_file_content": "load(\"@rules_java//java:defs.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
+              "sha256": "d5230eeec88739aa7133e4c8635bbd4ab226708c12deaafa13cf26b02bc8e8c4",
+              "urls": [
+                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_mac_hotspot_17.0.12_7.tar.gz"
+              ],
+              "strip_prefix": "jdk-17.0.12+7/Contents/Home"
+            }
+          },
+          "roboriojdk_windows_toolchain_config_repo": {
+            "bzlFile": "@@rules_java~//toolchains:remote_java_repository.bzl",
+            "ruleClassName": "_toolchain_config",
+            "attributes": {
+              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:windows\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_windows//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:windows\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_windows//:jdk\",\n)\n"
+            }
+          },
+          "roboriojdk_linux_arm64_toolchain_config_repo": {
+            "bzlFile": "@@rules_java~//toolchains:remote_java_repository.bzl",
+            "ruleClassName": "_toolchain_config",
+            "attributes": {
+              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:armv7\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_linux_arm64//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:armv7\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_linux_arm64//:jdk\",\n)\n"
+            }
+          },
+          "roboriojdk_windows": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "build_file_content": "load(\"@rules_java//java:defs.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
+              "sha256": "052049d687ebfda6a4032d54afcd0da6549a23bc2ed04cfaa509746eeacbae71",
+              "urls": [
+                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.12_7.zip"
+              ],
+              "strip_prefix": "jdk-17.0.12+7",
+              "patch_cmds": [
+                "cp ../rules_bzlmodrio_jdk~/msvc_runtime/concrt140.dll bin/concrt140.dll",
+                "cp ../rules_bzlmodrio_jdk~/msvc_runtime/msvcp140.dll bin/msvcp140.dll",
+                "cp ../rules_bzlmodrio_jdk~/msvc_runtime/msvcp140_1.dll bin/msvcp140_1.dll",
+                "cp ../rules_bzlmodrio_jdk~/msvc_runtime/msvcp140_2.dll bin/msvcp140_2.dll",
+                "cp ../rules_bzlmodrio_jdk~/msvc_runtime/msvcp140_atomic_wait.dll bin/msvcp140_atomic_wait.dll",
+                "cp ../rules_bzlmodrio_jdk~/msvc_runtime/msvcp140_codecvt_ids.dll bin/msvcp140_codecvt_ids.dll",
+                "cp ../rules_bzlmodrio_jdk~/msvc_runtime/vccorlib140.dll bin/vccorlib140.dll",
+                "cp ../rules_bzlmodrio_jdk~/msvc_runtime/vcruntime140.dll bin/vcruntime140.dll",
+                "cp ../rules_bzlmodrio_jdk~/msvc_runtime/vcruntime140_1.dll bin/vcruntime140_1.dll",
+                "cp ../rules_bzlmodrio_jdk~/msvc_runtime/vcruntime140_threads.dll bin/vcruntime140_threads.dll"
+              ]
+            }
+          },
+          "roboriojdk_linux": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "build_file_content": "load(\"@rules_java//java:defs.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
+              "sha256": "9d4dd339bf7e6a9dcba8347661603b74c61ab2a5083ae67bf76da6285da8a778",
+              "urls": [
+                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.12_7.tar.gz"
+              ],
+              "strip_prefix": "jdk-17.0.12+7"
+            }
+          },
+          "roboriojdk_mac_arm64": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "build_file_content": "load(\"@rules_java//java:defs.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
+              "sha256": "d7910b1acaeb290c5c5da21811d2b2b8635f806612a2d6e8d1953b2f77580f78",
+              "urls": [
+                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.12_7.tar.gz"
+              ],
+              "strip_prefix": "jdk-17.0.12+7/Contents/Home"
+            }
+          },
+          "roboriojdk_linux_toolchain_config_repo": {
+            "bzlFile": "@@rules_java~//toolchains:remote_java_repository.bzl",
+            "ruleClassName": "_toolchain_config",
+            "attributes": {
+              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:x86_64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_linux//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:x86_64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_linux//:jdk\",\n)\n"
+            }
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "rules_bzlmodrio_jdk~",
+            "rules_bzlmodrio_jdk",
+            "rules_bzlmodrio_jdk~"
+          ],
+          [
+            "rules_bzlmodrio_jdk~",
+            "rules_java",
+            "rules_java~"
+          ],
+          [
+            "rules_java~",
+            "bazel_tools",
+            "bazel_tools"
+          ]
+        ]
       }
     },
     "@@rules_bzlmodrio_toolchains~//:extensions.bzl%sh_configure": {
@@ -5116,7 +5859,7 @@
     "@@rules_jvm_external~//:extensions.bzl%maven": {
       "general": {
         "bzlTransitiveDigest": "Pq3YnJEflPAALx/UMykUnN3aA5bve0fNm/cuLvt/zvI=",
-        "usagesDigest": "ziLKgHOm3uqrr3swTbHDTssykTz5kxA4bQJ6sSchUMg=",
+        "usagesDigest": "tMnGxRyX1zAemv4G0QQfIJIh1LHuQxeMaEykFkhrmu4=",
         "recordedFileInputs": {
           "@@rules_jvm_external~//rules_jvm_external_deps_install.json": "0bfbc915d9155df44d7a3b216e8f3c1fbcd110e358dd07637dc393583a5227e8"
         },
