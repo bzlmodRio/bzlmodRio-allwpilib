@@ -185,16 +185,6 @@ http_archive(
     url = "https://github.com/bzlmodRio/rules_wpi_styleguide/releases/download/2024.11.19/rules_wpi_styleguide-2024.11.19.tar.gz",
 )
 
-load("@rules_checkstyle//dependencies:load_rule_dependencies.bzl", "load_checkstyle_rule_dependencies")
-load("@rules_pmd//dependencies:load_rule_dependencies.bzl", "load_pmd_rule_dependencies")
-load("@rules_wpiformat//dependencies:load_rule_dependencies.bzl", "load_wpiformat_rule_dependencies")
-
-load_pmd_rule_dependencies()
-
-load_checkstyle_rule_dependencies()
-
-load_wpiformat_rule_dependencies()
-
 load("@rules_wpiformat//dependencies:load_dependencies.bzl", "load_wpiformat_dependencies")
 
 load_wpiformat_dependencies()
