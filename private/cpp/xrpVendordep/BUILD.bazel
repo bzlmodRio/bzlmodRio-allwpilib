@@ -16,6 +16,10 @@ cc_library(
     }),
     linkstatic = True,
     tags = ["manual"],
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
     deps = ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_headers//:headers"],
 )
@@ -35,8 +39,8 @@ filegroup(
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm64debug//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32//:shared"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32debug//:shared"],
-        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathena//:shared"],
-        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio_debug": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathenadebug//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxsystemcore//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore_debug": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxsystemcoredebug//:shared"],
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
@@ -45,6 +49,10 @@ filegroup(
 cc_library(
     name = "shared",
     srcs = [":shared_raw"],
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/wpilibc:shared",
@@ -58,6 +66,10 @@ cc_library(
 cc_library(
     name = "static",
     linkstatic = 1,
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
     deps = ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_headers//:headers"] + select({
         "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxx86-64static//:static_libs"],
@@ -72,7 +84,7 @@ cc_library(
         "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm64staticdebug//:static_libs"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32static//:static_libs"],
         "@rules_bzlmodrio_toolchains//constraints/is_raspibookworm32:raspibookworm32_debug": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxarm32staticdebug//:static_libs"],
-        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathenastatic//:static_libs"],
-        "@rules_bzlmodrio_toolchains//constraints/is_roborio:roborio_debug": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxathenastaticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxsystemcorestatic//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore_debug": ["@bazelrio_edu_wpi_first_xrpvendordep_xrpvendordep-cpp_linuxsystemcorestaticdebug//:static_libs"],
     }),
 )
