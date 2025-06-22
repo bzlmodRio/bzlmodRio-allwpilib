@@ -147,6 +147,12 @@ def get_allwpilib_dependencies(
         has_jni=True,
         dependencies=["ni"],
     )
+    _cc_dependency(
+        group,
+        "datalog",
+        has_jni=True,
+        dependencies=["wpiutil-cpp"],
+    )
     _cc_dependency(group, "wpinet", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(group, "wpimath", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(

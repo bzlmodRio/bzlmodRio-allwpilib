@@ -241,6 +241,224 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_headers",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-headers.zip",
+        sha256 = "215d55fae5720f74b94597d7a7966854fcfdd18c4ffd018ba1466e9e192db7a2",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_sources",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-sources.zip",
+        sha256 = "3683a0b586e71c332f64574abcfb1e680977eceefe9149a260cfe59791170b37",
+        build_file_content = cc_library_sources,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxarm32",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxarm32.zip",
+        sha256 = "a61fe731256e356b3cf464f561c7938590ac716d137608d3b78112fa3a97ed8c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxarm64.zip",
+        sha256 = "5e852cb70c1616af2a2131d145f012703275b75867c8d60ccd0ff58277aadbdf",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxx86-64.zip",
+        sha256 = "b1753d9a53e75384e6da9eb0823d63a4fc6b1240e580b56dc597a6067f93585f",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-osxuniversal.zip",
+        sha256 = "2df448c27a4e8bdd2da360a788ed5d006cc612487285f25592909d4d51113622",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libdatalog.dylib osx/universal/shared/libdatalog.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libdatalog.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-windowsx86-64.zip",
+        sha256 = "eef142b3d20f71e4be62d10e1b16878aaef96e931f4f2b32a1c428db91c205e2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-windowsarm64.zip",
+        sha256 = "9ef90023bfc27492171ca37d75590df413784f3bf5a3d3f56a28e18333eb6d6b",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxarm32static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxarm32static.zip",
+        sha256 = "cc92f8053b57fee61c77994e4113c95cc89ced1b37abce3d4e4d7125bdfcedda",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxarm64static.zip",
+        sha256 = "edc75180ed7c34bccebf4bd64c2f7bf7599b653a26ed4b1d03fe0d19f982b5c8",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxx86-64static.zip",
+        sha256 = "60f72db7cb3804445fcb223db24bb2d6ff7e236567d0d6a48c821257b8041ca7",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_osxuniversalstatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-osxuniversalstatic.zip",
+        sha256 = "73f23399fa4b32f2db0a4a871ce1b644b439b4ea9afe98e94f9209a146888941",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_windowsx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-windowsx86-64static.zip",
+        sha256 = "3ea3a41183b2438ccc3b26ad6c86569e594e7f2daf9eedd03c5dc9f08a1358d8",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-windowsarm64static.zip",
+        sha256 = "d6843c7c4dc55ed5ee31cbe2d8a99428c94d29a5ace460277901d2535068cda9",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxarm32debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxarm32debug.zip",
+        sha256 = "cba077d96499076a72bc9477ef3cdf6ec119e702185ef9f81451ef5c071e3c9c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxarm64debug.zip",
+        sha256 = "d054a2360d4e5922773161f1945641a6ec4c9c86b4a6e0ee9a84464bb5326c53",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxx86-64debug.zip",
+        sha256 = "6e1ea1dfc383695abebf288f5170d1bb04d950e0ab14685938222f7396c2e6da",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_osxuniversaldebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-osxuniversaldebug.zip",
+        sha256 = "23dbe3e83d172f8bd381eb4d9a0666c2cb445cc9aaa87686b2a28bb43a62deb3",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libdatalog.dylib osx/universal/shared/libdatalog.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libdatalog.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_windowsx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-windowsx86-64debug.zip",
+        sha256 = "e216d02d54d005443d6732ae445adcf6720fb70eda96f9d47272ca7eec22e780",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_windowsarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-windowsarm64debug.zip",
+        sha256 = "d5e4c35c5237acb6e4924655338342d61141b637634d63eca9539ac56c4ee2a5",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxarm32staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxarm32staticdebug.zip",
+        sha256 = "bc55a7aafbd1efbff2187addc100ff9cf02472303ff2e54be9f61302de9df443",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxarm64staticdebug.zip",
+        sha256 = "ffea34369db5cbead326dcf746bdcf8e756c518c818a34f12d1a3e188ac90e75",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxx86-64staticdebug.zip",
+        sha256 = "7cfba612c60265127c593aff43325787470104d518ffd4ef0df3362f64d7185d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_osxuniversalstaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-osxuniversalstaticdebug.zip",
+        sha256 = "ccdbf5cab5f3110d7f4e4e260a981c6c4e9efa01e757f2004015f52dfd5247ec",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_windowsx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-windowsx86-64staticdebug.zip",
+        sha256 = "4e44393afac33202a18c7d72be486345dad41d14f425eb9cc542a3215818fe8e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-windowsarm64staticdebug.zip",
+        sha256 = "624163e15b7378bbd85624e88c984c8fed7cc28c8b38b4cf102235afcca6f7b6",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxsystemcore",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxsystemcore.zip",
+        sha256 = "1d0a8fc23fca73d44efbbd45f2438b8509bc2b9f4afc6359d11f7ab2e3bfc9b2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxsystemcorestatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxsystemcorestatic.zip",
+        sha256 = "887163ad80342bda5541934675e09310763b56bd67f4db511bb59747a9df74f2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxsystemcoredebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxsystemcoredebug.zip",
+        sha256 = "cd09a0b30bc69d77292b93657114d7893fbfe0d2e10b6c3d75115949a8bb6e0d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_datalog_datalog-cpp_linuxsystemcorestaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/datalog/datalog-cpp/2027.0.0-alpha-1/datalog-cpp-2027.0.0-alpha-1-linuxsystemcorestaticdebug.zip",
+        sha256 = "c764c28f5dcfb94c7f0c7103cd5b3410c088a02225e5bf3f6b07b1ac3d3629ba",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/datalog:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
         "bazelrio_edu_wpi_first_wpinet_wpinet-cpp_headers",
         url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/wpinet/wpinet-cpp/2027.0.0-alpha-1/wpinet-cpp-2027.0.0-alpha-1-headers.zip",
         sha256 = "1c8f8b16bc75d4685075a6793e11582263a8f7add770a4bdcd791ceafde2b23f",
