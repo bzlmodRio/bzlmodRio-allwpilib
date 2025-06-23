@@ -166,7 +166,10 @@ def get_allwpilib_dependencies(
         artifact_install_name="wpiHal",
     )
     _cc_dependency(
-        group, "ntcore", has_jni=True, dependencies=["wpiutil-cpp", "wpinet-cpp", "datalog-cpp"]
+        group,
+        "ntcore",
+        has_jni=True,
+        dependencies=["wpiutil-cpp", "wpinet-cpp", "datalog-cpp"],
     )
     _cc_dependency(
         group,
