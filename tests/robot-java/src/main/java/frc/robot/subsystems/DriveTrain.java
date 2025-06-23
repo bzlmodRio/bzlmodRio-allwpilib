@@ -124,10 +124,10 @@ public class DriveTrain extends SubsystemBase {
         m_rightMotor.get() * RobotController.getInputVoltage());
     m_drivetrainSimulator.update(0.02);
 
-    m_leftEncoderSim.setDistance(m_drivetrainSimulator.getLeftPositionMeters());
-    m_leftEncoderSim.setRate(m_drivetrainSimulator.getLeftVelocityMetersPerSecond());
-    m_rightEncoderSim.setDistance(m_drivetrainSimulator.getRightPositionMeters());
-    m_rightEncoderSim.setRate(m_drivetrainSimulator.getRightVelocityMetersPerSecond());
+    m_leftEncoderSim.setDistance(m_drivetrainSimulator.getLeftPosition());
+    m_leftEncoderSim.setRate(m_drivetrainSimulator.getLeftVelocity());
+    m_rightEncoderSim.setDistance(m_drivetrainSimulator.getRightPosition());
+    m_rightEncoderSim.setRate(m_drivetrainSimulator.getRightVelocity());
     m_gyroSim.setAngle(-m_drivetrainSimulator.getHeading().getDegrees());
   }
 
