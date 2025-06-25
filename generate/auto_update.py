@@ -17,10 +17,14 @@ def main():
     with open(file_to_replace, "r") as f:
         contents = f.read()
 
+    pre_mod = contents
     contents = re.sub('( +)year = "(.*)"', f'\\1year = "{new_year}"', contents)
     contents = re.sub(
         '( +)version = f?"(.*)"', f'\\1version = "{new_version}"', contents
     )
+    if contents != pre_mod:
+        print("Detected a change, reseting the patch")
+        contents = re.sub('( +)patch = f?"(.*)"', f'\\1patch = ""', contents)
 
     with open(file_to_replace, "w") as f:
         f.write(contents)
