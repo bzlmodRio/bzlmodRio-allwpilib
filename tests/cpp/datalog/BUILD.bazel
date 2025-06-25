@@ -1,0 +1,25 @@
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("@rules_wpi_styleguide//styleguide:cc_styleguide.bzl", "cc_styleguide")
+
+cc_binary(
+    name = "main",
+    srcs = ["main.cpp"],
+    tags = ["no-sandbox"],
+    deps = ["@bzlmodrio-allwpilib//libraries/cpp/datalog"],
+)
+
+cc_test(
+    name = "test",
+    srcs = ["test.cpp"],
+    tags = [
+        "bazelrio-cpp-test",
+        "no-sandbox",
+    ],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/datalog",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_styleguide(name = "datalog")

@@ -8,7 +8,7 @@
 #include <numbers>
 
 DriveTrain::DriveTrain()
-    : m_gyro(frc::SPI::Port::kMXP),
+    :  // m_gyro(frc::SPI::Port::kMXP),
       m_drivetrainSimulator(
           frc::sim::DifferentialDrivetrainSim::CreateKitbotSim(
               frc::sim::DifferentialDrivetrainSim::KitbotMotor::DualCIMPerSide,
@@ -32,7 +32,6 @@ DriveTrain::DriveTrain()
   AddChild("Rear Right Motor", &m_rightMotorB);
   AddChild("Left Encoder", &m_leftEncoder);
   AddChild("Right Encoder", &m_rightEncoder);
-  AddChild("Gyro", &m_gyro);
 }
 
 void DriveTrain::Log() {
@@ -41,17 +40,20 @@ void DriveTrain::Log() {
                                  m_rightEncoder.GetDistance());
   frc::SmartDashboard::PutNumber("Left Speed", m_leftEncoder.GetRate());
   frc::SmartDashboard::PutNumber("Right Speed", m_rightEncoder.GetRate());
-  frc::SmartDashboard::PutNumber("Gyro", m_gyro.GetAngle());
+  // frc::SmartDashboard::PutNumber("Gyro", m_gyro.GetAngle());
 }
 
 void DriveTrain::ArcadeDrive(double throttle, double rotation) {
   m_robotDrive.ArcadeDrive(throttle, rotation);
 }
 
-double DriveTrain::GetHeading() { return m_gyro.GetAngle(); }
+double DriveTrain::GetHeading() {
+  return 0;
+  // return m_gyro.GetAngle();
+}
 
 void DriveTrain::Reset() {
-  m_gyro.Reset();
+  // m_gyro.Reset();
   m_leftEncoder.Reset();
   m_rightEncoder.Reset();
 }
@@ -61,7 +63,10 @@ double DriveTrain::GetAverageDistance() {
 }
 
 void DriveTrain::UpdateOdometry() {
-  m_odometry.Update(m_gyro.GetRotation2d(),
+  // m_odometry.Update(m_gyro.GetRotation2d(),
+  //                   units::meter_t(m_leftEncoder.GetDistance()),
+  //                   units::meter_t(m_rightEncoder.GetDistance()));
+  m_odometry.Update(frc::Rotation2d{},
                     units::meter_t(m_leftEncoder.GetDistance()),
                     units::meter_t(m_rightEncoder.GetDistance()));
   m_field.SetRobotPose(m_odometry.GetPose());
@@ -91,5 +96,5 @@ void DriveTrain::SimulationPeriodic() {
       m_drivetrainSimulator.GetRightPosition().to<double>());
   m_rightEncoderSim.SetRate(
       m_drivetrainSimulator.GetRightVelocity().to<double>());
-  m_gyroSim.SetAngle(-m_drivetrainSimulator.GetHeading().Degrees());
+  // m_gyroSim.SetAngle(-m_drivetrainSimulator.GetHeading().Degrees());
 }

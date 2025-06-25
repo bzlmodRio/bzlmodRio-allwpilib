@@ -2,7 +2,6 @@
 
 #include <frc/RobotController.h>
 #include <frc/controller/PIDController.h>
-#include <frc/livewindow/LiveWindow.h>
 #include <frc/smartdashboard/SmartDashboard.h>
 
 namespace {
