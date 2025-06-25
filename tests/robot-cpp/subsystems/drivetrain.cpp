@@ -8,7 +8,7 @@
 #include <numbers>
 
 DriveTrain::DriveTrain()
-    : //m_gyro(frc::SPI::Port::kMXP),
+    :  // m_gyro(frc::SPI::Port::kMXP),
       m_drivetrainSimulator(
           frc::sim::DifferentialDrivetrainSim::CreateKitbotSim(
               frc::sim::DifferentialDrivetrainSim::KitbotMotor::DualCIMPerSide,
@@ -47,9 +47,9 @@ void DriveTrain::ArcadeDrive(double throttle, double rotation) {
   m_robotDrive.ArcadeDrive(throttle, rotation);
 }
 
-double DriveTrain::GetHeading() { 
+double DriveTrain::GetHeading() {
   return 0;
-  // return m_gyro.GetAngle(); 
+  // return m_gyro.GetAngle();
 }
 
 void DriveTrain::Reset() {
