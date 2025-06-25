@@ -55,6 +55,8 @@ cc_library(
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
     deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/datalog:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
         "@bzlmodrio-ni//libraries/cpp/ni:shared",
     ] + select({

@@ -1115,224 +1115,6 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_headers",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-headers.zip",
-        sha256 = "5c0d421bccb58d3102787546ecb50b6e920dbf1e48490743ec0ed5ec3eb378d3",
-        build_file_content = cc_library_headers,
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_sources",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-sources.zip",
-        sha256 = "ad21ada789cae0c9724e567e1dee950ca60179a23dc87721a16a5a2620be0b32",
-        build_file_content = cc_library_sources,
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm32",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm32.zip",
-        sha256 = "0a37e2f8146dcb65ee1e46652024c7309ae4e2490752f8338b42ad6504951706",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm64",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm64.zip",
-        sha256 = "e063b499ad64c79ea7cfd9afcf96c28962d33f76be8235c2c51bc9e7b3971f07",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxx86-64.zip",
-        sha256 = "927db410b741d462b4884ebd60d4ec23a5c1e7eec7808b1490821bcbd160a73b",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_osxuniversal",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-osxuniversal.zip",
-        sha256 = "97d8ab61fc8d19e4300cacc511c775548b0ae79eae9d541c5a9c35efc5a3ff2c",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-        patch_cmds = [
-            "install_name_tool -id @rpath/libwpiHal.dylib osx/universal/shared/libwpiHal.dylib",
-            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libwpiHal.dylib",
-        ],
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsx86-64.zip",
-        sha256 = "77f7008d969b13ab522984476c4408e7e5f9e0877534a2c3ae960780b859c4f9",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsarm64",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsarm64.zip",
-        sha256 = "15d1438d2613f64ff514bffee737ccbe3dcb96857a87e2bd3b3b9ee6beed2781",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm32static",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm32static.zip",
-        sha256 = "f0d321cc0e3e7f00b37ba69a0e78631cdda9258572efbf46b425bc922643e9fc",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm64static",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm64static.zip",
-        sha256 = "b80090c7e874f9654e975ce481a2c75c68e8ea04786fef1419e8fa0b1a7f83bc",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxx86-64static.zip",
-        sha256 = "1704571eb13dd470d61c35ae89d7a9d93aa9051c94a70a1a457590269c0a536f",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_osxuniversalstatic",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-osxuniversalstatic.zip",
-        sha256 = "3d1cd50021fefbfe0f836d1b8316e6a8fafcbe3551537a5515d1c3d6c9529bf5",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsx86-64static.zip",
-        sha256 = "b76390df5b01e1d313b10f65fc560739b3dfff94dd31be65a53e3c6392de4c2e",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsarm64static",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsarm64static.zip",
-        sha256 = "5f03c046f51fbaba730bc8be1c591dccbfab497799623f44bc9955b49a58ac1e",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm32debug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm32debug.zip",
-        sha256 = "7452959d9fdded313705528bff0794cd9839fed7801da3e6b7068cccb731d1a1",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm64debug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm64debug.zip",
-        sha256 = "190d91d87be251c0e47a833daa83f47a3b2c3f5720abaf2a97611902112b86ed",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxx86-64debug.zip",
-        sha256 = "d098cebc1f9bc86418b5d846d1609672f211714bf2a1bdb5e3c1589865f1c7c6",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_osxuniversaldebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-osxuniversaldebug.zip",
-        sha256 = "3a9f99d6734a124f2abceb74dbb0e370e95a0786d6adafa1f2b1a0c7e439ec3b",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-        patch_cmds = [
-            "install_name_tool -id @rpath/libwpiHal.dylib osx/universal/shared/libwpiHal.dylib",
-            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libwpiHal.dylib",
-        ],
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsx86-64debug.zip",
-        sha256 = "becec6b8609211c0da52d7752370b127bf3220014984e707134834b5bef4b414",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsarm64debug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsarm64debug.zip",
-        sha256 = "8a2a4dbcadfcc0e111054021e9c549a1e607d1ed93a1072e509c4f7e2adbb01d",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm32staticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm32staticdebug.zip",
-        sha256 = "38b88a6ff5ded8ed07d8a754e39c9fdc75558b7a3f0b21537ea05311d5c7d18d",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm64staticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm64staticdebug.zip",
-        sha256 = "9a5e43c5c985bc27ca2c790cf0ff96d276550dd8c9817bb9ce55f88c002863d2",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxx86-64staticdebug.zip",
-        sha256 = "4d925f2c577a3f61ee051d772a9a88af6d42fed529b0215b12715fee37b2f64a",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_osxuniversalstaticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-osxuniversalstaticdebug.zip",
-        sha256 = "b853807c9a49904518bc9473481ddf8ada497f2aaee627c24c6288cb75c30dc4",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsx86-64staticdebug.zip",
-        sha256 = "b8a72c4a407ba54655922357e9f1fa9fc56e8819074f79e594cfa9ae37cbcd26",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsarm64staticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsarm64staticdebug.zip",
-        sha256 = "4a23b45d17819a0340999f13ba5afe0426279eff24fd85e369c9c2543e51cca6",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxsystemcore",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxsystemcore.zip",
-        sha256 = "4700837861b3f6516384fb6c866ad94792f51fd123e8c89d223844c291147f9d",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxsystemcorestatic",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxsystemcorestatic.zip",
-        sha256 = "30b479fdd19155c2925f6e7937dfc9d2666ce3878e99ff1dc0c1067098539cfc",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxsystemcoredebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxsystemcoredebug.zip",
-        sha256 = "5a3a457f46ae06b0934b70950f7b3a00fab3e1f185ac452173176be479e81a9d",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxsystemcorestaticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxsystemcorestaticdebug.zip",
-        sha256 = "e6558294898db8b06eae751ba69e59ac8364af49c956750bc92a319052574b24",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
         "bazelrio_edu_wpi_first_ntcore_ntcore-cpp_headers",
         url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/ntcore/ntcore-cpp/2027.0.0-alpha-1/ntcore-cpp-2027.0.0-alpha-1-headers.zip",
         sha256 = "2d8a997626f0f96472acecd2d1eff1fdc4b0d61968ab0dd70e9bc50e3f98122c",
@@ -1552,6 +1334,230 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/ntcore/ntcore-cpp/2027.0.0-alpha-1/ntcore-cpp-2027.0.0-alpha-1-linuxsystemcorestaticdebug.zip",
         sha256 = "45a9c3077f7d9e4f6a1ee17a0b3a2a836d2ff22ae79c78625fbe4cdac89389ee",
         build_file = "@bzlmodrio-allwpilib//private/cpp/ntcore:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_headers",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-headers.zip",
+        sha256 = "5c0d421bccb58d3102787546ecb50b6e920dbf1e48490743ec0ed5ec3eb378d3",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_sources",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-sources.zip",
+        sha256 = "ad21ada789cae0c9724e567e1dee950ca60179a23dc87721a16a5a2620be0b32",
+        build_file_content = cc_library_sources,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm32",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm32.zip",
+        sha256 = "0a37e2f8146dcb65ee1e46652024c7309ae4e2490752f8338b42ad6504951706",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm64.zip",
+        sha256 = "e063b499ad64c79ea7cfd9afcf96c28962d33f76be8235c2c51bc9e7b3971f07",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxx86-64.zip",
+        sha256 = "927db410b741d462b4884ebd60d4ec23a5c1e7eec7808b1490821bcbd160a73b",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-osxuniversal.zip",
+        sha256 = "97d8ab61fc8d19e4300cacc511c775548b0ae79eae9d541c5a9c35efc5a3ff2c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libwpiHal.dylib osx/universal/shared/libwpiHal.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libwpiHal.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libwpiHal.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libwpiHal.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libwpiHal.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsx86-64.zip",
+        sha256 = "77f7008d969b13ab522984476c4408e7e5f9e0877534a2c3ae960780b859c4f9",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsarm64.zip",
+        sha256 = "15d1438d2613f64ff514bffee737ccbe3dcb96857a87e2bd3b3b9ee6beed2781",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm32static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm32static.zip",
+        sha256 = "f0d321cc0e3e7f00b37ba69a0e78631cdda9258572efbf46b425bc922643e9fc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm64static.zip",
+        sha256 = "b80090c7e874f9654e975ce481a2c75c68e8ea04786fef1419e8fa0b1a7f83bc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxx86-64static.zip",
+        sha256 = "1704571eb13dd470d61c35ae89d7a9d93aa9051c94a70a1a457590269c0a536f",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_osxuniversalstatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-osxuniversalstatic.zip",
+        sha256 = "3d1cd50021fefbfe0f836d1b8316e6a8fafcbe3551537a5515d1c3d6c9529bf5",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsx86-64static.zip",
+        sha256 = "b76390df5b01e1d313b10f65fc560739b3dfff94dd31be65a53e3c6392de4c2e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsarm64static.zip",
+        sha256 = "5f03c046f51fbaba730bc8be1c591dccbfab497799623f44bc9955b49a58ac1e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm32debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm32debug.zip",
+        sha256 = "7452959d9fdded313705528bff0794cd9839fed7801da3e6b7068cccb731d1a1",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm64debug.zip",
+        sha256 = "190d91d87be251c0e47a833daa83f47a3b2c3f5720abaf2a97611902112b86ed",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxx86-64debug.zip",
+        sha256 = "d098cebc1f9bc86418b5d846d1609672f211714bf2a1bdb5e3c1589865f1c7c6",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_osxuniversaldebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-osxuniversaldebug.zip",
+        sha256 = "3a9f99d6734a124f2abceb74dbb0e370e95a0786d6adafa1f2b1a0c7e439ec3b",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libwpiHal.dylib osx/universal/shared/libwpiHal.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libwpiHal.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libwpiHal.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libwpiHal.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libwpiHal.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsx86-64debug.zip",
+        sha256 = "becec6b8609211c0da52d7752370b127bf3220014984e707134834b5bef4b414",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsarm64debug.zip",
+        sha256 = "8a2a4dbcadfcc0e111054021e9c549a1e607d1ed93a1072e509c4f7e2adbb01d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm32staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm32staticdebug.zip",
+        sha256 = "38b88a6ff5ded8ed07d8a754e39c9fdc75558b7a3f0b21537ea05311d5c7d18d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxarm64staticdebug.zip",
+        sha256 = "9a5e43c5c985bc27ca2c790cf0ff96d276550dd8c9817bb9ce55f88c002863d2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxx86-64staticdebug.zip",
+        sha256 = "4d925f2c577a3f61ee051d772a9a88af6d42fed529b0215b12715fee37b2f64a",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_osxuniversalstaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-osxuniversalstaticdebug.zip",
+        sha256 = "b853807c9a49904518bc9473481ddf8ada497f2aaee627c24c6288cb75c30dc4",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsx86-64staticdebug.zip",
+        sha256 = "b8a72c4a407ba54655922357e9f1fa9fc56e8819074f79e594cfa9ae37cbcd26",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-windowsarm64staticdebug.zip",
+        sha256 = "4a23b45d17819a0340999f13ba5afe0426279eff24fd85e369c9c2543e51cca6",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxsystemcore",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxsystemcore.zip",
+        sha256 = "4700837861b3f6516384fb6c866ad94792f51fd123e8c89d223844c291147f9d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxsystemcorestatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxsystemcorestatic.zip",
+        sha256 = "30b479fdd19155c2925f6e7937dfc9d2666ce3878e99ff1dc0c1067098539cfc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxsystemcoredebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxsystemcoredebug.zip",
+        sha256 = "5a3a457f46ae06b0934b70950f7b3a00fab3e1f185ac452173176be479e81a9d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_edu_wpi_first_hal_hal-cpp_linuxsystemcorestaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/edu/wpi/first/hal/hal-cpp/2027.0.0-alpha-1/hal-cpp-2027.0.0-alpha-1-linuxsystemcorestaticdebug.zip",
+        sha256 = "e6558294898db8b06eae751ba69e59ac8364af49c956750bc92a319052574b24",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/hal:static.BUILD.bazel",
     )
     maybe(
         http_archive,
@@ -2964,6 +2970,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libhalsim_ds_socket.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
@@ -3054,6 +3062,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libhalsim_ds_socket.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
@@ -3358,6 +3368,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_client:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libhalsim_ws_client.dylib osx/universal/shared/libhalsim_ws_client.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_ws_client.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_ws_client.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_ws_client.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_ws_client.dylib",
             "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libhalsim_ws_client.dylib",
@@ -3448,6 +3460,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_client:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libhalsim_ws_client.dylib osx/universal/shared/libhalsim_ws_client.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_ws_client.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_ws_client.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_ws_client.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_ws_client.dylib",
             "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libhalsim_ws_client.dylib",
@@ -3552,6 +3566,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libhalsim_ws_server.dylib osx/universal/shared/libhalsim_ws_server.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_ws_server.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_ws_server.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_ws_server.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_ws_server.dylib",
             "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libhalsim_ws_server.dylib",
@@ -3642,6 +3658,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_ws_server:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libhalsim_ws_server.dylib osx/universal/shared/libhalsim_ws_server.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_ws_server.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_ws_server.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_ws_server.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_ws_server.dylib",
             "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libhalsim_ws_server.dylib",
