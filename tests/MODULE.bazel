@@ -24,6 +24,18 @@ archive_override(
     strip_prefix = "rules_bzlmodrio_jdk-4ecd4cbc97dfbfe2ceefa627de1228e2f2ca5773",
     urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/4ecd4cbc97dfbfe2ceefa627de1228e2f2ca5773.tar.gz"],
 )
+archive_override(
+    module_name = "rules_bzlmodrio_toolchains",
+    # integrity = "sha256-SrikyrF2v2lENdqn9aFC//d0TkIE620lR60yXTrWFTs=",
+    strip_prefix = "rules_bzlmodrio_toolchains-d5619664905bbae405d8cb5ab76049ff322adb29",
+    urls = ["https://github.com/AustinSchuh/rules_bzlmodrio_toolchains/archive/d5619664905bbae405d8cb5ab76049ff322adb29.tar.gz"],
+)
+archive_override(
+    module_name = "bzlmodrio-opencv",
+    # integrity = "sha256-SrikyrF2v2lENdqn9aFC//d0TkIE620lR60yXTrWFTs=",
+    strip_prefix = "bzlmodRio-opencv-71b0605886f1114eb461a234f33fd98e4caf2ab4",
+    urls = ["https://github.com/wpilibsuite/bzlmodrio-opencv/archive/71b0605886f1114eb461a234f33fd98e4caf2ab4.tar.gz"],
+)
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
