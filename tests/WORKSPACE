@@ -215,8 +215,9 @@ spotless_pinned_maven_install()
 
 http_archive(
     name = "rules_bzlmodrio_jdk",
-    sha256 = "623b8bcdba1c3140f56e940365f011d2e5d90d74c7a30ace6a8817c037c1dd61",
-    url = "https://github.com/wpilibsuite/rules_bzlmodRio_jdk/releases/download/17.0.12-7.bcr1/rules_bzlmodRio_jdk-17.0.12-7.bcr1.tar.gz",
+    integrity = "sha256-OrJI8gl3PiEw3J54p/jtNydjMY2xRlpI1yfKfPKnIYQ=",
+    strip_prefix = "rules_bzlmodrio_jdk-23a1c1fd1a9e1d1521164c854be10e3eb35e84cd",
+    urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/23a1c1fd1a9e1d1521164c854be10e3eb35e84cd.tar.gz"],
 )
 
 load("@rules_bzlmodrio_jdk//:maven_deps.bzl", "setup_legacy_setup_jdk_dependencies")

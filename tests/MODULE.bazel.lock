@@ -67,8 +67,6 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_android/0.1.1/source.json": "e6986b41626ee10bdc864937ffb6d6bf275bb5b9c65120e6137d56e6331f089e",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/MODULE.bazel": "e4004326cab72e5b27b697a01b03139276ac04c6e7c177ddb9424afc8709e51b",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/source.json": "7da669bc69d497942a9ac21b8f76c05f4a91b4212e3a697a1e27d9358576e995",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_jdk/17.0.12-7.bcr1/MODULE.bazel": "2576b58a2b7393ac789a679ea56cb51c6100e8fb09a9b47ca99904ab7e254c06",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_jdk/17.0.12-7.bcr1/source.json": "261c3de3cc7d8e1c9f56b6fce87e3e5c256a81e08750568829fce92b9ad690e9",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr2/MODULE.bazel": "c7db765cb7d20fd06b2c14768736ee4f7078c864fe6e85d2075f819b998e463f",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr4/MODULE.bazel": "5747793f9d36d55ecab212b1af2f4292fbf4dafed00ee5d4b09e726d5eb68773",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr4/source.json": "902458d8876a65fc58a7707c9fd4a0727165d16e906084cecfae980d53fcc0cb",
@@ -5084,8 +5082,8 @@
     },
     "@@rules_bzlmodrio_jdk+//:maven_deps.bzl%deps": {
       "general": {
-        "bzlTransitiveDigest": "UswhzTzRPFiolyqclNrWIRFeYlGVQ1clL55obKcuUJ4=",
-        "usagesDigest": "5aZZ8BASB0FXaKJ6+q0nZAVWQ+7VeeY2oNXRWXsGIRM=",
+        "bzlTransitiveDigest": "eNB/lZKlwFPPGUS7xBUeTMigJOxzRgk2mLGJaq/SqxM=",
+        "usagesDigest": "1lP3xyX0Z7uSYtzUSLbW25lLDdWbfSMUePgK8Am1J8A=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -5183,7 +5181,19 @@
               "urls": [
                 "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.12_7.zip"
               ],
-              "strip_prefix": "jdk-17.0.12+7"
+              "strip_prefix": "jdk-17.0.12+7",
+              "patch_cmds": [
+                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/concrt140.dll bin/concrt140.dll",
+                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/msvcp140.dll bin/msvcp140.dll",
+                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/msvcp140_1.dll bin/msvcp140_1.dll",
+                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/msvcp140_2.dll bin/msvcp140_2.dll",
+                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/msvcp140_atomic_wait.dll bin/msvcp140_atomic_wait.dll",
+                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/msvcp140_codecvt_ids.dll bin/msvcp140_codecvt_ids.dll",
+                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/vccorlib140.dll bin/vccorlib140.dll",
+                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/vcruntime140.dll bin/vcruntime140.dll",
+                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/vcruntime140_1.dll bin/vcruntime140_1.dll",
+                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/vcruntime140_threads.dll bin/vcruntime140_threads.dll"
+              ]
             }
           },
           "roboriojdk_windows_toolchain_config_repo": {
@@ -5194,6 +5204,11 @@
           }
         },
         "recordedRepoMappingEntries": [
+          [
+            "rules_bzlmodrio_jdk+",
+            "rules_bzlmodrio_jdk",
+            "rules_bzlmodrio_jdk+"
+          ],
           [
             "rules_bzlmodrio_jdk+",
             "rules_java",

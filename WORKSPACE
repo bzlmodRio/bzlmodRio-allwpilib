@@ -99,9 +99,9 @@ maven_install(
 
 http_archive(
     name = "rules_bzlmodrio_jdk",
-    integrity = "sha256-SrikyrF2v2lENdqn9aFC//d0TkIE620lR60yXTrWFTs=",
-    strip_prefix = "rules_bzlmodrio_jdk-4ecd4cbc97dfbfe2ceefa627de1228e2f2ca5773",
-    urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/4ecd4cbc97dfbfe2ceefa627de1228e2f2ca5773.tar.gz"],
+    integrity = "sha256-OrJI8gl3PiEw3J54p/jtNydjMY2xRlpI1yfKfPKnIYQ=",
+    strip_prefix = "rules_bzlmodrio_jdk-23a1c1fd1a9e1d1521164c854be10e3eb35e84cd",
+    urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/23a1c1fd1a9e1d1521164c854be10e3eb35e84cd.tar.gz"],
 )
 
 load("@rules_bzlmodrio_jdk//:maven_deps.bzl", "setup_legacy_setup_jdk_dependencies")

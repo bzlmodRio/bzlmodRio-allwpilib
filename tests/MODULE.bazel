@@ -19,6 +19,12 @@ bazel_dep(name = "rules_wpi_styleguide", version = "2025.06.22")
 bazel_dep(name = "rules_spotless", version = "2.40.0.bcr1")
 bazel_dep(name = "rules_bzlmodrio_jdk", version = "17.0.12-7.bcr1")
 archive_override(
+    module_name = "rules_bzlmodrio_jdk",
+    integrity = "sha256-OrJI8gl3PiEw3J54p/jtNydjMY2xRlpI1yfKfPKnIYQ=",
+    strip_prefix = "rules_bzlmodrio_jdk-23a1c1fd1a9e1d1521164c854be10e3eb35e84cd",
+    urls = ["https://github.com/wpilibsuite/rules_bzlmodRio_jdk/archive/23a1c1fd1a9e1d1521164c854be10e3eb35e84cd.tar.gz"],
+)
+archive_override(
     module_name = "bzlmodrio-opencv",
     integrity = "sha256-5phJ+XDE706hyqHDvyr0hvqHVeepil6/ftQY08cFZBQ=",
     strip_prefix = "bzlmodRio-opencv-d24613175ef0f67716d4e425260bed0fa365e4d5",
