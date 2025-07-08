@@ -36,8 +36,6 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/buildozer/7.1.2/source.json": "c9028a501d2db85793a6996205c8de120944f50a0d570438fcae0457a5f9d1f8",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2025.2.0.bcr1/MODULE.bazel": "525cd4d04b63b8eaa4e9fb37d290d7a635e81b0cb99c096682dc309d384f89a5",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2025.2.0.bcr1/source.json": "af248c5739b6ac9809fceba756ec22bd58e0c6af4be4e7d99042c6af2138bf74",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2025.4.10.0-3.bcr2/MODULE.bazel": "17db4a9075fb5e69f6159b5f35fcccf9854ad377fcab59673db1d96aac4777e7",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2025.4.10.0-3.bcr2/source.json": "410a4fef0e8c0885a2200cc11b6a566252f3ae47b92291e135dda45f8bd684d6",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/google_benchmark/1.8.2/MODULE.bazel": "a70cf1bba851000ba93b58ae2f6d76490a9feb74192e57ab8e8ff13c34ec50cb",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/googletest/1.11.0/MODULE.bazel": "3a83f095183f66345ca86aa13c58b59f9f94a2f81999c093d4eeaa2d262d12f4",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/googletest/1.14.0.bcr.1/MODULE.bazel": "22c31a561553727960057361aa33bf20fb2e98584bc4fec007906e27053f80c6",
@@ -70,7 +68,8 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/MODULE.bazel": "e4004326cab72e5b27b697a01b03139276ac04c6e7c177ddb9424afc8709e51b",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/source.json": "7da669bc69d497942a9ac21b8f76c05f4a91b4212e3a697a1e27d9358576e995",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr2/MODULE.bazel": "c7db765cb7d20fd06b2c14768736ee4f7078c864fe6e85d2075f819b998e463f",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr2/source.json": "4f010895f72782b63b4f351fb13e340b87a3db1372a204361072c4e75900aa36",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr4/MODULE.bazel": "5747793f9d36d55ecab212b1af2f4292fbf4dafed00ee5d4b09e726d5eb68773",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr4/source.json": "902458d8876a65fc58a7707c9fd4a0727165d16e906084cecfae980d53fcc0cb",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1/MODULE.bazel": "81e540a541aac221fc84fc24124b8e5d07e2eff75942f44e67510c56794a5f22",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.1/MODULE.bazel": "cb2aa0747f84c6c3a78dad4e2049c154f08ab9d166b1273835a8174940365647",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.10/MODULE.bazel": "ec1705118f7eaedd6e118508d3d26deba2a4e76476ada7e0e3965211be012002",
@@ -85,8 +84,9 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.9/MODULE.bazel": "836e76439f354b89afe6a911a7adf59a6b2518fafb174483ad78a2a2fde7b1c5",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.1.1/MODULE.bazel": "2f0222a6f229f0bf44cd711dc13c858dad98c62d52bd51d8fc3a764a83125513",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.1.1/source.json": "d61627377bd7dd1da4652063e368d9366fc9a73920bfa396798ad92172cf645c",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_checkstyle/10.12.2.bcr1/MODULE.bazel": "9d451484947d602c2c3dfd8940a11b074bb3bbd3bfc2bc9e597167000a907168",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_checkstyle/10.12.2.bcr1/source.json": "7a74843e772e952588df5b2e46886fc78e46863ae805dd9d22704c7e3b260985",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_checkstyle/10.12.2/MODULE.bazel": "a96110db4303d2e54869400467e9ec76c6be1de0de5466aae21022693872b2e1",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_checkstyle/10.12.2/source.json": "99ad555599885642858e1441d34c8dddf1713194a51235f93d4bd593322ca119",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_foreign_cc/0.9.0/MODULE.bazel": "c9e8c682bf75b0e7c704166d79b599f93b72cfca5ad7477df596947891feeef6",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_fuzzing/0.5.2/MODULE.bazel": "40c97d1144356f52905566c55811f13b299453a14ac7769dfba2ac38192337a8",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_fuzzing/0.5.2/source.json": "c8b1e2c717646f1702290959a3302a178fb639d987ab61d548105019f11e527e",
@@ -120,8 +120,9 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_pkg/0.7.0/MODULE.bazel": "df99f03fc7934a4737122518bb87e667e62d780b610910f0447665a7e2be62dc",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_pkg/1.0.1/MODULE.bazel": "5b1df97dbc29623bccdf2b0dcd0f5cb08e2f2c9050aab1092fd39a41e82686ff",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_pkg/1.0.1/source.json": "bd82e5d7b9ce2d31e380dd9f50c111d678c3bdaca190cb76b0e1c71b05e1ba8a",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_pmd/7.2.0.bcr1/MODULE.bazel": "b618c3a9e9dc8e883f0e1c4c057932f9db7b9c56135f5f00cc4a282f901da387",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_pmd/7.2.0.bcr1/source.json": "609a0697720e0b95c09b98ebe44fbf9a91825ef757ef4905f2163548d4cef077",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_pmd/7.2.0/MODULE.bazel": "9dd3e315f3b3a7112236b64a0988955fda6bbc47d9b8c44c6f42c4853eb90920",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_pmd/7.2.0/source.json": "6cf082f0ea608d1e8674ca3853ab10ab94da5c87734ab59d12726d1dc092a572",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_proto/4.0.0/MODULE.bazel": "a7a7b6ce9bee418c1a760b3d84f83a299ad6952f9903c67f19e4edd964894e06",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_proto/5.3.0-21.7/MODULE.bazel": "e8dff86b0971688790ae75528fe1813f71809b5afd57facb44dad9e8eca631b7",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_proto/6.0.2/MODULE.bazel": "ce916b775a62b90b61888052a416ccdda405212b6aaeb39522f7dc53431a5e73",
@@ -131,7 +132,6 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_python/0.23.1/MODULE.bazel": "49ffccf0511cb8414de28321f5fcf2a31312b47c40cc21577144b7447f2bf300",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_python/0.25.0/MODULE.bazel": "72f1506841c920a1afec76975b35312410eea3aa7b63267436bfb1dd91d2d382",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_python/0.28.0/MODULE.bazel": "cba2573d870babc976664a912539b320cbaa7114cd3e8f053c720171cde331ed",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_python/0.30.0/MODULE.bazel": "4edf4fd9555f6a67816ed0a4fbcc5ba662d9b541ab833246b5b75d7d43e8eaab",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_python/0.31.0/MODULE.bazel": "93a43dc47ee570e6ec9f5779b2e64c1476a6ce921c48cc9a1678a91dd5f8fd58",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_python/0.4.0/MODULE.bazel": "9208ee05fd48bf09ac60ed269791cf17fb343db56c8226a720fbb1cdf467166c",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_python/0.40.0/MODULE.bazel": "9d1a3cd88ed7d8e39583d9ffe56ae8a244f67783ae89b60caafc9f5cf318ada7",
@@ -141,10 +141,8 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_shell/0.4.0/source.json": "1d7fa7f941cd41dc2704ba5b4edc2e2230eea1cc600d80bd2b65838204c50b95",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_spotless/2.40.0.bcr1/MODULE.bazel": "05c52ab64386e07ff38822c7661ca4cb0104d4425eeb980854dbfd40af29e04f",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_spotless/2.40.0.bcr1/source.json": "9cca21b86b9f0806ce4e5c7bb59a905a34c5b0aa519c464be4647d0b7327e37e",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_spotless/2.40.0/MODULE.bazel": "b0c226d7507283abdb1efaa02d825bf2b9309be29b43c360c0d72ed5495a3193",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_wpi_styleguide/2024.11.19/MODULE.bazel": "d4d63695c750ad5381b7b05182ec7d8d7be9582d33614d18ba94714f820cbb8e",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_wpi_styleguide/2024.11.19/source.json": "2dac36528f3e271473d819df22081be545a99ff1bf7f6b6249269c9073d5259b",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_wpiformat/2024.45/MODULE.bazel": "b7aa582084b3624d62ac984c1803b2e95943bd5fd030f15f437ca0cfc318bf95",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_wpi_styleguide/2025.06.22/MODULE.bazel": "92f2000f4cd0a401cf54176d60866ebb808643202ea699df442deb47df2d729e",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_wpi_styleguide/2025.06.22/source.json": "1a9211982498ba5b5240286ef916643e404320551c226da89dfab95742cc38dd",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_wpiformat/2025.33/MODULE.bazel": "d65696ac3e3046d87208cbf12a2fd83be901028ec658d45ae52307db99e16991",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_wpiformat/2025.33/source.json": "bd58440873979df1e8488ec501e2f484d8d9c2441264ecd701d3ffaa92da565f",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/stardoc/0.5.1/MODULE.bazel": "1a05d92974d0c122f5ccf09291442580317cdd859f07a8655f1db9a60374f9f8",
@@ -4649,7 +4647,7 @@
     "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%setup_bzlmodrio_opencv_cpp_dependencies": {
       "general": {
         "bzlTransitiveDigest": "91ADwb5Vqrd+soYmFs3l3WYtffUQPAtt3I8F9qMn2VI=",
-        "usagesDigest": "vweg4fjWEChgL6AeawZQm8PV0YclRHbKmdknX97bcG0=",
+        "usagesDigest": "uafkZj4L90cr2IhPPE8nTSPD7xGOaJ+5p8WVOy60OSQ=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -5035,7 +5033,7 @@
     "@@bzlmodrio-opencv+//:maven_java_deps.bzl%setup_bzlmodrio_opencv_java_dependencies": {
       "general": {
         "bzlTransitiveDigest": "RWv/2M+JCd2PFMp63Qefiu03AhrMUFEtlyJGq6lZ6Y8=",
-        "usagesDigest": "rR1Z+jcfynWrOdTJDXk/ltCq1AoID1ZmBHDPAGwf8JA=",
+        "usagesDigest": "LqhXL6VcGHjHkGmxLtzZfKmzWe5KsxY9Z320PIZ3YtY=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -5209,8 +5207,8 @@
     },
     "@@rules_bzlmodrio_toolchains+//:extensions.bzl%sh_configure": {
       "general": {
-        "bzlTransitiveDigest": "FSzzLax1FSAilvZicvnhrjs+SiDm3CUZEJoKp8eiL2s=",
-        "usagesDigest": "xF8jvZz8j0e5l1tMd0BV9vETPjI/C7hxmh93M21dOOE=",
+        "bzlTransitiveDigest": "znAfQPH+PP/xmq1YA1rIBbw/js8K6hK1jKsLaRzVh5A=",
+        "usagesDigest": "dEAgr7NGa2sxjW5hfzcn2luyOqdcg1kSFoVzCS5/J3w=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -5223,6 +5221,8 @@
               "bin_prefix": "armv7-bookworm-linux-gnueabihf-",
               "sysroot_subfolder": "bookworm/arm-linux-gnueabihf/sysroot",
               "cxx_version": "12",
+              "target_cpu": "armv7",
+              "target_system_name": "arm-linux-gnueabihf",
               "sysroot_include_folder": "arm-linux-gnueabihf",
               "repo_shortname": "bookworm_32"
             }
@@ -5235,6 +5235,8 @@
               "bin_prefix": "aarch64-bookworm-linux-gnu-",
               "sysroot_subfolder": "bookworm/aarch64-linux-gnu/sysroot",
               "cxx_version": "12",
+              "target_cpu": "armv8a",
+              "target_system_name": "aarch64-linux-gnu",
               "sysroot_include_folder": "aarch64-linux-gnu",
               "repo_shortname": "bookworm_64"
             }
@@ -5247,6 +5249,8 @@
               "bin_prefix": "armv7-bullseye-linux-gnueabihf-",
               "sysroot_subfolder": "bullseye/arm-linux-gnueabihf/sysroot",
               "cxx_version": "10",
+              "target_cpu": "armv7",
+              "target_system_name": "arm-linux-gnueabihf",
               "sysroot_include_folder": "arm-linux-gnueabihf",
               "repo_shortname": "bullseye_32"
             }
@@ -5259,6 +5263,8 @@
               "bin_prefix": "aarch64-bullseye-linux-gnu-",
               "sysroot_subfolder": "bullseye/aarch64-linux-gnu/sysroot",
               "cxx_version": "10",
+              "target_cpu": "armv8a",
+              "target_system_name": "aarch64-linux-gnu",
               "sysroot_include_folder": "aarch64-linux-gnu",
               "repo_shortname": "bullseye_64"
             }
@@ -5271,6 +5277,8 @@
               "bin_prefix": "armv6-bookworm-linux-gnueabihf-",
               "sysroot_subfolder": "raspi-bookworm/arm-linux-gnueabihf/sysroot",
               "cxx_version": "12",
+              "target_cpu": "armv7",
+              "target_system_name": "arm-linux-gnueabihf",
               "sysroot_include_folder": "arm-linux-gnueabihf",
               "repo_shortname": "raspi_bookworm_32"
             }
@@ -5283,6 +5291,8 @@
               "bin_prefix": "armv6-bullseye-linux-gnueabihf-",
               "sysroot_subfolder": "raspi-bullseye/arm-linux-gnueabihf/sysroot",
               "cxx_version": "10",
+              "target_cpu": "armv7",
+              "target_system_name": "arm-linux-gnueabihf",
               "sysroot_include_folder": "arm-linux-gnueabihf",
               "repo_shortname": "raspi_bullseye_32"
             }
@@ -5295,6 +5305,8 @@
               "bin_prefix": "arm-frc2025-linux-gnueabi-",
               "sysroot_subfolder": "roborio-academic/arm-nilrt-linux-gnueabi/sysroot",
               "cxx_version": "12",
+              "target_cpu": "armv7",
+              "target_system_name": "arm-nilrt-linux-gnueabi",
               "sysroot_include_folder": "arm-nilrt-linux-gnueabi",
               "repo_shortname": "roborio"
             }
@@ -5307,6 +5319,8 @@
               "bin_prefix": "aarch64-bookworm-linux-gnu-",
               "sysroot_subfolder": "bookworm/aarch64-linux-gnu/sysroot",
               "cxx_version": "12",
+              "target_cpu": "armv8a",
+              "target_system_name": "aarch64-linux-gnu",
               "sysroot_include_folder": "aarch64-linux-gnu",
               "repo_shortname": "systemcore"
             }

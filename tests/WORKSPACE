@@ -44,16 +44,14 @@ http_archive(
 
 http_archive(
     name = "rules_bzlmodrio_toolchains",
-    # integrity = "sha256-SrikyrF2v2lENdqn9aFC//d0TkIE620lR60yXTrWFTs=",
-    strip_prefix = "rules_bzlmodrio_toolchains-d5619664905bbae405d8cb5ab76049ff322adb29",
-    urls = ["https://github.com/AustinSchuh/rules_bzlmodrio_toolchains/archive/d5619664905bbae405d8cb5ab76049ff322adb29.tar.gz"],
+    sha256 = "37780b3d3f30de72aaca12d9f80edc4216f6d708bed5b261c424d4dde49e8531",
+    url = "https://github.com/wpilibsuite/rules_bzlmodRio_toolchains/releases/download/2025-1.bcr4/rules_bzlmodRio_toolchains-2025-1.bcr4.tar.gz",
 )
 
 http_archive(
     name = "bzlmodrio-opencv",
-    # integrity = "sha256-SrikyrF2v2lENdqn9aFC//d0TkIE620lR60yXTrWFTs=",
-    strip_prefix = "bzlmodRio-opencv-71b0605886f1114eb461a234f33fd98e4caf2ab4",
-    urls = ["https://github.com/wpilibsuite/bzlmodrio-opencv/archive/71b0605886f1114eb461a234f33fd98e4caf2ab4.tar.gz"],
+    sha256 = "6e8544fae07ed5b4fedc146f6ad083d0d8947e3efb5332a20abc46601a52a1b5",
+    url = "https://github.com/bzlmodRio/bzlmodRio-opencv/releases/download/2025.4.10.0-3.bcr2/bzlmodRio-opencv-2025.4.10.0-3.bcr2.tar.gz",
 )
 
 http_archive(
