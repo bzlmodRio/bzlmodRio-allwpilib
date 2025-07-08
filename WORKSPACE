@@ -53,8 +53,8 @@ http_archive(
 
 http_archive(
     name = "bzlmodrio-opencv",
-    sha256 = "6e8544fae07ed5b4fedc146f6ad083d0d8947e3efb5332a20abc46601a52a1b5",
-    url = "https://github.com/bzlmodRio/bzlmodRio-opencv/releases/download/2025.4.10.0-3.bcr2/bzlmodRio-opencv-2025.4.10.0-3.bcr2.tar.gz",
+    sha256 = "27dff7aaedd00165b1a94867616ebf383220532e3956892cec649197077a9d01",
+    url = "https://github.com/bzlmodRio/bzlmodRio-opencv/releases/download/2025.4.10.0-3.bcr3/bzlmodRio-opencv-2025.4.10.0-3.bcr3.tar.gz",
 )
 
 http_archive(
