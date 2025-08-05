@@ -168,7 +168,7 @@
     "@@bzlmodrio-allwpilib+//:maven_cpp_deps.bzl%setup_bzlmodrio_allwpilib_cpp_dependencies": {
       "general": {
         "bzlTransitiveDigest": "dRcbvlmT916fUssKVxfvojWmK4cucZQnL5DxQJq+0QI=",
-        "usagesDigest": "CKYKZbbFfRpe7Di+tLRhJAhjoet0awt/a0G30nmhXdk=",
+        "usagesDigest": "82klKWSZm5eW6wOTlHqE8+j9S275X/S7O/KfmGYbIsQ=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -4427,7 +4427,7 @@
     "@@bzlmodrio-allwpilib+//:maven_java_deps.bzl%setup_bzlmodrio_allwpilib_java_dependencies": {
       "general": {
         "bzlTransitiveDigest": "he8+j7COt5valpjBc/husdDXBbWVAHMwocpg+IsPZYY=",
-        "usagesDigest": "/bR/+5z/BKFju7yZzaU6cqa4YqsybpFfSVuaKcIE6Hc=",
+        "usagesDigest": "BRDOx6tpd7ZqY1MSxKk1MT9gX3kWj+/lH5t04ePyWdw=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
