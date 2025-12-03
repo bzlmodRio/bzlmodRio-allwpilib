@@ -551,6 +551,8 @@ use_repo(
     "edu_wpi_first_apriltag_apriltag_java",
     "edu_wpi_first_cameraserver_cameraserver_java",
     "edu_wpi_first_cscore_cscore_java",
+    "edu_wpi_first_epilogue_epilogue_processor_java",
+    "edu_wpi_first_epilogue_epilogue_runtime_java",
     "edu_wpi_first_fieldimages_fieldimages_java",
     "edu_wpi_first_hal_hal_java",
     "edu_wpi_first_ntcore_ntcore_java",

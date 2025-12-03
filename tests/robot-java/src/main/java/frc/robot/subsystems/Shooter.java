@@ -12,7 +12,7 @@ import edu.wpi.first.math.system.plant.LinearSystemId;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.RobotBase;
 import edu.wpi.first.wpilibj.RobotController;
-import edu.wpi.first.wpilibj.motorcontrol.Victor;
+import edu.wpi.first.wpilibj.motorcontrol.PWMSparkFlex;
 import edu.wpi.first.wpilibj.simulation.EncoderSim;
 import edu.wpi.first.wpilibj.simulation.FlywheelSim;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -32,7 +32,7 @@ public class Shooter extends SubsystemBase {
   private static final double kGearing = 4;
   private static final double kInertia = 0.008;
 
-  private final Victor m_motor;
+  private final PWMSparkFlex m_motor;
   private final Encoder m_encoder;
   private final PIDController m_pidController;
 
@@ -42,7 +42,7 @@ public class Shooter extends SubsystemBase {
 
   /** Create a new claw subsystem. */
   public Shooter() {
-    m_motor = new Victor(PortMap.kShooterMotorPort);
+    m_motor = new PWMSparkFlex(PortMap.kShooterMotorPort);
     m_encoder = new Encoder(PortMap.kShooterEncoderPortA, PortMap.kShooterEncoderPortB);
     m_pidController = new PIDController(kP, kI, kD);
 

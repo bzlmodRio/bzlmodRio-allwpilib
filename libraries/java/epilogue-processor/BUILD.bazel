@@ -1,0 +1,10 @@
+load("@rules_java//java:defs.bzl", "java_import")
+
+java_import(
+    name = "epilogue-processor",
+    jars = ["@edu_wpi_first_epilogue_epilogue_processor_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/java/wpilibNewCommands",
+    ],
+)

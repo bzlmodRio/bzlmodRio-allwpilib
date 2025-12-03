@@ -68,10 +68,11 @@ def _cc_dependency(group, parent_folder, resources=None, **kwargs):
     )
 
 
-def _java_dependency(group, parent_folder, has_jni=False, **kwargs):
+def _java_dependency(group, parent_folder, has_jni=False, group_id=None, **kwargs):
+    group_id = group_id or f"edu.wpi.first.{parent_folder}"
     group.create_java_dependency(
         f"{parent_folder}-java",
-        group_id=f"edu.wpi.first.{parent_folder}",
+        group_id=group_id,
         parent_folder=parent_folder,
         **kwargs,
     )
@@ -282,6 +283,16 @@ def get_allwpilib_dependencies(
     )
     _java_dependency(
         group,
+        "epilogue-runtime",
+        group_id="edu.wpi.first.epilogue",
+        dependencies=["ntcore-java", "wpiunits-java", "wpiutil-java"],
+        maven_deps=[
+            ("us.hebi.quickbuf:quickbuf-runtime", "1.3.2"),
+        ],
+    )
+
+    _java_dependency(
+        group,
         "cscore",
         dependencies=[
             "wpiutil-java",
@@ -340,6 +351,12 @@ def get_allwpilib_dependencies(
             "opencv-cpp",
             "wpilibj-java",
         ],
+    )
+    _java_dependency(
+        group,
+        "epilogue-processor",
+        group_id="edu.wpi.first.epilogue",
+        dependencies=["wpilibNewCommands-java"],
     )
 
     _java_dependency(
