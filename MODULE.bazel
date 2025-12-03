@@ -1,7 +1,7 @@
 module(
     name = "bzlmodrio-allwpilib",
-    version = "2025.3.2.bcr2",
-    compatibility_level = 2025,
+    version = "2026.1.1-beta-1.bcr2",
+    compatibility_level = 2026,
 )
 
 bazel_dep(name = "platforms", version = "0.0.11")
