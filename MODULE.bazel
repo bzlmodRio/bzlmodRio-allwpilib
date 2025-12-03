@@ -4,7 +4,7 @@ module(
     compatibility_level = 2025,
 )
 
-bazel_dep(name = "platforms", version = "0.0.9")
+bazel_dep(name = "platforms", version = "0.0.11")
 bazel_dep(name = "rules_cc", version = "0.1.4")
 bazel_dep(name = "rules_java", version = "8.12.0")
 bazel_dep(name = "rules_shell", version = "0.4.0")
@@ -551,6 +551,8 @@ use_repo(
     "edu_wpi_first_apriltag_apriltag_java",
     "edu_wpi_first_cameraserver_cameraserver_java",
     "edu_wpi_first_cscore_cscore_java",
+    "edu_wpi_first_epilogue_epilogue_processor_java",
+    "edu_wpi_first_epilogue_epilogue_runtime_java",
     "edu_wpi_first_fieldimages_fieldimages_java",
     "edu_wpi_first_hal_hal_java",
     "edu_wpi_first_ntcore_ntcore_java",

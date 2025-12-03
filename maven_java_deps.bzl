@@ -44,6 +44,12 @@ def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
+        name = "edu_wpi_first_epilogue_epilogue_runtime_java",
+        artifact = "edu.wpi.first.epilogue:epilogue-runtime-java:2025.3.2",
+        artifact_sha256 = "e97cf673c9d7b8ca07c6e1c4dc79f76744c75170bfa11e478c65c610de016466",
+        server_urls = ["https://frcmaven.wpi.edu/release"],
+    )
+    jvm_maven_import_external(
         name = "edu_wpi_first_cscore_cscore_java",
         artifact = "edu.wpi.first.cscore:cscore-java:2025.3.2",
         artifact_sha256 = "24675c0c39cf67eb09dc9d6a84bd6a802dc203a832ad3b6c927c277ad719a933",
@@ -65,6 +71,12 @@ def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
         name = "edu_wpi_first_wpilibnewcommands_wpilibnewcommands_java",
         artifact = "edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java:2025.3.2",
         artifact_sha256 = "7d85256839a50ee478576be9587dffe665d6d7775960fc987bac32f7bce1b7de",
+        server_urls = ["https://frcmaven.wpi.edu/release"],
+    )
+    jvm_maven_import_external(
+        name = "edu_wpi_first_epilogue_epilogue_processor_java",
+        artifact = "edu.wpi.first.epilogue:epilogue-processor-java:2025.3.2",
+        artifact_sha256 = "03ae576363d6486289a09a823fbf314c8f11b57cc03bbf37173f91d1555648e5",
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
     jvm_maven_import_external(
