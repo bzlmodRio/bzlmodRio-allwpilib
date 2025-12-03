@@ -16,7 +16,7 @@ static const std::array<double, 8> pushFrontOut = {
 TEST(BasicTest, Basic) {
   wpi::circular_buffer<double> queue(8);
 
-  for (auto &value : values) {
+  for (auto& value : values) {
     queue.push_front(value);
   }
 

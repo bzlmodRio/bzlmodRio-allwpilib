@@ -16,7 +16,7 @@ TEST(BasicTest, Basic) {
   bool lastValue = false;
 
   auto cb = sim.RegisterActiveCallback(
-      [&](std::string_view /*name*/, const HAL_Value *value) {
+      [&](std::string_view /*name*/, const HAL_Value* value) {
         wasTriggered = true;
         lastValue = value->data.v_boolean;
       },

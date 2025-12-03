@@ -1,6 +1,6 @@
 #include "robot-cpp/commands/shooter_rpm_command.hpp"
 
-ShooterRpmCommand::ShooterRpmCommand(Shooter &shooter, double rpm)
+ShooterRpmCommand::ShooterRpmCommand(Shooter& shooter, double rpm)
     : m_shooter(shooter), m_rpm(rpm) {
   AddRequirements(&m_shooter);
 }
