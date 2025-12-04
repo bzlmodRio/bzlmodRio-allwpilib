@@ -131,11 +131,11 @@ def get_allwpilib_dependencies(
     use_local_opencv=False,
     use_local_ni=False,
     opencv_version_override="2025.4.10.0-3.bcr3",
-    ni_version_override="2025.2.0.bcr1",
+    ni_version_override="2026.1.0",
 ):
-    year = "2025"
-    version = "2025.3.2"
-    patch = ".bcr2"
+    year = "2026"
+    version = "2026.1.1-beta-1"
+    patch = ""
 
     opencv_dependency = ModuleDependency(
         get_opencv_dependencies(),
@@ -248,6 +248,8 @@ def get_allwpilib_dependencies(
         ],
     )
 
+    _java_dependency(group, "annotations", group_id=f"org.wpilib", dependencies=[])
+
     _java_dependency(
         group,
         "wpiutil",
@@ -350,6 +352,7 @@ def get_allwpilib_dependencies(
             "cameraserver-java",
             "opencv-cpp",
             "wpilibj-java",
+            "annotations-java",
         ],
     )
     _java_dependency(
