@@ -10,6 +10,7 @@ java_import(
         "@bzlmodrio-allwpilib//libraries/cpp/ntcore:jni",
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:jni",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/annotations",
         "@bzlmodrio-allwpilib//libraries/java/cameraserver",
         "@bzlmodrio-allwpilib//libraries/java/cscore",
         "@bzlmodrio-allwpilib//libraries/java/hal",

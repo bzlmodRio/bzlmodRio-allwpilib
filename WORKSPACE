@@ -59,8 +59,8 @@ http_archive(
 
 http_archive(
     name = "bzlmodrio-ni",
-    sha256 = "5ee1e2d6c1a670eba178eaa5c933f31dccf550b7ab613d4b22c37ead45497c45",
-    url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2025.2.0.bcr1/bzlmodRio-ni-2025.2.0.bcr1.tar.gz",
+    sha256 = "e8232c386bacfad08c45aaa7e625f587ec040cfb71f25a3b8f17b6abd909f38e",
+    url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2026.1.0/bzlmodRio-ni-2026.1.0.tar.gz",
 )
 
 ########################

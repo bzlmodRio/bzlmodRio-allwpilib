@@ -37,8 +37,8 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bazel_skylib/1.8.2/source.json": "34a3c8bcf233b835eb74be9d628899bb32999d3e0eadef1947a0a562a2b16ffb",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/buildozer/7.1.2/MODULE.bazel": "2e8dd40ede9c454042645fd8d8d0cd1527966aa5c919de86661e62953cd73d84",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/buildozer/7.1.2/source.json": "c9028a501d2db85793a6996205c8de120944f50a0d570438fcae0457a5f9d1f8",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2025.2.0.bcr1/MODULE.bazel": "525cd4d04b63b8eaa4e9fb37d290d7a635e81b0cb99c096682dc309d384f89a5",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2025.2.0.bcr1/source.json": "af248c5739b6ac9809fceba756ec22bd58e0c6af4be4e7d99042c6af2138bf74",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2026.1.0/MODULE.bazel": "cdc16d019219fde6a4d8c895e51664198df455cd6afe7c022a869d3c3e446171",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-ni/2026.1.0/source.json": "b0edc0846e76378be32bb05992822ced7f8e9359baee57403d07c85ceb7d4f5f",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2025.4.10.0-3.bcr3/MODULE.bazel": "de23d58a5c2d7bb5fc96aad68f8fc5c6995bf772ed960efba2e8ec26db8f1ca0",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2025.4.10.0-3.bcr3/source.json": "47fe03ff71716c67a7670675a9f5a4c7a6fa145a0dee963cefc329d915c6d09c",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/google_benchmark/1.8.2/MODULE.bazel": "a70cf1bba851000ba93b58ae2f6d76490a9feb74192e57ab8e8ff13c34ec50cb",
@@ -74,7 +74,6 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_android/0.1.1/source.json": "e6986b41626ee10bdc864937ffb6d6bf275bb5b9c65120e6137d56e6331f089e",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/MODULE.bazel": "e4004326cab72e5b27b697a01b03139276ac04c6e7c177ddb9424afc8709e51b",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/source.json": "7da669bc69d497942a9ac21b8f76c05f4a91b4212e3a697a1e27d9358576e995",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr2/MODULE.bazel": "c7db765cb7d20fd06b2c14768736ee4f7078c864fe6e85d2075f819b998e463f",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr4/MODULE.bazel": "5747793f9d36d55ecab212b1af2f4292fbf4dafed00ee5d4b09e726d5eb68773",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr5/MODULE.bazel": "9bcb97d90efa95cf28b2bac35915deff1e8b0c783b1d41221dda44f204202ba6",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr5/source.json": "8bdde517164b0eb8875e484c990aa1b3a4669b61d92f50641a3a75f31d2e52f9",
@@ -4435,12 +4434,28 @@
     },
     "@@bzlmodrio-allwpilib+//:maven_java_deps.bzl%setup_bzlmodrio_allwpilib_java_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "jnI7aXdRu6qk6Z4pNQ3Hsaagyx/y4aKPuJGt0RU/tc4=",
+        "bzlTransitiveDigest": "QfrcOtlrqGzr4Am3PbAMBdqALpfadMTxBQELg+lwIEU=",
         "usagesDigest": "dBoDBO50h3ZGM0LuCGK4GDjD5MJEe+KDEBBBhB9oUJU=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
         "generatedRepoSpecs": {
+          "org_wpilib_annotations_java": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:jvm.bzl%jvm_import_external",
+            "attributes": {
+              "generated_rule_name": "org_wpilib_annotations_java",
+              "artifact_urls": [
+                "https://frcmaven.wpi.edu/release/org/wpilib/annotations-java/2026.1.1-beta-1/annotations-java-2026.1.1-beta-1.jar"
+              ],
+              "srcjar_urls": [],
+              "canonical_id": "org.wpilib:annotations-java:2026.1.1-beta-1",
+              "rule_name": "java_import",
+              "tags": [
+                "maven_coordinates=org.wpilib:annotations-java:2026.1.1-beta-1"
+              ],
+              "artifact_sha256": "c40492bbd65eb0fc2c2697c3c60d2784363c0586371cf3ec84a244d1efaf9d41"
+            }
+          },
           "edu_wpi_first_wpiutil_wpiutil_java": {
             "repoRuleId": "@@bazel_tools//tools/build_defs/repo:jvm.bzl%jvm_import_external",
             "attributes": {
