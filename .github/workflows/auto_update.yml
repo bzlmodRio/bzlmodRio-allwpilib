@@ -70,7 +70,7 @@ jobs:
 
     - name: Generate if changed
       run: |
-        if [[ $(git --no-pager diff --exit-code HEAD ':!./MODULE.bazel.lock') != '' ]]; then
+        if [[ $(git --no-pager diff --exit-code HEAD  ':!./MODULE.bazel.lock') != '' ]]; then
           echo "Something changed, need to re-generate"
           bazel run //:generate
           buildifier -warnings all --lint=fix -r ..
