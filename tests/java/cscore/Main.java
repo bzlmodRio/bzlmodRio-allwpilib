@@ -1,9 +1,9 @@
 package cscore;
 
-import edu.wpi.first.cscore.CameraServerJNI;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import org.wpilib.vision.camera.CameraServerJNI;
 
 public final class Main {
   private Main() {}

@@ -1,6 +1,6 @@
 package wpiunits;
 
-import edu.wpi.first.units.Units;
+import org.wpilib.units.Units;
 
 public final class Main {
   private Main() {}

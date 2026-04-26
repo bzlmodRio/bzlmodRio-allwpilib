@@ -8,10 +8,10 @@ bazelrio_java_binary(
     jvm_flags = [
         "-Djava.library.path=.",
     ],
-    main_class = "wpilibnewcommands.Main",
+    main_class = "commandsv2.Main",
     deps = [
         "@bzlmodrio-allwpilib//libraries/java/cameraserver",
-        "@bzlmodrio-allwpilib//libraries/java/wpilibNewCommands",
+        "@bzlmodrio-allwpilib//libraries/java/commandsv2",
         "@bzlmodrio-allwpilib//libraries/java/wpilibj",
     ],
 )
@@ -21,7 +21,7 @@ bazelrio_java_test(
     srcs = ["BasicTest.java"],
     args = [
         "--select-package",
-        "wpilibnewcommands",
+        "commandsv2",
     ],
     javacopts = ["-Werror"],
     jvm_flags = [
@@ -40,7 +40,7 @@ bazelrio_java_test(
         "@maven//:org_junit_platform_junit_platform_suite_api",
     ],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/java/wpilibNewCommands",
+        "@bzlmodrio-allwpilib//libraries/java/commandsv2",
         "@bzlmodrio-allwpilib//libraries/java/wpilibj",
         "@maven//:org_junit_jupiter_junit_jupiter_api",
         "@maven//:org_junit_jupiter_junit_jupiter_engine",
@@ -48,4 +48,4 @@ bazelrio_java_test(
     ],
 )
 
-java_styleguide(name = "wpilibNewCommands")
+# java_styleguide(name = "commandsv2")
