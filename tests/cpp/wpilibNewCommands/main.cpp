@@ -14,7 +14,7 @@ class ExampleSubsystem : public frc2::Subsystem {
 class ExampleCommand
     : public frc2::CommandHelper<frc2::Command, ExampleCommand> {
  public:
-  explicit ExampleCommand(ExampleSubsystem &sub) { AddRequirements(&sub); }
+  explicit ExampleCommand(ExampleSubsystem& sub) { AddRequirements(&sub); }
 
   void Execute() override { std::cout << "Command periodic" << std::endl; }
 };

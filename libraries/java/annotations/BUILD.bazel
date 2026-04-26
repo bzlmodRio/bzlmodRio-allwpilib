@@ -1,0 +1,9 @@
+load("@rules_java//java:defs.bzl", "java_import")
+
+java_import(
+    name = "annotations",
+    jars = ["@org_wpilib_annotations_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+    ],
+)

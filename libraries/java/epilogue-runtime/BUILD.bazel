@@ -1,0 +1,14 @@
+load("@rules_java//java:defs.bzl", "java_import")
+load("@rules_jvm_external//:defs.bzl", "artifact")
+
+java_import(
+    name = "epilogue-runtime",
+    jars = ["@edu_wpi_first_epilogue_epilogue_runtime_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/java/ntcore",
+        "@bzlmodrio-allwpilib//libraries/java/wpiunits",
+        "@bzlmodrio-allwpilib//libraries/java/wpiutil",
+        artifact("us.hebi.quickbuf:quickbuf-runtime"),
+    ],
+)

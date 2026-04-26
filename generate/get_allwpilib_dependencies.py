@@ -64,10 +64,11 @@ def _cc_dependency(group, parent_folder, resources=None, **kwargs):
     )
 
 
-def _java_dependency(group, parent_folder, has_jni=False, **kwargs):
+def _java_dependency(group, parent_folder, has_jni=False, group_id=None, **kwargs):
+    group_id = group_id or f"edu.wpi.first.{parent_folder}"
     group.create_java_dependency(
         f"{parent_folder}-java",
-        group_id=f"edu.wpi.first.{parent_folder}",
+        group_id=group_id,
         parent_folder=parent_folder,
         **kwargs,
     )
@@ -109,8 +110,8 @@ def _executable_tool(
 def get_allwpilib_dependencies(
     use_local_opencv=False,
     use_local_ni=False,
-    opencv_version_override="2025.4.10.0-3.bcr2",
-    ni_version_override="2025.2.0.bcr1",
+    opencv_version_override="2025.4.10.0-3.bcr3",
+    ni_version_override="2026.1.0",
 ):
     year = "2027"
     version = "2027.0.0-alpha-1"
@@ -236,6 +237,8 @@ def get_allwpilib_dependencies(
         ],
     )
 
+    _java_dependency(group, "annotations", group_id=f"org.wpilib", dependencies=[])
+
     _java_dependency(
         group,
         "wpiutil",
@@ -269,6 +272,16 @@ def get_allwpilib_dependencies(
     _java_dependency(
         group, "ntcore", dependencies=["wpiutil-java", "wpiutil-cpp", "ntcore-cpp"]
     )
+    _java_dependency(
+        group,
+        "epilogue-runtime",
+        group_id="edu.wpi.first.epilogue",
+        dependencies=["ntcore-java", "wpiunits-java", "wpiutil-java"],
+        maven_deps=[
+            ("us.hebi.quickbuf:quickbuf-runtime", "1.3.2"),
+        ],
+    )
+
     _java_dependency(
         group,
         "cscore",
@@ -328,7 +341,14 @@ def get_allwpilib_dependencies(
             "cameraserver-java",
             "opencv-cpp",
             "wpilibj-java",
+            "annotations-java",
         ],
+    )
+    _java_dependency(
+        group,
+        "epilogue-processor",
+        group_id="edu.wpi.first.epilogue",
+        dependencies=["wpilibNewCommands-java"],
     )
 
     _java_dependency(

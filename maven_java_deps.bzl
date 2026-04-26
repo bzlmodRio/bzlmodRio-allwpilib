@@ -2,6 +2,12 @@ load("@bazel_tools//tools/build_defs/repo:jvm.bzl", "jvm_maven_import_external")
 
 def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
     jvm_maven_import_external(
+        name = "org_wpilib_annotations_java",
+        artifact = "org.wpilib:annotations-java:2026.2.2",
+        artifact_sha256 = "11006a397c61a997ad8172dad22861e1c93aac00ec2bc4843d633c5944b28238",
+        server_urls = ["https://frcmaven.wpi.edu/release"],
+    )
+    jvm_maven_import_external(
         name = "edu_wpi_first_wpiutil_wpiutil_java",
         artifact = "edu.wpi.first.wpiutil:wpiutil-java:2027.0.0-alpha-1",
         artifact_sha256 = "e89981fa9a833d42ba2e3b49e111f8bab9e11a48d6019b7719422fabb2e83c20",
