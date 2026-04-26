@@ -485,7 +485,7 @@ use_repo(
 setup_bzlmodrio_allwpilib_java_dependencies = use_extension("//:maven_java_deps.bzl", "setup_bzlmodrio_allwpilib_java_dependencies")
 use_repo(
     setup_bzlmodrio_allwpilib_java_dependencies,
-    "org_wpilib_annotations_annotations_java",
+    "org_wpilib_annotations_java",
     "org_wpilib_apriltag_apriltag_java",
     "org_wpilib_cameraserver_cameraserver_java",
     "org_wpilib_commands3_java",

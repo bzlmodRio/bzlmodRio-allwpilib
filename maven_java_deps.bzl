@@ -2,7 +2,7 @@ load("@bazel_tools//tools/build_defs/repo:jvm.bzl", "jvm_maven_import_external")
 
 def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
     jvm_maven_import_external(
-        name = "org_wpilib_annotations_annotations_java",
+        name = "org_wpilib_annotations_java",
         artifact = "org.wpilib:annotations-java:2027.0.0-alpha-4",
         artifact_sha256 = "f1d55dd6fd2e0821753ef7ac2b3e5cad7083a0d8e66c8c88495dd5fb7efd3e56",
         server_urls = ["https://frcmaven.wpi.edu/artifactory/release-2027"],
