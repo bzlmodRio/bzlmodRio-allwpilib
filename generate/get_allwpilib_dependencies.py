@@ -237,7 +237,7 @@ def get_allwpilib_dependencies(
         ],
     )
 
-    _java_dependency(group, "annotations", group_id=f"org.wpilib", dependencies=[])
+    # _java_dependency(group, "annotations", group_id=f"org.wpilib", dependencies=[])
 
     _java_dependency(
         group,
@@ -341,7 +341,7 @@ def get_allwpilib_dependencies(
             "cameraserver-java",
             "opencv-cpp",
             "wpilibj-java",
-            "annotations-java",
+            # "annotations-java",
         ],
     )
     _java_dependency(

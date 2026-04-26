@@ -2,12 +2,6 @@ load("@bazel_tools//tools/build_defs/repo:jvm.bzl", "jvm_maven_import_external")
 
 def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
     jvm_maven_import_external(
-        name = "org_wpilib_annotations_java",
-        artifact = "org.wpilib:annotations-java:2026.2.2",
-        artifact_sha256 = "11006a397c61a997ad8172dad22861e1c93aac00ec2bc4843d633c5944b28238",
-        server_urls = ["https://frcmaven.wpi.edu/release"],
-    )
-    jvm_maven_import_external(
         name = "edu_wpi_first_wpiutil_wpiutil_java",
         artifact = "edu.wpi.first.wpiutil:wpiutil-java:2027.0.0-alpha-1",
         artifact_sha256 = "e89981fa9a833d42ba2e3b49e111f8bab9e11a48d6019b7719422fabb2e83c20",
@@ -50,6 +44,12 @@ def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
         server_urls = ["https://frcmaven.wpi.edu/artifactory/release-2027"],
     )
     jvm_maven_import_external(
+        name = "edu_wpi_first_epilogue_epilogue_runtime_java",
+        artifact = "edu.wpi.first.epilogue:epilogue-runtime-java:2027.0.0-alpha-1",
+        artifact_sha256 = "9b482e68b58e50b4887379e403b2d0023f373578b1cad376db83f6150f65bb20",
+        server_urls = ["https://frcmaven.wpi.edu/artifactory/release-2027"],
+    )
+    jvm_maven_import_external(
         name = "edu_wpi_first_cscore_cscore_java",
         artifact = "edu.wpi.first.cscore:cscore-java:2027.0.0-alpha-1",
         artifact_sha256 = "a5f2f86a5ccb129aa9a20edfc103c6bfb150c856c1f365fe8c7f06a3991a8262",
@@ -71,6 +71,12 @@ def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
         name = "edu_wpi_first_wpilibnewcommands_wpilibnewcommands_java",
         artifact = "edu.wpi.first.wpilibNewCommands:wpilibNewCommands-java:2027.0.0-alpha-1",
         artifact_sha256 = "0d4a9f7527f5f9f7dd17aa79efe6f3b3ea71347b158b661fc49f2f5badfcc60e",
+        server_urls = ["https://frcmaven.wpi.edu/artifactory/release-2027"],
+    )
+    jvm_maven_import_external(
+        name = "edu_wpi_first_epilogue_epilogue_processor_java",
+        artifact = "edu.wpi.first.epilogue:epilogue-processor-java:2027.0.0-alpha-1",
+        artifact_sha256 = "fd2cb22f337c3f0998de1882ed50f92bf6e1988667c4e9068623c9fc1a2d7039",
         server_urls = ["https://frcmaven.wpi.edu/artifactory/release-2027"],
     )
     jvm_maven_import_external(
