@@ -1,7 +1,7 @@
 
 #include <iostream>
 
-#include "frc/romi/RomiGyro.h"
+#include "wpi/romi/RomiGyro.hpp"
 
 int main() {
   std::cout << "Hello World" << std::endl;

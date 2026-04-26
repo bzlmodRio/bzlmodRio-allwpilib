@@ -1,6 +1,6 @@
 #include "robot-cpp/robot.hpp"
 
-#include <cameraserver/CameraServer.h>
+#include <wpi/cameraserver/CameraServer.hpp>
 #include <frc2/command/CommandScheduler.h>
 #include <frc2/command/button/JoystickButton.h>
 

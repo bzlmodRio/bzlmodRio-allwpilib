@@ -1,14 +1,14 @@
 
-#include <hal/HALBase.h>
+#include <wpi/hal/HALBase.h>
 
-#include "frc/AnalogInput.h"
-#include "frc/simulation/AnalogInputSim.h"
+#include "wpi/hardware/discrete/AnalogInput.hpp"
+#include "wpi/simulation/AnalogInputSim.hpp"
 #include "gtest/gtest.h"
 
 TEST(BasicTest, Basic) {
   HAL_Initialize(500, 0);
 
-  frc::sim::AnalogInputSim sim(1);
+  wpi::sim::AnalogInputSim sim(1);
 
   sim.ResetData();
 
@@ -24,7 +24,7 @@ TEST(BasicTest, Basic) {
 
   EXPECT_FALSE(wasTriggered);
 
-  frc::AnalogInput _(1);
+  wpi::AnalogInput _(1);
 
   EXPECT_TRUE(wasTriggered);
   EXPECT_TRUE(lastValue);

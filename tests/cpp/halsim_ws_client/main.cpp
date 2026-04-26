@@ -1,15 +1,15 @@
 
-#include <hal/HAL.h>
-#include <wpi/json.h>
-#include <wpi/raw_ostream.h>
+#include <wpi/hal/HAL.h>
+#include <wpi/util/json.hpp>
+#include <wpi/util/raw_ostream.hpp>
 
 #include <iostream>
 #include <string>
 
 int main() {
-  wpi::json xxx = "{}"_json;
+  wpi::util::json xxx = "{}"_json;
   std::string output;
-  wpi::raw_string_ostream stream(output);
+  wpi::util::raw_string_ostream stream(output);
   xxx.dump(stream);
   std::cout << "Hello World" << std::endl;
   std::cout << output << std::endl;

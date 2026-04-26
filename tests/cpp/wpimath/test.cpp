@@ -1,10 +1,10 @@
 
-#include "frc/geometry/Pose2d.h"
+#include "wpi/math/geometry/Pose2d.hpp"
 #include "gtest/gtest.h"
 
 TEST(BasicTest, Basic) {
-  const frc::Pose2d initial{1_m, 2_m, 45_deg};
-  const frc::Transform2d transform{frc::Translation2d{5_m, 0_m}, 5_deg};
+  const wpi::math::Pose2d initial{1_m, 2_m, 45_deg};
+  const wpi::math::Transform2d transform{wpi::math::Translation2d{5_m, 0_m}, 5_deg};
 
   const auto transformed = initial + transform;
 

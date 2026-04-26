@@ -1,5 +1,5 @@
 
-#include <wpi/datalog/DataLogReader.h>
+#include <wpi/datalog/DataLogReader.hpp>
 
 #include "gtest/gtest.h"
 

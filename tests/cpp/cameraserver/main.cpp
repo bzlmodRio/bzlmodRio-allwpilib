@@ -1,11 +1,11 @@
 
-#include <cameraserver/CameraServer.h>
+#include <wpi/cameraserver/CameraServer.hpp>
 
 #include <iostream>
 
 int main() {
   std::cout << "Hello World" << std::endl;
 
-  frc::CameraServer::StartAutomaticCapture();
+  wpi::CameraServer::StartAutomaticCapture();
   return 0;
 }

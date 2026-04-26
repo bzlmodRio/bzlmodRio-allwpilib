@@ -1,11 +1,11 @@
 
 #include <iostream>
 
-#include "frc/apriltag/AprilTagFieldLayout.h"
+#include "wpi/apriltag/AprilTagFieldLayout.hpp"
 
 int main() {
-  frc::AprilTagFieldLayout layout =
-      frc::AprilTagFieldLayout::LoadField(frc::AprilTagField::k2022RapidReact);
+  wpi::apriltag::AprilTagFieldLayout layout =
+      wpi::apriltag::AprilTagFieldLayout::LoadField(wpi::apriltag::AprilTagField::k2022RapidReact);
   std::cout << "Loaded field!" << std::endl;
   return 0;
 }
