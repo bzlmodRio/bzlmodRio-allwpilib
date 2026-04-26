@@ -8,7 +8,6 @@ from get_opencv_dependencies import get_opencv_dependencies
 
 def _default_native_shared_platforms():
     return [
-        "linuxarm32",
         "linuxarm64",
         "linuxx86-64",
         "osxuniversal",
@@ -55,7 +54,7 @@ def _cc_dependency(group, parent_folder, resources=None, **kwargs):
         resources = _default_all_platforms()
     group.create_cc_dependency(
         f"{parent_folder}-cpp",
-        group_id=f"edu.wpi.first.{parent_folder}",
+        group_id=f"org.wpilib.{parent_folder}",
         parent_folder=parent_folder,
         headers="headers",
         sources="sources",
@@ -65,7 +64,7 @@ def _cc_dependency(group, parent_folder, resources=None, **kwargs):
 
 
 def _java_dependency(group, parent_folder, has_jni=False, group_id=None, **kwargs):
-    group_id = group_id or f"edu.wpi.first.{parent_folder}"
+    group_id = group_id or f"org.wpilib.{parent_folder}"
     group.create_java_dependency(
         f"{parent_folder}-java",
         group_id=group_id,
@@ -79,7 +78,7 @@ def _halsim_dependency(group, parent_folder, resources=None, **kwargs):
         resources = _make_all_native_platforms(_default_native_shared_platforms())
     group.create_cc_dependency(
         f"{parent_folder}",
-        group_id=f"edu.wpi.first.halsim",
+        group_id=f"org.wpilib.halsim",
         has_jni=False,
         parent_folder=parent_folder,
         headers="headers",
@@ -92,7 +91,7 @@ def _halsim_dependency(group, parent_folder, resources=None, **kwargs):
 def _executable_tool(
     maven_dep,
     artifact_name,
-    group_id="edu.wpi.first.tools",
+    group_id="org.wpilib.tools",
     native_platforms=None,
     lower_target_name=False,
 ):
@@ -114,7 +113,7 @@ def get_allwpilib_dependencies(
     ni_version_override="2026.1.0",
 ):
     year = "2027"
-    version = "2027.0.0-alpha-1"
+    version = "2027.0.0-alpha-4"
     patch = ""
 
     opencv_dependency = ModuleDependency(
@@ -204,7 +203,7 @@ def get_allwpilib_dependencies(
     )
     _cc_dependency(
         group,
-        "wpilibNewCommands",
+        "commandsv2",
         has_jni=False,
         dependencies=[
             "wpiutil-cpp",
@@ -275,7 +274,7 @@ def get_allwpilib_dependencies(
     _java_dependency(
         group,
         "epilogue-runtime",
-        group_id="edu.wpi.first.epilogue",
+        group_id="org.wpilib.epilogue",
         dependencies=["ntcore-java", "wpiunits-java", "wpiutil-java"],
         maven_deps=[
             ("us.hebi.quickbuf:quickbuf-runtime", "1.3.2"),
@@ -326,7 +325,28 @@ def get_allwpilib_dependencies(
     )
     _java_dependency(
         group,
-        "wpilibNewCommands",
+        "commandsv2",
+        dependencies=[
+            "wpiutil-cpp",
+            "wpiutil-java",
+            "wpimath-cpp",
+            "wpimath-java",
+            "cscore-cpp",
+            "cscore-java",
+            "ntcore-cpp",
+            "ntcore-java",
+            "hal-cpp",
+            "hal-java",
+            "cameraserver-java",
+            "opencv-cpp",
+            "wpilibj-java",
+            # "annotations-java",
+        ],
+    )
+    _java_dependency(
+        group,
+        "commands3",
+        group_id="org.wpilib",
         dependencies=[
             "wpiutil-cpp",
             "wpiutil-java",
@@ -347,13 +367,13 @@ def get_allwpilib_dependencies(
     _java_dependency(
         group,
         "epilogue-processor",
-        group_id="edu.wpi.first.epilogue",
-        dependencies=["wpilibNewCommands-java"],
+        group_id="org.wpilib.epilogue",
+        dependencies=["commandsv2-java"],
     )
 
     _java_dependency(
         group,
-        "fieldImages",
+        "fields",
         dependencies=[],
         maven_deps=[
             ("com.fasterxml.jackson.core:jackson-annotations", "2.15.2"),

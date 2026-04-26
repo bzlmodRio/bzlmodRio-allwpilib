@@ -2,7 +2,7 @@ load("@rules_java//java:defs.bzl", "java_import")
 
 java_import(
     name = "hal",
-    jars = ["@edu_wpi_first_hal_hal_java//jar:file"],
+    jars = ["@org_wpilib_hal_hal_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/hal:jni",
