@@ -1,10 +1,10 @@
 
 #include <wpi/hal/HAL.h>
-#include <wpi/util/json.hpp>
-#include <wpi/util/raw_ostream.hpp>
 
 #include <iostream>
 #include <string>
+#include <wpi/util/json.hpp>
+#include <wpi/util/raw_ostream.hpp>
 
 int main() {
   wpi::util::json xxx = "{}"_json;

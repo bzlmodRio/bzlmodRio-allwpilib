@@ -1,7 +1,6 @@
 
-#include <wpi/datalog/DataLogReader.hpp>
-
 #include <iostream>
+#include <wpi/datalog/DataLogReader.hpp>
 
 int main() {
   wpi::log::DataLogRecord record;

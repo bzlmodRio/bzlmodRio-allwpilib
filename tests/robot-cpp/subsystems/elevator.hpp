@@ -1,11 +1,11 @@
 #pragma once
 
+#include <wpi/commands2/Subsystem.hpp>
+#include <wpi/hardware/motor/PWMVictorSPX.hpp>
 #include <wpi/hardware/rotation/Encoder.hpp>
 #include <wpi/math/controller/PIDController.hpp>
-#include <wpi/hardware/motor/PWMVictorSPX.hpp>
 #include <wpi/simulation/ElevatorSim.hpp>
 #include <wpi/simulation/EncoderSim.hpp>
-#include <wpi/commands2/Subsystem.hpp>
 
 #include "robot-cpp/subsystems/ports.hpp"
 

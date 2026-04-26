@@ -3991,16 +3991,16 @@
     },
     "@@bzlmodrio-allwpilib+//:maven_java_deps.bzl%setup_bzlmodrio_allwpilib_java_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "upDCoDQbygWpBUEoiOyVNjvMAg6prZICpydOhShqBWY=",
+        "bzlTransitiveDigest": "NSskIGXQmry+1wgDjrYqt3byDhBuL7bSuaCYcu+IB9U=",
         "usagesDigest": "DFicyYDlGgQL7KzqZ/obPU19CwnYu5J0lsZZenqUJ0w=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
         "generatedRepoSpecs": {
-          "org_wpilib_annotations_annotations_java": {
+          "org_wpilib_annotations_java": {
             "repoRuleId": "@@bazel_tools//tools/build_defs/repo:jvm.bzl%jvm_import_external",
             "attributes": {
-              "generated_rule_name": "org_wpilib_annotations_annotations_java",
+              "generated_rule_name": "org_wpilib_annotations_java",
               "artifact_urls": [
                 "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/annotations-java/2027.0.0-alpha-4/annotations-java-2027.0.0-alpha-4.jar"
               ],

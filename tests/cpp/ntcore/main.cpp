@@ -1,7 +1,6 @@
 
-#include <wpi/nt/NetworkTable.hpp>
-
 #include <iostream>
+#include <wpi/nt/NetworkTable.hpp>
 
 int main() {
   std::cout << "Hello World" << std::endl;

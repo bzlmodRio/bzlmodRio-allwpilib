@@ -1,14 +1,16 @@
 
+#include "gtest/gtest.h"
 #include "wpi/apriltag/AprilTagDetector.hpp"
 #include "wpi/apriltag/AprilTagFieldLayout.hpp"
-#include "gtest/gtest.h"
 
 TEST(BasicTest, Basic) {
   wpi::apriltag::AprilTagFieldLayout layout =
-      wpi::apriltag::AprilTagFieldLayout::LoadField(wpi::apriltag::AprilTagField::k2022RapidReact);
+      wpi::apriltag::AprilTagFieldLayout::LoadField(
+          wpi::apriltag::AprilTagField::k2022RapidReact);
 
-  auto expectedPose = wpi::math::Pose3d{127.272_in, 216.01_in, 67.932_in,
-                                  wpi::math::Rotation3d{0_deg, 0_deg, 0_deg}};
+  auto expectedPose =
+      wpi::math::Pose3d{127.272_in, 216.01_in, 67.932_in,
+                        wpi::math::Rotation3d{0_deg, 0_deg, 0_deg}};
   auto maybePose = layout.GetTagPose(1);
   EXPECT_TRUE(maybePose);
   EXPECT_EQ(expectedPose, *maybePose);

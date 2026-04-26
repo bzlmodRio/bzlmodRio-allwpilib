@@ -1,7 +1,6 @@
 
-#include "wpi/cs/HttpCamera.hpp"
-
 #include "gtest/gtest.h"
+#include "wpi/cs/HttpCamera.hpp"
 
 class CameraSourceTest : public ::testing::Test {
  protected:

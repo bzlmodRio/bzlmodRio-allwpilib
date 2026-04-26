@@ -1,11 +1,10 @@
 
+#include <iostream>
 #include <wpi/cameraserver/CameraServer.hpp>
-#include <wpi/framework/TimedRobot.hpp>
 #include <wpi/commands2/Command.hpp>
 #include <wpi/commands2/CommandHelper.hpp>
 #include <wpi/commands2/Subsystem.hpp>
-
-#include <iostream>
+#include <wpi/framework/TimedRobot.hpp>
 
 class ExampleSubsystem : public wpi::cmd::Subsystem {
   void Periodic() override { std::cout << "Subsystem periodic" << std::endl; }

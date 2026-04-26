@@ -1,8 +1,8 @@
 #include "robot-cpp/subsystems/elevator.hpp"
 
-#include <wpi/system/RobotController.hpp>
 #include <wpi/math/controller/PIDController.hpp>
 #include <wpi/smartdashboard/SmartDashboard.hpp>
+#include <wpi/system/RobotController.hpp>
 
 namespace {
 constexpr double kP = 5.0;

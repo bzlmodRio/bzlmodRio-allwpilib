@@ -1,7 +1,7 @@
 #include "robot-cpp/subsystems/shooter.hpp"
 
-#include <wpi/smartdashboard/SmartDashboard.hpp>
 #include <wpi/math/system/Models.hpp>
+#include <wpi/smartdashboard/SmartDashboard.hpp>
 
 #include "wpi/system/RobotController.hpp"
 
@@ -16,8 +16,9 @@ constexpr double kGearing = 4;
 constexpr wpi::units::kilogram_square_meter_t kInertia{0.008};
 
 wpi::math::LinearSystem<1, 1, 1> kPlant{
-    wpi::math::Models::FlywheelFromPhysicalConstants(kGearbox, kInertia, kGearing)};
-    
+    wpi::math::Models::FlywheelFromPhysicalConstants(kGearbox, kInertia,
+                                                     kGearing)};
+
 }  // namespace
 
 Shooter::Shooter()

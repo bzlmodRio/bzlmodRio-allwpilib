@@ -1,7 +1,6 @@
 
-#include <wpi/units/length.hpp>
-
 #include <iostream>
+#include <wpi/units/length.hpp>
 
 int main() {
   std::cout << "Hello World" << std::endl;

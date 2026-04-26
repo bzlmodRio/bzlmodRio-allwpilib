@@ -1,11 +1,10 @@
 #include "robot-cpp/subsystems/drivetrain.hpp"
 
-#include <wpi/driverstation/Joystick.hpp>
-#include <wpi/system/RobotController.hpp>
-#include <wpi/smartdashboard/SmartDashboard.hpp>
-#include <wpi/units/length.hpp>
-
 #include <numbers>
+#include <wpi/driverstation/Joystick.hpp>
+#include <wpi/smartdashboard/SmartDashboard.hpp>
+#include <wpi/system/RobotController.hpp>
+#include <wpi/units/length.hpp>
 
 DriveTrain::DriveTrain()
     :  // m_gyro(wpi::SPI::Port::kMXP),
@@ -73,10 +72,11 @@ void DriveTrain::SimulationPeriodic() {
   // simulation, and write the simulated positions and velocities to our
   // simulated encoder and gyro. We negate the right side so that positive
   // voltages make the right side move forward.
-  m_drivetrainSimulator.SetInputs(wpi::units::volt_t{m_leftMotorA.GetDutyCycle()} *
-                                      wpi::RobotController::GetInputVoltage(),
-                                  wpi::units::volt_t{-m_rightMotorA.GetDutyCycle()} *
-                                      wpi::RobotController::GetInputVoltage());
+  m_drivetrainSimulator.SetInputs(
+      wpi::units::volt_t{m_leftMotorA.GetDutyCycle()} *
+          wpi::RobotController::GetInputVoltage(),
+      wpi::units::volt_t{-m_rightMotorA.GetDutyCycle()} *
+          wpi::RobotController::GetInputVoltage());
   m_drivetrainSimulator.Update(20_ms);
 
   m_leftEncoderSim.SetDistance(

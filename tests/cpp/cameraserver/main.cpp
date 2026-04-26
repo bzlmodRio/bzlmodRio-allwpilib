@@ -1,7 +1,6 @@
 
-#include <wpi/cameraserver/CameraServer.hpp>
-
 #include <iostream>
+#include <wpi/cameraserver/CameraServer.hpp>
 
 int main() {
   std::cout << "Hello World" << std::endl;

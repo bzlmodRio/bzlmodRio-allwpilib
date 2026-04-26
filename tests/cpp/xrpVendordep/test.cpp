@@ -1,6 +1,6 @@
 
-#include "wpi/xrp/XRPGyro.hpp"
 #include "gtest/gtest.h"
+#include "wpi/xrp/XRPGyro.hpp"
 
 TEST(BasicTest, Basic) {
   wpi::xrp::XRPGyro gyro;

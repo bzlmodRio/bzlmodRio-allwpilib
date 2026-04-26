@@ -1,8 +1,7 @@
 
+#include <iostream>
 #include <wpi/cameraserver/CameraServer.hpp>
 #include <wpi/framework/TimedRobot.hpp>
-
-#include <iostream>
 
 class Robot : public wpi::TimedRobot {
  public:

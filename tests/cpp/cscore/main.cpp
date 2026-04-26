@@ -1,7 +1,7 @@
 
-#include "wpi/cs/HttpCamera.hpp"
-
 #include <iostream>
+
+#include "wpi/cs/HttpCamera.hpp"
 
 int main() {
   std::cout << "Hello World" << std::endl;

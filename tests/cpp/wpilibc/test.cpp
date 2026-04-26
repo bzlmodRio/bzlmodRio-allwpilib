@@ -1,9 +1,9 @@
 
 #include <wpi/hal/HALBase.h>
 
+#include "gtest/gtest.h"
 #include "wpi/hardware/discrete/AnalogInput.hpp"
 #include "wpi/simulation/AnalogInputSim.hpp"
-#include "gtest/gtest.h"
 
 TEST(BasicTest, Basic) {
   HAL_Initialize(500, 0);

@@ -1,6 +1,6 @@
 
-#include "wpi/romi/RomiGyro.hpp"
 #include "gtest/gtest.h"
+#include "wpi/romi/RomiGyro.hpp"
 
 TEST(BasicTest, Basic) {
   wpi::romi::RomiGyro gyro;

@@ -1,16 +1,16 @@
 #pragma once
 
 // #include <frc/ADXRS450_Gyro.h>
-#include <wpi/hardware/rotation/Encoder.hpp>
 #include <wpi/drive/DifferentialDrive.hpp>
-#include <wpi/math/kinematics/DifferentialDriveOdometry.hpp>
 #include <wpi/hardware/motor/PWMVictorSPX.hpp>
+#include <wpi/hardware/rotation/Encoder.hpp>
+#include <wpi/math/kinematics/DifferentialDriveOdometry.hpp>
 // #include <frc/simulation/ADXRS450_GyroSim.h>
+#include <wpi/commands2/Subsystem.hpp>
 #include <wpi/simulation/DifferentialDrivetrainSim.hpp>
 #include <wpi/simulation/EncoderSim.hpp>
 #include <wpi/simulation/SimDeviceSim.hpp>
 #include <wpi/smartdashboard/Field2d.hpp>
-#include <wpi/commands2/Subsystem.hpp>
 
 #include "robot-cpp/subsystems/ports.hpp"
 
@@ -49,7 +49,8 @@ class DriveTrain : public wpi::cmd::Subsystem {
                               kDrivetrainEncoderRightPortB};
   // wpi::ADXRS450_Gyro m_gyro;
 
-  wpi::math::DifferentialDriveOdometry m_odometry{wpi::math::Rotation2d{}, 0_m, 0_m};
+  wpi::math::DifferentialDriveOdometry m_odometry{wpi::math::Rotation2d{}, 0_m,
+                                                  0_m};
   wpi::Field2d m_field;
 
   // Simulation

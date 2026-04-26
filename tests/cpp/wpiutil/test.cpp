@@ -1,8 +1,7 @@
 
 
-#include <wpi/util/circular_buffer.hpp>
-
 #include <array>
+#include <wpi/util/circular_buffer.hpp>
 
 #include "gtest/gtest.h"
 

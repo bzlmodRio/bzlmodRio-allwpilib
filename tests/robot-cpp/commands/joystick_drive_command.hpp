@@ -1,8 +1,8 @@
 #pragma once
 
-#include <wpi/driverstation/Joystick.hpp>
 #include <wpi/commands2/Command.hpp>
 #include <wpi/commands2/CommandHelper.hpp>
+#include <wpi/driverstation/Joystick.hpp>
 
 #include "robot-cpp/subsystems/drivetrain.hpp"
 
