@@ -1,6 +1,5 @@
 load("@bzlmodrio-allwpilib//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_allwpilib_cpp_dependencies")
 load("@bzlmodrio-allwpilib//:maven_java_deps.bzl", "get_bzlmodrio_allwpilib_java_dependencies", "setup_legacy_bzlmodrio_allwpilib_java_dependencies")
-load("@bzlmodrio-ni//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_ni_cpp_dependencies")
 load("@bzlmodrio-opencv//:maven_cpp_deps.bzl", "setup_legacy_bzlmodrio_opencv_cpp_dependencies")
 load("@bzlmodrio-opencv//:maven_java_deps.bzl", "setup_legacy_bzlmodrio_opencv_java_dependencies")
 load("@rules_bazelrio//:nonbzlmod_setup.bzl", "setup_rules_bazelrio")
@@ -43,7 +42,6 @@ def _setup_toolchains():
 def _setup_cpp_dependencies():
     setup_legacy_bzlmodrio_allwpilib_cpp_dependencies()
     setup_legacy_bzlmodrio_opencv_cpp_dependencies()
-    setup_legacy_bzlmodrio_ni_cpp_dependencies()
 
 def _setup_java_dependencies():
     rules_jvm_external_deps()

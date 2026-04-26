@@ -1,16 +1,16 @@
 package frc.robot.subsystems;
 
-import edu.wpi.first.math.controller.PIDController;
-import edu.wpi.first.math.system.plant.DCMotor;
-import edu.wpi.first.math.util.Units;
-import edu.wpi.first.wpilibj.Encoder;
-import edu.wpi.first.wpilibj.RobotBase;
-import edu.wpi.first.wpilibj.RobotController;
-import edu.wpi.first.wpilibj.motorcontrol.PWMSparkFlex;
-import edu.wpi.first.wpilibj.simulation.ElevatorSim;
-import edu.wpi.first.wpilibj.simulation.EncoderSim;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import org.wpilib.command2.SubsystemBase;
+import org.wpilib.framework.RobotBase;
+import org.wpilib.hardware.motor.PWMSparkFlex;
+import org.wpilib.hardware.rotation.Encoder;
+import org.wpilib.math.controller.PIDController;
+import org.wpilib.math.system.DCMotor;
+import org.wpilib.math.util.Units;
+import org.wpilib.simulation.ElevatorSim;
+import org.wpilib.simulation.EncoderSim;
+import org.wpilib.smartdashboard.SmartDashboard;
+import org.wpilib.system.RobotController;
 
 public class Elevator extends SubsystemBase {
   private static final double kP = 4;
@@ -67,7 +67,7 @@ public class Elevator extends SubsystemBase {
   }
 
   public void setVoltage(double output) {
-    m_motor.set(output);
+    m_motor.setDutyCycle(output);
   }
 
   public void goToHeight(double height) {
@@ -86,12 +86,12 @@ public class Elevator extends SubsystemBase {
 
   @Override
   public void simulationPeriodic() {
-    m_elevatorSim.setInput(m_motor.get() * RobotController.getInputVoltage());
+    m_elevatorSim.setInput(m_motor.getDutyCycle() * RobotController.getInputVoltage());
     m_elevatorSim.update(0.02);
     m_encoderSim.setDistance(m_elevatorSim.getPosition());
   }
 
   public void stop() {
-    m_motor.set(0);
+    m_motor.setDutyCycle(0);
   }
 }

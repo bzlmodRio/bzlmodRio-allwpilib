@@ -4,6 +4,5 @@ cc_library(
     srcs = glob(["**/*.lib", "**/*.a"], allow_empty=True),
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-ni//libraries/cpp/ni:shared",
     ],
 )

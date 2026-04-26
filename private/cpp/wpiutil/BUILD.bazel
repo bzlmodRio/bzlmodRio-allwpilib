@@ -52,9 +52,7 @@ cc_library(
         "//conditions:default": [],
     }),
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
-    deps = [
-        "@bzlmodrio-ni//libraries/cpp/ni:shared",
-    ] + select({
+    deps = [] + select({
         "@rules_bzlmodrio_toolchains//conditions:windows_arm64": [":shared_interface"],
         "@rules_bzlmodrio_toolchains//conditions:windows_x86_64": [":shared_interface"],
         "//conditions:default": [],

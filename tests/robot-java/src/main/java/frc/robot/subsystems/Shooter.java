@@ -4,19 +4,19 @@
 
 package frc.robot.subsystems;
 
-import edu.wpi.first.math.controller.PIDController;
-import edu.wpi.first.math.numbers.N1;
-import edu.wpi.first.math.system.LinearSystem;
-import edu.wpi.first.math.system.plant.DCMotor;
-import edu.wpi.first.math.system.plant.LinearSystemId;
-import edu.wpi.first.wpilibj.Encoder;
-import edu.wpi.first.wpilibj.RobotBase;
-import edu.wpi.first.wpilibj.RobotController;
-import edu.wpi.first.wpilibj.motorcontrol.PWMSparkFlex;
-import edu.wpi.first.wpilibj.simulation.EncoderSim;
-import edu.wpi.first.wpilibj.simulation.FlywheelSim;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import org.wpilib.command2.SubsystemBase;
+import org.wpilib.framework.RobotBase;
+import org.wpilib.hardware.motor.PWMSparkFlex;
+import org.wpilib.hardware.rotation.Encoder;
+import org.wpilib.math.controller.PIDController;
+import org.wpilib.math.numbers.N1;
+import org.wpilib.math.system.DCMotor;
+import org.wpilib.math.system.LinearSystem;
+import org.wpilib.math.system.Models;
+import org.wpilib.simulation.EncoderSim;
+import org.wpilib.simulation.FlywheelSim;
+import org.wpilib.smartdashboard.SmartDashboard;
+import org.wpilib.system.RobotController;
 
 /**
  * The claw subsystem is a simple system with a motor for opening and closing. If using stronger
@@ -50,18 +50,18 @@ public class Shooter extends SubsystemBase {
       m_encoderSim = new EncoderSim(m_encoder);
 
       LinearSystem<N1, N1, N1> plant =
-          LinearSystemId.createFlywheelSystem(kGearbox, kGearing, kInertia);
+          Models.flywheelFromPhysicalConstants(kGearbox, kGearing, kInertia);
       m_flywheelSim = new FlywheelSim(plant, kGearbox);
     }
   }
 
   public void log() {
-    SmartDashboard.putNumber("Shooter Speed", m_motor.get());
+    SmartDashboard.putNumber("Shooter Speed", m_motor.getDutyCycle());
     SmartDashboard.putNumber("Shooter RPM", getRpm());
   }
 
   public void stop() {
-    m_motor.set(0);
+    m_motor.setDutyCycle(0);
   }
 
   public void spinAtRpm(double rpm) {
@@ -81,7 +81,7 @@ public class Shooter extends SubsystemBase {
 
   @Override
   public void simulationPeriodic() {
-    m_flywheelSim.setInput(m_motor.get() * RobotController.getInputVoltage());
+    m_flywheelSim.setInput(m_motor.getDutyCycle() * RobotController.getInputVoltage());
 
     m_flywheelSim.update(0.02);
     m_encoderSim.setRate(m_flywheelSim.getAngularVelocity());

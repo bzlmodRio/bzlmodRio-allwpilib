@@ -55,12 +55,6 @@ http_archive(
 )
 
 http_archive(
-    name = "bzlmodrio-ni",
-    sha256 = "e8232c386bacfad08c45aaa7e625f587ec040cfb71f25a3b8f17b6abd909f38e",
-    url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2026.1.0/bzlmodRio-ni-2026.1.0.tar.gz",
-)
-
-http_archive(
     name = "googletest",
     sha256 = "8ad598c73ad796e0d8280b082cebd82a630d73e73cd3c70057938a6501bba5d7",
     strip_prefix = "googletest-1.14.0",

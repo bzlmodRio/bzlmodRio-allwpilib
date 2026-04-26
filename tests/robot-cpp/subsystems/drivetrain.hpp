@@ -1,21 +1,20 @@
 #pragma once
 
 // #include <frc/ADXRS450_Gyro.h>
-#include <frc/Encoder.h>
-#include <frc/drive/DifferentialDrive.h>
-#include <frc/kinematics/DifferentialDriveOdometry.h>
-#include <frc/motorcontrol/MotorControllerGroup.h>
-#include <frc/motorcontrol/PWMVictorSPX.h>
+#include <wpi/hardware/rotation/Encoder.hpp>
+#include <wpi/drive/DifferentialDrive.hpp>
+#include <wpi/math/kinematics/DifferentialDriveOdometry.hpp>
+#include <wpi/hardware/motor/PWMVictorSPX.hpp>
 // #include <frc/simulation/ADXRS450_GyroSim.h>
-#include <frc/simulation/DifferentialDrivetrainSim.h>
-#include <frc/simulation/EncoderSim.h>
-#include <frc/simulation/SimDeviceSim.h>
-#include <frc/smartdashboard/Field2d.h>
-#include <frc2/command/SubsystemBase.h>
+#include <wpi/simulation/DifferentialDrivetrainSim.hpp>
+#include <wpi/simulation/EncoderSim.hpp>
+#include <wpi/simulation/SimDeviceSim.hpp>
+#include <wpi/smartdashboard/Field2d.hpp>
+#include <wpi/commands2/Subsystem.hpp>
 
 #include "robot-cpp/subsystems/ports.hpp"
 
-class DriveTrain : public frc2::SubsystemBase {
+class DriveTrain : public wpi::cmd::Subsystem {
  public:
   DriveTrain();
 
@@ -36,26 +35,26 @@ class DriveTrain : public frc2::SubsystemBase {
  private:
   void Log();
 
-  frc::PWMVictorSPX m_leftMotorA{kDrivetrainMotorLeftAPort};
-  frc::PWMVictorSPX m_leftMotorB{kDrivetrainMotorLeftBPort};
+  wpi::PWMVictorSPX m_leftMotorA{kDrivetrainMotorLeftAPort};
+  wpi::PWMVictorSPX m_leftMotorB{kDrivetrainMotorLeftBPort};
 
-  frc::PWMVictorSPX m_rightMotorA{kDrivetrainMotorRightAPort};
-  frc::PWMVictorSPX m_rightMotorB{kDrivetrainMotorRightBPort};
+  wpi::PWMVictorSPX m_rightMotorA{kDrivetrainMotorRightAPort};
+  wpi::PWMVictorSPX m_rightMotorB{kDrivetrainMotorRightBPort};
 
-  frc::DifferentialDrive m_robotDrive{m_leftMotorA, m_rightMotorA};
+  wpi::DifferentialDrive m_robotDrive{m_leftMotorA, m_rightMotorA};
 
-  frc::Encoder m_leftEncoder{kDrivetrainEncoderLeftPortA,
+  wpi::Encoder m_leftEncoder{kDrivetrainEncoderLeftPortA,
                              kDrivetrainEncoderLeftPortB};
-  frc::Encoder m_rightEncoder{kDrivetrainEncoderRightPortA,
+  wpi::Encoder m_rightEncoder{kDrivetrainEncoderRightPortA,
                               kDrivetrainEncoderRightPortB};
-  // frc::ADXRS450_Gyro m_gyro;
+  // wpi::ADXRS450_Gyro m_gyro;
 
-  frc::DifferentialDriveOdometry m_odometry{frc::Rotation2d{}, 0_m, 0_m};
-  frc::Field2d m_field;
+  wpi::math::DifferentialDriveOdometry m_odometry{wpi::math::Rotation2d{}, 0_m, 0_m};
+  wpi::Field2d m_field;
 
   // Simulation
-  // frc::sim::ADXRS450_GyroSim m_gyroSim{m_gyro};
-  frc::sim::EncoderSim m_leftEncoderSim{m_leftEncoder};
-  frc::sim::EncoderSim m_rightEncoderSim{m_rightEncoder};
-  frc::sim::DifferentialDrivetrainSim m_drivetrainSimulator;
+  // wpi::sim::ADXRS450_GyroSim m_gyroSim{m_gyro};
+  wpi::sim::EncoderSim m_leftEncoderSim{m_leftEncoder};
+  wpi::sim::EncoderSim m_rightEncoderSim{m_rightEncoder};
+  wpi::sim::DifferentialDrivetrainSim m_drivetrainSimulator;
 };

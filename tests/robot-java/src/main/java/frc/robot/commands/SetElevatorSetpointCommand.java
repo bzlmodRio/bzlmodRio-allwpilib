@@ -4,8 +4,8 @@
 
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.Elevator;
+import org.wpilib.command2.Command;
 
 public class SetElevatorSetpointCommand extends Command {
   private final Elevator m_elevator;

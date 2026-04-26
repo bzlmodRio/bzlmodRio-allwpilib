@@ -43,16 +43,6 @@ def main():
 def manual_cleanup(REPO_DIR):
 
     # Manual cleanup
-    for lib in ["hal", "wpiutil"]:
-        lib_build = os.path.join(REPO_DIR, "private", "cpp", lib, "static.BUILD.bazel")
-        manual_cleanup_helper(
-            lib_build,
-            lambda contents: contents.replace(
-                "@bzlmodrio-ni//libraries/cpp/ni:static",
-                "@bzlmodrio-ni//libraries/cpp/ni:shared",
-            ),
-        )
-
     filepath = os.path.join(REPO_DIR, "libraries", "tools", "tool_launchers.bzl")
     manual_cleanup_helper(
         filepath,

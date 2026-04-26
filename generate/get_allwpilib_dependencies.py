@@ -2,7 +2,6 @@ from bazelrio_gentool.deps.dependency_container import (
     DependencyContainer,
     ModuleDependency,
 )
-from get_ni_dependencies import get_ni_dependencies
 from get_opencv_dependencies import get_opencv_dependencies
 
 
@@ -110,7 +109,6 @@ def get_allwpilib_dependencies(
     use_local_opencv=False,
     use_local_ni=False,
     opencv_version_override="2025.4.10.0-3.bcr3",
-    ni_version_override="2026.1.0",
 ):
     year = "2027"
     version = "2027.0.0-alpha-4"
@@ -123,13 +121,6 @@ def get_allwpilib_dependencies(
         local_rel_folder="../../libraries/bzlmodRio-opencv",
         remote_repo="bzlmodRio-opencv",
     )
-    ni_dependency = ModuleDependency(
-        get_ni_dependencies(),
-        use_local_version=use_local_ni,
-        override_version=ni_version_override,
-        local_rel_folder="../../libraries/bzlmodRio-ni",
-        remote_repo="bzlmodRio-ni",
-    )
 
     group = DependencyContainer(
         "bzlmodrio-allwpilib",
@@ -139,13 +130,12 @@ def get_allwpilib_dependencies(
         patch=patch,
     )
     group.add_module_dependency(opencv_dependency)
-    group.add_module_dependency(ni_dependency, meta_deps=["ni"])
 
     _cc_dependency(
         group,
         "wpiutil",
         has_jni=True,
-        dependencies=["ni"],
+        dependencies=[],
     )
     _cc_dependency(
         group,
@@ -168,7 +158,7 @@ def get_allwpilib_dependencies(
         group,
         "hal",
         has_jni=True,
-        dependencies=["wpiutil-cpp", "ntcore-cpp", "datalog-cpp", "ni"],
+        dependencies=["wpiutil-cpp", "ntcore-cpp", "datalog-cpp"],
         artifact_install_name="wpiHal",
     )
     _cc_dependency(
@@ -236,7 +226,7 @@ def get_allwpilib_dependencies(
         ],
     )
 
-    # _java_dependency(group, "annotations", group_id=f"org.wpilib", dependencies=[])
+    _java_dependency(group, "annotations", group_id=f"org.wpilib", dependencies=[])
 
     _java_dependency(
         group,
@@ -340,7 +330,7 @@ def get_allwpilib_dependencies(
             "cameraserver-java",
             "opencv-cpp",
             "wpilibj-java",
-            # "annotations-java",
+            "annotations-java",
         ],
     )
     _java_dependency(
@@ -361,7 +351,7 @@ def get_allwpilib_dependencies(
             "cameraserver-java",
             "opencv-cpp",
             "wpilibj-java",
-            # "annotations-java",
+            "annotations-java",
         ],
     )
     _java_dependency(

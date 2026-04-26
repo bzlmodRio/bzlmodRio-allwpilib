@@ -4,21 +4,21 @@
 
 package frc.robot.subsystems;
 
-import edu.wpi.first.math.geometry.Rotation2d;
-import edu.wpi.first.math.kinematics.DifferentialDriveOdometry;
-// import edu.wpi.first.wpilibj.ADXRS450_Gyro;
-import edu.wpi.first.wpilibj.Encoder;
-import edu.wpi.first.wpilibj.RobotBase;
-import edu.wpi.first.wpilibj.RobotController;
-import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.motorcontrol.MotorController;
-import edu.wpi.first.wpilibj.motorcontrol.PWMVictorSPX;
-// import edu.wpi.first.wpilibj.simulation.ADXRS450_GyroSim;
-import edu.wpi.first.wpilibj.simulation.DifferentialDrivetrainSim;
-import edu.wpi.first.wpilibj.simulation.EncoderSim;
-import edu.wpi.first.wpilibj.smartdashboard.Field2d;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import org.wpilib.command2.SubsystemBase;
+import org.wpilib.drive.DifferentialDrive;
+import org.wpilib.framework.RobotBase;
+import org.wpilib.hardware.motor.MotorController;
+import org.wpilib.hardware.motor.PWMVictorSPX;
+// import org.wpilib.simulation.ADXRS450_GyroSim;
+import org.wpilib.hardware.rotation.Encoder;
+import org.wpilib.math.geometry.Rotation2d;
+import org.wpilib.math.kinematics.DifferentialDriveOdometry;
+// import org.wpilib.wpilibj.ADXRS450_Gyro;
+import org.wpilib.simulation.DifferentialDrivetrainSim;
+import org.wpilib.simulation.EncoderSim;
+import org.wpilib.smartdashboard.Field2d;
+import org.wpilib.smartdashboard.SmartDashboard;
+import org.wpilib.system.RobotController;
 
 public class DriveTrain extends SubsystemBase {
   private final MotorController m_leftMotor;
@@ -121,8 +121,8 @@ public class DriveTrain extends SubsystemBase {
   @Override
   public void simulationPeriodic() {
     m_drivetrainSimulator.setInputs(
-        m_leftMotor.get() * RobotController.getInputVoltage(),
-        m_rightMotor.get() * RobotController.getInputVoltage());
+        m_leftMotor.getDutyCycle() * RobotController.getInputVoltage(),
+        m_rightMotor.getDutyCycle() * RobotController.getInputVoltage());
     m_drivetrainSimulator.update(0.02);
 
     m_leftEncoderSim.setDistance(m_drivetrainSimulator.getLeftPosition());
@@ -133,7 +133,7 @@ public class DriveTrain extends SubsystemBase {
   }
 
   public void stop() {
-    m_leftMotor.set(0);
-    m_rightMotor.set(0);
+    m_leftMotor.setDutyCycle(0);
+    m_rightMotor.setDutyCycle(0);
   }
 }

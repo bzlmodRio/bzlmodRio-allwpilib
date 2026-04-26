@@ -56,7 +56,6 @@ cc_library(
         "@bzlmodrio-allwpilib//libraries/cpp/datalog:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
-        "@bzlmodrio-ni//libraries/cpp/ni:shared",
     ] + select({
         "@rules_bzlmodrio_toolchains//conditions:windows_arm64": [":shared_interface"],
         "@rules_bzlmodrio_toolchains//conditions:windows_x86_64": [":shared_interface"],

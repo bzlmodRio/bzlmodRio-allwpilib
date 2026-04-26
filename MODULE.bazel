@@ -12,7 +12,6 @@ bazel_dep(name = "rules_jvm_external", version = "6.3")
 bazel_dep(name = "rules_bzlmodrio_toolchains", version = "2025-1.bcr5")
 bazel_dep(name = "rules_bzlmodrio_jdk", version = "17.0.12-7.bcr1")
 bazel_dep(name = "bzlmodrio-opencv", version = "2025.4.10.0-3.bcr3")
-bazel_dep(name = "bzlmodrio-ni", version = "2026.1.0")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
@@ -486,6 +485,7 @@ use_repo(
 setup_bzlmodrio_allwpilib_java_dependencies = use_extension("//:maven_java_deps.bzl", "setup_bzlmodrio_allwpilib_java_dependencies")
 use_repo(
     setup_bzlmodrio_allwpilib_java_dependencies,
+    "org_wpilib_annotations_annotations_java",
     "org_wpilib_apriltag_apriltag_java",
     "org_wpilib_cameraserver_cameraserver_java",
     "org_wpilib_commands3_java",

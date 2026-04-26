@@ -1,15 +1,15 @@
 #pragma once
 
-#include <frc/Encoder.h>
-#include <frc/controller/PIDController.h>
-#include <frc/motorcontrol/PWMVictorSPX.h>
-#include <frc/simulation/ElevatorSim.h>
-#include <frc/simulation/EncoderSim.h>
-#include <frc2/command/Subsystem.h>
+#include <wpi/hardware/rotation/Encoder.hpp>
+#include <wpi/math/controller/PIDController.hpp>
+#include <wpi/hardware/motor/PWMVictorSPX.hpp>
+#include <wpi/simulation/ElevatorSim.hpp>
+#include <wpi/simulation/EncoderSim.hpp>
+#include <wpi/commands2/Subsystem.hpp>
 
 #include "robot-cpp/subsystems/ports.hpp"
 
-class Elevator : public frc2::Subsystem {
+class Elevator : public wpi::cmd::Subsystem {
  public:
   Elevator();
 
@@ -17,7 +17,7 @@ class Elevator : public frc2::Subsystem {
 
   void SetVoltage(double output);
 
-  void GoToHeight(units::meter_t height);
+  void GoToHeight(wpi::units::meter_t height);
 
   bool IsAtHeight();
 
@@ -28,11 +28,11 @@ class Elevator : public frc2::Subsystem {
  private:
   void Log();
 
-  frc::PWMVictorSPX m_motor{kElevatorMotorPort};
-  frc::Encoder m_encoder{kElevatorEncoderPortA, kElevatorEncoderPortB};
+  wpi::PWMVictorSPX m_motor{kElevatorMotorPort};
+  wpi::Encoder m_encoder{kElevatorEncoderPortA, kElevatorEncoderPortB};
   double m_setpoint{0};
-  frc::PIDController m_controller;
+  wpi::math::PIDController m_controller;
 
-  frc::sim::EncoderSim m_encoderSim{m_encoder};
-  frc::sim::ElevatorSim m_elevatorSim;
+  wpi::sim::EncoderSim m_encoderSim{m_encoder};
+  wpi::sim::ElevatorSim m_elevatorSim;
 };

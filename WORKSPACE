@@ -57,12 +57,6 @@ http_archive(
     url = "https://github.com/bzlmodRio/bzlmodRio-opencv/releases/download/2025.4.10.0-3.bcr3/bzlmodRio-opencv-2025.4.10.0-3.bcr3.tar.gz",
 )
 
-http_archive(
-    name = "bzlmodrio-ni",
-    sha256 = "e8232c386bacfad08c45aaa7e625f587ec040cfb71f25a3b8f17b6abd909f38e",
-    url = "https://github.com/bzlmodRio/bzlmodRio-ni/releases/download/2026.1.0/bzlmodRio-ni-2026.1.0.tar.gz",
-)
-
 ########################
 
 ########################
