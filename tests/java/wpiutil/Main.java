@@ -27,5 +27,6 @@ public final class Main {
 
     System.out.println(queue);
     System.out.println(WPIUtilJNI.now());
+    WPIUtilJNI.checkMsvcRuntime();
   }
 }

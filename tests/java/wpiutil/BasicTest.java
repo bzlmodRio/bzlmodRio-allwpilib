@@ -9,5 +9,7 @@ class BasicTest {
   @Test
   void basicTest() {
     assertDoesNotThrow(WPIUtilJNI::now);
+
+    WPIUtilJNI.checkMsvcRuntime();
   }
 }
