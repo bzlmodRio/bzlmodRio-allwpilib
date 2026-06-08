@@ -2,12 +2,10 @@ load("@rules_java//java:defs.bzl", "java_import")
 load("@rules_jvm_external//:defs.bzl", "artifact")
 
 java_import(
-    name = "fieldImages",
-    jars = ["@org_wpilib_fieldimages_fieldimages_java//jar:file"],
+    name = "fields",
+    jars = ["@org_wpilib_fields_fields_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
-        artifact("com.fasterxml.jackson.core:jackson-annotations"),
-        artifact("com.fasterxml.jackson.core:jackson-core"),
-        artifact("com.fasterxml.jackson.core:jackson-databind"),
+        artifact("io.avaje:avaje-jsonb"),
     ],
 )

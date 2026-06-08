@@ -5,6 +5,6 @@ java_import(
     jars = ["@org_wpilib_epilogue_epilogue_processor_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/java/wpilibNewCommands",
+        "@bzlmodrio-allwpilib//libraries/java/commandsv2",
     ],
 )

@@ -1,9 +1,0 @@
-load("@rules_java//java:defs.bzl", "java_import")
-
-java_import(
-    name = "shuffleboard-api",
-    jars = ["@org_wpilib_shuffleboard_api//jar:file"],
-    visibility = ["//visibility:public"],
-    deps = [
-    ],
-)

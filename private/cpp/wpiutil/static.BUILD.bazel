@@ -11,6 +11,5 @@ cc_library(
     ),
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-ni//libraries/cpp/ni:shared",
     ],
 )

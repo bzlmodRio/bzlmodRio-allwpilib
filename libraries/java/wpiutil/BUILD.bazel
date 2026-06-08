@@ -7,9 +7,7 @@ java_import(
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
-        artifact("com.fasterxml.jackson.core:jackson-annotations"),
-        artifact("com.fasterxml.jackson.core:jackson-core"),
-        artifact("com.fasterxml.jackson.core:jackson-databind"),
+        artifact("io.avaje:avaje-jsonb"),
         artifact("us.hebi.quickbuf:quickbuf-runtime"),
     ],
 )

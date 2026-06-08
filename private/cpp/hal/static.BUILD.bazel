@@ -11,7 +11,8 @@ cc_library(
     ),
     visibility = ["//visibility:public"],
     deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/datalog:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/ntcore:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
-        "@bzlmodrio-ni//libraries/cpp/ni:shared",
     ],
 )
