@@ -3758,9 +3758,6 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
     )
 
-def setup_legacy_bzlmodrio_allwpilib_cpp_dependencies():
-    __setup_bzlmodrio_allwpilib_cpp_dependencies(None)
-
 setup_bzlmodrio_allwpilib_cpp_dependencies = module_extension(
     __setup_bzlmodrio_allwpilib_cpp_dependencies,
 )

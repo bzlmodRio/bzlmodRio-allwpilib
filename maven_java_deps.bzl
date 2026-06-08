@@ -98,24 +98,6 @@ def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
         server_urls = ["https://frcmaven.wpi.edu/release"],
     )
 
-def setup_legacy_bzlmodrio_allwpilib_java_dependencies():
-    __setup_bzlmodrio_allwpilib_java_dependencies(None)
-
 setup_bzlmodrio_allwpilib_java_dependencies = module_extension(
     __setup_bzlmodrio_allwpilib_java_dependencies,
 )
-
-def get_bzlmodrio_allwpilib_java_dependencies():
-    artifacts = [
-        "com.fasterxml.jackson.core:jackson-annotations:2.15.2",
-        "com.fasterxml.jackson.core:jackson-core:2.15.2",
-        "com.fasterxml.jackson.core:jackson-databind:2.15.2",
-        "org.ejml:ejml-simple:0.43.1",
-        "us.hebi.quickbuf:quickbuf-runtime:1.3.2",
-    ]
-    repositories = [
-        "https://repo1.maven.org/maven2",
-        "https://frcmaven.wpi.edu/release",
-    ]
-
-    return artifacts, repositories
