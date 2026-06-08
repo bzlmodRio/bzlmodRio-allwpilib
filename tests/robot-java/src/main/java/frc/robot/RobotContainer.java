@@ -1,17 +1,16 @@
 package frc.robot;
 
-import org.wpilib.math.util.Units;
-import org.wpilib.driverstation.GenericHID;
-import org.wpilib.driverstation.Joystick;
-import org.wpilib.driverstation.XboxController;
-import org.wpilib.command2.Command;
-import org.wpilib.command2.button.JoystickButton;
 import frc.robot.commands.JoystickDriveCommand;
 import frc.robot.commands.SetElevatorSetpointCommand;
 import frc.robot.commands.ShooterRpmCommand;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.Elevator;
 import frc.robot.subsystems.Shooter;
+import org.wpilib.command2.Command;
+import org.wpilib.command2.button.JoystickButton;
+import org.wpilib.driverstation.GenericHID;
+import org.wpilib.driverstation.Joystick;
+import org.wpilib.math.util.Units;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a

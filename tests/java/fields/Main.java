@@ -1,4 +1,4 @@
-package fieldimages;
+package fields;
 
 import org.wpilib.fields.Fields;
 
@@ -11,6 +11,6 @@ public final class Main {
    * @param args Command line arguments.
    */
   public static void main(String[] args) {
-    System.out.println(Fields.k2018PowerUp);
+    System.out.println(Fields.FRC_2018_POWER_UP);
   }
 }

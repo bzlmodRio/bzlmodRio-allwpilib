@@ -1,16 +1,15 @@
 
-#include <cameraserver/CameraServer.h>
-#include <frc/TimedRobot.h>
-
 #include <iostream>
+#include <wpi/cameraserver/CameraServer.hpp>
+#include <wpi/framework/TimedRobot.hpp>
 
-class Robot : public frc::TimedRobot {
+class Robot : public wpi::TimedRobot {
  public:
-  void RobotInit() override { frc::CameraServer::StartAutomaticCapture(); }
+  Robot() { wpi::CameraServer::StartAutomaticCapture(); }
 
   void RobotPeriodic() override { std::cout << "Hello world" << std::endl; }
 };
 
 #ifndef RUNNING_FRC_TESTS
-int main() { return frc::StartRobot<Robot>(); }
+int main() { return wpi::StartRobot<Robot>(); }
 #endif

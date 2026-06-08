@@ -1,11 +1,11 @@
-package wpilibnewcommands;
+package commandsv2;
 
-import org.wpilib.vision.stream.CameraServer;
+import org.wpilib.command2.Command;
+import org.wpilib.command2.Subsystem;
 import org.wpilib.framework.RobotBase;
 import org.wpilib.framework.TimedRobot;
 import org.wpilib.simulation.DriverStationSim;
-import org.wpilib.command2.Command;
-import org.wpilib.command2.Subsystem;
+import org.wpilib.vision.stream.CameraServer;
 
 /**
  * Do NOT add any static variables to this class, or any initialization at all. Unless you know what
@@ -34,8 +34,7 @@ public final class Main {
   private static class Robot extends TimedRobot {
     private final ExampleSubsystem m_subsystem = new ExampleSubsystem();
 
-    @Override
-    public void robotInit() {
+    public Robot() {
       CameraServer.startAutomaticCapture();
 
       m_subsystem.setDefaultCommand(new ExampleCommand(m_subsystem));
@@ -59,6 +58,6 @@ public final class Main {
    * <p>If you change your main robot class, change the parameter type.
    */
   public static void main(String... args) {
-    RobotBase.startRobot(Robot::new);
+    RobotBase.startRobot(Robot.class);
   }
 }

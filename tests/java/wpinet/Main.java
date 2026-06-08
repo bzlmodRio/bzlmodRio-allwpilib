@@ -1,7 +1,7 @@
 package wpinet;
 
-import org.wpilib.net.WPINetJNI;
 import java.io.IOException;
+import org.wpilib.net.WPINetJNI;
 
 public final class Main {
   private Main() {}

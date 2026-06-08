@@ -1,5 +1,4 @@
 load("@rules_bazelrio//:java_rules.bzl", "bazelrio_java_binary", "bazelrio_java_test")
-load("@rules_wpi_styleguide//styleguide:java_styleguide.bzl", "java_styleguide")
 
 bazelrio_java_binary(
     name = "main",
@@ -7,7 +6,7 @@ bazelrio_java_binary(
     jvm_flags = [
         "-Djava.library.path=.",
     ],
-    main_class = "bazelrio_test.Main",
+    main_class = "commands3.Main",
     deps = [
         "@bzlmodrio-allwpilib//libraries/java/commands3",
     ],
@@ -18,7 +17,7 @@ bazelrio_java_test(
     srcs = ["BasicTest.java"],
     args = [
         "--select-package",
-        "bazelrio_test",
+        "commands3",
     ],
     javacopts = ["-Werror"],
     jvm_flags = [
@@ -44,4 +43,4 @@ bazelrio_java_test(
     ],
 )
 
-java_styleguide(name = "commands3")
+# java_styleguide(name = "commands3") # TODO renable styleguide

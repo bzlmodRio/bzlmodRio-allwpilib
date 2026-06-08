@@ -1,8 +1,8 @@
 
-#include "frc/xrp/XRPGyro.h"
 #include "gtest/gtest.h"
+#include "wpi/xrp/XRPGyro.hpp"
 
 TEST(BasicTest, Basic) {
-  frc::XRPGyro gyro;
+  wpi::xrp::XRPGyro gyro;
   EXPECT_TRUE(true);
 }

@@ -1,8 +1,8 @@
 package wpilibj;
 
-import org.wpilib.vision.stream.CameraServer;
 import org.wpilib.framework.RobotBase;
 import org.wpilib.framework.TimedRobot;
+import org.wpilib.vision.stream.CameraServer;
 
 /**
  * Do NOT add any static variables to this class, or any initialization at all. Unless you know what
@@ -11,8 +11,7 @@ import org.wpilib.framework.TimedRobot;
  */
 public final class Main {
   private static class Robot extends TimedRobot {
-    @Override
-    public void robotInit() {
+    Robot() {
       CameraServer.startAutomaticCapture();
     }
 
@@ -30,6 +29,6 @@ public final class Main {
    * <p>If you change your main robot class, change the parameter type.
    */
   public static void main(String... args) {
-    RobotBase.startRobot(Robot::new);
+    RobotBase.startRobot(Robot.class);
   }
 }

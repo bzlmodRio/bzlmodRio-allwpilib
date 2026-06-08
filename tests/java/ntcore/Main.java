@@ -16,8 +16,8 @@ public final class Main {
     NetworkTableInstance serverInst = NetworkTableInstance.create();
     NetworkTableInstance clientInst = NetworkTableInstance.create();
 
-    serverInst.startServer("topiclistenertest.json", "127.0.0.1", 10010);
-    clientInst.startClient4("client");
+    serverInst.startServer("topiclistenertest.json", "127.0.0.1", "", 10010);
+    clientInst.startClient("client");
     clientInst.setServer("127.0.0.1", 10010);
 
     System.out.println("Hello World");

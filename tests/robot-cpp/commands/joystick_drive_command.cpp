@@ -2,7 +2,7 @@
 
 #include <utility>
 
-JoystickDriveCommand::JoystickDriveCommand(frc::Joystick& joystick,
+JoystickDriveCommand::JoystickDriveCommand(wpi::Joystick& joystick,
                                            DriveTrain& drivetrain)
     : m_joystick(joystick), m_drivetrain(drivetrain) {
   SetName("JoystickDriveCommand");

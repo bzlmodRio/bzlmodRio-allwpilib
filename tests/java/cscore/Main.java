@@ -1,9 +1,9 @@
 package cscore;
 
-import org.wpilib.vision.camera.CameraServerJNI;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import org.wpilib.vision.camera.CameraServerJNI;
 
 public final class Main {
   private Main() {}
@@ -13,6 +13,7 @@ public final class Main {
    *
    * @param args Command line arguments.
    */
+  @SuppressWarnings("restricted")
   public static void main(String[] args) {
     System.out.println("Hello World");
     System.out.println(System.getProperty("user.dir"));

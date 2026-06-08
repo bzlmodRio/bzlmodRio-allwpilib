@@ -1,7 +1,7 @@
 package hal;
 
-import org.wpilib.hardware.hal.HAL;
 import org.junit.jupiter.api.Test;
+import org.wpilib.hardware.hal.HAL;
 
 class BasicTest {
   @Test

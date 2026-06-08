@@ -1,10 +1,10 @@
-package fieldimages;
+package fields;
 
-import org.wpilib.fields.FieldConfig;
-import org.wpilib.fields.Fields;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
+import org.wpilib.fields.FieldConfig;
+import org.wpilib.fields.Fields;
 
 class BasicTest {
   @ParameterizedTest

@@ -1,30 +1,29 @@
 
-#include <cameraserver/CameraServer.h>
-#include <frc/TimedRobot.h>
-#include <frc2/command/Command.h>
-#include <frc2/command/CommandHelper.h>
-#include <frc2/command/Subsystem.h>
-
 #include <iostream>
+#include <wpi/cameraserver/CameraServer.hpp>
+#include <wpi/commands2/Command.hpp>
+#include <wpi/commands2/CommandHelper.hpp>
+#include <wpi/commands2/Subsystem.hpp>
+#include <wpi/framework/TimedRobot.hpp>
 
-class ExampleSubsystem : public frc2::Subsystem {
+class ExampleSubsystem : public wpi::cmd::Subsystem {
   void Periodic() override { std::cout << "Subsystem periodic" << std::endl; }
 };
 
 class ExampleCommand
-    : public frc2::CommandHelper<frc2::Command, ExampleCommand> {
+    : public wpi::cmd::CommandHelper<wpi::cmd::Command, ExampleCommand> {
  public:
   explicit ExampleCommand(ExampleSubsystem& sub) { AddRequirements(&sub); }
 
   void Execute() override { std::cout << "Command periodic" << std::endl; }
 };
 
-class Robot : public frc::TimedRobot {
+class Robot : public wpi::TimedRobot {
  public:
   ExampleSubsystem m_subsystem;
 
-  void RobotInit() override {
-    frc::CameraServer::StartAutomaticCapture();
+  Robot() {
+    wpi::CameraServer::StartAutomaticCapture();
 
     m_subsystem.SetDefaultCommand(ExampleCommand{m_subsystem});
   }
@@ -32,5 +31,5 @@ class Robot : public frc::TimedRobot {
 };
 
 #ifndef RUNNING_FRC_TESTS
-int main() { return frc::StartRobot<Robot>(); }
+int main() { return wpi::StartRobot<Robot>(); }
 #endif

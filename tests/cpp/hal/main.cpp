@@ -1,6 +1,6 @@
 
-#include <hal/DriverStation.h>
-#include <hal/HAL.h>
+#include <wpi/hal/DriverStation.h>
+#include <wpi/hal/HAL.h>
 
 #include <iostream>
 

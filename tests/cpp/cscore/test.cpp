@@ -1,5 +1,5 @@
 
-#include <cscore.h>
+#include <wpi/cs/HttpCamera.hpp>
 
 #include "gtest/gtest.h"
 
@@ -9,6 +9,6 @@ class CameraSourceTest : public ::testing::Test {
 };
 
 TEST_F(CameraSourceTest, Basictest) {
-  auto source = cs::HttpCamera("axis", "http://localhost:8000");
-  // cs::Shutdown();
+  auto source = wpi::cs::HttpCamera("axis", "http://localhost:8000");
+  // wpi::cs::Shutdown();
 }
