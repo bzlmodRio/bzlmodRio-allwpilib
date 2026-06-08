@@ -233,10 +233,8 @@ def get_allwpilib_dependencies(
         "wpiutil",
         dependencies=["wpiutil-cpp"],
         maven_deps=[
-            ("com.fasterxml.jackson.core:jackson-annotations", "2.15.2"),
-            ("com.fasterxml.jackson.core:jackson-core", "2.15.2"),
-            ("com.fasterxml.jackson.core:jackson-databind", "2.15.2"),
-            ("us.hebi.quickbuf:quickbuf-runtime", "1.3.2"),
+            ("io.avaje:avaje-jsonb", "3.11"),
+            ("us.hebi.quickbuf:quickbuf-runtime", "1.4"),
         ],
     )
     _java_dependency(
@@ -248,10 +246,8 @@ def get_allwpilib_dependencies(
         "wpimath",
         dependencies=["wpiutil-java", "wpiutil-cpp", "wpimath-cpp", "wpiunits-java"],
         maven_deps=[
-            ("com.fasterxml.jackson.core:jackson-annotations", "2.15.2"),
-            ("com.fasterxml.jackson.core:jackson-core", "2.15.2"),
-            ("com.fasterxml.jackson.core:jackson-databind", "2.15.2"),
-            ("org.ejml:ejml-simple", "0.43.1"),
+            ("io.avaje:avaje-jsonb", "3.11"),
+            ("org.ejml:ejml-simple", "0.44.0"),
         ],
     )
     _java_dependency(group, "apriltag", dependencies=["wpimath-java", "apriltag-cpp"])
@@ -267,7 +263,7 @@ def get_allwpilib_dependencies(
         group_id="org.wpilib.epilogue",
         dependencies=["ntcore-java", "wpiunits-java", "wpiutil-java"],
         maven_deps=[
-            ("us.hebi.quickbuf:quickbuf-runtime", "1.3.2"),
+            ("us.hebi.quickbuf:quickbuf-runtime", "1.4"),
         ],
     )
 
@@ -366,9 +362,7 @@ def get_allwpilib_dependencies(
         "fields",
         dependencies=[],
         maven_deps=[
-            ("com.fasterxml.jackson.core:jackson-annotations", "2.15.2"),
-            ("com.fasterxml.jackson.core:jackson-core", "2.15.2"),
-            ("com.fasterxml.jackson.core:jackson-databind", "2.15.2"),
+            ("io.avaje:avaje-jsonb", "3.11"),
         ],
     )
 
