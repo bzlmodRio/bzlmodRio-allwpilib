@@ -5,5 +5,5 @@ java_binary(
     javacopts = ["-Werror"],
     main_class = "robotbuilder.RobotBuilder",
     visibility = ["//visibility:public"],
-    runtime_deps = ["@bazelrio_edu_wpi_first_tools_robotbuilder//jar"],
+    runtime_deps = ["@bazelrio_org_wpilib_tools_robotbuilder//jar"],
 )

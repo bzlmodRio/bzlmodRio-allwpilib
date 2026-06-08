@@ -3,7 +3,7 @@ load("@rules_jvm_external//:defs.bzl", "artifact")
 
 java_import(
     name = "wpiutil",
-    jars = ["@edu_wpi_first_wpiutil_wpiutil_java//jar:file"],
+    jars = ["@org_wpilib_wpiutil_wpiutil_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",

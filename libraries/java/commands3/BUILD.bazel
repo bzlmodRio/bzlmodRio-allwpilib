@@ -1,15 +1,22 @@
 load("@rules_java//java:defs.bzl", "java_import")
 
 java_import(
-    name = "cameraserver",
-    jars = ["@org_wpilib_cameraserver_cameraserver_java//jar:file"],
+    name = "commands3",
+    jars = ["@org_wpilib_commands3_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/cscore:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/hal:jni",
         "@bzlmodrio-allwpilib//libraries/cpp/ntcore:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:jni",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/annotations",
+        "@bzlmodrio-allwpilib//libraries/java/cameraserver",
         "@bzlmodrio-allwpilib//libraries/java/cscore",
+        "@bzlmodrio-allwpilib//libraries/java/hal",
         "@bzlmodrio-allwpilib//libraries/java/ntcore",
+        "@bzlmodrio-allwpilib//libraries/java/wpilibj",
+        "@bzlmodrio-allwpilib//libraries/java/wpimath",
         "@bzlmodrio-allwpilib//libraries/java/wpiutil",
         "@bzlmodrio-opencv//libraries/cpp/opencv:jni",
     ],

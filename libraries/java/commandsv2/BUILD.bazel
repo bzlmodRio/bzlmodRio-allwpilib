@@ -2,7 +2,7 @@ load("@rules_java//java:defs.bzl", "java_import")
 
 java_import(
     name = "wpilibNewCommands",
-    jars = ["@edu_wpi_first_wpilibnewcommands_wpilibnewcommands_java//jar:file"],
+    jars = ["@org_wpilib_wpilibnewcommands_wpilibnewcommands_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/cscore:jni",
