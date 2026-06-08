@@ -1,6 +1,6 @@
 package cscore;
 
-import edu.wpi.first.cscore.CameraServerJNI;
+import org.wpilib.vision.camera.CameraServerJNI;
 import org.junit.jupiter.api.Test;
 
 class BasicTest {

@@ -1,6 +1,6 @@
 package wpinet;
 
-import edu.wpi.first.net.WPINetJNI;
+import org.wpilib.net.WPINetJNI;
 import java.io.IOException;
 import org.junit.jupiter.api.Test;
 

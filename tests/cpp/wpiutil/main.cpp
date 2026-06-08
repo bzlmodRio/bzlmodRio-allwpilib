@@ -1,6 +1,6 @@
 
-#include <wpi/json.h>
-#include <wpi/raw_ostream.h>
+#include <wpi/util/json.hpp>
+#include <wpi/util/raw_ostream.hpp>
 
 #include <iostream>
 #include <string>

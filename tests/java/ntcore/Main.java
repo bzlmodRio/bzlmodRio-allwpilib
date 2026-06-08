@@ -1,6 +1,6 @@
 package ntcore;
 
-import edu.wpi.first.networktables.NetworkTableInstance;
+import org.wpilib.networktables.NetworkTableInstance;
 
 public final class Main {
   private Main() {}

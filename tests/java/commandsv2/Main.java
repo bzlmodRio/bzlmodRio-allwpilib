@@ -1,11 +1,11 @@
 package wpilibnewcommands;
 
-import edu.wpi.first.cameraserver.CameraServer;
-import edu.wpi.first.wpilibj.RobotBase;
-import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.simulation.DriverStationSim;
-import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.Subsystem;
+import org.wpilib.vision.stream.CameraServer;
+import org.wpilib.framework.RobotBase;
+import org.wpilib.framework.TimedRobot;
+import org.wpilib.simulation.DriverStationSim;
+import org.wpilib.command2.Command;
+import org.wpilib.command2.Subsystem;
 
 /**
  * Do NOT add any static variables to this class, or any initialization at all. Unless you know what

@@ -1,5 +1,5 @@
 
-#include <wpinet/hostname.h>
+#include <wpi/net/hostname.hpp>
 
 #include "gtest/gtest.h"
 

@@ -3,10 +3,10 @@ package wpilibnewcommands;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.simulation.DriverStationSim;
-import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import edu.wpi.first.wpilibj2.command.StartEndCommand;
+import org.wpilib.driverstation.DriverStation;
+import org.wpilib.simulation.DriverStationSim;
+import org.wpilib.command2.CommandScheduler;
+import org.wpilib.command2.StartEndCommand;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

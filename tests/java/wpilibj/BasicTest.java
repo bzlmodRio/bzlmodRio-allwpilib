@@ -2,8 +2,8 @@ package wpilibj;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import edu.wpi.first.math.filter.SlewRateLimiter;
-import edu.wpi.first.wpilibj.Timer;
+import org.wpilib.math.filter.SlewRateLimiter;
+import org.wpilib.system.Timer;
 import org.junit.jupiter.api.Test;
 
 class BasicTest {

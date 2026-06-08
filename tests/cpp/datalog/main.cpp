@@ -1,7 +1,7 @@
 
 #include <iostream>
-#include <wpi/raw_ostream.h>
-#include <wpi/json.h>
+#include <wpi/util/raw_ostream.hpp>
+#include <wpi/util/json.hpp>
 
 int main() {
     wpi::json xxx = "{}"_json;

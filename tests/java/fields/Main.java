@@ -1,6 +1,6 @@
 package fieldimages;
 
-import edu.wpi.first.fields.Fields;
+import org.wpilib.fields.Fields;
 
 public final class Main {
   private Main() {}

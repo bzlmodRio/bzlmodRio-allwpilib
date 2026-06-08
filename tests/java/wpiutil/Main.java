@@ -1,8 +1,8 @@
 package wpiutil;
 
-import edu.wpi.first.util.CircularBuffer;
-import edu.wpi.first.util.CombinedRuntimeLoader;
-import edu.wpi.first.util.WPIUtilJNI;
+import org.wpilib.util.container.CircularBuffer;
+import org.wpilib.util.runtime.CombinedRuntimeLoader;
+import org.wpilib.util.WPIUtilJNI;
 
 public final class Main {
   private Main() {}

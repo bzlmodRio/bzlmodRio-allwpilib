@@ -4,8 +4,8 @@
 
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj2.command.Command;
+import org.wpilib.driverstation.Joystick;
+import org.wpilib.command2.Command;
 import frc.robot.subsystems.DriveTrain;
 
 /** Have the robot drive tank style. */

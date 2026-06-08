@@ -1,6 +1,6 @@
 package hal;
 
-import edu.wpi.first.hal.HAL;
+import org.wpilib.hardware.hal.HAL;
 import org.junit.jupiter.api.Test;
 
 class BasicTest {

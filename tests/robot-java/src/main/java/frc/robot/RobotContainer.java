@@ -1,11 +1,11 @@
 package frc.robot;
 
-import edu.wpi.first.math.util.Units;
-import edu.wpi.first.wpilibj.GenericHID;
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+import org.wpilib.math.util.Units;
+import org.wpilib.driverstation.GenericHID;
+import org.wpilib.driverstation.Joystick;
+import org.wpilib.driverstation.XboxController;
+import org.wpilib.command2.Command;
+import org.wpilib.command2.button.JoystickButton;
 import frc.robot.commands.JoystickDriveCommand;
 import frc.robot.commands.SetElevatorSetpointCommand;
 import frc.robot.commands.ShooterRpmCommand;
@@ -39,8 +39,8 @@ public class RobotContainer {
   /**
    * Use this method to define your button->command mappings. Buttons can be created by
    * instantiating a {@link GenericHID} or one of its subclasses ({@link
-   * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a {@link
-   * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
+   * org.wpilib.driverstation.Joystick} or {@link XboxController}), and then passing it to a {@link
+   * org.wpilib.command2.button.JoystickButton}.
    */
   private void configureButtonBindings() {
     // Create some buttons

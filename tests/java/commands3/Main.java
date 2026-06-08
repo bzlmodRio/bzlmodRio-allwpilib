@@ -2,9 +2,9 @@
 
 package bazelrio_test;
 
-import edu.wpi.first.util.CircularBuffer;
-import edu.wpi.first.util.WPIUtilJNI;
-import edu.wpi.first.util.CombinedRuntimeLoader;
+import org.wpilib.util.container.CircularBuffer;
+import org.wpilib.util.WPIUtilJNI;
+import org.wpilib.util.runtime.CombinedRuntimeLoader;
 
 public class Main {
     private static final double[] m_values = {
