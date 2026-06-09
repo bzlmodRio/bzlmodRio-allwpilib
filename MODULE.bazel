@@ -29,9 +29,9 @@ use_repo(
     "maven",
 )
 
-setup_bzlmodrio_allwpilib_cpp_dependencies = use_extension("//:maven_cpp_deps.bzl", "setup_bzlmodrio_allwpilib_cpp_dependencies")
+deps = use_extension("//:maven_cpp_deps.bzl", "deps")
 use_repo(
-    setup_bzlmodrio_allwpilib_cpp_dependencies,
+    deps,
     "bazelrio_org_wpilib_apriltag_apriltag-cpp_headers",
     "bazelrio_org_wpilib_apriltag_apriltag-cpp_linuxarm64",
     "bazelrio_org_wpilib_apriltag_apriltag-cpp_linuxarm64debug",

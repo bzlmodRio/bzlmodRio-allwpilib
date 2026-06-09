@@ -49,9 +49,6 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bazel_skylib/1.8.2/source.json": "34a3c8bcf233b835eb74be9d628899bb32999d3e0eadef1947a0a562a2b16ffb",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/buildozer/7.1.2/MODULE.bazel": "2e8dd40ede9c454042645fd8d8d0cd1527966aa5c919de86661e62953cd73d84",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/buildozer/7.1.2/source.json": "c9028a501d2db85793a6996205c8de120944f50a0d570438fcae0457a5f9d1f8",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2025.4.10.0-3.bcr3/MODULE.bazel": "de23d58a5c2d7bb5fc96aad68f8fc5c6995bf772ed960efba2e8ec26db8f1ca0",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2027.4.13.0-3/MODULE.bazel": "b94a5ee312513dbf48b572a339bfcf727dea8ca6151304b929672412f1a01ba3",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/bzlmodrio-opencv/2027.4.13.0-3/source.json": "7c73661aba1d94cb17aae9ddb556ed148a7215e7ac168b850ebbcff58a9a7a1a",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/google_benchmark/1.8.2/MODULE.bazel": "a70cf1bba851000ba93b58ae2f6d76490a9feb74192e57ab8e8ff13c34ec50cb",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/googletest/1.11.0/MODULE.bazel": "3a83f095183f66345ca86aa13c58b59f9f94a2f81999c093d4eeaa2d262d12f4",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/googletest/1.14.0.bcr.1/MODULE.bazel": "22c31a561553727960057361aa33bf20fb2e98584bc4fec007906e27053f80c6",
@@ -98,8 +95,6 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_apple/3.16.0/source.json": "d8b5fe461272018cc07cfafce11fe369c7525330804c37eec5a82f84cd475366",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/MODULE.bazel": "e4004326cab72e5b27b697a01b03139276ac04c6e7c177ddb9424afc8709e51b",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/source.json": "7da669bc69d497942a9ac21b8f76c05f4a91b4212e3a697a1e27d9358576e995",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr4/MODULE.bazel": "5747793f9d36d55ecab212b1af2f4292fbf4dafed00ee5d4b09e726d5eb68773",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr5/MODULE.bazel": "9bcb97d90efa95cf28b2bac35915deff1e8b0c783b1d41221dda44f204202ba6",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr7/MODULE.bazel": "f7dfc784f9a1f6a54afab293494609ecb74afc185a33f6d7f89730029831f3c8",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1/MODULE.bazel": "81e540a541aac221fc84fc24124b8e5d07e2eff75942f44e67510c56794a5f22",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-2/MODULE.bazel": "f8f29556c285c8e8c2d596d8bde5bdfffb220084f4e40a5c00ab76c33151b82c",
@@ -215,10 +210,10 @@
   },
   "selectedYankedVersions": {},
   "moduleExtensions": {
-    "@@bzlmodrio-allwpilib+//:maven_cpp_deps.bzl%setup_bzlmodrio_allwpilib_cpp_dependencies": {
+    "@@bzlmodrio-allwpilib+//:maven_cpp_deps.bzl%deps": {
       "general": {
-        "bzlTransitiveDigest": "+L+7wa1RwMZfyeZ60vqttL8vbv3xCXIaa2wbL9QyBAs=",
-        "usagesDigest": "H4Na5CLLBTOHgWl7ZYwHCUk8ZHJuk26Xp61s31SmQNs=",
+        "bzlTransitiveDigest": "9vHOdaODWlne86zam9iHcyPnTo28VxZXSRci4BPSdLU=",
+        "usagesDigest": "MQlBv+8oJ478p88NGHVIZFqQRBGrFPe+c7ifwHN3hVc=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -4387,10 +4382,10 @@
         ]
       }
     },
-    "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%setup_bzlmodrio_opencv_cpp_dependencies": {
+    "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%deps": {
       "general": {
-        "bzlTransitiveDigest": "f3I4dH9GjqIXLIOE20eE+77DfnJqmwUNPrp7tv2YH94=",
-        "usagesDigest": "OmAihkE8wd2grpFh/THN3ZawQAfw/pUeyjId4z7HY1Q=",
+        "bzlTransitiveDigest": "zlNi8XygFuJzNgXwv0Yer7TqgkQ/bWpfnSebpCXfdwc=",
+        "usagesDigest": "hlO6cbte+7Zhqv4TBGZHAWChGiIsrqx7Gy9i/mKLnTo=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -4400,7 +4395,7 @@
             "attributes": {
               "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-headers.zip",
               "sha256": "e1454fadad5c6b525a43388e7be63bc6d5e25f74c221ab5ad18f2b3f61f030d6",
-              "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
+              "build_file_content": "load(\"@rules_cc//cc:cc_library.bzl\", \"cc_library\")\n\ncc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
           "org_wpilib_opencv-cpp_sources": {
@@ -4409,6 +4404,38 @@
               "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-sources.zip",
               "sha256": "28b35e66a3cc6c4667cddd915ad4db8182fd45482595d8efdc73e08b006ceeab",
               "build_file_content": "filegroup(\n     name = \"sources\",\n     srcs = glob([\"**\"]),\n     visibility = [\"//visibility:public\"],\n )\n "
+            }
+          },
+          "org_wpilib_opencv-cpp_linuxarm64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-linuxarm64static.zip",
+              "sha256": "2f4f65049e8418d4132fa0b0e95164a3e14cf5938c14a3525e5760dda34d5984",
+              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
+          "org_wpilib_opencv-cpp_linuxarm64": {
+            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-linuxarm64.zip",
+              "sha256": "90a81046e444fe035cdc4795e74149df8e31a70ba817f4c2e8b2966b71f92b85",
+              "static_repository_name": "org_wpilib_opencv-cpp_linuxarm64static"
+            }
+          },
+          "org_wpilib_opencv-cpp_linuxarm64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-linuxarm64staticdebug.zip",
+              "sha256": "7884e90b4e51f75216a1b875e1039ca96d2b5aab47d88a64ea4d1a812fe625a7",
+              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
+          "org_wpilib_opencv-cpp_linuxarm64debug": {
+            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-linuxarm64debug.zip",
+              "sha256": "364a7f50320f8dbd69a6fb1ee89caf3570393a9c86c38ebc22c649256f700e23",
+              "static_repository_name": "org_wpilib_opencv-cpp_linuxarm64staticdebug"
             }
           },
           "org_wpilib_opencv-cpp_linuxsystemcorestatic": {
@@ -4443,22 +4470,6 @@
               "static_repository_name": "org_wpilib_opencv-cpp_linuxsystemcorestaticdebug"
             }
           },
-          "org_wpilib_opencv-cpp_linuxarm64static": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-linuxarm64static.zip",
-              "sha256": "2f4f65049e8418d4132fa0b0e95164a3e14cf5938c14a3525e5760dda34d5984",
-              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "org_wpilib_opencv-cpp_linuxarm64": {
-            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-linuxarm64.zip",
-              "sha256": "90a81046e444fe035cdc4795e74149df8e31a70ba817f4c2e8b2966b71f92b85",
-              "static_repository_name": "org_wpilib_opencv-cpp_linuxarm64static"
-            }
-          },
           "org_wpilib_opencv-cpp_linuxx86-64static": {
             "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
             "attributes": {
@@ -4473,102 +4484,6 @@
               "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-linuxx86-64.zip",
               "sha256": "9da8059c46572071bacd13f0b2288282e65853abbee9ba0cce99eeee7d0a8b59",
               "static_repository_name": "org_wpilib_opencv-cpp_linuxx86-64static"
-            }
-          },
-          "org_wpilib_opencv-cpp_osxarm64static": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxarm64static.zip",
-              "sha256": "6512c351254d34b33e796c2a9103fe7771a2b0cda582443b98d26ecbc819d04b",
-              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "org_wpilib_opencv-cpp_osxarm64": {
-            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxarm64.zip",
-              "sha256": "5b04598eed6e4f33994aa834d7df13d862a97571cc1aca43f2f402f520878568",
-              "static_repository_name": "org_wpilib_opencv-cpp_osxarm64static"
-            }
-          },
-          "org_wpilib_opencv-cpp_osxuniversalstatic": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxuniversalstatic.zip",
-              "sha256": "d1fc11ff74a06dbb721945564b254b6e25a9e98eb47258adca80d49ee076a9d2",
-              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "org_wpilib_opencv-cpp_osxuniversal": {
-            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxuniversal.zip",
-              "sha256": "1dadc172e9241d0dfc10f506d76a8635e1726f09f9d329aa2c8853a0d3ef63d4",
-              "static_repository_name": "org_wpilib_opencv-cpp_osxuniversalstatic"
-            }
-          },
-          "org_wpilib_opencv-cpp_osxx86-64static": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxx86-64static.zip",
-              "sha256": "912cea1c5b29aeda4befe09cc50882a22b180e3c798e35fda678a18130ac0183",
-              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "org_wpilib_opencv-cpp_osxx86-64": {
-            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxx86-64.zip",
-              "sha256": "1be9dcc9db720224ec024215c8b7ad7cffe72323122727a773184ddef4c38579",
-              "static_repository_name": "org_wpilib_opencv-cpp_osxx86-64static"
-            }
-          },
-          "org_wpilib_opencv-cpp_windowsx86-64static": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsx86-64static.zip",
-              "sha256": "34e9c1b5af0d37622f0b9d40fed408aeecc46d772eb64278cf2318e0892e0e31",
-              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "org_wpilib_opencv-cpp_windowsx86-64": {
-            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsx86-64.zip",
-              "sha256": "47843b292e5b4c5f0331fc6c8f3d26a3f22db2438e25379eb87bbb28a6be1288",
-              "static_repository_name": "org_wpilib_opencv-cpp_windowsx86-64static"
-            }
-          },
-          "org_wpilib_opencv-cpp_windowsarm64static": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsarm64static.zip",
-              "sha256": "4c4eacfbee78e497da6178d95f9417d8f3b84a193769b26dd5138f0e43803e76",
-              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "org_wpilib_opencv-cpp_windowsarm64": {
-            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsarm64.zip",
-              "sha256": "52f8a756cc79f8822d6b47a79a5eeaa4a142df59a11882ae7f212377723641c8",
-              "static_repository_name": "org_wpilib_opencv-cpp_windowsarm64static"
-            }
-          },
-          "org_wpilib_opencv-cpp_linuxarm64staticdebug": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-linuxarm64staticdebug.zip",
-              "sha256": "7884e90b4e51f75216a1b875e1039ca96d2b5aab47d88a64ea4d1a812fe625a7",
-              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "org_wpilib_opencv-cpp_linuxarm64debug": {
-            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
-            "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-linuxarm64debug.zip",
-              "sha256": "364a7f50320f8dbd69a6fb1ee89caf3570393a9c86c38ebc22c649256f700e23",
-              "static_repository_name": "org_wpilib_opencv-cpp_linuxarm64staticdebug"
             }
           },
           "org_wpilib_opencv-cpp_linuxx86-64staticdebug": {
@@ -4587,6 +4502,22 @@
               "static_repository_name": "org_wpilib_opencv-cpp_linuxx86-64staticdebug"
             }
           },
+          "org_wpilib_opencv-cpp_osxarm64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxarm64static.zip",
+              "sha256": "6512c351254d34b33e796c2a9103fe7771a2b0cda582443b98d26ecbc819d04b",
+              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
+          "org_wpilib_opencv-cpp_osxarm64": {
+            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxarm64.zip",
+              "sha256": "5b04598eed6e4f33994aa834d7df13d862a97571cc1aca43f2f402f520878568",
+              "static_repository_name": "org_wpilib_opencv-cpp_osxarm64static"
+            }
+          },
           "org_wpilib_opencv-cpp_osxarm64staticdebug": {
             "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
             "attributes": {
@@ -4601,6 +4532,22 @@
               "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxarm64debug.zip",
               "sha256": "3d9f17248cd9f65bd37839b4fc838e167776139770fbe7ecec7936fb94a77741",
               "static_repository_name": "org_wpilib_opencv-cpp_osxarm64staticdebug"
+            }
+          },
+          "org_wpilib_opencv-cpp_osxuniversalstatic": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxuniversalstatic.zip",
+              "sha256": "d1fc11ff74a06dbb721945564b254b6e25a9e98eb47258adca80d49ee076a9d2",
+              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
+          "org_wpilib_opencv-cpp_osxuniversal": {
+            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxuniversal.zip",
+              "sha256": "1dadc172e9241d0dfc10f506d76a8635e1726f09f9d329aa2c8853a0d3ef63d4",
+              "static_repository_name": "org_wpilib_opencv-cpp_osxuniversalstatic"
             }
           },
           "org_wpilib_opencv-cpp_osxuniversalstaticdebug": {
@@ -4619,6 +4566,22 @@
               "static_repository_name": "org_wpilib_opencv-cpp_osxuniversalstaticdebug"
             }
           },
+          "org_wpilib_opencv-cpp_osxx86-64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxx86-64static.zip",
+              "sha256": "912cea1c5b29aeda4befe09cc50882a22b180e3c798e35fda678a18130ac0183",
+              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
+          "org_wpilib_opencv-cpp_osxx86-64": {
+            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-osxx86-64.zip",
+              "sha256": "1be9dcc9db720224ec024215c8b7ad7cffe72323122727a773184ddef4c38579",
+              "static_repository_name": "org_wpilib_opencv-cpp_osxx86-64static"
+            }
+          },
           "org_wpilib_opencv-cpp_osxx86-64staticdebug": {
             "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
             "attributes": {
@@ -4635,20 +4598,20 @@
               "static_repository_name": "org_wpilib_opencv-cpp_osxx86-64staticdebug"
             }
           },
-          "org_wpilib_opencv-cpp_windowsx86-64staticdebug": {
+          "org_wpilib_opencv-cpp_windowsarm64static": {
             "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
             "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsx86-64staticdebug.zip",
-              "sha256": "022d23a87f8c213a78fe5d50177c217cdd61f164990594952d83dc319454ab56",
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsarm64static.zip",
+              "sha256": "4c4eacfbee78e497da6178d95f9417d8f3b84a193769b26dd5138f0e43803e76",
               "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
             }
           },
-          "org_wpilib_opencv-cpp_windowsx86-64debug": {
+          "org_wpilib_opencv-cpp_windowsarm64": {
             "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
             "attributes": {
-              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsx86-64debug.zip",
-              "sha256": "353275e28d1b4bf093427b6e68889432c0c61974a14bc2372dc4455ccd44ab58",
-              "static_repository_name": "org_wpilib_opencv-cpp_windowsx86-64staticdebug"
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsarm64.zip",
+              "sha256": "52f8a756cc79f8822d6b47a79a5eeaa4a142df59a11882ae7f212377723641c8",
+              "static_repository_name": "org_wpilib_opencv-cpp_windowsarm64static"
             }
           },
           "org_wpilib_opencv-cpp_windowsarm64staticdebug": {
@@ -4665,6 +4628,38 @@
               "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsarm64debug.zip",
               "sha256": "ed79a7ca116caab00a1132ae8df6616ca9a43fe479493ac8bceb0026603e5d6c",
               "static_repository_name": "org_wpilib_opencv-cpp_windowsarm64staticdebug"
+            }
+          },
+          "org_wpilib_opencv-cpp_windowsx86-64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsx86-64static.zip",
+              "sha256": "34e9c1b5af0d37622f0b9d40fed408aeecc46d772eb64278cf2318e0892e0e31",
+              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
+          "org_wpilib_opencv-cpp_windowsx86-64": {
+            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsx86-64.zip",
+              "sha256": "47843b292e5b4c5f0331fc6c8f3d26a3f22db2438e25379eb87bbb28a6be1288",
+              "static_repository_name": "org_wpilib_opencv-cpp_windowsx86-64static"
+            }
+          },
+          "org_wpilib_opencv-cpp_windowsx86-64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsx86-64staticdebug.zip",
+              "sha256": "022d23a87f8c213a78fe5d50177c217cdd61f164990594952d83dc319454ab56",
+              "build_file_content": "load(\"@bzlmodrio-opencv//private/cpp/opencv:wrapped_cc_import.bzl\", \"static_alias\")\n\nexports_files(glob([\"**\"]))\n\nlibraries = glob([\"**/*.lib\", \"**/*.a\"], allow_empty=True)\n\nstatic_alias(\n    name = \"static_library_file\",\n    libraries = libraries,\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
+          "org_wpilib_opencv-cpp_windowsx86-64debug": {
+            "repoRuleId": "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%_download_and_generate",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/release/org/wpilib/thirdparty/opencv/opencv-cpp/2027-4.13.0-3/opencv-cpp-2027-4.13.0-3-windowsx86-64debug.zip",
+              "sha256": "353275e28d1b4bf093427b6e68889432c0c61974a14bc2372dc4455ccd44ab58",
+              "static_repository_name": "org_wpilib_opencv-cpp_windowsx86-64staticdebug"
             }
           }
         },

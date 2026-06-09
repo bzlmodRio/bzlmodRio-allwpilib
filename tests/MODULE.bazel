@@ -17,8 +17,11 @@ single_version_override(
     patches = ["//:toolchains.patch"],
 )
 bazel_dep(name = "bzlmodrio-opencv", version = "2027.4.13.0-3")
-single_version_override(
+archive_override(
     module_name = "bzlmodrio-opencv",
+    integrity = "sha256-56r1aSroTH6mPy+XvplhRjh75YJSWf3v7ZDntS8ELv0=",
+    strip_prefix = "bzlmodRio-opencv-567f0914644cb55a604e17ea39b559e728c7e4a1",
+    urls = ["https://github.com/wpilibsuite/bzlmodrio-opencv/archive/567f0914644cb55a604e17ea39b559e728c7e4a1.tar.gz"],
     patch_strip = 1,
     patches = ["//:opencv.patch"],
 )
