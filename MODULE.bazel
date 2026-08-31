@@ -32,9 +32,9 @@ use_repo(
     "maven",
 )
 
-setup_bzlmodrio_allwpilib_cpp_dependencies = use_extension("//:maven_cpp_deps.bzl", "setup_bzlmodrio_allwpilib_cpp_dependencies")
+deps = use_extension("//:maven_cpp_deps.bzl", "deps")
 use_repo(
-    setup_bzlmodrio_allwpilib_cpp_dependencies,
+    deps,
     "bazelrio_edu_wpi_first_apriltag_apriltag-cpp_headers",
     "bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm32",
     "bazelrio_edu_wpi_first_apriltag_apriltag-cpp_linuxarm32debug",

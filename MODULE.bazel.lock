@@ -200,10 +200,10 @@
   },
   "selectedYankedVersions": {},
   "moduleExtensions": {
-    "//:maven_cpp_deps.bzl%setup_bzlmodrio_allwpilib_cpp_dependencies": {
+    "//:maven_cpp_deps.bzl%deps": {
       "general": {
-        "bzlTransitiveDigest": "Kt6H9XVM376/Y4DQH1Jk4NGry9GSDnnoZxrVKe1h2eo=",
-        "usagesDigest": "itupMczsBfQOzcEVVbiMgsLYp+eJyQRsTU7Zc+8W0IA=",
+        "bzlTransitiveDigest": "k2j7dVCc01Ns+PEUbzEVulAxcLDDsBN2FivJEI9t+T8=",
+        "usagesDigest": "W7miMuYmYBGztzp6m4HohPjMAdqfOpjP/Mh71NKr2GQ=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
