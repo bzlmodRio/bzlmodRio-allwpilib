@@ -3,8 +3,7 @@ module(
     version = "2026.2.2",
 )
 
-bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2", dev_dependency = True)
-
+bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2")
 bazel_dep(name = "platforms", version = "0.0.11")
 bazel_dep(name = "rules_cc", version = "0.2.13")
 bazel_dep(name = "rules_java", version = "8.16.1")
