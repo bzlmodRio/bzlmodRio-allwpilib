@@ -1,6 +1,6 @@
 package hal;
 
-import edu.wpi.first.hal.HAL;
+import org.wpilib.hardware.hal.HAL;
 
 public final class Main {
   private Main() {}

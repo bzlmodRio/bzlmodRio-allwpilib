@@ -1,0 +1,85 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+alias(
+    name = "header_files",
+    actual = "@bazelrio_org_wpilib_halsim_halsim_xrp_headers//:header_files",
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+)
+
+cc_library(
+    name = "shared_interface",
+    srcs = select({
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64//:shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64debug//:shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_x86_64": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64//:shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_x86_64_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64debug//:shared_interface"],
+    }),
+    linkstatic = True,
+    tags = ["manual"],
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+    deps = ["@bazelrio_org_wpilib_halsim_halsim_xrp_headers//:headers"],
+)
+
+filegroup(
+    name = "shared_raw",
+    srcs = select({
+        "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:linux_x86_64_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64debug//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:osx": ["@bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversal//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:osx_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversaldebug//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64debug//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_x86_64": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64//:shared"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_x86_64_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64debug//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64//:shared"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64debug//:shared"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+)
+
+cc_library(
+    name = "shared",
+    srcs = [":shared_raw"],
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
+    ] + select({
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": [":shared_interface"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_x86_64": [":shared_interface"],
+        "//conditions:default": [],
+    }) + ["@bazelrio_org_wpilib_halsim_halsim_xrp_headers//:headers"],
+    alwayslink = 1,
+)
+
+cc_library(
+    name = "static",
+    linkstatic = 1,
+    target_compatible_with = select({
+        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+    deps = ["@bazelrio_org_wpilib_halsim_halsim_xrp_headers//:headers"] + select({
+        "@rules_bzlmodrio_toolchains//conditions:linux_x86_64": ["@bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:linux_x86_64_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:osx": ["@bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversalstatic//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:osx_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversalstaticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_arm64_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_x86_64": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//conditions:windows_x86_64_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64staticdebug//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64": ["@bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64static//:static_libs"],
+        "@rules_bzlmodrio_toolchains//constraints/is_bookworm64:bookworm64_debug": ["@bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64staticdebug//:static_libs"],
+    }),
+)

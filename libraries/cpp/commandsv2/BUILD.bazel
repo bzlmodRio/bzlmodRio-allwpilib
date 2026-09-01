@@ -1,0 +1,29 @@
+alias(
+    name = "commandsv2",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "header_files",
+    actual = "@bzlmodrio-allwpilib//private/cpp/commandsv2:header_files",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "static",
+    actual = "@bzlmodrio-allwpilib//private/cpp/commandsv2:static",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared",
+    actual = "@bzlmodrio-allwpilib//private/cpp/commandsv2:shared",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared_raw",
+    actual = "@bzlmodrio-allwpilib//private/cpp/commandsv2:shared_raw",
+    visibility = ["//visibility:public"],
+)

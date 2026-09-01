@@ -1,12 +1,18 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
 
 cc_library(
     name = "static_libs",
-    srcs = glob(["**/*.lib", "**/*.a"], allow_empty=True),
+    srcs = glob(
+        [
+            "**/*.lib",
+            "**/*.a",
+        ],
+        allow_empty = True,
+    ),
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/datalog:static",
         "@bzlmodrio-allwpilib//libraries/cpp/ntcore:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
-        "@bzlmodrio-ni//libraries/cpp/ni:shared",
     ],
 )

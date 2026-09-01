@@ -1,11 +1,18 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
 
 cc_library(
     name = "static_libs",
-    srcs = glob(["**/*.lib", "**/*.a"], allow_empty=True),
+    srcs = glob(
+        [
+            "**/*.lib",
+            "**/*.a",
+        ],
+        allow_empty = True,
+    ),
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
-        "@bzlmodrio-opencv//libraries/cpp/opencv:static",
+        "@bzlmodrio-opencv//libraries/cpp/opencv",
     ],
 )

@@ -1,6 +1,6 @@
 package ntcore;
 
-import edu.wpi.first.networktables.NetworkTableInstance;
+import org.wpilib.networktables.NetworkTableInstance;
 
 public final class Main {
   private Main() {}
@@ -16,7 +16,7 @@ public final class Main {
     NetworkTableInstance serverInst = NetworkTableInstance.create();
     NetworkTableInstance clientInst = NetworkTableInstance.create();
 
-    serverInst.startServer("topiclistenertest.json", "127.0.0.1", 10010);
+    serverInst.startServer("topiclistenertest.json", "127.0.0.1", "", 10010);
     clientInst.startClient("client");
     clientInst.setServer("127.0.0.1", 10010);
 

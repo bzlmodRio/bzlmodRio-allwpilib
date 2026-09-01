@@ -1,8 +1,8 @@
 package apriltag;
 
-import edu.wpi.first.apriltag.AprilTagFieldLayout;
-import edu.wpi.first.apriltag.AprilTagFields;
 import java.io.IOException;
+import org.wpilib.vision.apriltag.AprilTagFieldLayout;
+import org.wpilib.vision.apriltag.AprilTagFields;
 
 public final class Main {
   private Main() {}
@@ -14,6 +14,6 @@ public final class Main {
    */
   public static void main(String[] args) throws IOException {
     System.out.println(
-        AprilTagFieldLayout.loadFromResource(AprilTagFields.k2022RapidReact.m_resourceFile));
+        AprilTagFieldLayout.loadFromResource(AprilTagFields.k2022RapidReact.resourceFile));
   }
 }

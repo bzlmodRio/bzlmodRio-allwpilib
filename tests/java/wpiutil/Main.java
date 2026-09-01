@@ -1,8 +1,7 @@
 package wpiutil;
 
-import edu.wpi.first.util.CircularBuffer;
-import edu.wpi.first.util.CombinedRuntimeLoader;
-import edu.wpi.first.util.WPIUtilJNI;
+import org.wpilib.util.WPIUtilJNI;
+import org.wpilib.util.container.CircularBuffer;
 
 public final class Main {
   private Main() {}
@@ -27,7 +26,6 @@ public final class Main {
     }
 
     System.out.println(queue);
-    System.out.println(CombinedRuntimeLoader.getExtractionDirectory());
     System.out.println(WPIUtilJNI.now());
   }
 }

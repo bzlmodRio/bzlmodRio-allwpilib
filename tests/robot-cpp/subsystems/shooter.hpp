@@ -1,15 +1,15 @@
 #pragma once
 
-#include <frc/Encoder.h>
-#include <frc/controller/PIDController.h>
-#include <frc/motorcontrol/PWMVictorSPX.h>
-#include <frc/simulation/EncoderSim.h>
-#include <frc/simulation/FlywheelSim.h>
-#include <frc2/command/Subsystem.h>
+#include <wpi/commands2/Subsystem.hpp>
+#include <wpi/hardware/motor/PWMVictorSPX.hpp>
+#include <wpi/hardware/rotation/Encoder.hpp>
+#include <wpi/math/controller/PIDController.hpp>
+#include <wpi/simulation/EncoderSim.hpp>
+#include <wpi/simulation/FlywheelSim.hpp>
 
 #include "robot-cpp/subsystems/ports.hpp"
 
-class Shooter : public frc2::Subsystem {
+class Shooter : public wpi::cmd::Subsystem {
  public:
   Shooter();
 
@@ -25,10 +25,10 @@ class Shooter : public frc2::Subsystem {
  private:
   void Log();
 
-  frc::PWMVictorSPX m_motor{kShooterMotorPort};
-  frc::Encoder m_encoder{kShooterEncoderPortA, kShooterEncoderPortB};
-  frc::PIDController m_controller;
+  wpi::PWMVictorSPX m_motor{kShooterMotorPort};
+  wpi::Encoder m_encoder{kShooterEncoderPortA, kShooterEncoderPortB};
+  wpi::math::PIDController m_controller;
 
-  frc::sim::EncoderSim m_encoderSim{m_encoder};
-  frc::sim::FlywheelSim m_flywheelSim;
+  wpi::sim::EncoderSim m_encoderSim{m_encoder};
+  wpi::sim::FlywheelSim m_flywheelSim;
 };

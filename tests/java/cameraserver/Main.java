@@ -1,6 +1,6 @@
 package cameraserver;
 
-import edu.wpi.first.cameraserver.CameraServer;
+import org.wpilib.vision.stream.CameraServer;
 
 public final class Main {
   private Main() {}

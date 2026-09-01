@@ -1,7 +1,7 @@
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.Shooter;
+import org.wpilib.command2.Command;
 
 public class ShooterRpmCommand extends Command {
   private final Shooter m_shooter;

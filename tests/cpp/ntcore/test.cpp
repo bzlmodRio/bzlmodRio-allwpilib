@@ -1,9 +1,9 @@
 
-#include <networktables/NetworkTableValue.h>
+#include <wpi/nt/NetworkTableValue.hpp>
 
 #include "gtest/gtest.h"
 
 TEST(BasicTest, Basic) {
-  nt::Value v;
+  wpi::nt::Value v;
   ASSERT_EQ(NT_UNASSIGNED, v.type());
 }

@@ -2,8 +2,8 @@ package wpiunits;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import edu.wpi.first.units.Units;
 import org.junit.jupiter.api.Test;
+import org.wpilib.units.Units;
 
 class BasicTest {
   @Test

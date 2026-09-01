@@ -1,8 +1,7 @@
 
 
-#include <wpi/circular_buffer.h>
-
 #include <array>
+#include <wpi/util/circular_buffer.hpp>
 
 #include "gtest/gtest.h"
 
@@ -14,7 +13,7 @@ static const std::array<double, 8> pushFrontOut = {
     {799.913, 421.125, 22.727, 445.697, 132.344, 716.126, 234.252, 342.657}};
 
 TEST(BasicTest, Basic) {
-  wpi::circular_buffer<double> queue(8);
+  wpi::util::circular_buffer<double> queue(8);
 
   for (auto& value : values) {
     queue.push_front(value);

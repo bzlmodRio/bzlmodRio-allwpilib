@@ -1,7 +1,7 @@
 package ntcore;
 
-import edu.wpi.first.networktables.NetworkTablesJNI;
 import org.junit.jupiter.api.Test;
+import org.wpilib.networktables.NetworkTablesJNI;
 
 class BasicTest {
   @Test
