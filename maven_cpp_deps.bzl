@@ -3247,6 +3247,176 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_headers",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-headers.zip",
+        sha256 = "66718fe24a2135b8f0f2be05ec6c28d516774354815cbb64b778ef93f6d3a6ea",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_sources",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-sources.zip",
+        sha256 = "7298755f95d6f366aa0d398f3fa6de303fac3e34f6af716ee9c2f3d748f6e8ff",
+        build_file_content = cc_library_sources,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-linuxarm64.zip",
+        sha256 = "ff4d366b181b3678054490849e04bb7f157f3e8c11cc843eae7602999d6d16bc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-linuxx86-64.zip",
+        sha256 = "57613d5aaebb3823b448a6c9da6357e7ae25cbf489f7e12863be7a2d02cf9f4c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-osxuniversal.zip",
+        sha256 = "ca722dc627f16bc11f0c6f4b1bd45891df4d34b56de0e2190b0714e977033b3b",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libhalsim_xrp.dylib osx/universal/shared/libhalsim_xrp.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_xrp.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_xrp.dylib",
+            "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_xrp.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_xrp.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libhalsim_xrp.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-windowsx86-64.zip",
+        sha256 = "db9215df698a62ac15455293098055bdcf646cb7b2de2d42c633eb6a2e1e1ff2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-windowsarm64.zip",
+        sha256 = "2b88f495067804cf84e5e97d2f9d21413558d1487cf12457ca384e99f57f3452",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-linuxarm64static.zip",
+        sha256 = "bbb320fbe4b0adf8b00c6deb4424fde8cf3f5897befc9f45f2f29ca1a80fda0d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-linuxx86-64static.zip",
+        sha256 = "8c3ea4fbbc2971e150335a886f1a977e96489dd1e47a47cb486ab3b8b1391c99",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversalstatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-osxuniversalstatic.zip",
+        sha256 = "d4d6069d2e61bdef49bb760e9fe0daa8197577e89febb6baabdea3dcb5ce202d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-windowsx86-64static.zip",
+        sha256 = "14a567fac9ed4adbb4d6f0d39c1c9bd19da3feccd1401e56bbf47d8e78a5da6b",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-windowsarm64static.zip",
+        sha256 = "8eaeb55dfd44aef283dcfc837b63a3a6efd6bff102f99653358bf4945c7e2e3d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-linuxarm64debug.zip",
+        sha256 = "8a0a52df134480aaa9290eaf1581a2fe252f7a03c3725218718749ced5158405",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-linuxx86-64debug.zip",
+        sha256 = "63f8c5da1219aae6f4eef80a2d0ba06db14518ef86f9d1cff916d5a399da4d7b",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversaldebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-osxuniversaldebug.zip",
+        sha256 = "52b25a200ed238f0ad20585877e8cefc04a9a0925c5af55eec072a40227dcf17",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libhalsim_xrp.dylib osx/universal/shared/libhalsim_xrp.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_xrp.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_xrp.dylib",
+            "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_xrp.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_xrp.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libhalsim_xrp.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-windowsx86-64debug.zip",
+        sha256 = "475ef40fb35195fdbb811c45c031d5d77fd48dba93e26216c747de2711407b2a",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-windowsarm64debug.zip",
+        sha256 = "68a47a96aebaffda20233091a564d43349eacbf0a98fd2ebf1c260d514fb2190",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-linuxarm64staticdebug.zip",
+        sha256 = "e319b16927d268958e7e3e95e462da2daaa85775b69e155a9ec9779f233c7bbf",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-linuxx86-64staticdebug.zip",
+        sha256 = "cfe5025e90860922d4f21dc2e87c23ae0d3cf4d07fe70fa8e8df7065535df3c0",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversalstaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-osxuniversalstaticdebug.zip",
+        sha256 = "4a534ae333ce5f533f8e06080a1e5ff7d7cf52ebd615b5e5feb9882f620cf35a",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-windowsx86-64staticdebug.zip",
+        sha256 = "a7c5c94f0988c00069f0b9b6b0f477e57b2804220fda1172528d981c057d5946",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/halsim/halsim_xrp/2027.0.0-alpha-6/halsim_xrp-2027.0.0-alpha-6-windowsarm64staticdebug.zip",
+        sha256 = "dad849c1475221fe3fa735504b85b5c61da0f575f00d94efecb5112c20bacf55",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/halsim_xrp:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
         name = "bazelrio_org_wpilib_tools_datalogtool_linuxarm64",
         url = "https://frcmaven.wpi.edu/artifactory/release-2027/org/wpilib/tools/DataLogTool/2027.0.0-alpha-6/DataLogTool-2027.0.0-alpha-6-linuxarm64.zip",
         sha256 = "f7de1a13ee8603749b0804a178e04a2de56343371dc06857fa79b506422a40a1",

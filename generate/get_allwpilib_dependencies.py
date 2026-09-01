@@ -380,6 +380,9 @@ def get_allwpilib_dependencies(
     _halsim_dependency(
         group, "halsim_ws_server", dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp"]
     )
+    _halsim_dependency(
+        group, "halsim_xrp", dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp"]
+    )
 
     _executable_tool(group, "DataLogTool", lower_target_name=True)
     _executable_tool(group, "Glass", lower_target_name=True)

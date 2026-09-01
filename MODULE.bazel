@@ -3,6 +3,7 @@ module(
     version = "2027.0.0-alpha-6",
 )
 
+bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2")
 bazel_dep(name = "platforms", version = "0.0.11")
 bazel_dep(name = "rules_cc", version = "0.2.13")
 bazel_dep(name = "rules_java", version = "8.16.1")
@@ -276,6 +277,28 @@ use_repo(
     "bazelrio_org_wpilib_halsim_halsim_ws_server_windowsx86-64debug",
     "bazelrio_org_wpilib_halsim_halsim_ws_server_windowsx86-64static",
     "bazelrio_org_wpilib_halsim_halsim_ws_server_windowsx86-64staticdebug",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_headers",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64debug",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64static",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_linuxarm64staticdebug",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64debug",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64static",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_linuxx86-64staticdebug",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversal",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversaldebug",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversalstatic",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_osxuniversalstaticdebug",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_sources",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64debug",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64static",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_windowsarm64staticdebug",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64debug",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64static",
+    "bazelrio_org_wpilib_halsim_halsim_xrp_windowsx86-64staticdebug",
     "bazelrio_org_wpilib_ntcore_ntcore-cpp_headers",
     "bazelrio_org_wpilib_ntcore_ntcore-cpp_linuxarm64",
     "bazelrio_org_wpilib_ntcore_ntcore-cpp_linuxarm64debug",
