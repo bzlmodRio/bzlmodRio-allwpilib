@@ -97,9 +97,6 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_apple/3.16.0/source.json": "d8b5fe461272018cc07cfafce11fe369c7525330804c37eec5a82f84cd475366",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/MODULE.bazel": "e4004326cab72e5b27b697a01b03139276ac04c6e7c177ddb9424afc8709e51b",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bazelrio/0.0.14/source.json": "7da669bc69d497942a9ac21b8f76c05f4a91b4212e3a697a1e27d9358576e995",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr7/MODULE.bazel": "f7dfc784f9a1f6a54afab293494609ecb74afc185a33f6d7f89730029831f3c8",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1.bcr7/source.json": "72e2f522417c36f3496bc69fe22ce39e9ab8bc96daa0e4a5cee2040458ec2d79",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_bzlmodrio_toolchains/2025-1/MODULE.bazel": "81e540a541aac221fc84fc24124b8e5d07e2eff75942f44e67510c56794a5f22",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.1/MODULE.bazel": "cb2aa0747f84c6c3a78dad4e2049c154f08ab9d166b1273835a8174940365647",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.10/MODULE.bazel": "ec1705118f7eaedd6e118508d3d26deba2a4e76476ada7e0e3965211be012002",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_cc/0.0.13/MODULE.bazel": "0e8529ed7b323dad0775ff924d2ae5af7640b23553dfcd4d34344c7e7a867191",
@@ -132,7 +129,6 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_java/7.2.0/MODULE.bazel": "06c0334c9be61e6cef2c8c84a7800cef502063269a5af25ceb100b192453d4ab",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_java/7.3.2/MODULE.bazel": "50dece891cfdf1741ea230d001aa9c14398062f2b7c066470accace78e412bc2",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_java/7.6.1/MODULE.bazel": "2f14b7e8a1aa2f67ae92bc69d1ec0fa8d9f827c4e17ff5e5f02e91caa3b2d0fe",
-    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_java/7.6.5/MODULE.bazel": "481164be5e02e4cab6e77a36927683263be56b7e36fef918b458d7a8a1ebadb1",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_java/8.11.0/MODULE.bazel": "c3d280bc5ff1038dcb3bacb95d3f6b83da8dd27bba57820ec89ea4085da767ad",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_java/8.14.0/MODULE.bazel": "717717ed40cc69994596a45aec6ea78135ea434b8402fb91b009b9151dd65615",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/rules_java/8.16.1/MODULE.bazel": "0f20b1cecaa8e52f60a8f071e59a20b4e3b9a67f6c56c802ea256f6face692d3",
@@ -207,6 +203,7 @@
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/upb/0.0.0-20220923-a547704/MODULE.bazel": "7298990c00040a0e2f121f6c32544bab27d4452f80d9ce51349b1a28f3005c43",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/wpilib_toolchains/2027-1.bcr1/MODULE.bazel": "70be8844968189c39461b5ed38588a529b338ad6893d3cdf79de918463c70ac0",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/wpilib_toolchains/2027-1.bcr1/source.json": "08f323e5ca9a755808c367acf23450505e09f2c62ba5eac3f439362082b48de4",
+    "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/wpilib_toolchains/2027-1/MODULE.bazel": "5ae040df0043b3915c50383e6e1db1327d3bbfadb55e28dc7301a235f9affab2",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/zlib/1.2.11/MODULE.bazel": "07b389abc85fdbca459b69e2ec656ae5622873af3f845e1c9d80fe179f3effa0",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/zlib/1.3.1.bcr.5/MODULE.bazel": "eec517b5bbe5492629466e11dae908d043364302283de25581e3eb944326c4ca",
     "https://raw.githubusercontent.com/pjreiniger/bazel-central-registry/bzlmodrio/modules/zlib/1.3.1.bcr.5/source.json": "22bc55c47af97246cfc093d0acf683a7869377de362b5d1c552c2c2e16b7a806",
@@ -216,7 +213,7 @@
   "moduleExtensions": {
     "@@bzlmodrio-allwpilib+//:maven_cpp_deps.bzl%deps": {
       "general": {
-        "bzlTransitiveDigest": "GSJQPPK6WraQ1Bg+oeyHqpq00gMXdkQ1ys2vkhiijuQ=",
+        "bzlTransitiveDigest": "fQS894Y1yCqwqJYi/HbO5IaK+xu+r4LRk/jnm6+VUMU=",
         "usagesDigest": "aOdGckvkk4wTgiEr7NSMlRRBTFosyFx4ePZqDOr512c=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -650,6 +647,438 @@
               "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/datalog/datalog-cpp/2027.0.0-alpha-7/datalog-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
               "sha256": "1225542273bbb710d6d0c41a2c8987704c73b81808432e96a168fab7fb94a683",
               "build_file": "@@bzlmodrio-allwpilib+//private/cpp/datalog:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_headers": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-headers.zip",
+              "sha256": "f846fea8cd9c1ed2ace6b6505dcfc6b9268f072dab68f53f6f0d564f0321fd9d",
+              "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_sources": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-sources.zip",
+              "sha256": "09cdb5219652c96a182632c4dc3ee5bd0404b155c8244a4bd2ef4f26ac6f9c0d",
+              "build_file_content": "filegroup(\n     name = \"sources\",\n     srcs = glob([\"**\"]),\n     visibility = [\"//visibility:public\"],\n )\n "
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxarm64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxarm64.zip",
+              "sha256": "697776c8d5f52b3d0ab8dda85da2f2056e668782011f7909984b6736dc1e035e",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxx86-64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxx86-64.zip",
+              "sha256": "3e54c4fae7f70d1ce124d56b8a7e2318be14035d5c0bcc2f039f80ac7c90ed76",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_osxuniversal": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-osxuniversal.zip",
+              "sha256": "5691fb08ab859ddc74aa9dd0d8246a00d93267bf13b9fc3b60fe0bfb223b03b2",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel",
+              "patch_cmds": [
+                "install_name_tool -id @rpath/libtelemetry.dylib osx/universal/shared/libtelemetry.dylib",
+                "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libtelemetry.dylib"
+              ]
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsx86-64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsx86-64.zip",
+              "sha256": "c21108601c633dd4f03adf5169e6fbf008de841c69297e3f89f7266b486db923",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsarm64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsarm64.zip",
+              "sha256": "b71ade1ed6a60497dac08c49140dd3f06fe07de4536ddaa63b70466900d40ee6",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxarm64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxarm64static.zip",
+              "sha256": "93c21dd8b9824b57fd9055e2af3fb8059d65ddab031489fd10afa97e88be7679",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxx86-64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxx86-64static.zip",
+              "sha256": "ffcd4abaf7ab49aa35bdd5bcd57538db373711d4a93a6ee3f4e536aee01b9161",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_osxuniversalstatic": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-osxuniversalstatic.zip",
+              "sha256": "ba6a72dc541173ed3b79df5a2a0e61a392b9d7261e3181ad50b6ba1e247c90eb",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsx86-64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsx86-64static.zip",
+              "sha256": "161c8e9d2a376df48570edac3f286522a918901585bf8f6e679d1acfbdd23ea0",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsarm64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsarm64static.zip",
+              "sha256": "8c567e12640e49d1b746e79b6345168d1bcb4abae058fce959e013df0d368aaa",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxarm64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxarm64debug.zip",
+              "sha256": "1d7e72f8947395096cfea9158a9fb81b222d492a818ee4d6c1e3ca10fbf6ddc6",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxx86-64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxx86-64debug.zip",
+              "sha256": "01caaa58e0ebc786d53280fe67e27a9d2b6120f6622cb6dc7aab791b21ce02bc",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_osxuniversaldebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-osxuniversaldebug.zip",
+              "sha256": "5cfd672795aafebdaf8d14442657decb9092c977e5db415276b84d24695a6643",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel",
+              "patch_cmds": [
+                "install_name_tool -id @rpath/libtelemetry.dylib osx/universal/shared/libtelemetry.dylib",
+                "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libtelemetry.dylib"
+              ]
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsx86-64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsx86-64debug.zip",
+              "sha256": "4e7f6c7f4e540cdeb64db4d65fcd7c70602f7238905260b42a743501403b45b9",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsarm64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsarm64debug.zip",
+              "sha256": "b6548bf0283a4ec4e9987f9f6eb725b4109dfd282cb7c550dec34135844ce7af",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxarm64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxarm64staticdebug.zip",
+              "sha256": "ad22f0b74ae118e63aaefd229370db443c7bf77b4248c83a2589a5bc743ba739",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxx86-64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxx86-64staticdebug.zip",
+              "sha256": "e8dd4a115dd9944c2481869715c76dfed0145535d0708b8449a7d26e12185e97",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_osxuniversalstaticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-osxuniversalstaticdebug.zip",
+              "sha256": "34dc7025897ce34a3c7b3c50d953a4c2569d7bd46d1337f3aa5c3b6ca3ed2a08",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsx86-64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsx86-64staticdebug.zip",
+              "sha256": "2e488cec5be4f68a3edb24ab73eaf751145605370e1ad758568579d0dbbef1fe",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsarm64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsarm64staticdebug.zip",
+              "sha256": "7b9adc6630281304e919c4bd238056b54685ef4e6e3bf0a6a08d1c45e99fd38e",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxsystemcore": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxsystemcore.zip",
+              "sha256": "d2e8351a1ce65ffc43e2d635ec8c0e8896897c6f81b83ea5b19c8095e1196fb7",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxsystemcorestatic": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxsystemcorestatic.zip",
+              "sha256": "36824ec71abbc1cc90f02d8144420b078ad9a2198a075eda574c071ac3c822d3",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxsystemcoredebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxsystemcoredebug.zip",
+              "sha256": "6ae5e4e31995a73469aba6c079b7a50fd824f8e606b245cdfa6765ac8103cb47",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxsystemcorestaticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
+              "sha256": "a1c6ac8bbe52c2e4f3d286cac952abee3e3b978b3b6ef69317096b7d39f29e42",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/telemetry:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_headers": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-headers.zip",
+              "sha256": "ec4b9af4b17da7797dbc083fd810b8b54d962b2af0f40e7aa5fdc73b6687da1a",
+              "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_sources": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-sources.zip",
+              "sha256": "509e16f45ad63761502c1b0fc226fd673409ed0798c5dc9ef374df22e68a0d68",
+              "build_file_content": "filegroup(\n     name = \"sources\",\n     srcs = glob([\"**\"]),\n     visibility = [\"//visibility:public\"],\n )\n "
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxarm64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxarm64.zip",
+              "sha256": "e5c87d30fab2e13f91a3930c657eb3737b82b36cbcf8db3cdac716d9268e404c",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxx86-64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxx86-64.zip",
+              "sha256": "4d0b6d6465a83320fc8ee5a77353feb4d3460df2413e48104b175e8594cfdeb3",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_osxuniversal": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-osxuniversal.zip",
+              "sha256": "ee848e81781701d8897aba4f8d2c2ba35a8ec99a691c4ca4572729e2352049b2",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel",
+              "patch_cmds": [
+                "install_name_tool -id @rpath/libtunables.dylib osx/universal/shared/libtunables.dylib",
+                "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libtunables.dylib"
+              ]
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_windowsx86-64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsx86-64.zip",
+              "sha256": "d929686aacf96918ed1564d1272aae1039e3caaa93d4ca57f8f02ecb88ef92d2",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_windowsarm64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsarm64.zip",
+              "sha256": "22dcf27d059d7fcb30aa3e15e69a768a4f979276d30b19d4c7acc6ad2e638297",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxarm64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxarm64static.zip",
+              "sha256": "3f88a45593ae36e5ff9ab1ec23813793bc848888a07a92513cac301df6919003",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxx86-64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxx86-64static.zip",
+              "sha256": "07ad3a2d7682c1e6fe42db7630ddf88a07ee23811736bfdf07e852411ae0da46",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_osxuniversalstatic": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-osxuniversalstatic.zip",
+              "sha256": "a0351aad15ec9277df070697f51a2d97effbe6eb1107b2450f35df4b14654d69",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_windowsx86-64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsx86-64static.zip",
+              "sha256": "4c0b8dd98706a6f94210405a13bee5ca22f25f8c2807841e8dbba48a60a722c6",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_windowsarm64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsarm64static.zip",
+              "sha256": "b4104490e5d86980dbdeb2ce7d493051bd0d200fed88fbf04640e69bd60111ef",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxarm64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxarm64debug.zip",
+              "sha256": "db5140b76ef9c5ce6c30ac802ebbc855663ccf58ecdda594891b205ccfdda879",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxx86-64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxx86-64debug.zip",
+              "sha256": "e104bf5eb7f66b0f67ce0b82197445da805cda4eb8e9d17b2b1a8fd0408a2d5e",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_osxuniversaldebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-osxuniversaldebug.zip",
+              "sha256": "93e3ccea6443c8a51d6a375754df7d1a595f2e691d1c7aaf1b1dc7c8cec9de2a",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel",
+              "patch_cmds": [
+                "install_name_tool -id @rpath/libtunables.dylib osx/universal/shared/libtunables.dylib",
+                "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libtunables.dylib"
+              ]
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_windowsx86-64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsx86-64debug.zip",
+              "sha256": "4de45cbb556bf5c7ed79fa317863f43db60aae673af97cb151ba4a84c5758db4",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_windowsarm64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsarm64debug.zip",
+              "sha256": "6f7b81e74bb0d8f4658d3e1b50d568b42889660c0065bebde4edd5539acda4d1",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxarm64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxarm64staticdebug.zip",
+              "sha256": "e6aa71159b470721acbee97fbd5e506e2bdf43901b6ca63c10187a47afff3b95",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxx86-64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxx86-64staticdebug.zip",
+              "sha256": "445465635b1da1bb08bcfe1b8a9d93849b500f194e4025898de23acb3a0579bc",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_osxuniversalstaticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-osxuniversalstaticdebug.zip",
+              "sha256": "3b03b8b4509f15a4267c2f346534331b4ff8df26b6aa7afeee68d8b3e82ce122",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_windowsx86-64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsx86-64staticdebug.zip",
+              "sha256": "49155983c9b4401c8b044c976622ea857f410a085b8b0aa9062455cfbe3a076b",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_windowsarm64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsarm64staticdebug.zip",
+              "sha256": "9513a0c78b24a7bc7922114f7f906f99246b521da37a974520cce95dd8155dfd",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxsystemcore": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxsystemcore.zip",
+              "sha256": "5b7cff339b435c18fd53b7cd6ab0481f5b4d50b177650ed62993dbf830c269dc",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxsystemcorestatic": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxsystemcorestatic.zip",
+              "sha256": "c6ca5a8758313f01b3bd060f256a6f79c37356ca7b59447cc829ae90fe0dc856",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxsystemcoredebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxsystemcoredebug.zip",
+              "sha256": "5d635b5449d3c42d932bfd94a6955ed1072614b4921361be4075dd2d547b57a1",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_tunables_tunables-cpp_linuxsystemcorestaticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
+              "sha256": "6501a446da4765840fb1efdb8ce56c281cabeab54fad3ca69ac81cca0f83a7cc",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/tunables:static.BUILD.bazel"
             }
           },
           "bazelrio_org_wpilib_wpinet_wpinet-cpp_headers": {
@@ -2410,6 +2839,234 @@
               "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/wpilibc/wpilibc-cpp/2027.0.0-alpha-7/wpilibc-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
               "sha256": "46828d213c283b3b98e96b56afb475deba87bb109f0d504ae6cdf1a69d0d8c69",
               "build_file": "@@bzlmodrio-allwpilib+//private/cpp/wpilibc:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_headers": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-headers.zip",
+              "sha256": "c0e70a88a0932bdf1c72b3c7f791895d09570a1674ed932d4c39fc56e5182420",
+              "build_file_content": "cc_library(\n    name = \"headers\",\n    hdrs = glob([\"**\"]),\n    includes = [\".\"],\n    visibility = [\"//visibility:public\"],\n)\n\nfilegroup(\n    name = \"header_files\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_sources": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-sources.zip",
+              "sha256": "98331773a47767636991d64babdce64584adb88e367a0709eab2cb0a31f0a928",
+              "build_file_content": "filegroup(\n     name = \"sources\",\n     srcs = glob([\"**\"]),\n     visibility = [\"//visibility:public\"],\n )\n "
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxarm64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxarm64.zip",
+              "sha256": "35f025f2d86cf8468ed71cb7ba1231a337b68df36abae222ba02e7de0b02e5b4",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxx86-64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxx86-64.zip",
+              "sha256": "a5ba2534962ed368f868602cd80221e629c5f20d2de3e72a2c5a1142f1b327eb",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_osxuniversal": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-osxuniversal.zip",
+              "sha256": "5830a35ffea354c2f8e0ee718886e45e96554955399db52faee32c486121a92b",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel",
+              "patch_cmds": [
+                "install_name_tool -id @rpath/libdrivers.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libdrivers.dylib"
+              ]
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_windowsx86-64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsx86-64.zip",
+              "sha256": "ed038d2864ed038c9c4bda1a9ff0bdad0211d178dcf404099373fbbd85dd8267",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_windowsarm64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsarm64.zip",
+              "sha256": "52dae908c08b6b695ed62103621590b470faeac491b506e7f31671b782b0b791",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxarm64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxarm64static.zip",
+              "sha256": "c3cba4816cdc25ee0d035a0d5351b7625c5d204c1179345c71ada88ec832d928",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxx86-64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxx86-64static.zip",
+              "sha256": "155c81742831ab661a35f39c83daa23885c7c345af6c441385f2c3414cf56cb8",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_osxuniversalstatic": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-osxuniversalstatic.zip",
+              "sha256": "bd9ea238e2edb5399ef6d6d50a793d3b010251591b6293fe56b7cd7fc6458041",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_windowsx86-64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsx86-64static.zip",
+              "sha256": "9797c504ea77c8f7ecc7c9af5e44b00391be6c6e5f26ad32da2c1dafd81b8a37",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_windowsarm64static": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsarm64static.zip",
+              "sha256": "ab2fbf758576ad7278190b25cc425075360d208fb77873062fd264da83a9ac7d",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxarm64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxarm64debug.zip",
+              "sha256": "860e48da1fa689f1076f66769fccd7d771f4ce9d30778d666b7c9186833ee751",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxx86-64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxx86-64debug.zip",
+              "sha256": "00a886f376c8e0ef2c033f35232036dbe0bef4d578a037981f4182d879f39747",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_osxuniversaldebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-osxuniversaldebug.zip",
+              "sha256": "c51c6d400b4a44382479d371f590f9be3dcf98c8bf39458674e6be75b84adff0",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel",
+              "patch_cmds": [
+                "install_name_tool -id @rpath/libdrivers.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libdrivers.dylib",
+                "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libdrivers.dylib"
+              ]
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_windowsx86-64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsx86-64debug.zip",
+              "sha256": "ee9febc95a8dd4d36ba965714efda2da241218c7b477b13353dd41a80a18c3cc",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_windowsarm64debug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsarm64debug.zip",
+              "sha256": "6d29bc2d399c0b08485a35f4501361b6832628e2316deb68053d943488ddac30",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxarm64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxarm64staticdebug.zip",
+              "sha256": "5dd7d17ed1d53a41c7e979f338fce373fd71243b029909abd93b683d585b86f9",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxx86-64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxx86-64staticdebug.zip",
+              "sha256": "32c2e7822171df16d6f0817502eb89d73ef18ea18a076098df5c56417c5a7e0c",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_osxuniversalstaticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-osxuniversalstaticdebug.zip",
+              "sha256": "02dc1b0659d66bed405f322931be7014b44a718b7bde6bf3d156affa077c4af4",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_windowsx86-64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsx86-64staticdebug.zip",
+              "sha256": "6466557bd9cca05354c98fcee33ac5d43603c02561facb95e3535f8578e5d253",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_windowsarm64staticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsarm64staticdebug.zip",
+              "sha256": "da80cfb4a1916cea43f29d9c679ec226eb898d108742474edfca0089b666ab24",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxsystemcore": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxsystemcore.zip",
+              "sha256": "d8bf0e8b9ce44f6edcfc330792b8a83766c1e843d1305f7683e091495d061779",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxsystemcorestatic": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxsystemcorestatic.zip",
+              "sha256": "ce9516ea998751a10a004ce4eab8cf8a620e2643ada64c153b562fc89bde6485",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxsystemcoredebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxsystemcoredebug.zip",
+              "sha256": "2eae45049800063d11e88227ea5ccbfbb1ee00501d39894bb23770d120faecb8",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:shared.BUILD.bazel"
+            }
+          },
+          "bazelrio_org_wpilib_drivers_drivers-cpp_linuxsystemcorestaticdebug": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
+              "sha256": "94edccf0653b74f9cb456fb6b569f807b45445b03d570215e77d3bd9d596a196",
+              "build_file": "@@bzlmodrio-allwpilib+//private/cpp/drivers:static.BUILD.bazel"
             }
           },
           "bazelrio_org_wpilib_commandsv2_commandsv2-cpp_headers": {
@@ -4306,7 +4963,7 @@
     },
     "@@bzlmodrio-allwpilib+//:maven_java_deps.bzl%setup_bzlmodrio_allwpilib_java_dependencies": {
       "general": {
-        "bzlTransitiveDigest": "LthLbenr23CFDbVm3gyN9MJxISN/44szlZhhw3x896s=",
+        "bzlTransitiveDigest": "BaLlNXk5/cffjDe2GHktcHmQojXFJWvx/NkPHPaz/FQ=",
         "usagesDigest": "BRHhyg4Zq0hFjkAQVoYwThvi3mp2Dfsrj7bV+zQL7mE=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -4358,6 +5015,54 @@
                 "maven_coordinates=org.wpilib.wpinet:wpinet-java:2027.0.0-alpha-7"
               ],
               "artifact_sha256": "68405d182a74cce68dfaff2f9cab08553b09430835cf5ee13eed3b5475fe7494"
+            }
+          },
+          "org_wpilib_datalog_datalog_java": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:jvm.bzl%jvm_import_external",
+            "attributes": {
+              "generated_rule_name": "org_wpilib_datalog_datalog_java",
+              "artifact_urls": [
+                "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/datalog/datalog-java/2027.0.0-alpha-7/datalog-java-2027.0.0-alpha-7.jar"
+              ],
+              "srcjar_urls": [],
+              "canonical_id": "org.wpilib.datalog:datalog-java:2027.0.0-alpha-7",
+              "rule_name": "java_import",
+              "tags": [
+                "maven_coordinates=org.wpilib.datalog:datalog-java:2027.0.0-alpha-7"
+              ],
+              "artifact_sha256": "1aa1042c101e159824aba21635c9750cce0545c7c06051248365d7584539ae70"
+            }
+          },
+          "org_wpilib_telemetry_telemetry_java": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:jvm.bzl%jvm_import_external",
+            "attributes": {
+              "generated_rule_name": "org_wpilib_telemetry_telemetry_java",
+              "artifact_urls": [
+                "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-java/2027.0.0-alpha-7/telemetry-java-2027.0.0-alpha-7.jar"
+              ],
+              "srcjar_urls": [],
+              "canonical_id": "org.wpilib.telemetry:telemetry-java:2027.0.0-alpha-7",
+              "rule_name": "java_import",
+              "tags": [
+                "maven_coordinates=org.wpilib.telemetry:telemetry-java:2027.0.0-alpha-7"
+              ],
+              "artifact_sha256": "6f83e03a62419fa2cace46e18e6ea56dcc60d5354ff36323fdce4aadb63291ef"
+            }
+          },
+          "org_wpilib_tunables_tunables_java": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:jvm.bzl%jvm_import_external",
+            "attributes": {
+              "generated_rule_name": "org_wpilib_tunables_tunables_java",
+              "artifact_urls": [
+                "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-java/2027.0.0-alpha-7/tunables-java-2027.0.0-alpha-7.jar"
+              ],
+              "srcjar_urls": [],
+              "canonical_id": "org.wpilib.tunables:tunables-java:2027.0.0-alpha-7",
+              "rule_name": "java_import",
+              "tags": [
+                "maven_coordinates=org.wpilib.tunables:tunables-java:2027.0.0-alpha-7"
+              ],
+              "artifact_sha256": "4564954282e960ca95172b89fbd9ffb5d3e2ea5911f4c46fb71aab8d2ba9bfff"
             }
           },
           "org_wpilib_wpiunits_wpiunits_java": {
@@ -4581,7 +5286,7 @@
     "@@bzlmodrio-opencv+//:maven_cpp_deps.bzl%deps": {
       "general": {
         "bzlTransitiveDigest": "zlNi8XygFuJzNgXwv0Yer7TqgkQ/bWpfnSebpCXfdwc=",
-        "usagesDigest": "hlO6cbte+7Zhqv4TBGZHAWChGiIsrqx7Gy9i/mKLnTo=",
+        "usagesDigest": "CnS14ymuExu7Nl5i6AZMzQdi8hsMTDI/0npjj0y1EFY=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -5012,406 +5717,6 @@
         "recordedRepoMappingEntries": [
           [
             "rules_apple+",
-            "bazel_tools",
-            "bazel_tools"
-          ]
-        ]
-      }
-    },
-    "@@rules_bzlmodrio_jdk+//:maven_deps.bzl%deps": {
-      "general": {
-        "bzlTransitiveDigest": "Be4E3jdYw7X0Zk/ejRu/4zKlKFWwaJ2IfpnQxUFEGrQ=",
-        "usagesDigest": "1lP3xyX0Z7uSYtzUSLbW25lLDdWbfSMUePgK8Am1J8A=",
-        "recordedFileInputs": {},
-        "recordedDirentsInputs": {},
-        "envVariables": {},
-        "generatedRepoSpecs": {
-          "roboriojdk_linux": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "build_file_content": "load(\"@rules_java//java/toolchains:java_runtime.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
-              "sha256": "9d4dd339bf7e6a9dcba8347661603b74c61ab2a5083ae67bf76da6285da8a778",
-              "urls": [
-                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_linux_hotspot_17.0.12_7.tar.gz"
-              ],
-              "strip_prefix": "jdk-17.0.12+7"
-            }
-          },
-          "roboriojdk_linux_toolchain_config_repo": {
-            "repoRuleId": "@@rules_java+//toolchains:remote_java_repository.bzl%_toolchain_config",
-            "attributes": {
-              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:x86_64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_linux//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:x86_64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_linux//:jdk\",\n)\n"
-            }
-          },
-          "roboriojdk_linux_arm32": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "build_file_content": "load(\"@rules_java//java/toolchains:java_runtime.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
-              "sha256": "ce7873ebf40ed0eb1089941ead4d3af79a205b1264f3162860d26ae957572b74",
-              "urls": [
-                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_arm_linux_hotspot_17.0.12_7.tar.gz"
-              ],
-              "strip_prefix": "jdk-17.0.12+7"
-            }
-          },
-          "roboriojdk_linux_arm32_toolchain_config_repo": {
-            "repoRuleId": "@@rules_java+//toolchains:remote_java_repository.bzl%_toolchain_config",
-            "attributes": {
-              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:armv7\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_linux_arm32//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:armv7\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_linux_arm32//:jdk\",\n)\n"
-            }
-          },
-          "roboriojdk_linux_arm64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "build_file_content": "load(\"@rules_java//java/toolchains:java_runtime.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
-              "sha256": "8257de06bf37f0c8f19f8d542e2ab5a4e17db3ca5f29d041bd0b02ab265db021",
-              "urls": [
-                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.12_7.tar.gz"
-              ],
-              "strip_prefix": "jdk-17.0.12+7"
-            }
-          },
-          "roboriojdk_linux_arm64_toolchain_config_repo": {
-            "repoRuleId": "@@rules_java+//toolchains:remote_java_repository.bzl%_toolchain_config",
-            "attributes": {
-              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:arm64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_linux_arm64//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:linux\", \"@platforms//cpu:arm64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_linux_arm64//:jdk\",\n)\n"
-            }
-          },
-          "roboriojdk_mac": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "build_file_content": "load(\"@rules_java//java/toolchains:java_runtime.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
-              "sha256": "d5230eeec88739aa7133e4c8635bbd4ab226708c12deaafa13cf26b02bc8e8c4",
-              "urls": [
-                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_mac_hotspot_17.0.12_7.tar.gz"
-              ],
-              "strip_prefix": "jdk-17.0.12+7/Contents/Home"
-            }
-          },
-          "roboriojdk_mac_toolchain_config_repo": {
-            "repoRuleId": "@@rules_java+//toolchains:remote_java_repository.bzl%_toolchain_config",
-            "attributes": {
-              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:macos\", \"@platforms//cpu:x86_64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_mac//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:macos\", \"@platforms//cpu:x86_64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_mac//:jdk\",\n)\n"
-            }
-          },
-          "roboriojdk_mac_arm64": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "build_file_content": "load(\"@rules_java//java/toolchains:java_runtime.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
-              "sha256": "d7910b1acaeb290c5c5da21811d2b2b8635f806612a2d6e8d1953b2f77580f78",
-              "urls": [
-                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.12_7.tar.gz"
-              ],
-              "strip_prefix": "jdk-17.0.12+7/Contents/Home"
-            }
-          },
-          "roboriojdk_mac_arm64_toolchain_config_repo": {
-            "repoRuleId": "@@rules_java+//toolchains:remote_java_repository.bzl%_toolchain_config",
-            "attributes": {
-              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:macos\", \"@platforms//cpu:aarch64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_mac_arm64//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:macos\", \"@platforms//cpu:aarch64\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_mac_arm64//:jdk\",\n)\n"
-            }
-          },
-          "roboriojdk_windows": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "build_file_content": "load(\"@rules_java//java/toolchains:java_runtime.bzl\", \"java_runtime\")\n\npackage(default_visibility = [\"//visibility:public\"])\n\nexports_files([\"WORKSPACE\", \"BUILD.bazel\"])\n\nfilegroup(\n    name = \"jre\",\n    srcs = glob(\n        [\n            \"jre/bin/**\",\n            \"jre/lib/**\",\n        ],\n        allow_empty = True,\n        # In some configurations, Java browser plugin is considered harmful and\n        # common antivirus software blocks access to npjp2.dll interfering with Bazel,\n        # so do not include it in JRE on Windows.\n        exclude = [\"jre/bin/plugin2/**\"],\n    ),\n)\n\nfilegroup(\n    name = \"jdk-bin\",\n    srcs = glob(\n        [\"bin/**\"],\n        # The JDK on Windows sometimes contains a directory called\n        # \"%systemroot%\", which is not a valid label.\n        exclude = [\"**/*%*/**\"],\n    ),\n)\n\n# This folder holds security policies.\nfilegroup(\n    name = \"jdk-conf\",\n    srcs = glob(\n        [\"conf/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-include\",\n    srcs = glob(\n        [\"include/**\"],\n        allow_empty = True,\n    ),\n)\n\nfilegroup(\n    name = \"jdk-lib\",\n    srcs = glob(\n        [\"lib/**\", \"release\"],\n        allow_empty = True,\n        exclude = [\n            \"lib/missioncontrol/**\",\n            \"lib/visualvm/**\",\n        ],\n    ),\n)\n\njava_runtime(\n    name = \"jdk\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jre\",\n    ],\n    # Provide the 'java` binary explicitly so that the correct path is used by\n    # Bazel even when the host platform differs from the execution platform.\n    # Exactly one of the two globs will be empty depending on the host platform.\n    # When --incompatible_disallow_empty_glob is enabled, each individual empty\n    # glob will fail without allow_empty = True, even if the overall result is\n    # non-empty.\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n\nfilegroup(\n    name = \"jdk-jmods\",\n    srcs = glob(\n        [\"jmods/**\"],\n        allow_empty = True,\n    ),\n)\n\njava_runtime(\n    name = \"jdk-with-jmods\",\n    srcs = [\n        \":jdk-bin\",\n        \":jdk-conf\",\n        \":jdk-include\",\n        \":jdk-lib\",\n        \":jdk-jmods\",\n        \":jre\",\n    ],\n    java = glob([\"bin/java.exe\", \"bin/java\"], allow_empty = True)[0],\n    version = 17,\n)\n",
-              "sha256": "052049d687ebfda6a4032d54afcd0da6549a23bc2ed04cfaa509746eeacbae71",
-              "urls": [
-                "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.12%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.12_7.zip"
-              ],
-              "strip_prefix": "jdk-17.0.12+7",
-              "patch_cmds": [
-                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/concrt140.dll bin/concrt140.dll",
-                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/msvcp140.dll bin/msvcp140.dll",
-                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/msvcp140_1.dll bin/msvcp140_1.dll",
-                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/msvcp140_2.dll bin/msvcp140_2.dll",
-                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/msvcp140_atomic_wait.dll bin/msvcp140_atomic_wait.dll",
-                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/msvcp140_codecvt_ids.dll bin/msvcp140_codecvt_ids.dll",
-                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/vccorlib140.dll bin/vccorlib140.dll",
-                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/vcruntime140.dll bin/vcruntime140.dll",
-                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/vcruntime140_1.dll bin/vcruntime140_1.dll",
-                "cp ../rules_bzlmodrio_jdk+/msvc_runtime/vcruntime140_threads.dll bin/vcruntime140_threads.dll"
-              ]
-            }
-          },
-          "roboriojdk_windows_toolchain_config_repo": {
-            "repoRuleId": "@@rules_java+//toolchains:remote_java_repository.bzl%_toolchain_config",
-            "attributes": {
-              "build_file": "\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"roboriojdk_17\"},\n    visibility = [\"//visibility:private\"],\n)\nconfig_setting(\n    name = \"version_setting\",\n    values = {\"java_runtime_version\": \"17\"},\n    visibility = [\"//visibility:private\"],\n)\nalias(\n    name = \"version_or_prefix_version_setting\",\n    actual = select({\n        \":version_setting\": \":version_setting\",\n        \"//conditions:default\": \":prefix_version_setting\",\n    }),\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [\"@platforms//os:windows\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_windows//:jdk\",\n)\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [\"@platforms//os:windows\"],\n    target_settings = [\":version_or_prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@roboriojdk_windows//:jdk\",\n)\n"
-            }
-          }
-        },
-        "recordedRepoMappingEntries": [
-          [
-            "rules_bzlmodrio_jdk+",
-            "rules_bzlmodrio_jdk",
-            "rules_bzlmodrio_jdk+"
-          ],
-          [
-            "rules_bzlmodrio_jdk+",
-            "rules_java",
-            "rules_java+"
-          ],
-          [
-            "rules_java+",
-            "bazel_tools",
-            "bazel_tools"
-          ]
-        ]
-      }
-    },
-    "@@rules_bzlmodrio_toolchains+//:extensions.bzl%cfg": {
-      "general": {
-        "bzlTransitiveDigest": "DhgJ+yfXuTo6NfJqy0Yk6AMrlg1mqXZVqmE/ndVBgjE=",
-        "usagesDigest": "fTg/DVTl3lR9WpwKoW5X9ajczyRdoE6a1uf1p0SVExs=",
-        "recordedFileInputs": {},
-        "recordedDirentsInputs": {},
-        "envVariables": {},
-        "generatedRepoSpecs": {
-          "local_bookworm32": {
-            "repoRuleId": "@@rules_bzlmodrio_toolchains+//toolchains:configure_cross_compiler.bzl%configure_cross_compiler",
-            "attributes": {
-              "bin_subfolder": "bookworm/bin",
-              "bin_prefix": "armv7-bookworm-linux-gnueabihf-",
-              "sysroot_subfolder": "bookworm/arm-linux-gnueabihf/sysroot",
-              "cxx_version": "12",
-              "target_cpu": "armv7",
-              "target_system_name": "arm-linux-gnueabihf",
-              "sysroot_include_folder": "arm-linux-gnueabihf",
-              "repo_shortname": "bookworm32"
-            }
-          },
-          "local_bookworm64": {
-            "repoRuleId": "@@rules_bzlmodrio_toolchains+//toolchains:configure_cross_compiler.bzl%configure_cross_compiler",
-            "attributes": {
-              "bin_subfolder": "bookworm/bin",
-              "bin_prefix": "aarch64-bookworm-linux-gnu-",
-              "sysroot_subfolder": "bookworm/aarch64-linux-gnu/sysroot",
-              "cxx_version": "12",
-              "target_cpu": "armv8a",
-              "target_system_name": "aarch64-linux-gnu",
-              "sysroot_include_folder": "aarch64-linux-gnu",
-              "repo_shortname": "bookworm64"
-            }
-          },
-          "local_rp_bookworm32": {
-            "repoRuleId": "@@rules_bzlmodrio_toolchains+//toolchains:configure_cross_compiler.bzl%configure_cross_compiler",
-            "attributes": {
-              "bin_subfolder": "raspi-bookworm/bin",
-              "bin_prefix": "armv6-bookworm-linux-gnueabihf-",
-              "sysroot_subfolder": "raspi-bookworm/arm-linux-gnueabihf/sysroot",
-              "cxx_version": "12",
-              "target_cpu": "armv7",
-              "target_system_name": "arm-linux-gnueabihf",
-              "sysroot_include_folder": "arm-linux-gnueabihf",
-              "repo_shortname": "rp_bookworm32"
-            }
-          },
-          "local_roborio": {
-            "repoRuleId": "@@rules_bzlmodrio_toolchains+//toolchains:configure_cross_compiler.bzl%configure_cross_compiler",
-            "attributes": {
-              "bin_subfolder": "roborio-academic/bin",
-              "bin_prefix": "arm-frc2025-linux-gnueabi-",
-              "sysroot_subfolder": "roborio-academic/arm-nilrt-linux-gnueabi/sysroot",
-              "cxx_version": "12",
-              "target_cpu": "armv7",
-              "target_system_name": "arm-nilrt-linux-gnueabi",
-              "sysroot_include_folder": "arm-nilrt-linux-gnueabi",
-              "repo_shortname": "roborio"
-            }
-          },
-          "local_systemcore": {
-            "repoRuleId": "@@rules_bzlmodrio_toolchains+//toolchains:configure_cross_compiler.bzl%configure_cross_compiler",
-            "attributes": {
-              "extra_defines": [
-                "-D__FRC_SYSTEMCORE__=1"
-              ],
-              "bin_subfolder": "bookworm/bin",
-              "bin_prefix": "aarch64-bookworm-linux-gnu-",
-              "sysroot_subfolder": "bookworm/aarch64-linux-gnu/sysroot",
-              "cxx_version": "12",
-              "target_cpu": "armv8a",
-              "target_system_name": "aarch64-linux-gnu",
-              "sysroot_include_folder": "aarch64-linux-gnu",
-              "repo_shortname": "systemcore"
-            }
-          }
-        },
-        "recordedRepoMappingEntries": []
-      }
-    },
-    "@@rules_bzlmodrio_toolchains+//:maven_deps.bzl%deps": {
-      "general": {
-        "bzlTransitiveDigest": "W/z4wanyklRPonYbeii0dlV3J2acaPpPpJwZlCj1H8A=",
-        "usagesDigest": "dCdiXdb1xqlIoLlY/sp0nlLp94ZbkstXlUgnFGmpNfY=",
-        "recordedFileInputs": {},
-        "recordedDirentsInputs": {},
-        "envVariables": {},
-        "generatedRepoSpecs": {
-          "gcc_bookworm32_macosarm": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/armhf-bookworm-2025-arm64-apple-darwin-Toolchain-12.2.0.tgz",
-              "sha256": "cbbfef87c1004923a01697424d6904097ff118efe0709ccd453544088693d5ab",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_bookworm32_macos": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/armhf-bookworm-2025-x86_64-apple-darwin-Toolchain-12.2.0.tgz",
-              "sha256": "2c0dd7352edf13f73bc802690876bf77e353265afad0acf677b1cff0cf62c7b0",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_bookworm32_linux": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/armhf-bookworm-2025-x86_64-linux-gnu-Toolchain-12.2.0.tgz",
-              "sha256": "1dbb38120fd37cf5b69447cb93cb5c488b2a56bec72db4edcb3fa92ad3881b05",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_bookworm32_win": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/armhf-bookworm-2025-x86_64-w64-mingw32-Toolchain-12.2.0.zip",
-              "sha256": "85f75e41ec6cdee80ac4abc5cb2f1d235de67611663ecf6f69a64d05ba3591ef",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_bookworm64_macosarm": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/arm64-bookworm-2025-arm64-apple-darwin-Toolchain-12.2.0.tgz",
-              "sha256": "4082238f6c726c9105cd85c52cfea80349ac57737e6a3915aa896246a201a5b7",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_bookworm64_macos": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/arm64-bookworm-2025-x86_64-apple-darwin-Toolchain-12.2.0.tgz",
-              "sha256": "6900a02b447d89fa31e7872071c1264b20188cb0c2456a634706bf884f3016ea",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_bookworm64_linux": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/arm64-bookworm-2025-x86_64-linux-gnu-Toolchain-12.2.0.tgz",
-              "sha256": "7682bac991f106627ce6bd38c1f4dd552931700f3aee73534b4c10f119ad2899",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_bookworm64_win": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/arm64-bookworm-2025-x86_64-w64-mingw32-Toolchain-12.2.0.zip",
-              "sha256": "258d0209ec43302cd2b9e4ce7808f163db14a66a85383bd1880c4083f09dd22f",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_rp_bookworm32_macosarm": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/armhf-raspi-bookworm-2025-arm64-apple-darwin-Toolchain-12.2.0.tgz",
-              "sha256": "eca6d22a02f0a8b18723fadde0ef82ee2f31f20be8d258e4dbe8faed055547c7",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_rp_bookworm32_macos": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/armhf-raspi-bookworm-2025-x86_64-apple-darwin-Toolchain-12.2.0.tgz",
-              "sha256": "f2dec8a3d9b8ccf30087454dbf4fcff0fd261f3a2a3f9cf08729b17d1ceb6101",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_rp_bookworm32_linux": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/armhf-raspi-bookworm-2025-x86_64-linux-gnu-Toolchain-12.2.0.tgz",
-              "sha256": "2ab8530d9cb7c00d148ad1a4ccc027d91d02f5f83da8077a1604dff9547d9c4d",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_rp_bookworm32_win": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/armhf-raspi-bookworm-2025-x86_64-w64-mingw32-Toolchain-12.2.0.zip",
-              "sha256": "23c1c6434e761b6cc79e8622b1bcd575030a689801870ff795190f718d7fdc80",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_roborio_macosarm": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/cortexa9_vfpv3-roborio-academic-2025-arm64-apple-darwin-Toolchain-12.1.0.tgz",
-              "sha256": "f55024a44d0d3243f4f88229baeb883e386193c99b18afdcbcefd12f6d913e35",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_roborio_macos": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/cortexa9_vfpv3-roborio-academic-2025-x86_64-apple-darwin-Toolchain-12.1.0.tgz",
-              "sha256": "02d412a98ccec9dbb410975513b388304ff9b475c74450fe42bf497b5400212b",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_roborio_linux": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/cortexa9_vfpv3-roborio-academic-2025-x86_64-linux-gnu-Toolchain-12.1.0.tgz",
-              "sha256": "e1aea36b35c48d81e146a12a4b7428af051e525fac18c85a53c7be98339cce9f",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_roborio_win": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/cortexa9_vfpv3-roborio-academic-2025-x86_64-w64-mingw32-Toolchain-12.1.0.zip",
-              "sha256": "7f15de72cdacc738c3c0d33292c869a5785ad09b87478cf6af38daf4aab92b68",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_systemcore_macosarm": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/arm64-bookworm-2025-arm64-apple-darwin-Toolchain-12.2.0.tgz",
-              "sha256": "4082238f6c726c9105cd85c52cfea80349ac57737e6a3915aa896246a201a5b7",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_systemcore_macos": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/arm64-bookworm-2025-x86_64-apple-darwin-Toolchain-12.2.0.tgz",
-              "sha256": "6900a02b447d89fa31e7872071c1264b20188cb0c2456a634706bf884f3016ea",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_systemcore_linux": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/arm64-bookworm-2025-x86_64-linux-gnu-Toolchain-12.2.0.tgz",
-              "sha256": "7682bac991f106627ce6bd38c1f4dd552931700f3aee73534b4c10f119ad2899",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          },
-          "gcc_systemcore_win": {
-            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
-            "attributes": {
-              "url": "https://github.com/wpilibsuite/opensdk/releases/download/v2025-2/arm64-bookworm-2025-x86_64-w64-mingw32-Toolchain-12.2.0.zip",
-              "sha256": "258d0209ec43302cd2b9e4ce7808f163db14a66a85383bd1880c4083f09dd22f",
-              "build_file_content": "filegroup(\n    name = \"all\",\n    srcs = glob([\"**\"]),\n    visibility = [\"//visibility:public\"],\n)\n"
-            }
-          }
-        },
-        "recordedRepoMappingEntries": [
-          [
-            "rules_bzlmodrio_toolchains+",
             "bazel_tools",
             "bazel_tools"
           ]

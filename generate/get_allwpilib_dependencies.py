@@ -143,6 +143,18 @@ def get_allwpilib_dependencies(
         has_jni=True,
         dependencies=["wpiutil-cpp"],
     )
+    _cc_dependency(
+        group,
+        "telemetry",
+        has_jni=True,
+        dependencies=["wpiutil-cpp"],
+    )
+    _cc_dependency(
+        group,
+        "tunables",
+        has_jni=True,
+        dependencies=["wpiutil-cpp"],
+    )
     _cc_dependency(group, "wpinet", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(group, "wpimath", has_jni=True, dependencies=["wpiutil-cpp"])
     _cc_dependency(
@@ -193,6 +205,12 @@ def get_allwpilib_dependencies(
     )
     _cc_dependency(
         group,
+        "drivers",
+        has_jni=True,
+        dependencies=["wpilibc-cpp"],
+    )
+    _cc_dependency(
+        group,
         "commandsv2",
         has_jni=False,
         dependencies=[
@@ -239,6 +257,15 @@ def get_allwpilib_dependencies(
     )
     _java_dependency(
         group, "wpinet", dependencies=["wpiutil-java", "wpiutil-cpp", "wpinet-cpp"]
+    )
+    _java_dependency(
+        group, "datalog", dependencies=["wpiutil-java", "wpiutil-cpp", "datalog-cpp"]
+    )
+    _java_dependency(
+        group, "telemetry", dependencies=["wpiutil-java", "wpiutil-cpp", "telemetry-cpp"]
+    )
+    _java_dependency(
+        group, "tunables", dependencies=["wpiutil-java", "wpiutil-cpp", "tunables-cpp"]
     )
     _java_dependency(group, "wpiunits", dependencies=[])
     _java_dependency(

@@ -7,6 +7,6 @@
 #include <wpi/util/raw_ostream.hpp>
 
 int main() {
-  HAL_Initialize(500, 0);
+  HAL_Initialize();
   return 0;
 }

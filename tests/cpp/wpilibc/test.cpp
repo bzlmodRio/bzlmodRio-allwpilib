@@ -3,4 +3,4 @@
 
 #include "gtest/gtest.h"
 
-TEST(BasicTest, Basic) { HAL_Initialize(500, 0); }
+TEST(BasicTest, Basic) { HAL_Initialize(); }

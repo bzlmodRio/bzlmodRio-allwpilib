@@ -20,6 +20,24 @@ def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
         server_urls = ["https://frcmaven.wpi.edu/artifactory/release"],
     )
     jvm_maven_import_external(
+        name = "org_wpilib_datalog_datalog_java",
+        artifact = "org.wpilib.datalog:datalog-java:2027.0.0-alpha-7",
+        artifact_sha256 = "1aa1042c101e159824aba21635c9750cce0545c7c06051248365d7584539ae70",
+        server_urls = ["https://frcmaven.wpi.edu/artifactory/release"],
+    )
+    jvm_maven_import_external(
+        name = "org_wpilib_telemetry_telemetry_java",
+        artifact = "org.wpilib.telemetry:telemetry-java:2027.0.0-alpha-7",
+        artifact_sha256 = "6f83e03a62419fa2cace46e18e6ea56dcc60d5354ff36323fdce4aadb63291ef",
+        server_urls = ["https://frcmaven.wpi.edu/artifactory/release"],
+    )
+    jvm_maven_import_external(
+        name = "org_wpilib_tunables_tunables_java",
+        artifact = "org.wpilib.tunables:tunables-java:2027.0.0-alpha-7",
+        artifact_sha256 = "4564954282e960ca95172b89fbd9ffb5d3e2ea5911f4c46fb71aab8d2ba9bfff",
+        server_urls = ["https://frcmaven.wpi.edu/artifactory/release"],
+    )
+    jvm_maven_import_external(
         name = "org_wpilib_wpiunits_wpiunits_java",
         artifact = "org.wpilib.wpiunits:wpiunits-java:2027.0.0-alpha-7",
         artifact_sha256 = "c8cd062785ce6ada6af6e092e80555ad345aa1c4a3eec622fc2dec88eec8f7c3",

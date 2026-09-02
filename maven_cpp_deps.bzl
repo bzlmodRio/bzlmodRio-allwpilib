@@ -403,6 +403,386 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_headers",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-headers.zip",
+        sha256 = "f846fea8cd9c1ed2ace6b6505dcfc6b9268f072dab68f53f6f0d564f0321fd9d",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_sources",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-sources.zip",
+        sha256 = "09cdb5219652c96a182632c4dc3ee5bd0404b155c8244a4bd2ef4f26ac6f9c0d",
+        build_file_content = cc_library_sources,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxarm64.zip",
+        sha256 = "697776c8d5f52b3d0ab8dda85da2f2056e668782011f7909984b6736dc1e035e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxx86-64.zip",
+        sha256 = "3e54c4fae7f70d1ce124d56b8a7e2318be14035d5c0bcc2f039f80ac7c90ed76",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-osxuniversal.zip",
+        sha256 = "5691fb08ab859ddc74aa9dd0d8246a00d93267bf13b9fc3b60fe0bfb223b03b2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libtelemetry.dylib osx/universal/shared/libtelemetry.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libtelemetry.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsx86-64.zip",
+        sha256 = "c21108601c633dd4f03adf5169e6fbf008de841c69297e3f89f7266b486db923",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsarm64.zip",
+        sha256 = "b71ade1ed6a60497dac08c49140dd3f06fe07de4536ddaa63b70466900d40ee6",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxarm64static.zip",
+        sha256 = "93c21dd8b9824b57fd9055e2af3fb8059d65ddab031489fd10afa97e88be7679",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxx86-64static.zip",
+        sha256 = "ffcd4abaf7ab49aa35bdd5bcd57538db373711d4a93a6ee3f4e536aee01b9161",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_osxuniversalstatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-osxuniversalstatic.zip",
+        sha256 = "ba6a72dc541173ed3b79df5a2a0e61a392b9d7261e3181ad50b6ba1e247c90eb",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsx86-64static.zip",
+        sha256 = "161c8e9d2a376df48570edac3f286522a918901585bf8f6e679d1acfbdd23ea0",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsarm64static.zip",
+        sha256 = "8c567e12640e49d1b746e79b6345168d1bcb4abae058fce959e013df0d368aaa",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxarm64debug.zip",
+        sha256 = "1d7e72f8947395096cfea9158a9fb81b222d492a818ee4d6c1e3ca10fbf6ddc6",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxx86-64debug.zip",
+        sha256 = "01caaa58e0ebc786d53280fe67e27a9d2b6120f6622cb6dc7aab791b21ce02bc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_osxuniversaldebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-osxuniversaldebug.zip",
+        sha256 = "5cfd672795aafebdaf8d14442657decb9092c977e5db415276b84d24695a6643",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libtelemetry.dylib osx/universal/shared/libtelemetry.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libtelemetry.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsx86-64debug.zip",
+        sha256 = "4e7f6c7f4e540cdeb64db4d65fcd7c70602f7238905260b42a743501403b45b9",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsarm64debug.zip",
+        sha256 = "b6548bf0283a4ec4e9987f9f6eb725b4109dfd282cb7c550dec34135844ce7af",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxarm64staticdebug.zip",
+        sha256 = "ad22f0b74ae118e63aaefd229370db443c7bf77b4248c83a2589a5bc743ba739",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxx86-64staticdebug.zip",
+        sha256 = "e8dd4a115dd9944c2481869715c76dfed0145535d0708b8449a7d26e12185e97",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_osxuniversalstaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-osxuniversalstaticdebug.zip",
+        sha256 = "34dc7025897ce34a3c7b3c50d953a4c2569d7bd46d1337f3aa5c3b6ca3ed2a08",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsx86-64staticdebug.zip",
+        sha256 = "2e488cec5be4f68a3edb24ab73eaf751145605370e1ad758568579d0dbbef1fe",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-windowsarm64staticdebug.zip",
+        sha256 = "7b9adc6630281304e919c4bd238056b54685ef4e6e3bf0a6a08d1c45e99fd38e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxsystemcore",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxsystemcore.zip",
+        sha256 = "d2e8351a1ce65ffc43e2d635ec8c0e8896897c6f81b83ea5b19c8095e1196fb7",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxsystemcorestatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxsystemcorestatic.zip",
+        sha256 = "36824ec71abbc1cc90f02d8144420b078ad9a2198a075eda574c071ac3c822d3",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxsystemcoredebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxsystemcoredebug.zip",
+        sha256 = "6ae5e4e31995a73469aba6c079b7a50fd824f8e606b245cdfa6765ac8103cb47",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_telemetry_telemetry-cpp_linuxsystemcorestaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/telemetry/telemetry-cpp/2027.0.0-alpha-7/telemetry-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
+        sha256 = "a1c6ac8bbe52c2e4f3d286cac952abee3e3b978b3b6ef69317096b7d39f29e42",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/telemetry:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_headers",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-headers.zip",
+        sha256 = "ec4b9af4b17da7797dbc083fd810b8b54d962b2af0f40e7aa5fdc73b6687da1a",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_sources",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-sources.zip",
+        sha256 = "509e16f45ad63761502c1b0fc226fd673409ed0798c5dc9ef374df22e68a0d68",
+        build_file_content = cc_library_sources,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxarm64.zip",
+        sha256 = "e5c87d30fab2e13f91a3930c657eb3737b82b36cbcf8db3cdac716d9268e404c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxx86-64.zip",
+        sha256 = "4d0b6d6465a83320fc8ee5a77353feb4d3460df2413e48104b175e8594cfdeb3",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-osxuniversal.zip",
+        sha256 = "ee848e81781701d8897aba4f8d2c2ba35a8ec99a691c4ca4572729e2352049b2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libtunables.dylib osx/universal/shared/libtunables.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libtunables.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsx86-64.zip",
+        sha256 = "d929686aacf96918ed1564d1272aae1039e3caaa93d4ca57f8f02ecb88ef92d2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsarm64.zip",
+        sha256 = "22dcf27d059d7fcb30aa3e15e69a768a4f979276d30b19d4c7acc6ad2e638297",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxarm64static.zip",
+        sha256 = "3f88a45593ae36e5ff9ab1ec23813793bc848888a07a92513cac301df6919003",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxx86-64static.zip",
+        sha256 = "07ad3a2d7682c1e6fe42db7630ddf88a07ee23811736bfdf07e852411ae0da46",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_osxuniversalstatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-osxuniversalstatic.zip",
+        sha256 = "a0351aad15ec9277df070697f51a2d97effbe6eb1107b2450f35df4b14654d69",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_windowsx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsx86-64static.zip",
+        sha256 = "4c0b8dd98706a6f94210405a13bee5ca22f25f8c2807841e8dbba48a60a722c6",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsarm64static.zip",
+        sha256 = "b4104490e5d86980dbdeb2ce7d493051bd0d200fed88fbf04640e69bd60111ef",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxarm64debug.zip",
+        sha256 = "db5140b76ef9c5ce6c30ac802ebbc855663ccf58ecdda594891b205ccfdda879",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxx86-64debug.zip",
+        sha256 = "e104bf5eb7f66b0f67ce0b82197445da805cda4eb8e9d17b2b1a8fd0408a2d5e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_osxuniversaldebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-osxuniversaldebug.zip",
+        sha256 = "93e3ccea6443c8a51d6a375754df7d1a595f2e691d1c7aaf1b1dc7c8cec9de2a",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libtunables.dylib osx/universal/shared/libtunables.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libtunables.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_windowsx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsx86-64debug.zip",
+        sha256 = "4de45cbb556bf5c7ed79fa317863f43db60aae673af97cb151ba4a84c5758db4",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_windowsarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsarm64debug.zip",
+        sha256 = "6f7b81e74bb0d8f4658d3e1b50d568b42889660c0065bebde4edd5539acda4d1",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxarm64staticdebug.zip",
+        sha256 = "e6aa71159b470721acbee97fbd5e506e2bdf43901b6ca63c10187a47afff3b95",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxx86-64staticdebug.zip",
+        sha256 = "445465635b1da1bb08bcfe1b8a9d93849b500f194e4025898de23acb3a0579bc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_osxuniversalstaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-osxuniversalstaticdebug.zip",
+        sha256 = "3b03b8b4509f15a4267c2f346534331b4ff8df26b6aa7afeee68d8b3e82ce122",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_windowsx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsx86-64staticdebug.zip",
+        sha256 = "49155983c9b4401c8b044c976622ea857f410a085b8b0aa9062455cfbe3a076b",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-windowsarm64staticdebug.zip",
+        sha256 = "9513a0c78b24a7bc7922114f7f906f99246b521da37a974520cce95dd8155dfd",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxsystemcore",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxsystemcore.zip",
+        sha256 = "5b7cff339b435c18fd53b7cd6ab0481f5b4d50b177650ed62993dbf830c269dc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxsystemcorestatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxsystemcorestatic.zip",
+        sha256 = "c6ca5a8758313f01b3bd060f256a6f79c37356ca7b59447cc829ae90fe0dc856",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxsystemcoredebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxsystemcoredebug.zip",
+        sha256 = "5d635b5449d3c42d932bfd94a6955ed1072614b4921361be4075dd2d547b57a1",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_tunables_tunables-cpp_linuxsystemcorestaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tunables/tunables-cpp/2027.0.0-alpha-7/tunables-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
+        sha256 = "6501a446da4765840fb1efdb8ce56c281cabeab54fad3ca69ac81cca0f83a7cc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/tunables:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
         "bazelrio_org_wpilib_wpinet_wpinet-cpp_headers",
         url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/wpinet/wpinet-cpp/2027.0.0-alpha-7/wpinet-cpp-2027.0.0-alpha-7-headers.zip",
         sha256 = "f2eff5f6e2e2e0aa6a175aeed7e4a7e3e914e895b159f3c1291c08ad3d63aaf2",
@@ -1952,6 +2332,208 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/wpilibc/wpilibc-cpp/2027.0.0-alpha-7/wpilibc-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
         sha256 = "46828d213c283b3b98e96b56afb475deba87bb109f0d504ae6cdf1a69d0d8c69",
         build_file = "@bzlmodrio-allwpilib//private/cpp/wpilibc:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_headers",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-headers.zip",
+        sha256 = "c0e70a88a0932bdf1c72b3c7f791895d09570a1674ed932d4c39fc56e5182420",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_sources",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-sources.zip",
+        sha256 = "98331773a47767636991d64babdce64584adb88e367a0709eab2cb0a31f0a928",
+        build_file_content = cc_library_sources,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxarm64.zip",
+        sha256 = "35f025f2d86cf8468ed71cb7ba1231a337b68df36abae222ba02e7de0b02e5b4",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxx86-64.zip",
+        sha256 = "a5ba2534962ed368f868602cd80221e629c5f20d2de3e72a2c5a1142f1b327eb",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-osxuniversal.zip",
+        sha256 = "5830a35ffea354c2f8e0ee718886e45e96554955399db52faee32c486121a92b",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libdrivers.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libdrivers.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsx86-64.zip",
+        sha256 = "ed038d2864ed038c9c4bda1a9ff0bdad0211d178dcf404099373fbbd85dd8267",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsarm64.zip",
+        sha256 = "52dae908c08b6b695ed62103621590b470faeac491b506e7f31671b782b0b791",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxarm64static.zip",
+        sha256 = "c3cba4816cdc25ee0d035a0d5351b7625c5d204c1179345c71ada88ec832d928",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxx86-64static.zip",
+        sha256 = "155c81742831ab661a35f39c83daa23885c7c345af6c441385f2c3414cf56cb8",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_osxuniversalstatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-osxuniversalstatic.zip",
+        sha256 = "bd9ea238e2edb5399ef6d6d50a793d3b010251591b6293fe56b7cd7fc6458041",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_windowsx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsx86-64static.zip",
+        sha256 = "9797c504ea77c8f7ecc7c9af5e44b00391be6c6e5f26ad32da2c1dafd81b8a37",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsarm64static.zip",
+        sha256 = "ab2fbf758576ad7278190b25cc425075360d208fb77873062fd264da83a9ac7d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxarm64debug.zip",
+        sha256 = "860e48da1fa689f1076f66769fccd7d771f4ce9d30778d666b7c9186833ee751",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxx86-64debug.zip",
+        sha256 = "00a886f376c8e0ef2c033f35232036dbe0bef4d578a037981f4182d879f39747",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_osxuniversaldebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-osxuniversaldebug.zip",
+        sha256 = "c51c6d400b4a44382479d371f590f9be3dcf98c8bf39458674e6be75b84adff0",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libdrivers.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libdrivers.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_windowsx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsx86-64debug.zip",
+        sha256 = "ee9febc95a8dd4d36ba965714efda2da241218c7b477b13353dd41a80a18c3cc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_windowsarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsarm64debug.zip",
+        sha256 = "6d29bc2d399c0b08485a35f4501361b6832628e2316deb68053d943488ddac30",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxarm64staticdebug.zip",
+        sha256 = "5dd7d17ed1d53a41c7e979f338fce373fd71243b029909abd93b683d585b86f9",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxx86-64staticdebug.zip",
+        sha256 = "32c2e7822171df16d6f0817502eb89d73ef18ea18a076098df5c56417c5a7e0c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_osxuniversalstaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-osxuniversalstaticdebug.zip",
+        sha256 = "02dc1b0659d66bed405f322931be7014b44a718b7bde6bf3d156affa077c4af4",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_windowsx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsx86-64staticdebug.zip",
+        sha256 = "6466557bd9cca05354c98fcee33ac5d43603c02561facb95e3535f8578e5d253",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-windowsarm64staticdebug.zip",
+        sha256 = "da80cfb4a1916cea43f29d9c679ec226eb898d108742474edfca0089b666ab24",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxsystemcore",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxsystemcore.zip",
+        sha256 = "d8bf0e8b9ce44f6edcfc330792b8a83766c1e843d1305f7683e091495d061779",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxsystemcorestatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxsystemcorestatic.zip",
+        sha256 = "ce9516ea998751a10a004ce4eab8cf8a620e2643ada64c153b562fc89bde6485",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxsystemcoredebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxsystemcoredebug.zip",
+        sha256 = "2eae45049800063d11e88227ea5ccbfbb1ee00501d39894bb23770d120faecb8",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_drivers_drivers-cpp_linuxsystemcorestaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
+        sha256 = "94edccf0653b74f9cb456fb6b569f807b45445b03d570215e77d3bd9d596a196",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/drivers:static.BUILD.bazel",
     )
     maybe(
         http_archive,

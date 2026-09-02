@@ -36,7 +36,7 @@ bazelrio_java_test(
         "@maven//:org_junit_platform_junit_platform_suite_api",
     ],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/java/commands3",
+        "@bzlmodrio-allwpilib//libraries/java/commandsv3",
         "@maven//:org_junit_jupiter_junit_jupiter_api",
         "@maven//:org_junit_jupiter_junit_jupiter_engine",
         "@maven//:org_junit_jupiter_junit_jupiter_params",

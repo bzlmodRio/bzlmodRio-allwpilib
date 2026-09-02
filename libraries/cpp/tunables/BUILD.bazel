@@ -1,0 +1,35 @@
+alias(
+    name = "tunables",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "header_files",
+    actual = "@bzlmodrio-allwpilib//private/cpp/tunables:header_files",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "static",
+    actual = "@bzlmodrio-allwpilib//private/cpp/tunables:static",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared",
+    actual = "@bzlmodrio-allwpilib//private/cpp/tunables:shared",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared_raw",
+    actual = "@bzlmodrio-allwpilib//private/cpp/tunables:shared_raw",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "jni",
+    actual = "@bzlmodrio-allwpilib//private/cpp/tunables:jni",
+    visibility = ["//visibility:public"],
+)
