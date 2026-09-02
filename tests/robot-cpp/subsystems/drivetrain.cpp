@@ -2,8 +2,8 @@
 
 #include <numbers>
 #include <wpi/driverstation/Joystick.hpp>
-#include <wpi/telemetry/Telemetry.hpp>
 #include <wpi/system/RobotController.hpp>
+#include <wpi/telemetry/Telemetry.hpp>
 #include <wpi/units/length.hpp>
 
 DriveTrain::DriveTrain()

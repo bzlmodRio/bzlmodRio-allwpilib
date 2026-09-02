@@ -1,8 +1,8 @@
 #include "robot-cpp/subsystems/elevator.hpp"
 
 #include <wpi/math/controller/PIDController.hpp>
-#include <wpi/telemetry/Telemetry.hpp>
 #include <wpi/system/RobotController.hpp>
+#include <wpi/telemetry/Telemetry.hpp>
 
 namespace {
 constexpr double kP = 5.0;
@@ -35,8 +35,7 @@ Elevator::Elevator()
 }
 
 void Elevator::Log() {
-  wpi::telemetry::Log("Elevator Height (m)",
-                                 m_encoder.GetDistance());
+  wpi::telemetry::Log("Elevator Height (m)", m_encoder.GetDistance());
 }
 
 void Elevator::SetVoltage(double output) {
