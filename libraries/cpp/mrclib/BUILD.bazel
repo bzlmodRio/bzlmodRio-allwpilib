@@ -1,0 +1,27 @@
+alias(
+    name = "mrclib",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "header_files",
+    actual = "@bzlmodrio-allwpilib//private/cpp/mrclib:header_files",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared",
+    actual = "@bzlmodrio-allwpilib//private/cpp/mrclib:shared",
+    target_compatible_with = select({
+        "@wpilib_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared_raw",
+    actual = "@bzlmodrio-allwpilib//private/cpp/mrclib:shared_raw",
+    visibility = ["//visibility:public"],
+)

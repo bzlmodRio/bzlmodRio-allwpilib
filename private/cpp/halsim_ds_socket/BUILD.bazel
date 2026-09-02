@@ -52,6 +52,7 @@ cc_library(
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/mrclib:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
     ] + select({

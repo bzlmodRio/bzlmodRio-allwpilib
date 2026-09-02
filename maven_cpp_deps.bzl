@@ -213,6 +213,51 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
+        "bazelrio_org_wpilib_mrclib_mrclib-cpp_headers",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/mrclib/mrclib-cpp/2027.1.0-alpha-1-116-g5288562/mrclib-cpp-2027.1.0-alpha-1-116-g5288562-headers.zip",
+        sha256 = "1020629cbdd8218e9a13f72c1b31b284ee79ecbbc10373d44a938c873783e003",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_mrclib_mrclib-cpp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/mrclib/mrclib-cpp/2027.1.0-alpha-1-116-g5288562/mrclib-cpp-2027.1.0-alpha-1-116-g5288562-linuxarm64.zip",
+        sha256 = "de65721300dcc7d99a19750647c118ad2cf66936375b12f38e16515d80d0c809",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/mrclib:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_mrclib_mrclib-cpp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/mrclib/mrclib-cpp/2027.1.0-alpha-1-116-g5288562/mrclib-cpp-2027.1.0-alpha-1-116-g5288562-linuxx86-64.zip",
+        sha256 = "5edd36845bbf51bae2dc2dbe0cbce37f11b3990e11ca8d8fd889e83ae89326b0",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/mrclib:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_mrclib_mrclib-cpp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/mrclib/mrclib-cpp/2027.1.0-alpha-1-116-g5288562/mrclib-cpp-2027.1.0-alpha-1-116-g5288562-osxuniversal.zip",
+        sha256 = "13cd4ec2890f40de96e9d942297dfb4ed19861318a3b842910c1d26d1da9822d",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/mrclib:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libmrclib.dylib osx/universal/shared/libmrclib.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_mrclib_mrclib-cpp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/mrclib/mrclib-cpp/2027.1.0-alpha-1-116-g5288562/mrclib-cpp-2027.1.0-alpha-1-116-g5288562-windowsx86-64.zip",
+        sha256 = "95b7cb77b4a4fed6d610ce6872d705d27178bcd1a5d1326c267c9cbe4fc71d5c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/mrclib:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_mrclib_mrclib-cpp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/mrclib/mrclib-cpp/2027.1.0-alpha-1-116-g5288562/mrclib-cpp-2027.1.0-alpha-1-116-g5288562-windowsarm64.zip",
+        sha256 = "34c3bfa2a1693e2181554383ba72245eb11a57325c25d1c07ec28f02233d6518",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/mrclib:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
         "bazelrio_org_wpilib_datalog_datalog-cpp_headers",
         url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/datalog/datalog-cpp/2027.0.0-alpha-7/datalog-cpp-2027.0.0-alpha-7-headers.zip",
         sha256 = "1854eb2ce6e371247b077205f043a7443d32b53b34c1f51a77a51b821e867933",
@@ -3416,6 +3461,7 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         patch_cmds = [
             "install_name_tool -id @rpath/libhalsim_ds_socket.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
+            "install_name_tool -change libmrclib.dylib @rpath/libmrclib.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
@@ -3494,6 +3540,7 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         patch_cmds = [
             "install_name_tool -id @rpath/libhalsim_ds_socket.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
+            "install_name_tool -change libmrclib.dylib @rpath/libmrclib.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_ds_socket.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_ds_socket.dylib",

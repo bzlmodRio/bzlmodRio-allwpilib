@@ -137,6 +137,17 @@ def get_allwpilib_dependencies(
         has_jni=True,
         dependencies=[],
     )
+    group.create_cc_dependency(
+        "mrclib-cpp",
+        group_id="org.wpilib.mrclib",
+        parent_folder="mrclib",
+        version="2027.1.0-alpha-1-116-g5288562",
+        headers="headers",
+        sources=None,
+        resources=_default_native_shared_platforms(),
+        has_jni=False,
+        dependencies=[],
+    )
     _cc_dependency(
         group,
         "datalog",
@@ -425,7 +436,9 @@ def get_allwpilib_dependencies(
     )
 
     _halsim_dependency(
-        group, "halsim_ds_socket", dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp"]
+        group,
+        "halsim_ds_socket",
+        dependencies=["hal-cpp", "wpinet-cpp", "wpiutil-cpp", "mrclib-cpp"],
     )
     _halsim_dependency(
         group,
