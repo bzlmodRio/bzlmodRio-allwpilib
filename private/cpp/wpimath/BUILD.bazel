@@ -45,6 +45,8 @@ cc_library(
     srcs = [":shared_raw"],
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
     deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/telemetry:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/tunables:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",
     ] + select({
         "@wpilib_toolchains//conditions:windows_arm64": [":shared_interface"],

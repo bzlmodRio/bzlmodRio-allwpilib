@@ -27,9 +27,3 @@ alias(
     actual = "@bzlmodrio-allwpilib//private/cpp/tunables:shared_raw",
     visibility = ["//visibility:public"],
 )
-
-alias(
-    name = "jni",
-    actual = "@bzlmodrio-allwpilib//private/cpp/tunables:jni",
-    visibility = ["//visibility:public"],
-)

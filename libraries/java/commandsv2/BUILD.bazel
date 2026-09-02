@@ -15,6 +15,8 @@ java_import(
         "@bzlmodrio-allwpilib//libraries/java/cscore",
         "@bzlmodrio-allwpilib//libraries/java/hal",
         "@bzlmodrio-allwpilib//libraries/java/ntcore",
+        "@bzlmodrio-allwpilib//libraries/java/telemetry",
+        "@bzlmodrio-allwpilib//libraries/java/tunables",
         "@bzlmodrio-allwpilib//libraries/java/wpilibj",
         "@bzlmodrio-allwpilib//libraries/java/wpimath",
         "@bzlmodrio-allwpilib//libraries/java/wpiutil",

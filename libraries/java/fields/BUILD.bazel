@@ -6,6 +6,10 @@ java_import(
     jars = ["@org_wpilib_fields_fields_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/wpimath",
+        "@bzlmodrio-allwpilib//libraries/java/wpiutil",
         artifact("io.avaje:avaje-jsonb"),
     ],
 )

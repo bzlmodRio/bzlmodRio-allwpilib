@@ -5,7 +5,6 @@ java_import(
     jars = ["@org_wpilib_telemetry_telemetry_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/telemetry:jni",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
         "@bzlmodrio-allwpilib//libraries/java/wpiutil",
     ],

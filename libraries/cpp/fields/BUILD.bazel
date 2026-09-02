@@ -1,0 +1,29 @@
+alias(
+    name = "fields",
+    actual = ":shared",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "header_files",
+    actual = "@bzlmodrio-allwpilib//private/cpp/fields:header_files",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "static",
+    actual = "@bzlmodrio-allwpilib//private/cpp/fields:static",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared",
+    actual = "@bzlmodrio-allwpilib//private/cpp/fields:shared",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "shared_raw",
+    actual = "@bzlmodrio-allwpilib//private/cpp/fields:shared_raw",
+    visibility = ["//visibility:public"],
+)

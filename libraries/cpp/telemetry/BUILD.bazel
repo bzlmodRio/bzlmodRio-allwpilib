@@ -27,9 +27,3 @@ alias(
     actual = "@bzlmodrio-allwpilib//private/cpp/telemetry:shared_raw",
     visibility = ["//visibility:public"],
 )
-
-alias(
-    name = "jni",
-    actual = "@bzlmodrio-allwpilib//private/cpp/telemetry:jni",
-    visibility = ["//visibility:public"],
-)

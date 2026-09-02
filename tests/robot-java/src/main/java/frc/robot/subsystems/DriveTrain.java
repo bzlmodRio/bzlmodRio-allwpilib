@@ -6,18 +6,18 @@ package frc.robot.subsystems;
 
 import org.wpilib.command2.SubsystemBase;
 import org.wpilib.drive.DifferentialDrive;
+import org.wpilib.drivers.motor.PWMVictorSPX;
 import org.wpilib.framework.RobotBase;
 import org.wpilib.hardware.imu.OnboardIMU;
 import org.wpilib.hardware.motor.MotorController;
-import org.wpilib.hardware.motor.PWMVictorSPX;
 import org.wpilib.hardware.rotation.Encoder;
 import org.wpilib.math.kinematics.DifferentialDriveOdometry;
 import org.wpilib.simulation.DifferentialDrivetrainSim;
 import org.wpilib.simulation.EncoderSim;
 import org.wpilib.simulation.OnboardIMUSim;
 import org.wpilib.smartdashboard.Field2d;
-import org.wpilib.smartdashboard.SmartDashboard;
 import org.wpilib.system.RobotController;
+import org.wpilib.telemetry.Telemetry;
 
 public class DriveTrain extends SubsystemBase {
   private final MotorController m_leftMotor;
@@ -62,7 +62,7 @@ public class DriveTrain extends SubsystemBase {
     m_leftEncoder.setDistancePerPulse((4.0 / 12.0 * Math.PI) / 360.0);
     m_rightEncoder.setDistancePerPulse((4.0 / 12.0 * Math.PI) / 360.0);
 
-    SmartDashboard.putData("Field", m_field);
+    Telemetry.log("Field", m_field);
 
     if (RobotBase.isSimulation()) {
       m_leftEncoderSim = new EncoderSim(m_leftEncoder);
@@ -77,11 +77,11 @@ public class DriveTrain extends SubsystemBase {
   }
 
   public void log() {
-    SmartDashboard.putNumber("Left Distance", m_leftEncoder.getDistance());
-    SmartDashboard.putNumber("Right Distance", m_rightEncoder.getDistance());
-    SmartDashboard.putNumber("Left Speed", m_leftEncoder.getRate());
-    SmartDashboard.putNumber("Right Speed", m_rightEncoder.getRate());
-    SmartDashboard.putNumber("Gyro", m_gyro.getYawRadians());
+    Telemetry.log("Left Distance", m_leftEncoder.getDistance());
+    Telemetry.log("Right Distance", m_rightEncoder.getDistance());
+    Telemetry.log("Left Speed", m_leftEncoder.getRate());
+    Telemetry.log("Right Speed", m_rightEncoder.getRate());
+    Telemetry.log("Gyro", m_gyro.getYawRadians());
   }
 
   public void arcadeDrive(double throttle, double rotation) {

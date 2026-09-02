@@ -5,7 +5,6 @@ java_import(
     jars = ["@org_wpilib_tunables_tunables_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/cpp/tunables:jni",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
         "@bzlmodrio-allwpilib//libraries/java/wpiutil",
     ],

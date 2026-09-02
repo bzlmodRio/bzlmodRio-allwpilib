@@ -43,9 +43,3 @@ filegroup(
     srcs = shared_srcs,
     visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
 )
-
-filegroup(
-    name = "jni",
-    srcs = shared_jni_srcs,
-    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
-)

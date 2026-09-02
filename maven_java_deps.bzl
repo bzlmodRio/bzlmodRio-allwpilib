@@ -80,15 +80,21 @@ def __setup_bzlmodrio_allwpilib_java_dependencies(mctx):
         server_urls = ["https://frcmaven.wpi.edu/artifactory/release"],
     )
     jvm_maven_import_external(
+        name = "org_wpilib_wpilibj_wpilibj_java",
+        artifact = "org.wpilib.wpilibj:wpilibj-java:2027.0.0-alpha-7",
+        artifact_sha256 = "08c6d7b6933ecf26422bf49dbc4c50fd84e1158c6d03394a28f9705ffc716a8e",
+        server_urls = ["https://frcmaven.wpi.edu/artifactory/release"],
+    )
+    jvm_maven_import_external(
         name = "org_wpilib_cameraserver_cameraserver_java",
         artifact = "org.wpilib.cameraserver:cameraserver-java:2027.0.0-alpha-7",
         artifact_sha256 = "260a8e6d2a8bcd42184cd1ceac53c613dec5e6dc1b85da9d01badf2b02c9eb17",
         server_urls = ["https://frcmaven.wpi.edu/artifactory/release"],
     )
     jvm_maven_import_external(
-        name = "org_wpilib_wpilibj_wpilibj_java",
-        artifact = "org.wpilib.wpilibj:wpilibj-java:2027.0.0-alpha-7",
-        artifact_sha256 = "08c6d7b6933ecf26422bf49dbc4c50fd84e1158c6d03394a28f9705ffc716a8e",
+        name = "org_wpilib_drivers_drivers_java",
+        artifact = "org.wpilib.drivers:drivers-java:2027.0.0-alpha-7",
+        artifact_sha256 = "53cbf1f81dc2f5ab5ec4717ae82a00821f00e8db272ecdc874ed56c467149597",
         server_urls = ["https://frcmaven.wpi.edu/artifactory/release"],
     )
     jvm_maven_import_external(

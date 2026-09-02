@@ -1007,6 +1007,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/wpimath:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libwpimath.dylib osx/universal/shared/libwpimath.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libwpimath.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libwpimath.dylib",
             "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libwpimath.dylib",
         ],
     )
@@ -1081,6 +1083,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/wpimath:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libwpimath.dylib osx/universal/shared/libwpimath.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libwpimath.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libwpimath.dylib",
             "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libwpimath.dylib",
         ],
     )
@@ -1197,6 +1201,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/apriltag:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libapriltag.dylib osx/universal/shared/libapriltag.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libapriltag.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libapriltag.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libapriltag.dylib",
             "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libapriltag.dylib",
         ],
@@ -1272,6 +1278,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         build_file = "@bzlmodrio-allwpilib//private/cpp/apriltag:shared.BUILD.bazel",
         patch_cmds = [
             "install_name_tool -id @rpath/libapriltag.dylib osx/universal/shared/libapriltag.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libapriltag.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libapriltag.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libapriltag.dylib",
             "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libapriltag.dylib",
         ],
@@ -1352,6 +1360,202 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
         url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/apriltag/apriltag-cpp/2027.0.0-alpha-7/apriltag-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
         sha256 = "4b9dce1c46628e73f25082cb016d1e15b822bfa6b4a9ed7df79327cb0afcaa03",
         build_file = "@bzlmodrio-allwpilib//private/cpp/apriltag:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_headers",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-headers.zip",
+        sha256 = "75caeeacd5d602b4fc78342b4ac7abd8e61de474f2e6533ac2fdf4c03d594113",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_sources",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-sources.zip",
+        sha256 = "6d0e8c71be857d68dbfbfbd8a6a3e21cd2f71f6fad769695094fea0d552122ec",
+        build_file_content = cc_library_sources,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxarm64.zip",
+        sha256 = "a9d6c522531a9e91e39215f2958a72477376ccdf8791946d44de46d1d294e4fb",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxx86-64.zip",
+        sha256 = "50514477d06075f8a7925252723e20d61155a127f1d5ed40a00124c7f7d211cf",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-osxuniversal.zip",
+        sha256 = "c358e3cc779bb4161404ca1434a631997403dd55563f8d4bd14161325579c3a3",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libfields.dylib osx/universal/shared/libfields.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libfields.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libfields.dylib",
+            "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libfields.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libfields.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-windowsx86-64.zip",
+        sha256 = "9a65c9e70bbc6dd77df4f9b8a81a6a6fe5385871e34af86ae9da44113a93119a",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-windowsarm64.zip",
+        sha256 = "3943aaa450840137519bad5c02bb99a22ec3968897788a79c9b8deced15e2fb2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxarm64static.zip",
+        sha256 = "5cddb0a7d257954692001d1df36d6c437e4e229afbd0971bf33d65da88749aca",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxx86-64static.zip",
+        sha256 = "faaacc8d96e2972caed5170bbe33df6b7047f2083534a66d76ce1eed81c2fe32",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_osxuniversalstatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-osxuniversalstatic.zip",
+        sha256 = "c0339b76eb43d8cd7848cb37580a90d6b3a41c90552e33630b79940320213508",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_windowsx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-windowsx86-64static.zip",
+        sha256 = "9ec54c17c1e972684fa7a6d1611a7cb333a3c19cf50c36fb83db75ba9010bc2c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-windowsarm64static.zip",
+        sha256 = "e832908d18f7b3c7a58366756095e629354a3226e596e6fbd8548735a6ae53b4",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxarm64debug.zip",
+        sha256 = "12f76574983e6e4710e5d8683cd9d4e1c1cedf6ab6134154fe8fb44908df4273",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxx86-64debug.zip",
+        sha256 = "2c16df34d4098c38a5ff4a9c364dfe24794306fc94833022aaa32197f2e9aa75",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_osxuniversaldebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-osxuniversaldebug.zip",
+        sha256 = "03a42fddf3fb5b358484b5f11c29b8bd9a52fdaf9782e8c1a7678644bee28f60",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libfields.dylib osx/universal/shared/libfields.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libfields.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libfields.dylib",
+            "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libfields.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libfields.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_windowsx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-windowsx86-64debug.zip",
+        sha256 = "3b54cdfc4482e47fe3a8ebd6c326dca08e1c47bdea2d47a52224d25378e641bf",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_windowsarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-windowsarm64debug.zip",
+        sha256 = "002d9a8c638c7c8fdac125189ee513c95295df6eb9c03d908c5939c247c47185",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxarm64staticdebug.zip",
+        sha256 = "bba64bf65c2da5427f94d1ad7829df2d009eb4b7998755cafd8e1aa1ac0ff0a6",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxx86-64staticdebug.zip",
+        sha256 = "41a5ced71ca196db22a47d04826d41d5f4717484eb4d51e25bd89847b3382b6a",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_osxuniversalstaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-osxuniversalstaticdebug.zip",
+        sha256 = "a2a060455b10609a983b4b276f4c333169fa2eaf9f3b95ff055f7f0888f4faad",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_windowsx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-windowsx86-64staticdebug.zip",
+        sha256 = "5a5d47caf94fdf69e366745104ba4b8219d11aa6c942cbef5aa313d4b14dc2d9",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-windowsarm64staticdebug.zip",
+        sha256 = "a4b9aacfe19117092e609c294ed5cbb72e85cc7b31661755a4cab64e32bb3bb2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxsystemcore",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxsystemcore.zip",
+        sha256 = "10ee05f59f9598387b329b9e66f338889b4a0ba372a5cc5c82d0fbed1d2382ff",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxsystemcorestatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxsystemcorestatic.zip",
+        sha256 = "47ce143a7c3d0aeca24a0c8dcf31f9e93438663fe7cfbffc71720f60ef56dc69",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxsystemcoredebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxsystemcoredebug.zip",
+        sha256 = "2c45de4b22b80d8d420704c4c048ad8ae9e81d7a7bcd83e6cf390d5572577bd3",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_fields_fields-cpp_linuxsystemcorestaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/fields/fields-cpp/2027.0.0-alpha-7/fields-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
+        sha256 = "70a574463868fe41b043d44fb2847cae37c1df8022e50ba912a3aef5811fb29c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/fields:static.BUILD.bazel",
     )
     maybe(
         http_archive,
@@ -1937,204 +2141,6 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_headers",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-headers.zip",
-        sha256 = "4423aa87f5ec8f0de1c5379d75ab98f9906d3eaef573ccc00fe658941dd989e9",
-        build_file_content = cc_library_headers,
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_sources",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-sources.zip",
-        sha256 = "6a51609a77c7972716ff10b02e2b1c28ac4b94551bb1f4442585f48f1d3d339e",
-        build_file_content = cc_library_sources,
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxarm64",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxarm64.zip",
-        sha256 = "31361c567f0f6ddfd5f9a8f29e8c93f54d7f4210730439f5da4274e0f8e0825e",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxx86-64.zip",
-        sha256 = "1d2d38e5449e699054b4a4e17a75b74b217a22958feecc237b18f923105fabf2",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_osxuniversal",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-osxuniversal.zip",
-        sha256 = "61ae70d3b4050bee04ec8b869363e5a0a0fa608e435381872d76b3a76b9e5344",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-        patch_cmds = [
-            "install_name_tool -id @rpath/libcameraserver.dylib osx/universal/shared/libcameraserver.dylib",
-            "install_name_tool -change libcscore.dylib @rpath/libcscore.dylib osx/universal/shared/libcameraserver.dylib",
-            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libcameraserver.dylib",
-            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libcameraserver.dylib",
-            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libcameraserver.dylib",
-            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libcameraserver.dylib",
-        ],
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsx86-64.zip",
-        sha256 = "ab614a607cba16673ca16d927d32f598bb1e496e339357f7a2af6d46ecaa60f0",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsarm64",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsarm64.zip",
-        sha256 = "f63ec5f655752484ed08e5f656c22a1356821f375e6a438cd0820d94dc312895",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxarm64static",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxarm64static.zip",
-        sha256 = "e192ddb6af42e778a9432d79c1bc1807ba90d01b68171234d4de2fb7cc0f153e",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxx86-64static",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxx86-64static.zip",
-        sha256 = "831b045177c556e11ae2d5a7bf44739454c6c39944e5bcd25ffdf0b918e36e7f",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_osxuniversalstatic",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-osxuniversalstatic.zip",
-        sha256 = "cbf40bfb023bb027cf418210e4ecf75d53039cffd3f647103c267d7899a55170",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsx86-64static",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsx86-64static.zip",
-        sha256 = "559718a667795af34a7624dba79020adb863ddf2caf2cc88488a653185f90274",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsarm64static",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsarm64static.zip",
-        sha256 = "7df17a482053e96f29eeab79951a2c3ff13b8065831d342fd095ce5638b5cb74",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxarm64debug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxarm64debug.zip",
-        sha256 = "ba8c456f1cd4cf2ea8ca9a0904195275012c8098f0008a8b794b46bc2648dc05",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxx86-64debug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxx86-64debug.zip",
-        sha256 = "bc544da6fb207e471d919c30fc85caa3a3464823c4d9ad4d444e4a3496cb8d84",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_osxuniversaldebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-osxuniversaldebug.zip",
-        sha256 = "a0d159159ba257db54cbb81a73d776870ca615d8157612c099b93186d6a72cd6",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-        patch_cmds = [
-            "install_name_tool -id @rpath/libcameraserver.dylib osx/universal/shared/libcameraserver.dylib",
-            "install_name_tool -change libcscore.dylib @rpath/libcscore.dylib osx/universal/shared/libcameraserver.dylib",
-            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libcameraserver.dylib",
-            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libcameraserver.dylib",
-            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libcameraserver.dylib",
-            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libcameraserver.dylib",
-        ],
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsx86-64debug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsx86-64debug.zip",
-        sha256 = "0c4acc62bb922229f634e4c84e95a47a730fb80d5dcf38366d19252ab5c80f54",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsarm64debug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsarm64debug.zip",
-        sha256 = "df71c600a8528eb1cb38d8bfc9da9d0bb674532510dd3b25dad6ab44fa863493",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxarm64staticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxarm64staticdebug.zip",
-        sha256 = "d95489e110b70cf13d4efb5ddf0e5b5dd96f5782683405e974eb916ed5ee17dc",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxx86-64staticdebug.zip",
-        sha256 = "1e4616f8b6e90b10f1b813edfe9fce9cbb76263f1f3dd331a8f1546b0983ed3e",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_osxuniversalstaticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-osxuniversalstaticdebug.zip",
-        sha256 = "fd8004a345d0635f388eeefa2d7b085163942e047ca7890d3f97b1332d43edec",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsx86-64staticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsx86-64staticdebug.zip",
-        sha256 = "b1a227634d0fc8bc3e6753e3237d75dc11d90e0dfe0ad1bf3b4f5d2e0d6349b7",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsarm64staticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsarm64staticdebug.zip",
-        sha256 = "a260a358afa8d64e59485b6d396cc20dabaf9fd69e292fe5b70dd1e5122c48d0",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxsystemcore",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxsystemcore.zip",
-        sha256 = "4c5cadf4a6021a9f1acf87c44666e79a205fa771d890d9cb60ca6dc7ff9bf28e",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxsystemcorestatic",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxsystemcorestatic.zip",
-        sha256 = "a93a40b5b72ce08b4efab1de949b1fff4ae6978b61b9d796244fe4b97c6e06d9",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxsystemcoredebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxsystemcoredebug.zip",
-        sha256 = "6d64ccfd899ccbdbb041321cf23c9e97097f273a3210d5bb3b1d14326c68e3f3",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
-        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxsystemcorestaticdebug",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
-        sha256 = "d2b3752387d6ae76ef467b1e95a287389a09fc874a365bf3c3a6ba395fd5f32c",
-        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
-    )
-    maybe(
-        http_archive,
         "bazelrio_org_wpilib_wpilibc_wpilibc-cpp_headers",
         url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/wpilibc/wpilibc-cpp/2027.0.0-alpha-7/wpilibc-cpp-2027.0.0-alpha-7-headers.zip",
         sha256 = "53a3a6601cdf74b8e57096f822f2649174691a255a7892556d6b3a1ef37444ab",
@@ -2171,6 +2177,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -id @rpath/libwpilibc.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libwpilibc.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libwpilibc.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libwpilibc.dylib",
@@ -2250,6 +2258,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -id @rpath/libwpilibc.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libwpilibc.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libwpilibc.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libwpilibc.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libwpilibc.dylib",
@@ -2335,6 +2345,214 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_headers",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-headers.zip",
+        sha256 = "4423aa87f5ec8f0de1c5379d75ab98f9906d3eaef573ccc00fe658941dd989e9",
+        build_file_content = cc_library_headers,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_sources",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-sources.zip",
+        sha256 = "6a51609a77c7972716ff10b02e2b1c28ac4b94551bb1f4442585f48f1d3d339e",
+        build_file_content = cc_library_sources,
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxarm64.zip",
+        sha256 = "31361c567f0f6ddfd5f9a8f29e8c93f54d7f4210730439f5da4274e0f8e0825e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxx86-64.zip",
+        sha256 = "1d2d38e5449e699054b4a4e17a75b74b217a22958feecc237b18f923105fabf2",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_osxuniversal",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-osxuniversal.zip",
+        sha256 = "61ae70d3b4050bee04ec8b869363e5a0a0fa608e435381872d76b3a76b9e5344",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libcameraserver.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libcscore.dylib @rpath/libcscore.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libcameraserver.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsx86-64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsx86-64.zip",
+        sha256 = "ab614a607cba16673ca16d927d32f598bb1e496e339357f7a2af6d46ecaa60f0",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsarm64.zip",
+        sha256 = "f63ec5f655752484ed08e5f656c22a1356821f375e6a438cd0820d94dc312895",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxarm64static.zip",
+        sha256 = "e192ddb6af42e778a9432d79c1bc1807ba90d01b68171234d4de2fb7cc0f153e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxx86-64static.zip",
+        sha256 = "831b045177c556e11ae2d5a7bf44739454c6c39944e5bcd25ffdf0b918e36e7f",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_osxuniversalstatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-osxuniversalstatic.zip",
+        sha256 = "cbf40bfb023bb027cf418210e4ecf75d53039cffd3f647103c267d7899a55170",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsx86-64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsx86-64static.zip",
+        sha256 = "559718a667795af34a7624dba79020adb863ddf2caf2cc88488a653185f90274",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsarm64static",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsarm64static.zip",
+        sha256 = "7df17a482053e96f29eeab79951a2c3ff13b8065831d342fd095ce5638b5cb74",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxarm64debug.zip",
+        sha256 = "ba8c456f1cd4cf2ea8ca9a0904195275012c8098f0008a8b794b46bc2648dc05",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxx86-64debug.zip",
+        sha256 = "bc544da6fb207e471d919c30fc85caa3a3464823c4d9ad4d444e4a3496cb8d84",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_osxuniversaldebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-osxuniversaldebug.zip",
+        sha256 = "a0d159159ba257db54cbb81a73d776870ca615d8157612c099b93186d6a72cd6",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+        patch_cmds = [
+            "install_name_tool -id @rpath/libcameraserver.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libcscore.dylib @rpath/libcscore.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libcameraserver.dylib",
+            "install_name_tool -change libwpiutil.dylib @rpath/libwpiutil.dylib osx/universal/shared/libcameraserver.dylib",
+        ],
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsx86-64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsx86-64debug.zip",
+        sha256 = "0c4acc62bb922229f634e4c84e95a47a730fb80d5dcf38366d19252ab5c80f54",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsarm64debug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsarm64debug.zip",
+        sha256 = "df71c600a8528eb1cb38d8bfc9da9d0bb674532510dd3b25dad6ab44fa863493",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxarm64staticdebug.zip",
+        sha256 = "d95489e110b70cf13d4efb5ddf0e5b5dd96f5782683405e974eb916ed5ee17dc",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxx86-64staticdebug.zip",
+        sha256 = "1e4616f8b6e90b10f1b813edfe9fce9cbb76263f1f3dd331a8f1546b0983ed3e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_osxuniversalstaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-osxuniversalstaticdebug.zip",
+        sha256 = "fd8004a345d0635f388eeefa2d7b085163942e047ca7890d3f97b1332d43edec",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsx86-64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsx86-64staticdebug.zip",
+        sha256 = "b1a227634d0fc8bc3e6753e3237d75dc11d90e0dfe0ad1bf3b4f5d2e0d6349b7",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_windowsarm64staticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-windowsarm64staticdebug.zip",
+        sha256 = "a260a358afa8d64e59485b6d396cc20dabaf9fd69e292fe5b70dd1e5122c48d0",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxsystemcore",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxsystemcore.zip",
+        sha256 = "4c5cadf4a6021a9f1acf87c44666e79a205fa771d890d9cb60ca6dc7ff9bf28e",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxsystemcorestatic",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxsystemcorestatic.zip",
+        sha256 = "a93a40b5b72ce08b4efab1de949b1fff4ae6978b61b9d796244fe4b97c6e06d9",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxsystemcoredebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxsystemcoredebug.zip",
+        sha256 = "6d64ccfd899ccbdbb041321cf23c9e97097f273a3210d5bb3b1d14326c68e3f3",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:shared.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
+        "bazelrio_org_wpilib_cameraserver_cameraserver-cpp_linuxsystemcorestaticdebug",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/cameraserver/cameraserver-cpp/2027.0.0-alpha-7/cameraserver-cpp-2027.0.0-alpha-7-linuxsystemcorestaticdebug.zip",
+        sha256 = "d2b3752387d6ae76ef467b1e95a287389a09fc874a365bf3c3a6ba395fd5f32c",
+        build_file = "@bzlmodrio-allwpilib//private/cpp/cameraserver:static.BUILD.bazel",
+    )
+    maybe(
+        http_archive,
         "bazelrio_org_wpilib_drivers_drivers-cpp_headers",
         url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/drivers/drivers-cpp/2027.0.0-alpha-7/drivers-cpp-2027.0.0-alpha-7-headers.zip",
         sha256 = "c0e70a88a0932bdf1c72b3c7f791895d09570a1674ed932d4c39fc56e5182420",
@@ -2371,6 +2589,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -id @rpath/libdrivers.dylib osx/universal/shared/libdrivers.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libdrivers.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libdrivers.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libdrivers.dylib",
             "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libdrivers.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libdrivers.dylib",
@@ -2451,6 +2671,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -id @rpath/libdrivers.dylib osx/universal/shared/libdrivers.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libdrivers.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libdrivers.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libdrivers.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libdrivers.dylib",
             "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libdrivers.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libdrivers.dylib",
@@ -2575,6 +2797,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -change libcscore.dylib @rpath/libcscore.dylib osx/universal/shared/libcommandsv2.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libcommandsv2.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libcommandsv2.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libcommandsv2.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libcommandsv2.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libcommandsv2.dylib",
             "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libcommandsv2.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libcommandsv2.dylib",
@@ -2657,6 +2881,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -change libcscore.dylib @rpath/libcscore.dylib osx/universal/shared/libcommandsv2.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libcommandsv2.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libcommandsv2.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libcommandsv2.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libcommandsv2.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libcommandsv2.dylib",
             "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libcommandsv2.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libcommandsv2.dylib",
@@ -2779,6 +3005,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -id @rpath/libromiVendordep.dylib osx/universal/shared/libromiVendordep.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libromiVendordep.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libromiVendordep.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libromiVendordep.dylib",
             "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libromiVendordep.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libromiVendordep.dylib",
@@ -2859,6 +3087,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -id @rpath/libromiVendordep.dylib osx/universal/shared/libromiVendordep.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libromiVendordep.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libromiVendordep.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libromiVendordep.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libromiVendordep.dylib",
             "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libromiVendordep.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libromiVendordep.dylib",
@@ -2981,6 +3211,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -id @rpath/libxrpVendordep.dylib osx/universal/shared/libxrpVendordep.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libxrpVendordep.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libxrpVendordep.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libxrpVendordep.dylib",
             "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libxrpVendordep.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libxrpVendordep.dylib",
@@ -3061,6 +3293,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -id @rpath/libxrpVendordep.dylib osx/universal/shared/libxrpVendordep.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libxrpVendordep.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libxrpVendordep.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libxrpVendordep.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libxrpVendordep.dylib",
             "install_name_tool -change libwpilibc.dylib @rpath/libwpilibc.dylib osx/universal/shared/libxrpVendordep.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libxrpVendordep.dylib",
@@ -3353,6 +3587,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -id @rpath/libhalsim_gui.dylib osx/universal/shared/libhalsim_gui.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_gui.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_gui.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libhalsim_gui.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libhalsim_gui.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_gui.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libhalsim_gui.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_gui.dylib",
@@ -3432,6 +3668,8 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
             "install_name_tool -id @rpath/libhalsim_gui.dylib osx/universal/shared/libhalsim_gui.dylib",
             "install_name_tool -change libdatalog.dylib @rpath/libdatalog.dylib osx/universal/shared/libhalsim_gui.dylib",
             "install_name_tool -change libntcore.dylib @rpath/libntcore.dylib osx/universal/shared/libhalsim_gui.dylib",
+            "install_name_tool -change libtelemetry.dylib @rpath/libtelemetry.dylib osx/universal/shared/libhalsim_gui.dylib",
+            "install_name_tool -change libtunables.dylib @rpath/libtunables.dylib osx/universal/shared/libhalsim_gui.dylib",
             "install_name_tool -change libwpiHal.dylib @rpath/libwpiHal.dylib osx/universal/shared/libhalsim_gui.dylib",
             "install_name_tool -change libwpimath.dylib @rpath/libwpimath.dylib osx/universal/shared/libhalsim_gui.dylib",
             "install_name_tool -change libwpinet.dylib @rpath/libwpinet.dylib osx/universal/shared/libhalsim_gui.dylib",

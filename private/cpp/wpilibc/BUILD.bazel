@@ -47,6 +47,8 @@ cc_library(
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/hal:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/ntcore:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/telemetry:shared",
+        "@bzlmodrio-allwpilib//libraries/cpp/tunables:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:shared",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:shared",

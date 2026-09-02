@@ -146,19 +146,30 @@ def get_allwpilib_dependencies(
     _cc_dependency(
         group,
         "telemetry",
-        has_jni=True,
+        has_jni=False,
         dependencies=["wpiutil-cpp"],
     )
     _cc_dependency(
         group,
         "tunables",
-        has_jni=True,
+        has_jni=False,
         dependencies=["wpiutil-cpp"],
     )
     _cc_dependency(group, "wpinet", has_jni=True, dependencies=["wpiutil-cpp"])
-    _cc_dependency(group, "wpimath", has_jni=True, dependencies=["wpiutil-cpp"])
+    _cc_dependency(
+        group,
+        "wpimath",
+        has_jni=True,
+        dependencies=["wpiutil-cpp", "telemetry-cpp", "tunables-cpp"],
+    )
     _cc_dependency(
         group, "apriltag", has_jni=True, dependencies=["wpiutil-cpp", "wpimath-cpp"]
+    )
+    _cc_dependency(
+        group,
+        "fields",
+        has_jni=False,
+        dependencies=["wpiutil-cpp", "wpimath-cpp"],
     )
     _cc_dependency(
         group,
@@ -181,18 +192,6 @@ def get_allwpilib_dependencies(
     )
     _cc_dependency(
         group,
-        "cameraserver",
-        has_jni=False,
-        dependencies=[
-            "wpiutil-cpp",
-            "cscore-cpp",
-            "ntcore-cpp",
-            "wpinet-cpp",
-            "opencv-cpp",
-        ],
-    )
-    _cc_dependency(
-        group,
         "wpilibc",
         has_jni=False,
         dependencies=[
@@ -201,12 +200,27 @@ def get_allwpilib_dependencies(
             "ntcore-cpp",
             "hal-cpp",
             "wpinet-cpp",
+            "telemetry-cpp",
+            "tunables-cpp",
+        ],
+    )
+    _cc_dependency(
+        group,
+        "cameraserver",
+        has_jni=False,
+        dependencies=[
+            "wpiutil-cpp",
+            "cscore-cpp",
+            "ntcore-cpp",
+            "wpinet-cpp",
+            "opencv-cpp",
+            "wpilibc-cpp",
         ],
     )
     _cc_dependency(
         group,
         "drivers",
-        has_jni=True,
+        has_jni=False,
         dependencies=["wpilibc-cpp"],
     )
     _cc_dependency(
@@ -223,6 +237,8 @@ def get_allwpilib_dependencies(
             "opencv-cpp",
             "wpilibc-cpp",
             "wpinet-cpp",
+            "telemetry-cpp",
+            "tunables-cpp",
         ],
     )
 
@@ -232,6 +248,7 @@ def get_allwpilib_dependencies(
         has_jni=False,
         dependencies=[
             "wpilibc-cpp",
+            "telemetry-cpp",
         ],
     )
 
@@ -261,12 +278,8 @@ def get_allwpilib_dependencies(
     _java_dependency(
         group, "datalog", dependencies=["wpiutil-java", "wpiutil-cpp", "datalog-cpp"]
     )
-    _java_dependency(
-        group, "telemetry", dependencies=["wpiutil-java", "wpiutil-cpp", "telemetry-cpp"]
-    )
-    _java_dependency(
-        group, "tunables", dependencies=["wpiutil-java", "wpiutil-cpp", "tunables-cpp"]
-    )
+    _java_dependency(group, "telemetry", dependencies=["wpiutil-java", "wpiutil-cpp"])
+    _java_dependency(group, "tunables", dependencies=["wpiutil-java", "wpiutil-cpp"])
     _java_dependency(group, "wpiunits", dependencies=[])
     _java_dependency(
         group,
@@ -307,19 +320,6 @@ def get_allwpilib_dependencies(
     )
     _java_dependency(
         group,
-        "cameraserver",
-        dependencies=[
-            "wpiutil-java",
-            "wpiutil-cpp",
-            "cscore-cpp",
-            "cscore-java",
-            "ntcore-java",
-            "ntcore-cpp",
-            "opencv-cpp",
-        ],
-    )
-    _java_dependency(
-        group,
         "wpilibj",
         dependencies=[
             "wpiutil-cpp",
@@ -332,8 +332,37 @@ def get_allwpilib_dependencies(
             "ntcore-java",
             "hal-cpp",
             "hal-java",
-            "cameraserver-java",
             "opencv-cpp",
+            "datalog-java",
+            "telemetry-java",
+            "tunables-java",
+        ],
+    )
+    _java_dependency(
+        group,
+        "cameraserver",
+        dependencies=[
+            "wpiutil-java",
+            "wpiutil-cpp",
+            "cscore-cpp",
+            "cscore-java",
+            "ntcore-java",
+            "ntcore-cpp",
+            "opencv-cpp",
+            "wpilibj-java",
+        ],
+    )
+    _java_dependency(
+        group,
+        "drivers",
+        dependencies=[
+            "wpiutil-cpp",
+            "wpiutil-java",
+            "wpimath-cpp",
+            "wpimath-java",
+            "hal-cpp",
+            "hal-java",
+            "wpilibj-java",
         ],
     )
     _java_dependency(
@@ -354,6 +383,8 @@ def get_allwpilib_dependencies(
             "opencv-cpp",
             "wpilibj-java",
             "annotations-java",
+            "telemetry-java",
+            "tunables-java",
         ],
     )
     _java_dependency(
@@ -387,7 +418,7 @@ def get_allwpilib_dependencies(
     _java_dependency(
         group,
         "fields",
-        dependencies=[],
+        dependencies=["wpiutil-java", "wpiutil-cpp", "wpimath-java", "wpimath-cpp"],
         maven_deps=[
             ("io.avaje:avaje-jsonb", "3.11"),
         ],

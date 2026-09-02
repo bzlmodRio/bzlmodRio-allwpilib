@@ -1,7 +1,7 @@
 #pragma once
 
 #include <wpi/commands2/Subsystem.hpp>
-#include <wpi/hardware/motor/PWMVictorSPX.hpp>
+#include <wpi/drivers/motor/PWMVictorSPX.hpp>
 #include <wpi/hardware/rotation/Encoder.hpp>
 #include <wpi/math/controller/PIDController.hpp>
 #include <wpi/simulation/ElevatorSim.hpp>
