@@ -111,7 +111,7 @@ def get_allwpilib_dependencies(
     opencv_version_override="2027.4.13.0-3",
 ):
     year = "2027"
-    version = "2027.0.0-alpha-6"
+    version = "2027.0.0-alpha-7"
     patch = ""
 
     opencv_dependency = ModuleDependency(
@@ -126,7 +126,7 @@ def get_allwpilib_dependencies(
         "bzlmodrio-allwpilib",
         version,
         year,
-        "https://frcmaven.wpi.edu/artifactory/release-2027",
+        "https://frcmaven.wpi.edu/artifactory/release",
         patch=patch,
     )
     group.add_module_dependency(opencv_dependency)
@@ -331,7 +331,7 @@ def get_allwpilib_dependencies(
     )
     _java_dependency(
         group,
-        "commands3",
+        "commandsv3",
         group_id="org.wpilib",
         dependencies=[
             "wpiutil-cpp",

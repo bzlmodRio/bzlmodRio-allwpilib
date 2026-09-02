@@ -1,6 +1,6 @@
 module(
     name = "bzlmodrio-allwpilib",
-    version = "2027.0.0-alpha-6",
+    version = "2027.0.0-alpha-7",
 )
 
 bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2")
@@ -518,8 +518,8 @@ use_repo(
     "org_wpilib_annotations_java",
     "org_wpilib_apriltag_apriltag_java",
     "org_wpilib_cameraserver_cameraserver_java",
-    "org_wpilib_commands3_java",
     "org_wpilib_commandsv2_commandsv2_java",
+    "org_wpilib_commandsv3_java",
     "org_wpilib_cscore_cscore_java",
     "org_wpilib_epilogue_epilogue_processor_java",
     "org_wpilib_epilogue_epilogue_runtime_java",
