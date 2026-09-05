@@ -30,7 +30,6 @@ class Elevator : public wpi::cmd::Subsystem {
 
   wpi::PWMVictorSPX m_motor{kElevatorMotorPort};
   wpi::Encoder m_encoder{kElevatorEncoderPortA, kElevatorEncoderPortB};
-  double m_setpoint{0};
   wpi::math::PIDController m_controller;
 
   wpi::sim::EncoderSim m_encoderSim{m_encoder};
