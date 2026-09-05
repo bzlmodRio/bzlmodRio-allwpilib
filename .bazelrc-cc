@@ -1,7 +1,7 @@
 # Windows
 build:windows --copt=/W3
 build:windows --copt=/WX
-build:windows --copt=/std:c++23
+build:windows --copt=/std:c++23preview
 build:windows --copt=/Zc:preprocessor
 build:windows --copt=/wd5105
 build:windows --cxxopt=/wd4146

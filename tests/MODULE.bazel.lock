@@ -213,7 +213,7 @@
   "moduleExtensions": {
     "@@bzlmodrio-allwpilib+//:maven_cpp_deps.bzl%deps": {
       "general": {
-        "bzlTransitiveDigest": "6lOLDDw+EfNQfggziU4UYKaaE3xXHY6i2R1wxt4VcWE=",
+        "bzlTransitiveDigest": "2AYBOt6NIq02DAwPEr5tiMwNGKxWVr2Op8qOHzsQvrg=",
         "usagesDigest": "aOdGckvkk4wTgiEr7NSMlRRBTFosyFx4ePZqDOr512c=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
@@ -5193,6 +5193,14 @@
             "attributes": {
               "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tools/processstarter/2027.0.0-alpha-7/processstarter-2027.0.0-alpha-7-windowsarm64.zip",
               "sha256": "c8d060189f59f0d596c9c4ad84a777581a2f9ae49e3be8d5f2c5fab52a953871",
+              "build_file_content": "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])"
+            }
+          },
+          "bazelrio_org_wpilib_tools_sysid_linuxarm64": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "url": "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tools/SysId/2027.0.0-alpha-7/SysId-2027.0.0-alpha-7-linuxarm64.zip",
+              "sha256": "46ff279aa99267ae37ed482cc1480a68af3fbf1f6700c30b042f0bcf3d2e64c9",
               "build_file_content": "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])"
             }
           },

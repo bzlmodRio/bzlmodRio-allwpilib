@@ -4424,6 +4424,13 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
+        name = "bazelrio_org_wpilib_tools_sysid_linuxarm64",
+        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tools/SysId/2027.0.0-alpha-7/SysId-2027.0.0-alpha-7-linuxarm64.zip",
+        sha256 = "46ff279aa99267ae37ed482cc1480a68af3fbf1f6700c30b042f0bcf3d2e64c9",
+        build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
+    )
+    maybe(
+        http_archive,
         name = "bazelrio_org_wpilib_tools_sysid_linuxx86-64",
         url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tools/SysId/2027.0.0-alpha-7/SysId-2027.0.0-alpha-7-linuxx86-64.zip",
         sha256 = "92b8795b75b5338b2af80bd29300b209bf0177605a931309ae699e0ebc9834eb",

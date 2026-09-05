@@ -42,11 +42,6 @@ def executable_tool_launcher(name, base_repo_name, macos_app = None):
         deps = ["@bazel_tools//tools/bash/runfiles"],
         visibility = ["//visibility:public"],
         tags = ["no-systemcore", "no-bullseye32", "no-bullseye64", "no-bookworm64"],
-        target_compatible_with = select({
-            "@wpilib_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
-            "@wpilib_toolchains//constraints/is_trixie64:trixie64": ["@platforms//:incompatible"],
-            "//conditions:default": [],
-        })
     )
 
 def java_tool_launcher(name, main_class, base_repo_name):
