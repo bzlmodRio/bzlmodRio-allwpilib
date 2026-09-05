@@ -12,7 +12,7 @@ build:windows --cxxopt=/utf-8
 # Windows Arm
 build:windows_arm --copt=/W3
 build:windows_arm --copt=/WX
-build:windows_arm --copt=/std:c++23
+build:windows_arm --copt=/std:c++23preview
 build:windows_arm --copt=/Zc:preprocessor
 build:windows_arm --copt=/wd5105
 build:windows_arm --cxxopt=/wd4146

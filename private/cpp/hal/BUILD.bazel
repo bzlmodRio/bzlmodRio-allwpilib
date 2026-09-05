@@ -52,7 +52,10 @@ cc_library(
         "@wpilib_toolchains//conditions:windows_arm64": [":shared_interface"],
         "@wpilib_toolchains//conditions:windows_x86_64": [":shared_interface"],
         "//conditions:default": [],
-    }) + ["@bazelrio_org_wpilib_hal_hal-cpp_headers//:headers"],
+    }) + ["@bazelrio_org_wpilib_hal_hal-cpp_headers//:headers"] + select({
+        "@wpilib_toolchains//constraints/is_systemcore:systemcore": ["@bzlmodrio-allwpilib//libraries/cpp/mrclib"],
+        "//conditions:default": [],
+    }),
     alwayslink = 1,
 )
 
