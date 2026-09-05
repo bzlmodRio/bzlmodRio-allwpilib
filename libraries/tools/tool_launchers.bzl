@@ -43,10 +43,9 @@ def executable_tool_launcher(name, base_repo_name, macos_app = None):
         visibility = ["//visibility:public"],
         tags = ["no-systemcore", "no-bullseye32", "no-bullseye64", "no-bookworm64"],
         target_compatible_with = select({
-            "@bazel_tools//src/conditions:darwin": [base_repo_name + "_osxuniversal"],
-            "@bazel_tools//src/conditions:linux_x86_64": [base_repo_name + "_linuxx86-64"],
-            "@bazel_tools//src/conditions:windows": [base_repo_name + "_windowsx86-64"],
+            "@wpilib_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
             "@wpilib_toolchains//constraints/is_trixie64:trixie64": ["@platforms//:incompatible"],
+            "//conditions:default": [],
         })
     )
 
