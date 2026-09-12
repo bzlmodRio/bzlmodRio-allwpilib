@@ -10,28 +10,24 @@ def executable_tool_launcher(name, base_repo_name, macos_app = None):
         "@bazel_tools//src/conditions:darwin": [macos_subpath],
         "@bazel_tools//src/conditions:linux_x86_64": ["linux/x86-64"],
         "@bazel_tools//src/conditions:windows": ["windows/x86-64"],
-        "@wpilib_toolchains//constraints/is_trixie64:trixie64": ["linux/arm64"],
     })
 
     exe_name = select({
         "@bazel_tools//src/conditions:darwin": [name],
         "@bazel_tools//src/conditions:linux_x86_64": [name],
         "@bazel_tools//src/conditions:windows": [name + ".exe"],
-        "@wpilib_toolchains//constraints/is_trixie64:trixie64": [name],
     })
 
     data = select({
         "@bazel_tools//src/conditions:darwin": ["@" + base_repo_name + "_osxuniversal//:all"],
         "@bazel_tools//src/conditions:linux_x86_64": ["@" + base_repo_name + "_linuxx86-64//:all"],
         "@bazel_tools//src/conditions:windows": ["@" + base_repo_name + "_windowsx86-64//:all"],
-        "@wpilib_toolchains//constraints/is_trixie64:trixie64": ["@" + base_repo_name + "_linuxarm64//:all"],
     })
 
     repo_name = select({
         "@bazel_tools//src/conditions:darwin": [base_repo_name + "_osxuniversal"],
         "@bazel_tools//src/conditions:linux_x86_64": [base_repo_name + "_linuxx86-64"],
         "@bazel_tools//src/conditions:windows": [base_repo_name + "_windowsx86-64"],
-        "@wpilib_toolchains//constraints/is_trixie64:trixie64": [base_repo_name + "_linuxarm64"],
     })
 
     sh_binary(
@@ -41,7 +37,7 @@ def executable_tool_launcher(name, base_repo_name, macos_app = None):
         args = repo_name + subpath + exe_name,
         deps = ["@bazel_tools//tools/bash/runfiles"],
         visibility = ["//visibility:public"],
-        tags = ["no-systemcore", "no-bullseye32", "no-bullseye64", "no-bookworm64"],
+        tags = ["no-systemcore", "no-trixie64"],
     )
 
 def java_tool_launcher(name, main_class, base_repo_name):
@@ -55,5 +51,5 @@ def java_tool_launcher(name, main_class, base_repo_name):
             "@bazel_tools//src/conditions:windows": ["@" + base_repo_name + "_winx64//jar"],
         }),
         visibility = ["//visibility:public"],
-        tags = ["no-systemcore", "no-bullseye32", "no-bullseye64", "no-bookworm64"],
+        tags = ["no-systemcore", "no-trixie64"],
     )

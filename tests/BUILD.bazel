@@ -2,10 +2,8 @@ alias(
     name = "DataLogTool",
     actual = "@bzlmodrio-allwpilib//libraries/tools/datalogtool",
     tags = [
-        "no-bookworm64",
-        "no-bullseye32",
-        "no-bullseye64",
         "no-systemcore",
+        "no-trixie64",
     ],
 )
 
@@ -13,10 +11,8 @@ alias(
     name = "Glass",
     actual = "@bzlmodrio-allwpilib//libraries/tools/glass",
     tags = [
-        "no-bookworm64",
-        "no-bullseye32",
-        "no-bullseye64",
         "no-systemcore",
+        "no-trixie64",
     ],
 )
 
@@ -24,10 +20,8 @@ alias(
     name = "OutlineViewer",
     actual = "@bzlmodrio-allwpilib//libraries/tools/outlineviewer",
     tags = [
-        "no-bookworm64",
-        "no-bullseye32",
-        "no-bullseye64",
         "no-systemcore",
+        "no-trixie64",
     ],
 )
 
@@ -35,10 +29,8 @@ alias(
     name = "processstarter",
     actual = "@bzlmodrio-allwpilib//libraries/tools/processstarter",
     tags = [
-        "no-bookworm64",
-        "no-bullseye32",
-        "no-bullseye64",
         "no-systemcore",
+        "no-trixie64",
     ],
 )
 
@@ -46,10 +38,8 @@ alias(
     name = "SysId",
     actual = "@bzlmodrio-allwpilib//libraries/tools/sysid",
     tags = [
-        "no-bookworm64",
-        "no-bullseye32",
-        "no-bullseye64",
         "no-systemcore",
+        "no-trixie64",
     ],
 )
 
@@ -57,9 +47,7 @@ alias(
     name = "wpical",
     actual = "@bzlmodrio-allwpilib//libraries/tools/wpical",
     tags = [
-        "no-bookworm64",
-        "no-bullseye32",
-        "no-bullseye64",
         "no-systemcore",
+        "no-trixie64",
     ],
 )
