@@ -1,0 +1,12 @@
+load("@rules_java//java:defs.bzl", "java_import")
+
+java_import(
+    name = "datalog",
+    jars = ["@org_wpilib_datalog_datalog_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/datalog:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/wpiutil",
+    ],
+)

@@ -1,0 +1,16 @@
+load("@rules_java//java:defs.bzl", "java_import")
+
+java_import(
+    name = "drivers",
+    jars = ["@org_wpilib_drivers_drivers_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/hal:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:jni",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/hal",
+        "@bzlmodrio-allwpilib//libraries/java/wpilibj",
+        "@bzlmodrio-allwpilib//libraries/java/wpimath",
+        "@bzlmodrio-allwpilib//libraries/java/wpiutil",
+    ],
+)

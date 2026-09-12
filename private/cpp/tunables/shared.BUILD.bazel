@@ -1,0 +1,45 @@
+JNI_PATTERN = [
+    "**/*jni.dll",
+    "**/*jni.so*",
+    "**/*jni.dylib",
+    "**/*_java*.dll",
+    "**/lib*_java*.dylib",
+    "**/lib*_java*.so",
+]
+
+static_srcs = glob(
+    [
+        "**/*.lib",
+        "**/*.a",
+    ],
+    allow_empty = True,
+    exclude = ["**/*jni.lib"],
+)
+
+shared_srcs = glob(
+    [
+        "**/*.dll",
+        "**/*.so*",
+        "**/*.dylib",
+    ],
+    allow_empty = True,
+    exclude = JNI_PATTERN + ["**/*.so.debug"],
+)
+
+shared_jni_srcs = glob(
+    JNI_PATTERN,
+    allow_empty = True,
+    exclude = ["**/*.so.debug"],
+)
+
+filegroup(
+    name = "shared_interface",
+    srcs = static_srcs,
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+)
+
+filegroup(
+    name = "shared",
+    srcs = shared_srcs,
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+)

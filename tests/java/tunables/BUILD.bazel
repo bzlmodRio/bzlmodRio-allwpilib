@@ -1,4 +1,5 @@
 load("@rules_bazelrio//:java_rules.bzl", "bazelrio_java_binary", "bazelrio_java_test")
+load("@rules_wpi_styleguide//styleguide:java_styleguide.bzl", "java_styleguide")
 
 bazelrio_java_binary(
     name = "main",
@@ -6,9 +7,9 @@ bazelrio_java_binary(
     jvm_flags = [
         "-Djava.library.path=.",
     ],
-    main_class = "commands3.Main",
+    main_class = "tunables.Main",
     deps = [
-        "@bzlmodrio-allwpilib//libraries/java/commands3",
+        "@bzlmodrio-allwpilib//libraries/java/tunables",
     ],
 )
 
@@ -17,7 +18,7 @@ bazelrio_java_test(
     srcs = ["BasicTest.java"],
     args = [
         "--select-package",
-        "commands3",
+        "tunables",
     ],
     javacopts = ["-Werror"],
     jvm_flags = [
@@ -36,11 +37,11 @@ bazelrio_java_test(
         "@maven//:org_junit_platform_junit_platform_suite_api",
     ],
     deps = [
-        "@bzlmodrio-allwpilib//libraries/java/commands3",
+        "@bzlmodrio-allwpilib//libraries/java/tunables",
         "@maven//:org_junit_jupiter_junit_jupiter_api",
         "@maven//:org_junit_jupiter_junit_jupiter_engine",
         "@maven//:org_junit_jupiter_junit_jupiter_params",
     ],
 )
 
-# java_styleguide(name = "commands3") # TODO renable styleguide
+java_styleguide(name = "tunables")

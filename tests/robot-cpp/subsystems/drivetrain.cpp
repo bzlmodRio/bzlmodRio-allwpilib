@@ -2,8 +2,8 @@
 
 #include <numbers>
 #include <wpi/driverstation/Joystick.hpp>
-#include <wpi/smartdashboard/SmartDashboard.hpp>
 #include <wpi/system/RobotController.hpp>
+#include <wpi/telemetry/Telemetry.hpp>
 #include <wpi/units/length.hpp>
 
 DriveTrain::DriveTrain()
@@ -22,16 +22,15 @@ DriveTrain::DriveTrain()
   m_rightEncoder.SetDistancePerPulse(wpi::units::foot_t{4_in}.to<double>() *
                                      std::numbers::pi / 360.0);
 
-  wpi::SmartDashboard::PutData("Field", &m_field);
+  wpi::telemetry::Log("Field", m_field);
 }
 
 void DriveTrain::Log() {
-  wpi::SmartDashboard::PutNumber("Left Distance", m_leftEncoder.GetDistance());
-  wpi::SmartDashboard::PutNumber("Right Distance",
-                                 m_rightEncoder.GetDistance());
-  wpi::SmartDashboard::PutNumber("Left Speed", m_leftEncoder.GetRate());
-  wpi::SmartDashboard::PutNumber("Right Speed", m_rightEncoder.GetRate());
-  wpi::SmartDashboard::PutNumber("Gyro", m_gyro.GetYaw().value());
+  wpi::telemetry::Log("Left Distance", m_leftEncoder.GetDistance());
+  wpi::telemetry::Log("Right Distance", m_rightEncoder.GetDistance());
+  wpi::telemetry::Log("Left Speed", m_leftEncoder.GetRate());
+  wpi::telemetry::Log("Right Speed", m_rightEncoder.GetRate());
+  wpi::telemetry::Log("Gyro", m_gyro.GetYaw().value());
 }
 
 void DriveTrain::ArcadeDrive(double throttle, double rotation) {

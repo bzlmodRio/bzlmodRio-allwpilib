@@ -8,6 +8,8 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/commandsv2",
+        "@bzlmodrio-allwpilib//libraries/cpp/drivers",
+        "@bzlmodrio-allwpilib//libraries/cpp/telemetry",
         "@bzlmodrio-allwpilib//libraries/cpp/wpilibc",
     ],
 )

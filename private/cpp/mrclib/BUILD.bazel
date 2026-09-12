@@ -1,0 +1,52 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+alias(
+    name = "header_files",
+    actual = "@bazelrio_org_wpilib_mrclib_mrclib-cpp_headers//:header_files",
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+)
+
+cc_library(
+    name = "shared_interface",
+    srcs = select({
+        "@wpilib_toolchains//conditions:windows_arm64": ["@bazelrio_org_wpilib_mrclib_mrclib-cpp_windowsarm64//:shared_interface"],
+        "@wpilib_toolchains//conditions:windows_x86_64": ["@bazelrio_org_wpilib_mrclib_mrclib-cpp_windowsx86-64//:shared_interface"],
+    }),
+    linkstatic = True,
+    tags = ["manual"],
+    target_compatible_with = select({
+        "@wpilib_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+    deps = ["@bazelrio_org_wpilib_mrclib_mrclib-cpp_headers//:headers"],
+)
+
+filegroup(
+    name = "shared_raw",
+    srcs = select({
+        "@wpilib_toolchains//conditions:linux_x86_64": ["@bazelrio_org_wpilib_mrclib_mrclib-cpp_linuxx86-64//:shared"],
+        "@wpilib_toolchains//conditions:osx": ["@bazelrio_org_wpilib_mrclib_mrclib-cpp_osxuniversal//:shared"],
+        "@wpilib_toolchains//conditions:windows_arm64": ["@bazelrio_org_wpilib_mrclib_mrclib-cpp_windowsarm64//:shared"],
+        "@wpilib_toolchains//conditions:windows_x86_64": ["@bazelrio_org_wpilib_mrclib_mrclib-cpp_windowsx86-64//:shared"],
+        "@wpilib_toolchains//constraints/is_trixie64:trixie64": ["@bazelrio_org_wpilib_mrclib_mrclib-cpp_linuxarm64//:shared"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+)
+
+cc_library(
+    name = "shared",
+    srcs = [":shared_raw"],
+    target_compatible_with = select({
+        "@wpilib_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
+        "//conditions:default": [],
+    }),
+    visibility = ["@bzlmodrio-allwpilib//:__subpackages__"],
+    deps = [] + select({
+        "@wpilib_toolchains//conditions:windows_arm64": [":shared_interface"],
+        "@wpilib_toolchains//conditions:windows_x86_64": [":shared_interface"],
+        "//conditions:default": [],
+    }) + ["@bazelrio_org_wpilib_mrclib_mrclib-cpp_headers//:headers"],
+    alwayslink = 1,
+)

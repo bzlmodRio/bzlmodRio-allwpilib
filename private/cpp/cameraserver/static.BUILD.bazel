@@ -13,6 +13,7 @@ cc_library(
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/cscore:static",
         "@bzlmodrio-allwpilib//libraries/cpp/ntcore:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpilibc:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
         "@bzlmodrio-opencv//libraries/cpp/opencv",

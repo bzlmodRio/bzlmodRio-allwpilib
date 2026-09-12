@@ -15,6 +15,8 @@ cc_library(
         "@bzlmodrio-allwpilib//libraries/cpp/cscore:static",
         "@bzlmodrio-allwpilib//libraries/cpp/hal:static",
         "@bzlmodrio-allwpilib//libraries/cpp/ntcore:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/telemetry:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/tunables:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpilibc:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpinet:static",
