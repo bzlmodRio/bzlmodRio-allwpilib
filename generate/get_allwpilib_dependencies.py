@@ -458,7 +458,6 @@ def get_allwpilib_dependencies(
     _executable_tool(group, "DataLogTool", lower_target_name=True)
     _executable_tool(group, "Glass", lower_target_name=True)
     _executable_tool(group, "OutlineViewer", lower_target_name=True)
-    _executable_tool(group, "processstarter", lower_target_name=True)
     _executable_tool(
         group,
         "SysId",

@@ -4389,41 +4389,6 @@ def __setup_bzlmodrio_allwpilib_cpp_dependencies(mctx):
     )
     maybe(
         http_archive,
-        name = "bazelrio_org_wpilib_tools_processstarter_linuxarm64",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tools/processstarter/2027.0.0-alpha-8/processstarter-2027.0.0-alpha-8-linuxarm64.zip",
-        sha256 = "None",
-        build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
-    )
-    maybe(
-        http_archive,
-        name = "bazelrio_org_wpilib_tools_processstarter_linuxx86-64",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tools/processstarter/2027.0.0-alpha-8/processstarter-2027.0.0-alpha-8-linuxx86-64.zip",
-        sha256 = "None",
-        build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
-    )
-    maybe(
-        http_archive,
-        name = "bazelrio_org_wpilib_tools_processstarter_osxuniversal",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tools/processstarter/2027.0.0-alpha-8/processstarter-2027.0.0-alpha-8-osxuniversal.zip",
-        sha256 = "None",
-        build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
-    )
-    maybe(
-        http_archive,
-        name = "bazelrio_org_wpilib_tools_processstarter_windowsx86-64",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tools/processstarter/2027.0.0-alpha-8/processstarter-2027.0.0-alpha-8-windowsx86-64.zip",
-        sha256 = "None",
-        build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
-    )
-    maybe(
-        http_archive,
-        name = "bazelrio_org_wpilib_tools_processstarter_windowsarm64",
-        url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tools/processstarter/2027.0.0-alpha-8/processstarter-2027.0.0-alpha-8-windowsarm64.zip",
-        sha256 = "None",
-        build_file_content = "filegroup(name='all', srcs=glob(['**']), visibility=['//visibility:public'])",
-    )
-    maybe(
-        http_archive,
         name = "bazelrio_org_wpilib_tools_sysid_linuxx86-64",
         url = "https://frcmaven.wpi.edu/artifactory/release/org/wpilib/tools/SysId/2027.0.0-alpha-8/SysId-2027.0.0-alpha-8-linuxx86-64.zip",
         sha256 = "52b9bfa12e50b149d9137e401f3d993ccc3ed9ec2768ff34d36b1908ec144616",

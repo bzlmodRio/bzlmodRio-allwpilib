@@ -26,15 +26,6 @@ alias(
 )
 
 alias(
-    name = "processstarter",
-    actual = "@bzlmodrio-allwpilib//libraries/tools/processstarter",
-    tags = [
-        "no-systemcore",
-        "no-trixie64",
-    ],
-)
-
-alias(
     name = "SysId",
     actual = "@bzlmodrio-allwpilib//libraries/tools/sysid",
     tags = [
