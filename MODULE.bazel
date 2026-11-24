@@ -1,6 +1,6 @@
 module(
     name = "bzlmodrio-allwpilib",
-    version = "2027.0.0-alpha-7",
+    version = "2027.0.0-alpha-8",
 )
 
 bazel_dep(name = "buildifier_prebuilt", version = "8.5.1.2")
@@ -456,7 +456,6 @@ use_repo(
     "bazelrio_org_wpilib_tools_processstarter_osxuniversal",
     "bazelrio_org_wpilib_tools_processstarter_windowsarm64",
     "bazelrio_org_wpilib_tools_processstarter_windowsx86-64",
-    "bazelrio_org_wpilib_tools_sysid_linuxarm64",
     "bazelrio_org_wpilib_tools_sysid_linuxx86-64",
     "bazelrio_org_wpilib_tools_sysid_osxuniversal",
     "bazelrio_org_wpilib_tools_sysid_windowsarm64",
