@@ -1,8 +1,8 @@
 package apriltag;
 
 import java.io.IOException;
-import org.wpilib.vision.apriltag.AprilTagFieldLayout;
-import org.wpilib.vision.apriltag.AprilTagFields;
+import org.wpilib.fields.Field;
+import org.wpilib.fields.Fields;
 
 public final class Main {
   private Main() {}
@@ -13,7 +13,6 @@ public final class Main {
    * @param args Command line arguments.
    */
   public static void main(String[] args) throws IOException {
-    System.out.println(
-        AprilTagFieldLayout.loadFromResource(AprilTagFields.k2022RapidReact.resourceFile));
+    System.out.println(Field.loadFromResource(Fields.FRC_2022_RAPID_REACT.resourceFile));
   }
 }

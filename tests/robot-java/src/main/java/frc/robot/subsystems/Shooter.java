@@ -5,8 +5,8 @@
 package frc.robot.subsystems;
 
 import org.wpilib.command2.SubsystemBase;
+import org.wpilib.drivers.motor.PWMSparkFlex;
 import org.wpilib.framework.RobotBase;
-import org.wpilib.hardware.motor.PWMSparkFlex;
 import org.wpilib.hardware.rotation.Encoder;
 import org.wpilib.math.controller.PIDController;
 import org.wpilib.math.numbers.N1;
@@ -15,8 +15,8 @@ import org.wpilib.math.system.LinearSystem;
 import org.wpilib.math.system.Models;
 import org.wpilib.simulation.EncoderSim;
 import org.wpilib.simulation.FlywheelSim;
-import org.wpilib.smartdashboard.SmartDashboard;
 import org.wpilib.system.RobotController;
+import org.wpilib.telemetry.Telemetry;
 
 /**
  * The claw subsystem is a simple system with a motor for opening and closing. If using stronger
@@ -56,8 +56,8 @@ public class Shooter extends SubsystemBase {
   }
 
   public void log() {
-    SmartDashboard.putNumber("Shooter Speed", m_motor.getThrottle());
-    SmartDashboard.putNumber("Shooter RPM", getRpm());
+    Telemetry.log("Shooter Speed", m_motor.getThrottle());
+    Telemetry.log("Shooter RPM", getRpm());
   }
 
   public void stop() {

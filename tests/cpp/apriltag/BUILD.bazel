@@ -5,7 +5,10 @@ cc_binary(
     name = "main",
     srcs = ["main.cpp"],
     tags = ["no-sandbox"],
-    deps = ["@bzlmodrio-allwpilib//libraries/cpp/apriltag"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/apriltag",
+        "@bzlmodrio-allwpilib//libraries/cpp/fields",
+    ],
 )
 
 cc_test(
@@ -17,6 +20,7 @@ cc_test(
     ],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/apriltag",
+        "@bzlmodrio-allwpilib//libraries/cpp/fields",
         "@googletest//:gtest_main",
     ],
 )

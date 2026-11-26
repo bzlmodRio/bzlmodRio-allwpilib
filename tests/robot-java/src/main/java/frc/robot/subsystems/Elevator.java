@@ -1,16 +1,16 @@
 package frc.robot.subsystems;
 
 import org.wpilib.command2.SubsystemBase;
+import org.wpilib.drivers.motor.PWMSparkFlex;
 import org.wpilib.framework.RobotBase;
-import org.wpilib.hardware.motor.PWMSparkFlex;
 import org.wpilib.hardware.rotation.Encoder;
 import org.wpilib.math.controller.PIDController;
 import org.wpilib.math.system.DCMotor;
 import org.wpilib.math.util.Units;
 import org.wpilib.simulation.ElevatorSim;
 import org.wpilib.simulation.EncoderSim;
-import org.wpilib.smartdashboard.SmartDashboard;
 import org.wpilib.system.RobotController;
+import org.wpilib.telemetry.Telemetry;
 
 public class Elevator extends SubsystemBase {
   private static final double kP = 4;
@@ -63,7 +63,7 @@ public class Elevator extends SubsystemBase {
   }
 
   public void log() {
-    SmartDashboard.putNumber("Elevator Height", m_encoder.getDistance());
+    Telemetry.log("Elevator Height", m_encoder.getDistance());
   }
 
   public void setVoltage(double output) {

@@ -1,0 +1,11 @@
+load("@rules_java//java:defs.bzl", "java_import")
+
+java_import(
+    name = "telemetry",
+    jars = ["@org_wpilib_telemetry_telemetry_java//jar:file"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:jni",
+        "@bzlmodrio-allwpilib//libraries/java/wpiutil",
+    ],
+)

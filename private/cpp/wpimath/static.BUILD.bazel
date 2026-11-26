@@ -11,6 +11,8 @@ cc_library(
     ),
     visibility = ["//visibility:public"],
     deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/telemetry:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/tunables:static",
         "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
     ],
 )

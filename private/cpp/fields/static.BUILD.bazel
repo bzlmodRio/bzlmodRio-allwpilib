@@ -1,0 +1,17 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+
+cc_library(
+    name = "static_libs",
+    srcs = glob(
+        [
+            "**/*.lib",
+            "**/*.a",
+        ],
+        allow_empty = True,
+    ),
+    visibility = ["//visibility:public"],
+    deps = [
+        "@bzlmodrio-allwpilib//libraries/cpp/wpimath:static",
+        "@bzlmodrio-allwpilib//libraries/cpp/wpiutil:static",
+    ],
+)

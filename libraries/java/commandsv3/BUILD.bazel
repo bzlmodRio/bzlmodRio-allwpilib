@@ -1,8 +1,8 @@
 load("@rules_java//java:defs.bzl", "java_import")
 
 java_import(
-    name = "commands3",
-    jars = ["@org_wpilib_commands3_java//jar:file"],
+    name = "commandsv3",
+    jars = ["@org_wpilib_commandsv3_java//jar:file"],
     visibility = ["//visibility:public"],
     deps = [
         "@bzlmodrio-allwpilib//libraries/cpp/cscore:jni",

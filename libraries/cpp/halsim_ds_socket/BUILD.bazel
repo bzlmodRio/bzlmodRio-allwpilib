@@ -14,7 +14,7 @@ alias(
     name = "static",
     actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:static",
     target_compatible_with = select({
-        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
+        "@wpilib_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["//visibility:public"],
@@ -24,7 +24,7 @@ alias(
     name = "shared",
     actual = "@bzlmodrio-allwpilib//private/cpp/halsim_ds_socket:shared",
     target_compatible_with = select({
-        "@rules_bzlmodrio_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
+        "@wpilib_toolchains//constraints/is_systemcore:systemcore": ["@platforms//:incompatible"],
         "//conditions:default": [],
     }),
     visibility = ["//visibility:public"],
